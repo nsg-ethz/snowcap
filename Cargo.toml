@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "snowcap",
+    "snowcap_runtime",
+    "snowcap_main",
+    "snowcap_ltl_parser",
+    "snowcap_bencher",
+    "problem_probability",
+    "gns3",
+]

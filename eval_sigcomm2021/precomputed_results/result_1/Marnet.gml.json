@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 60,
+        "failures": 940,
+        "success_rate": 0.06
+      },
+      "total_severity": {
+        "min": 0.00008650519031141868,
+        "max": 0.06686851211072664,
+        "mean": 0.017205238165353753,
+        "median": 0.015484429065743944,
+        "std": 0.01351747942607855,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.011764705882352941,
+        "max": 0.11764705882352941,
+        "mean": 0.03788613833294152,
+        "median": 0.03529411764705882,
+        "std": 0.02117261011332882,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 163,
+        "failures": 837,
+        "success_rate": 0.163
+      },
+      "total_severity": {
+        "min": 0.0006920415224913495,
+        "max": 0.15155709342560553,
+        "mean": 0.03771584956985111,
+        "median": 0.02906574394463668,
+        "std": 0.03386703209954052,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.011764705882352941,
+        "max": 0.17647058823529413,
+        "mean": 0.07972943448661529,
+        "median": 0.058823529411764705,
+        "std": 0.05840065429575681,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 56,
+        "failures": 944,
+        "success_rate": 0.056
+      },
+      "total_severity": {
+        "min": 0.00021626297577854672,
+        "max": 0.3209342560553633,
+        "mean": 0.06767587861415753,
+        "median": 0.05060553633217993,
+        "std": 0.06595799506943519,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.029411764705882353,
+        "max": 0.47058823529411764,
+        "mean": 0.1446275488971364,
+        "median": 0.08823529411764706,
+        "std": 0.1251545442882366,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 141,
+        "failures": 859,
+        "success_rate": 0.141
+      },
+      "total_severity": {
+        "min": 0.0017301038062283738,
+        "max": 0.4273356401384083,
+        "mean": 0.12119991460255947,
+        "median": 0.10034602076124567,
+        "std": 0.10408981999200105,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.029411764705882353,
+        "max": 0.47058823529411764,
+        "mean": 0.2554680070642674,
+        "median": 0.29411764705882354,
+        "std": 0.17345631345025378,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 72,
+        "failures": 928,
+        "success_rate": 0.072
+      },
+      "total_severity": {
+        "min": 0.00021626297577854672,
+        "max": 0.3259083044982699,
+        "mean": 0.06474722400369878,
+        "median": 0.04865916955017301,
+        "std": 0.0609055382237469,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.029411764705882353,
+        "max": 0.47058823529411764,
+        "mean": 0.14309560548900588,
+        "median": 0.08823529411764706,
+        "std": 0.11526392516124645,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 145,
+        "failures": 855,
+        "success_rate": 0.145
+      },
+      "total_severity": {
+        "min": 0.0017301038062283738,
+        "max": 0.4429065743944637,
+        "mean": 0.1174447075011636,
+        "median": 0.08650519031141868,
+        "std": 0.10389458969696601,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.029411764705882353,
+        "max": 0.47058823529411764,
+        "mean": 0.2523368549193604,
+        "median": 0.29411764705882354,
+        "std": 0.17189425233937292,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Marnet.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  }
+]

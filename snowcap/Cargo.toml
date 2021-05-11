@@ -1,0 +1,34 @@
+[package]
+name = "snowcap"
+version = "0.1.0"
+authors = ["Tibor Schneider <tiborschneider@bluewin.ch>"]
+edition = "2018"
+
+[features]
+count-states = []
+strawman-strategies = []
+transient-violation = []
+
+[lib]
+name = "snowcap"
+path = "src/lib.rs"
+
+[dependencies]
+thiserror = "1"
+rand = "0.7"
+log = "0.4"
+pretty_env_logger = "0.4"
+petgraph = "0.5.1"
+primal = "0.3"
+maplit = "1.0.2"
+itertools = "0.9"
+num_cpus = "1"
+libc = "0.2"
+
+[dev-dependencies]
+assert_approx_eq = "1.1.0"
+lazy_static = "1.4"
+snowcap_ltl_parser = {path = "../snowcap_ltl_parser"}
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--html-in-header", "katex-header.html"]

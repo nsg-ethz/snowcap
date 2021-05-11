@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 24,
+        "failures": 976,
+        "success_rate": 0.024
+      },
+      "total_severity": {
+        "min": 0.00026041666666666666,
+        "max": 0.47265625,
+        "mean": 0.12191662397540981,
+        "median": 0.10572916666666667,
+        "std": 0.08592866822320633,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03125,
+        "max": 0.875,
+        "mean": 0.22373317560050768,
+        "median": 0.1875,
+        "std": 0.1451308780540734,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 108,
+        "failures": 892,
+        "success_rate": 0.108
+      },
+      "total_severity": {
+        "min": 0.001953125,
+        "max": 0.7109375,
+        "mean": 0.22396344240470853,
+        "median": 0.197265625,
+        "std": 0.17370809137738658,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03125,
+        "max": 0.875,
+        "mean": 0.46506711043212573,
+        "median": 0.4375,
+        "std": 0.2561401938443772,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 21,
+        "failures": 979,
+        "success_rate": 0.021
+      },
+      "total_severity": {
+        "min": 0.00017361111111111112,
+        "max": 0.35833333333333334,
+        "mean": 0.0959149075019861,
+        "median": 0.08524305555555556,
+        "std": 0.06918146740936737,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.020833333333333332,
+        "max": 0.7916666666666666,
+        "mean": 0.17373735037598287,
+        "median": 0.14583333333333334,
+        "std": 0.11795038354031281,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 100,
+        "failures": 900,
+        "success_rate": 0.1
+      },
+      "total_severity": {
+        "min": 0.0013020833333333333,
+        "max": 0.6614583333333334,
+        "mean": 0.19859953703703698,
+        "median": 0.17122395833333331,
+        "std": 0.16289551373678393,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.020833333333333332,
+        "max": 0.8333333333333334,
+        "mean": 0.4051903277604684,
+        "median": 0.375,
+        "std": 0.25232867858056657,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 25,
+        "failures": 975,
+        "success_rate": 0.025
+      },
+      "total_severity": {
+        "min": 0.00026041666666666666,
+        "max": 0.34270833333333334,
+        "mean": 0.0806531784188034,
+        "median": 0.07395833333333333,
+        "std": 0.059300283068850206,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015625,
+        "max": 0.765625,
+        "mean": 0.14477702749351784,
+        "median": 0.125,
+        "std": 0.10302263626330305,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 121,
+        "failures": 879,
+        "success_rate": 0.121
+      },
+      "total_severity": {
+        "min": 0.0009765625,
+        "max": 0.6220703125,
+        "mean": 0.17240272148748578,
+        "median": 0.1328125,
+        "std": 0.1520947493868834,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015625,
+        "max": 0.8125,
+        "mean": 0.3697837235016013,
+        "median": 0.3125,
+        "std": 0.2509755690581654,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 24,
+        "failures": 976,
+        "success_rate": 0.024
+      },
+      "total_severity": {
+        "min": 0.00026041666666666666,
+        "max": 0.4432291666666667,
+        "mean": 0.12249322276297822,
+        "median": 0.11302083333333333,
+        "std": 0.0827614890873697,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03125,
+        "max": 0.75,
+        "mean": 0.22150796316025137,
+        "median": 0.1875,
+        "std": 0.14229576745760283,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 129,
+        "failures": 871,
+        "success_rate": 0.129
+      },
+      "total_severity": {
+        "min": 0.001953125,
+        "max": 0.7265625,
+        "mean": 0.2166152411021814,
+        "median": 0.1875,
+        "std": 0.17465449179411283,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03125,
+        "max": 0.875,
+        "mean": 0.45996495505104373,
+        "median": 0.4375,
+        "std": 0.26152748190371833,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 20,
+        "failures": 980,
+        "success_rate": 0.02
+      },
+      "total_severity": {
+        "min": 0.00013020833333333333,
+        "max": 0.38528645833333336,
+        "mean": 0.08637861394557818,
+        "median": 0.0744140625,
+        "std": 0.062291336425375377,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015625,
+        "max": 0.796875,
+        "mean": 0.15924571634607848,
+        "median": 0.140625,
+        "std": 0.11336345317346735,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 112,
+        "failures": 888,
+        "success_rate": 0.112
+      },
+      "total_severity": {
+        "min": 0.0009765625,
+        "max": 0.69140625,
+        "mean": 0.20048784135698197,
+        "median": 0.15771484375,
+        "std": 0.16933281407798262,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015625,
+        "max": 0.84375,
+        "mean": 0.41439209339540295,
+        "median": 0.375,
+        "std": 0.26412021466075947,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 267,
+        "failures": 733,
+        "success_rate": 0.267
+      },
+      "total_severity": {
+        "min": 0.0005208333333333333,
+        "max": 0.41354166666666664,
+        "mean": 0.08739625966348338,
+        "median": 0.06822916666666666,
+        "std": 0.0764968061442199,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0625,
+        "max": 0.8125,
+        "mean": 0.2549456107186681,
+        "median": 0.25,
+        "std": 0.16350097758544574,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 242,
+        "failures": 758,
+        "success_rate": 0.242
+      },
+      "total_severity": {
+        "min": 0.00390625,
+        "max": 0.59765625,
+        "mean": 0.19640501319261214,
+        "median": 0.171875,
+        "std": 0.1540929022616948,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0625,
+        "max": 0.8125,
+        "mean": 0.4392402729116725,
+        "median": 0.4375,
+        "std": 0.24677057904903807,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 25,
+        "failures": 975,
+        "success_rate": 0.025
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.31875,
+        "mean": 0.08755288461538466,
+        "median": 0.07309027777777778,
+        "std": 0.06547057139371763,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.020833333333333332,
+        "max": 0.6875,
+        "mean": 0.15953911506352986,
+        "median": 0.125,
+        "std": 0.11243155029775087,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 110,
+        "failures": 890,
+        "success_rate": 0.11
+      },
+      "total_severity": {
+        "min": 0.0013020833333333333,
+        "max": 0.6861979166666666,
+        "mean": 0.1798952481273409,
+        "median": 0.1328125,
+        "std": 0.15695116980933466,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.020833333333333332,
+        "max": 0.8333333333333334,
+        "mean": 0.38325977458608584,
+        "median": 0.3333333333333333,
+        "std": 0.25343170232413803,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 35,
+        "failures": 965,
+        "success_rate": 0.035
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.3190972222222222,
+        "mean": 0.08315108664363839,
+        "median": 0.07274305555555556,
+        "std": 0.06060963478804405,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.020833333333333332,
+        "max": 0.6875,
+        "mean": 0.15715771162142705,
+        "median": 0.14583333333333334,
+        "std": 0.10248883843682734,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 159,
+        "failures": 841,
+        "success_rate": 0.159
+      },
+      "total_severity": {
+        "min": 0.0013020833333333333,
+        "max": 0.6106770833333334,
+        "mean": 0.18351169242964702,
+        "median": 0.15234375,
+        "std": 0.14681617521565865,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.020833333333333332,
+        "max": 0.8125,
+        "mean": 0.3927681459095498,
+        "median": 0.3541666666666667,
+        "std": 0.23535505804133117,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 52,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 24,
+        "failures": 976,
+        "success_rate": 0.024
+      },
+      "total_severity": {
+        "min": 0.0009375,
+        "max": 0.5578125,
+        "mean": 0.15552681010928976,
+        "median": 0.13114583333333335,
+        "std": 0.12138349947168563,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0125,
+        "max": 0.9125,
+        "mean": 0.28488559408192454,
+        "median": 0.25,
+        "std": 0.21765298787329912,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 116,
+        "failures": 884,
+        "success_rate": 0.116
+      },
+      "total_severity": {
+        "min": 0.00078125,
+        "max": 0.81796875,
+        "mean": 0.25832861990950223,
+        "median": 0.22734375,
+        "std": 0.20122004772855995,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0125,
+        "max": 0.9125,
+        "mean": 0.5286168981481413,
+        "median": 0.55,
+        "std": 0.29554539367604765,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaNireland.gml",
+      "seed": 53,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 252,
+        "failures": 748,
+        "success_rate": 0.252
+      },
+      "total_severity": {
+        "min": 0.0005208333333333333,
+        "max": 0.37552083333333336,
+        "mean": 0.07843624665775392,
+        "median": 0.06067708333333333,
+        "std": 0.06807088515127412,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0625,
+        "max": 0.8125,
+        "mean": 0.22382570338578922,
+        "median": 0.1875,
+        "std": 0.13720257995705362,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 262,
+        "failures": 738,
+        "success_rate": 0.262
+      },
+      "total_severity": {
+        "min": 0.00390625,
+        "max": 0.640625,
+        "mean": 0.1908081385501355,
+        "median": 0.15625,
+        "std": 0.1538359749927908,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0625,
+        "max": 0.8125,
+        "mean": 0.4188627068228295,
+        "median": 0.375,
+        "std": 0.24795784206311886,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  }
+]

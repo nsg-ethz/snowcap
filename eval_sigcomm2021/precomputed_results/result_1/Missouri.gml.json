@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0013427734375,
+        "max": 0.8171851748511905,
+        "mean": 0.3118133699931797,
+        "median": 0.3042757548983135,
+        "std": 0.19415185723876058,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01171875,
+        "max": 0.98046875,
+        "mean": 0.39327320347984257,
+        "median": 0.2890625,
+        "std": 0.3362577660162315,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 7,
+        "failures": 993,
+        "success_rate": 0.007
+      },
+      "total_severity": {
+        "min": 0.0006103515625,
+        "max": 0.88043212890625,
+        "mean": 0.31834554528181647,
+        "median": 0.28179931640625,
+        "std": 0.24198941724079662,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01171875,
+        "max": 0.98046875,
+        "mean": 0.458337964562425,
+        "median": 0.36328125,
+        "std": 0.3869714915307105,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 4,
+        "failures": 996,
+        "success_rate": 0.004
+      },
+      "total_severity": {
+        "min": 0.0005405970982142857,
+        "max": 0.10180082775297619,
+        "mean": 0.04544596533143991,
+        "median": 0.0453093998015873,
+        "std": 0.02183294923364486,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01171875,
+        "max": 0.109375,
+        "mean": 0.07504584027059323,
+        "median": 0.0859375,
+        "std": 0.030358275056562797,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.04489707341269841,
+        "max": 0.7702566964285714,
+        "mean": 0.3654691096230161,
+        "median": 0.3504022507440476,
+        "std": 0.14648390846692713,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.971875,
+        "mean": 0.4034200062560389,
+        "median": 0.33125,
+        "std": 0.2696143953141695,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 2,
+        "failures": 998,
+        "success_rate": 0.002
+      },
+      "total_severity": {
+        "min": 0.0001953125,
+        "max": 0.882421875,
+        "mean": 0.33484542326841166,
+        "median": 0.29753417968749996,
+        "std": 0.20075230311445877,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.971875,
+        "mean": 0.42384555836293486,
+        "median": 0.325,
+        "std": 0.32003844675962406,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.03326977926587302,
+        "max": 0.32742745535714285,
+        "mean": 0.185513199094742,
+        "median": 0.18737289186507938,
+        "std": 0.055485091465029474,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01875,
+        "max": 0.390625,
+        "mean": 0.22717474932944834,
+        "median": 0.246875,
+        "std": 0.10749778752716793,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.04000031001984127,
+        "max": 0.7334333147321429,
+        "mean": 0.34931785171751006,
+        "median": 0.3399270678323413,
+        "std": 0.1462189001614799,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.00390625,
+        "max": 0.98046875,
+        "mean": 0.3804218682812689,
+        "median": 0.3515625,
+        "std": 0.2693002086045947,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 2,
+        "failures": 998,
+        "success_rate": 0.002
+      },
+      "total_severity": {
+        "min": 0.0006103515625,
+        "max": 0.90618896484375,
+        "mean": 0.3399160992884206,
+        "median": 0.309112548828125,
+        "std": 0.2275916360922658,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.00390625,
+        "max": 0.98046875,
+        "mean": 0.4279149554319333,
+        "median": 0.30859375,
+        "std": 0.36161560243632374,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.011804005456349206,
+        "max": 0.14742218501984128,
+        "mean": 0.08213395763578868,
+        "median": 0.08298262338789683,
+        "std": 0.027587506829948878,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0078125,
+        "max": 0.17578125,
+        "mean": 0.1046004276661154,
+        "median": 0.1171875,
+        "std": 0.05005783073526429,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.040112692212301584,
+        "max": 0.7744566902281746,
+        "mean": 0.34031772770957336,
+        "median": 0.3259703621031746,
+        "std": 0.15988616994684246,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0078125,
+        "max": 0.9765625,
+        "mean": 0.37518089091310275,
+        "median": 0.25,
+        "std": 0.2780638895060021,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 7,
+        "failures": 993,
+        "success_rate": 0.007
+      },
+      "total_severity": {
+        "min": 0.0001220703125,
+        "max": 0.8843994140625,
+        "mean": 0.33362799852876385,
+        "median": 0.2960205078125,
+        "std": 0.21344291005103228,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0078125,
+        "max": 0.9765625,
+        "mean": 0.4177054090327029,
+        "median": 0.25,
+        "std": 0.34047763534446485,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.023108103918650792,
+        "max": 0.22310965401785715,
+        "mean": 0.12745663984995026,
+        "median": 0.1282106429811508,
+        "std": 0.03761967239553424,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015625,
+        "max": 0.2578125,
+        "mean": 0.1573499256506885,
+        "median": 0.15625,
+        "std": 0.06830948658794486,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.016721695188492064,
+        "max": 0.7574249751984127,
+        "mean": 0.33910970439608085,
+        "median": 0.32974969773065477,
+        "std": 0.1309330546707525,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.00390625,
+        "max": 0.9765625,
+        "mean": 0.36882937538507105,
+        "median": 0.33984375,
+        "std": 0.2532873180209551,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 3,
+        "failures": 997,
+        "success_rate": 0.003
+      },
+      "total_severity": {
+        "min": 0.00054931640625,
+        "max": 0.869873046875,
+        "mean": 0.32435630867211007,
+        "median": 0.2755126953125,
+        "std": 0.21289140995078853,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.00390625,
+        "max": 0.9765625,
+        "mean": 0.4045371932477864,
+        "median": 0.234375,
+        "std": 0.34379767103999986,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.016872829861111112,
+        "max": 0.20902312748015872,
+        "mean": 0.10767802889384905,
+        "median": 0.10766117156498016,
+        "std": 0.03582173164913829,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0078125,
+        "max": 0.23828125,
+        "mean": 0.13279572017938646,
+        "median": 0.14453125,
+        "std": 0.06818181282101632,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.00957186259920635,
+        "max": 0.7594029017857142,
+        "mean": 0.3083334387400791,
+        "median": 0.3077566964285714,
+        "std": 0.15550784377133978,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.98125,
+        "mean": 0.35007738898450247,
+        "median": 0.34375,
+        "std": 0.28115684731596724,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 4,
+        "failures": 996,
+        "success_rate": 0.004
+      },
+      "total_severity": {
+        "min": 0.0001953125,
+        "max": 0.89130859375,
+        "mean": 0.3264475381996737,
+        "median": 0.30205078124999996,
+        "std": 0.23825511074929698,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.98125,
+        "mean": 0.4359381546696541,
+        "median": 0.403125,
+        "std": 0.3880740035094749,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.0008169022817460318,
+        "max": 0.03901909722222222,
+        "mean": 0.015357942267664482,
+        "median": 0.015297929067460317,
+        "std": 0.006913041789365813,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.00625,
+        "max": 0.046875,
+        "mean": 0.02217214339837389,
+        "median": 0.021875,
+        "std": 0.01110341005024728,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.004079861111111111,
+        "max": 0.708079117063492,
+        "mean": 0.3016661876860119,
+        "median": 0.29800812251984127,
+        "std": 0.14584088119578725,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.978125,
+        "mean": 0.3679726285283555,
+        "median": 0.3625,
+        "std": 0.26518464545336656,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 6,
+        "failures": 994,
+        "success_rate": 0.006
+      },
+      "total_severity": {
+        "min": 0.00009765625,
+        "max": 0.929248046875,
+        "mean": 0.3060047786720321,
+        "median": 0.26962890625,
+        "std": 0.23980229759039604,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.978125,
+        "mean": 0.45333830139038345,
+        "median": 0.4375,
+        "std": 0.3767831599227832,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 35,
+        "failures": 965,
+        "success_rate": 0.035
+      },
+      "total_severity": {
+        "min": 6.200396825396825e-6,
+        "max": 0.05592137896825397,
+        "mean": 0.01776695439078047,
+        "median": 0.015891617063492063,
+        "std": 0.012248674037887045,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0125,
+        "max": 0.075,
+        "mean": 0.034031843306697646,
+        "median": 0.03125,
+        "std": 0.0199853188394898,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.04240490141369048,
+        "max": 0.8036547464037699,
+        "mean": 0.3810641915457591,
+        "median": 0.3676883758060516,
+        "std": 0.14760227545740867,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.00390625,
+        "max": 0.97265625,
+        "mean": 0.43276330689421194,
+        "median": 0.36328125,
+        "std": 0.25709366960468727,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 6,
+        "failures": 994,
+        "success_rate": 0.006
+      },
+      "total_severity": {
+        "min": 0.0001220703125,
+        "max": 0.8682861328125,
+        "mean": 0.35856754295303067,
+        "median": 0.33172607421875,
+        "std": 0.2020612250106577,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.00390625,
+        "max": 0.97265625,
+        "mean": 0.4624276843273597,
+        "median": 0.3671875,
+        "std": 0.30534617664525343,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.013354104662698412,
+        "max": 0.3641241164434524,
+        "mean": 0.20705007207961318,
+        "median": 0.21382649739583331,
+        "std": 0.06493386053880365,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0234375,
+        "max": 0.40234375,
+        "mean": 0.27376582618606315,
+        "median": 0.31640625,
+        "std": 0.11179199153483844,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.00035342261904761904,
+        "max": 0.7088231646825397,
+        "mean": 0.2942120597718253,
+        "median": 0.2885897197420635,
+        "std": 0.15046192450409435,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.978125,
+        "mean": 0.41927732933591605,
+        "median": 0.39375,
+        "std": 0.23936506851084696,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 21,
+        "failures": 979,
+        "success_rate": 0.021
+      },
+      "total_severity": {
+        "min": 0.000048828125,
+        "max": 0.857666015625,
+        "mean": 0.2966850740551583,
+        "median": 0.2673828125,
+        "std": 0.23057779963962588,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.978125,
+        "mean": 0.5528521294314581,
+        "median": 0.58125,
+        "std": 0.34130527425556,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 507,
+        "failures": 493,
+        "success_rate": 0.507
+      },
+      "total_severity": {
+        "min": 0.000037202380952380956,
+        "max": 0.04382440476190476,
+        "mean": 0.013085176599375374,
+        "median": 0.011235119047619048,
+        "std": 0.009607990694385166,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0375,
+        "max": 0.05,
+        "mean": 0.043369893986106266,
+        "median": 0.04375,
+        "std": 0.004782260907593776,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Missouri.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.08247147817460318,
+        "max": 0.7497457837301588,
+        "mean": 0.37876519717261864,
+        "median": 0.37160295758928574,
+        "std": 0.12160936898914058,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.975,
+        "mean": 0.4067431108243883,
+        "median": 0.378125,
+        "std": 0.24226903417989323,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.00009765625,
+        "max": 0.84677734375,
+        "mean": 0.34366852203766285,
+        "median": 0.310693359375,
+        "std": 0.20251378210524837,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.003125,
+        "max": 0.975,
+        "mean": 0.4153803664599569,
+        "median": 0.3,
+        "std": 0.3226391280189895,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.04306640625,
+        "max": 0.2982793898809524,
+        "mean": 0.17163611421130953,
+        "median": 0.17141927083333333,
+        "std": 0.04576445789564709,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01875,
+        "max": 0.346875,
+        "mean": 0.2059682410592522,
+        "median": 0.215625,
+        "std": 0.09442792850545954,
+        "values": []
+      }
+    }
+  }
+]

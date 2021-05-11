@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 234,
+        "failures": 766,
+        "success_rate": 0.234
+      },
+      "total_severity": {
+        "min": 0.00015096618357487922,
+        "max": 0.5413647342995169,
+        "mean": 0.11556244560487382,
+        "median": 0.09475015096618358,
+        "std": 0.09879906620349664,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.2953084017261052,
+        "median": 0.25,
+        "std": 0.19079989480282553,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 167,
+        "failures": 833,
+        "success_rate": 0.167
+      },
+      "total_severity": {
+        "min": 0.001736111111111111,
+        "max": 0.7170138888888888,
+        "mean": 0.23772894574496456,
+        "median": 0.20789930555555555,
+        "std": 0.18722093315622862,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.4994931248905489,
+        "median": 0.5,
+        "std": 0.2948346053225633,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 17,
+        "failures": 983,
+        "success_rate": 0.017
+      },
+      "total_severity": {
+        "min": 0.00030193236714975844,
+        "max": 0.6431662640901772,
+        "mean": 0.17856837165795986,
+        "median": 0.16379830917874397,
+        "std": 0.12187477675870337,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013888888888888888,
+        "max": 0.9444444444444444,
+        "mean": 0.29989432040084923,
+        "median": 0.2777777777777778,
+        "std": 0.19491420478323382,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 115,
+        "failures": 885,
+        "success_rate": 0.115
+      },
+      "total_severity": {
+        "min": 0.0011574074074074073,
+        "max": 0.8171296296296297,
+        "mean": 0.27301082862523524,
+        "median": 0.24305555555555555,
+        "std": 0.21112916415093216,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.027777777777777776,
+        "max": 0.9444444444444444,
+        "mean": 0.5763592088261447,
+        "median": 0.6111111111111112,
+        "std": 0.2858242603232916,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 10,
+        "failures": 990,
+        "success_rate": 0.01
+      },
+      "total_severity": {
+        "min": 0.00010064412238325282,
+        "max": 0.5684380032206119,
+        "mean": 0.17146998365295454,
+        "median": 0.15962157809983896,
+        "std": 0.11910341229724031,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013888888888888888,
+        "max": 0.9444444444444444,
+        "mean": 0.287154763291187,
+        "median": 0.25,
+        "std": 0.20616180103808698,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 117,
+        "failures": 883,
+        "success_rate": 0.117
+      },
+      "total_severity": {
+        "min": 0.0011574074074074073,
+        "max": 0.8159722222222222,
+        "mean": 0.26831010653915494,
+        "median": 0.2337962962962963,
+        "std": 0.20943002520648404,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.027777777777777776,
+        "max": 0.9444444444444444,
+        "mean": 0.5665067029767569,
+        "median": 0.625,
+        "std": 0.2990352311185165,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 216,
+        "failures": 784,
+        "success_rate": 0.216
+      },
+      "total_severity": {
+        "min": 0.00015096618357487922,
+        "max": 0.6499094202898551,
+        "mean": 0.11162832433698118,
+        "median": 0.09080615942028986,
+        "std": 0.09936398709935516,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.875,
+        "mean": 0.29188770598439645,
+        "median": 0.25,
+        "std": 0.20697759498445548,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 170,
+        "failures": 830,
+        "success_rate": 0.17
+      },
+      "total_severity": {
+        "min": 0.001736111111111111,
+        "max": 0.7847222222222222,
+        "mean": 0.23102618808567607,
+        "median": 0.1857638888888889,
+        "std": 0.1922645024658501,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.5046651679643291,
+        "median": 0.5416666666666666,
+        "std": 0.30079972846733677,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 12,
+        "failures": 988,
+        "success_rate": 0.012
+      },
+      "total_severity": {
+        "min": 0.00012077294685990338,
+        "max": 0.512469806763285,
+        "mean": 0.14590297947348854,
+        "median": 0.12133152173913044,
+        "std": 0.11217633754804265,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.9333333333333333,
+        "mean": 0.24401996802499318,
+        "median": 0.2,
+        "std": 0.19059301925967803,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 115,
+        "failures": 885,
+        "success_rate": 0.115
+      },
+      "total_severity": {
+        "min": 0.0006944444444444445,
+        "max": 0.7607638888888889,
+        "mean": 0.24076545825486523,
+        "median": 0.19375,
+        "std": 0.1926589386958426,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016666666666666666,
+        "max": 0.9333333333333333,
+        "mean": 0.51241065464263,
+        "median": 0.49166666666666664,
+        "std": 0.292021015934697,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 214,
+        "failures": 786,
+        "success_rate": 0.214
+      },
+      "total_severity": {
+        "min": 0.0004528985507246377,
+        "max": 0.6186594202898551,
+        "mean": 0.12723049655197843,
+        "median": 0.10092089371980677,
+        "std": 0.11054590177311757,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.3339650436803004,
+        "median": 0.3333333333333333,
+        "std": 0.20362524121760422,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 177,
+        "failures": 823,
+        "success_rate": 0.177
+      },
+      "total_severity": {
+        "min": 0.001736111111111111,
+        "max": 0.7482638888888888,
+        "mean": 0.23228027541514792,
+        "median": 0.1892361111111111,
+        "std": 0.18973470581112598,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.5238638958666517,
+        "median": 0.5416666666666666,
+        "std": 0.2857872770313743,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 45,
+        "failures": 955,
+        "success_rate": 0.045
+      },
+      "total_severity": {
+        "min": 0.00015096618357487922,
+        "max": 0.7208635265700483,
+        "mean": 0.23089242355262155,
+        "median": 0.2157306763285024,
+        "std": 0.16823985323985785,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9583333333333334,
+        "mean": 0.4866120688276122,
+        "median": 0.5,
+        "std": 0.2450986024978197,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 124,
+        "failures": 876,
+        "success_rate": 0.124
+      },
+      "total_severity": {
+        "min": 0.001736111111111111,
+        "max": 0.9184027777777778,
+        "mean": 0.314234129249112,
+        "median": 0.2864583333333333,
+        "std": 0.2347174577809821,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9583333333333334,
+        "mean": 0.6381818328180555,
+        "median": 0.75,
+        "std": 0.3167411699310594,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 248,
+        "failures": 752,
+        "success_rate": 0.248
+      },
+      "total_severity": {
+        "min": 0.00030193236714975844,
+        "max": 0.46210748792270534,
+        "mean": 0.11370985744937816,
+        "median": 0.09035326086956522,
+        "std": 0.09770895473634467,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.289089741705346,
+        "median": 0.25,
+        "std": 0.19674389667247894,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 184,
+        "failures": 816,
+        "success_rate": 0.184
+      },
+      "total_severity": {
+        "min": 0.001736111111111111,
+        "max": 0.7291666666666666,
+        "mean": 0.22134991149237448,
+        "median": 0.1857638888888889,
+        "std": 0.18225012327705112,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.4797915513742843,
+        "median": 0.4583333333333333,
+        "std": 0.298909889253963,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 52,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 12,
+        "failures": 988,
+        "success_rate": 0.012
+      },
+      "total_severity": {
+        "min": 0.00020128824476650564,
+        "max": 0.6121678743961353,
+        "mean": 0.1832601626115641,
+        "median": 0.1731833735909823,
+        "std": 0.12161793749131596,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013888888888888888,
+        "max": 0.9444444444444444,
+        "mean": 0.310529225630309,
+        "median": 0.3055555555555556,
+        "std": 0.19343949463303775,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 135,
+        "failures": 865,
+        "success_rate": 0.135
+      },
+      "total_severity": {
+        "min": 0.0011574074074074073,
+        "max": 0.8773148148148148,
+        "mean": 0.272075037465211,
+        "median": 0.22453703703703703,
+        "std": 0.20899590239994162,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.027777777777777776,
+        "max": 0.9444444444444444,
+        "mean": 0.5859209313047361,
+        "median": 0.625,
+        "std": 0.28435523923014044,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Funet.gml",
+      "seed": 53,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 210,
+        "failures": 790,
+        "success_rate": 0.21
+      },
+      "total_severity": {
+        "min": 0.00015096618357487922,
+        "max": 0.5348731884057971,
+        "mean": 0.13257028526875791,
+        "median": 0.11065821256038648,
+        "std": 0.109623651360983,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.33510271391972785,
+        "median": 0.3333333333333333,
+        "std": 0.20933990029667493,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 161,
+        "failures": 839,
+        "success_rate": 0.161
+      },
+      "total_severity": {
+        "min": 0.001736111111111111,
+        "max": 0.8125,
+        "mean": 0.24311142563898833,
+        "median": 0.21180555555555555,
+        "std": 0.19261483154715184,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.041666666666666664,
+        "max": 0.9166666666666666,
+        "mean": 0.5383582609333507,
+        "median": 0.5833333333333334,
+        "std": 0.28560804794432565,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  }
+]

@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.010865900383141763,
+        "max": 0.47698084291187737,
+        "mean": 0.17377264367816087,
+        "median": 0.16241379310344828,
+        "std": 0.0741595250506869,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.8133333333333334,
+        "mean": 0.19046816337847053,
+        "median": 0.16,
+        "std": 0.13924075126448,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 4,
+        "failures": 996,
+        "success_rate": 0.004
+      },
+      "total_severity": {
+        "min": 0.0013333333333333333,
+        "max": 0.7908888888888889,
+        "mean": 0.23072958500669363,
+        "median": 0.18566666666666665,
+        "std": 0.1759166007284451,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9333333333333333,
+        "mean": 0.29179328734073906,
+        "median": 0.14666666666666667,
+        "std": 0.29098319402767414,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.002544061302681992,
+        "max": 0.1331800766283525,
+        "mean": 0.060051984674329505,
+        "median": 0.0589808429118774,
+        "std": 0.02379610059706314,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.20666666666666667,
+        "mean": 0.07745495588993359,
+        "median": 0.07333333333333333,
+        "std": 0.04451024639207992,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.002758620689655172,
+        "max": 0.5487969348659004,
+        "mean": 0.1793018697318007,
+        "median": 0.15859770114942529,
+        "std": 0.10770677742185313,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9133333333333333,
+        "mean": 0.21604848948192745,
+        "median": 0.16,
+        "std": 0.1891136352367485,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 7,
+        "failures": 993,
+        "success_rate": 0.007
+      },
+      "total_severity": {
+        "min": 0.00044444444444444447,
+        "max": 0.8088888888888889,
+        "mean": 0.24284413114020384,
+        "median": 0.2008888888888889,
+        "std": 0.19870416472900687,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.94,
+        "mean": 0.3559324313242724,
+        "median": 0.25333333333333335,
+        "std": 0.3203640225247752,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 23,
+        "failures": 977,
+        "success_rate": 0.023
+      },
+      "total_severity": {
+        "min": 0.00003065134099616858,
+        "max": 0.10953256704980843,
+        "mean": 0.027117275889520256,
+        "median": 0.022911877394636015,
+        "std": 0.019312712023851514,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.19333333333333333,
+        "mean": 0.05076896193738822,
+        "median": 0.04,
+        "std": 0.03367798932552081,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.017425287356321838,
+        "max": 0.6950191570881226,
+        "mean": 0.18677353256705,
+        "median": 0.16825287356321839,
+        "std": 0.11153297058779839,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9333333333333333,
+        "mean": 0.218992044966549,
+        "median": 0.15333333333333332,
+        "std": 0.20470335806992238,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 4,
+        "failures": 996,
+        "success_rate": 0.004
+      },
+      "total_severity": {
+        "min": 0.0011111111111111111,
+        "max": 0.7971111111111111,
+        "mean": 0.22835497545738512,
+        "median": 0.17777777777777776,
+        "std": 0.18359766018575407,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.94,
+        "mean": 0.3072980844292037,
+        "median": 0.16666666666666666,
+        "std": 0.3061080649042023,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.0012873563218390805,
+        "max": 0.2129655172413793,
+        "mean": 0.06662429479287717,
+        "median": 0.060659003831417625,
+        "std": 0.038568767713422325,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.35333333333333333,
+        "mean": 0.09436434965041339,
+        "median": 0.07333333333333333,
+        "std": 0.07016567448442858,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 2,
+        "failures": 998,
+        "success_rate": 0.002
+      },
+      "total_severity": {
+        "min": 0.00013793103448275863,
+        "max": 0.606360153256705,
+        "mean": 0.19089509286772766,
+        "median": 0.1734712643678161,
+        "std": 0.11328165625538585,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9,
+        "mean": 0.26045384070636934,
+        "median": 0.22,
+        "std": 0.20211199821663198,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 24,
+        "failures": 976,
+        "success_rate": 0.024
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.7791111111111111,
+        "mean": 0.24564002732240434,
+        "median": 0.20500000000000002,
+        "std": 0.2037654182576532,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9466666666666667,
+        "mean": 0.4013358629540545,
+        "median": 0.36,
+        "std": 0.32944259629057954,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 181,
+        "failures": 819,
+        "success_rate": 0.181
+      },
+      "total_severity": {
+        "min": 0.00003065134099616858,
+        "max": 0.0509272030651341,
+        "mean": 0.011517213310316755,
+        "median": 0.009854406130268199,
+        "std": 0.008494537054134846,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.08666666666666667,
+        "mean": 0.03107951705016161,
+        "median": 0.02666666666666667,
+        "std": 0.012901014325626235,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.00020434227330779056,
+        "max": 0.7072030651340996,
+        "mean": 0.24959122596415065,
+        "median": 0.23634738186462326,
+        "std": 0.1470568493121509,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.011111111111111112,
+        "max": 0.9666666666666667,
+        "mean": 0.3839732477728034,
+        "median": 0.36666666666666664,
+        "std": 0.2311769918803914,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 52,
+        "failures": 948,
+        "success_rate": 0.052
+      },
+      "total_severity": {
+        "min": 0.00037037037037037035,
+        "max": 0.8848148148148148,
+        "mean": 0.2956524456946401,
+        "median": 0.2711111111111111,
+        "std": 0.2204192037102455,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.011111111111111112,
+        "max": 0.9666666666666667,
+        "mean": 0.5937684877872587,
+        "median": 0.6444444444444445,
+        "std": 0.29852231929341516,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.008199233716475096,
+        "max": 0.5885210727969349,
+        "mean": 0.21416824521072825,
+        "median": 0.20629885057471264,
+        "std": 0.10020478564839469,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9066666666666666,
+        "mean": 0.2614776706567865,
+        "median": 0.24,
+        "std": 0.17935248079126528,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 19,
+        "failures": 981,
+        "success_rate": 0.019
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.8182222222222222,
+        "mean": 0.2646727828746178,
+        "median": 0.23577777777777778,
+        "std": 0.20387976183910214,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9533333333333334,
+        "mean": 0.42186525129977726,
+        "median": 0.41333333333333333,
+        "std": 0.3240178341505388,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 87,
+        "failures": 913,
+        "success_rate": 0.087
+      },
+      "total_severity": {
+        "min": 0.00006130268199233716,
+        "max": 0.03926436781609195,
+        "mean": 0.011355448964090433,
+        "median": 0.010022988505747127,
+        "std": 0.007940279506126751,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.04666666666666667,
+        "mean": 0.026729927295717135,
+        "median": 0.02666666666666667,
+        "std": 0.011234338892860211,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.00003065134099616858,
+        "max": 0.6579157088122606,
+        "mean": 0.20504357230794024,
+        "median": 0.19118773946360154,
+        "std": 0.11755636931394185,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9333333333333333,
+        "mean": 0.2933828095418263,
+        "median": 0.2866666666666667,
+        "std": 0.20200521692838658,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 42,
+        "failures": 958,
+        "success_rate": 0.042
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.8293333333333334,
+        "mean": 0.25826931106471834,
+        "median": 0.2131111111111111,
+        "std": 0.2074206055584011,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9533333333333334,
+        "mean": 0.48105379131557546,
+        "median": 0.47333333333333333,
+        "std": 0.3249852524827039,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 513,
+        "failures": 487,
+        "success_rate": 0.513
+      },
+      "total_severity": {
+        "min": 0.00006130268199233716,
+        "max": 0.02274329501915709,
+        "mean": 0.006310148142903213,
+        "median": 0.0050268199233716475,
+        "std": 0.004896282851923537,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.02666666666666667,
+        "mean": 0.02018776648492453,
+        "median": 0.02666666666666667,
+        "std": 0.006664021923101862,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0005747126436781609,
+        "max": 0.7001149425287356,
+        "mean": 0.21009814176245192,
+        "median": 0.19490421455938697,
+        "std": 0.13497968586049078,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.9583333333333334,
+        "mean": 0.2697119153929697,
+        "median": 0.19166666666666668,
+        "std": 0.2385902714007056,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 23,
+        "failures": 977,
+        "success_rate": 0.023
+      },
+      "total_severity": {
+        "min": 0.0011111111111111111,
+        "max": 0.8755555555555555,
+        "mean": 0.26874331854884576,
+        "median": 0.22055555555555556,
+        "std": 0.21842372449967695,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016666666666666666,
+        "max": 0.9583333333333334,
+        "mean": 0.4074311626062267,
+        "median": 0.3,
+        "std": 0.3597794050382908,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 70,
+        "failures": 930,
+        "success_rate": 0.07
+      },
+      "total_severity": {
+        "min": 0.000038314176245210727,
+        "max": 0.07086206896551724,
+        "mean": 0.020550611790878758,
+        "median": 0.01731800766283525,
+        "std": 0.01471488257917699,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016666666666666666,
+        "max": 0.09166666666666666,
+        "mean": 0.04108416230555706,
+        "median": 0.03333333333333333,
+        "std": 0.025293688165047686,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.020659003831417624,
+        "max": 0.5991570881226054,
+        "mean": 0.20848045977011495,
+        "median": 0.1864904214559387,
+        "std": 0.11154244815114864,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9,
+        "mean": 0.2369424188825212,
+        "median": 0.16,
+        "std": 0.20175260296373512,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 11,
+        "failures": 989,
+        "success_rate": 0.011
+      },
+      "total_severity": {
+        "min": 0.0008888888888888889,
+        "max": 0.7977777777777778,
+        "mean": 0.2479820244916299,
+        "median": 0.19088888888888889,
+        "std": 0.19858704946282082,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.9533333333333334,
+        "mean": 0.33483328782496574,
+        "median": 0.14,
+        "std": 0.33278724612007765,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.00003065134099616858,
+        "max": 0.10567049808429119,
+        "mean": 0.04131535632183909,
+        "median": 0.038804597701149426,
+        "std": 0.018776445373256637,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.16666666666666666,
+        "mean": 0.05795196729036766,
+        "median": 0.05333333333333334,
+        "std": 0.033708653071946884,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/IowaStatewideFiberMap.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 11,
+        "failures": 989,
+        "success_rate": 0.011
+      },
+      "total_severity": {
+        "min": 0.00024521072796934864,
+        "max": 0.62544061302682,
+        "mean": 0.14425876983988623,
+        "median": 0.11762452107279693,
+        "std": 0.11285666448725533,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.9266666666666666,
+        "mean": 0.22478924219433702,
+        "median": 0.14,
+        "std": 0.20499750171888248,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 32,
+        "failures": 968,
+        "success_rate": 0.032
+      },
+      "total_severity": {
+        "min": 0.00044444444444444447,
+        "max": 0.814,
+        "mean": 0.2118893480257116,
+        "median": 0.15955555555555556,
+        "std": 0.18310224353732707,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.9266666666666666,
+        "mean": 0.3565870808220991,
+        "median": 0.24666666666666667,
+        "std": 0.3068330141713588,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 125,
+        "failures": 875,
+        "success_rate": 0.125
+      },
+      "total_severity": {
+        "min": 0.00009195402298850575,
+        "max": 0.1289655172413793,
+        "mean": 0.03227097536945812,
+        "median": 0.02832183908045977,
+        "std": 0.02320284044542941,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02666666666666667,
+        "max": 0.18666666666666668,
+        "mean": 0.07371284544072604,
+        "median": 0.06,
+        "std": 0.03677667980552773,
+        "values": []
+      }
+    }
+  }
+]

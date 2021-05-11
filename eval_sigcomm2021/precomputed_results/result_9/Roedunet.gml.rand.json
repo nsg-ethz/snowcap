@@ -1,0 +1,5015 @@
+{
+  "scenario": "Roedunet.gml, s=42, FullMesh2RouteReflector",
+  "ideal_cost": 0.0,
+  "optimal_cost": null,
+  "optimal_cost_time": null,
+  "num_nodes": 42,
+  "num_edges": 46,
+  "num_commands": 780,
+  "strategy_result": [],
+  "tree_result": [],
+  "random_result": [
+    {
+      "cost": 0.0,
+      "time": 0.428839146,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.446179575,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.437678859,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.455038446,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.459126299,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.479637161,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.489042649,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.51148325,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.507021383,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.506850233,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.519749635,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.527972481,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.518481262,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.503302435,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.550288231,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.549208919,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.557122241,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.569002113,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.568003104,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.557924659,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.586571525,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.576969486,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.564030792,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.579965867,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.567391867,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.599879332,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.596808561,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.636528311,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.636592501,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.627125793,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.584298532,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.61417886,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.575676783,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.590051071,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.647256362,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.62866077,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.660502709,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.668701943,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.660264016,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.67997326,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.670241158,
+      "num_states": 35880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.638469051,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.684718198,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.679721067,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.634814793,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.661351626,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.692239566,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.680233392,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.71782038,
+      "num_states": 40560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.692315057,
+      "num_states": 31980
+    },
+    {
+      "cost": 0.0,
+      "time": 0.654136102,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.70141718,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.707485224,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.688522287,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.720893761,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.674652795,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.660989883,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.743952099,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.728077106,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.700209828,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.731532371,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.759300868,
+      "num_states": 34320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.749258005,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.648946989,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.705642474,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.769284511,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.708873428,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.663907563,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.700969265,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.76725819,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.755117335,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.776095231,
+      "num_states": 28080
+    },
+    {
+      "cost": 0.0,
+      "time": 0.730798374,
+      "num_states": 28080
+    },
+    {
+      "cost": 0.0,
+      "time": 0.815606449,
+      "num_states": 47580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.729174776,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.718066652,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.649756097,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.730163598,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.815464438,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.849709931,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.801358072,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.729007375,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.850825673,
+      "num_states": 35880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.844796921,
+      "num_states": 69420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.728732553,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.763686603,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.721624349,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.849083995,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.711161591,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.834203821,
+      "num_states": 34320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.67233047,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.881065185,
+      "num_states": 67860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.443130154,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.872570007,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.769938928,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.665291387,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.920933036,
+      "num_states": 50700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.881288977,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.716434816,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.76913751,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.745215903,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.854748913,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.825477471,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.536068933,
+      "num_states": 53040
+    },
+    {
+      "cost": 0.0,
+      "time": 1.022602606,
+      "num_states": 81900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.572102116,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.785540349,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.934036522,
+      "num_states": 52260
+    },
+    {
+      "cost": 0.0,
+      "time": 1.022340053,
+      "num_states": 70200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.456506222,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.329799264,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.613587444,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.875420076,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 1.044938597,
+      "num_states": 84240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.963169692,
+      "num_states": 49140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.500339375,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.588374884,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 1.05783219,
+      "num_states": 81120
+    },
+    {
+      "cost": 0.0,
+      "time": 1.0879485899999999,
+      "num_states": 94380
+    },
+    {
+      "cost": 0.0,
+      "time": 1.037319478,
+      "num_states": 75660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.385774712,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.448189716,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.681519775,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 1.099344528,
+      "num_states": 92040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.996034501,
+      "num_states": 49920
+    },
+    {
+      "cost": 0.0,
+      "time": 1.104251628,
+      "num_states": 105300
+    },
+    {
+      "cost": 0.0,
+      "time": 1.068220147,
+      "num_states": 85020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.427575944,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.527111921,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 1.073069507,
+      "num_states": 99840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.99488695,
+      "num_states": 85020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.558129912,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.569549069,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 1.01040183,
+      "num_states": 88920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.55322352,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.635914274,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.644876116,
+      "num_states": 51480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.59292219,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.54930186,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 1.158232645,
+      "num_states": 104520
+    },
+    {
+      "cost": 0.0,
+      "time": 1.167697044,
+      "num_states": 110760
+    },
+    {
+      "cost": 0.0,
+      "time": 1.09655911,
+      "num_states": 80340
+    },
+    {
+      "cost": 0.0,
+      "time": 1.159726901,
+      "num_states": 111540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.656486817,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.997080772,
+      "num_states": 70980
+    },
+    {
+      "cost": 0.0,
+      "time": 0.440059992,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.690446387,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 1.21091086,
+      "num_states": 150540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.706549773,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.625448047,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.700507351,
+      "num_states": 58500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.478991305,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.377335466,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.528135091,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.485264779,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.521455012,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.603360238,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.622649828,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.659816121,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.703368161,
+      "num_states": 31980
+    },
+    {
+      "cost": 0.0,
+      "time": 0.578980536,
+      "num_states": 51480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.420263708,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.579425371,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 1.215481367,
+      "num_states": 113880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.610590872,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.558347253,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.695860883,
+      "num_states": 49140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.576659963,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.583914427,
+      "num_states": 48360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.571273677,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.539915484,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.644610914,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.71403281,
+      "num_states": 69420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.505399507,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 1.282241816,
+      "num_states": 153660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.618905759,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.617437493,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.52991285,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.535954503,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 1.278976793,
+      "num_states": 117780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.787641351,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.546199829,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.6354549,
+      "num_states": 35880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.486500782,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.869896469,
+      "num_states": 109980
+    },
+    {
+      "cost": 0.0,
+      "time": 0.526775318,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.554317132,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.522559114,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.590357204,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.536480428,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.48535968,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.475161715,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.655468197,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.468214244,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.666229027,
+      "num_states": 57720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.469709209,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.554283412,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.693511749,
+      "num_states": 55380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.427343731,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.581609813,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.513909855,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.670495402,
+      "num_states": 46800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.463214142,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.500269724,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.533136974,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.556323592,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.673133379,
+      "num_states": 52260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.55996962,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.555411854,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.797590723,
+      "num_states": 87360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.591163902,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.432619966,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.448550671,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.518636584,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.663844723,
+      "num_states": 56940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.62971146,
+      "num_states": 50700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.688673359,
+      "num_states": 56940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.604386509,
+      "num_states": 34320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.44466232,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.83302456,
+      "num_states": 86580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.786208696,
+      "num_states": 71760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.481343629,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.619835028,
+      "num_states": 49920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.472011463,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.57060014,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.457578074,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.624040502,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.43875943,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.630858572,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.51531103,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.423668873,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.456804866,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.436679468,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.923624425,
+      "num_states": 124020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434879039,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.490735626,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.428453023,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.788815992,
+      "num_states": 72540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.76047171,
+      "num_states": 69420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.46010829,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434829779,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.538059014,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.746007671,
+      "num_states": 54600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.468231743,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.502047742,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.463367703,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.80019559,
+      "num_states": 69420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.586218231,
+      "num_states": 35880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.555672996,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.619582655,
+      "num_states": 45240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.440659179,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.421493941,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.567484598,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.61600974,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.826525442,
+      "num_states": 86580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.656137303,
+      "num_states": 52260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.435263213,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.432159461,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.526882839,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.979604212,
+      "num_states": 108420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.439399406,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.680763007,
+      "num_states": 55380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.503614098,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.431986409,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.485681654,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.523377083,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.538949603,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.421918455,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.510786473,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.601009255,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.500600738,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.456700264,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.564057793,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.452618442,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434899749,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.453110697,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.473342876,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.451871325,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.645089948,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.502526347,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.489963747,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.962292863,
+      "num_states": 122460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.701036736,
+      "num_states": 52260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.68199309,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.631536719,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.42147298,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.421809374,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.477260736,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.712845908,
+      "num_states": 63180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.472919042,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.517429641,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.52708138,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.513200508,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.445066874,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.50375918,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.507122404,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.649172541,
+      "num_states": 39780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.495564986,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.477585659,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.702822005,
+      "num_states": 60840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.55215853,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.565825571,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.536365657,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.92124799,
+      "num_states": 101400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.596083703,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.638968226,
+      "num_states": 34320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.484868975,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.545672873,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.451585972,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.576375039,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.671755725,
+      "num_states": 49140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.436016591,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.514723663,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.659585638,
+      "num_states": 46800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.668803484,
+      "num_states": 46020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.689876721,
+      "num_states": 59280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.458306491,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.619304622,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.455738275,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.602749742,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.435730858,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434739048,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.593461496,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.86021015,
+      "num_states": 79560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.512024236,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.508930263,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.601289847,
+      "num_states": 39780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.567587719,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.928537065,
+      "num_states": 91260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.709249851,
+      "num_states": 56940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.445247216,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.477752992,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.531002332,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434505535,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.531205063,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.549097738,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.752478297,
+      "num_states": 74880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.508220266,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.501697048,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.453615902,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.454676734,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.446082765,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.798020988,
+      "num_states": 77220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.512973836,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.88160663,
+      "num_states": 78780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.838386954,
+      "num_states": 89700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.463334973,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.424809805,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.693171326,
+      "num_states": 58500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.822070307,
+      "num_states": 83460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.45339365,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.582699605,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.98325462,
+      "num_states": 124800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.437467646,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.421823083,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.423141268,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.51151021,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.467996161,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.633425479,
+      "num_states": 39780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.651074661,
+      "num_states": 48360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.507228986,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.53771994,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.429007749,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.828390442,
+      "num_states": 78000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.525589395,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.46785535,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.450830014,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.469987132,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.426561613,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.582955428,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.442565158,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.496649216,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.80690664,
+      "num_states": 71760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.591091942,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.83115741,
+      "num_states": 66300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.464415164,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434531876,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.62293043,
+      "num_states": 40560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.506187785,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.495151711,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.611586124,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.611567233,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.613042848,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.477098035,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.448580521,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.472595889,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.506833112,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.459970968,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.460442993,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.572166576,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.454695573,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.481037335,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.581855946,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.953095069,
+      "num_states": 95940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.442666499,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.64128415,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.441414216,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 1.02106725,
+      "num_states": 99060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.599801152,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.488501772,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.497513365,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.496563015,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.583498773,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.428374932,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.432797887,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.474009813,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.523595035,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.95413704,
+      "num_states": 105300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.690008073,
+      "num_states": 47580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.452633393,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.688515907,
+      "num_states": 54600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.429988639,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.555542125,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.659792561,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.648862698,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.560355954,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.601008064,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.432556445,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.459860657,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.466542095,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.608054837,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.534413097,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.605308788,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.732917005,
+      "num_states": 57720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.517707464,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.484984006,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.543374459,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.700549641,
+      "num_states": 59280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.443902123,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.440690729,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.448682331,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.442640599,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.479637421,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.518916016,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.527294133,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.600320228,
+      "num_states": 46020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.436527146,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.459320731,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.683735638,
+      "num_states": 53820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.54929757,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 1.020039789,
+      "num_states": 118560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.623502526,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.485415291,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.629543149,
+      "num_states": 46800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.573720182,
+      "num_states": 34320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.423474861,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.56385168,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.677964888,
+      "num_states": 53820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.428518234,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.496593287,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.496563756,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.550658584,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.603812753,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.474483798,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.531685008,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.720950582,
+      "num_states": 58500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.859030748,
+      "num_states": 70200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.495251302,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.605608892,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.48530271,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.658903551,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.890457832,
+      "num_states": 92040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.656363485,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.553592544,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.627597018,
+      "num_states": 49920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.632063995,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.454433551,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.506290947,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.689774801,
+      "num_states": 57720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.46502609,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.625906901,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.572748193,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.505191144,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.538506809,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.592687558,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.520819617,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.552309821,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.459317721,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.436540957,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.472110393,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.635716053,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.556313123,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.483624132,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.542307328,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.455801845,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.616493554,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.59381327,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.510101416,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.497160452,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.45051159,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.47956823,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.766748335,
+      "num_states": 60840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.456101789,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.458394242,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.514744674,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.546567511,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.583841067,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.5734631,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.51822282,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.531622888,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.947191468,
+      "num_states": 108420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.578314699,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.549438962,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.429042889,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.527535895,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.486235829,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.658172914,
+      "num_states": 46020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.623963211,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.4514386,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.483297099,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.445984753,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.42530235,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.691931472,
+      "num_states": 46800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.50666718,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.42625451,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.473514088,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.442607309,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.5859777,
+      "num_states": 35880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.578554352,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.540834853,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.486668674,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.572970994,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.46889392,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.638268878,
+      "num_states": 40560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.633072725,
+      "num_states": 39780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.455448931,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.457892197,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.731796834,
+      "num_states": 56940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.516896116,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.461852228,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.671181348,
+      "num_states": 47580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.486675573,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.425343141,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.530484286,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.551029748,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.456399911,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.52111545,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.534861881,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.446417308,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.473908273,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.610433361,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.55608224,
+      "num_states": 28080
+    },
+    {
+      "cost": 0.0,
+      "time": 0.471696099,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.459697715,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.609063707,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.630588749,
+      "num_states": 45240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.464370733,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.435335984,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.654685119,
+      "num_states": 35880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.486832895,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.506798932,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.811490217,
+      "num_states": 75660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.740020779,
+      "num_states": 53040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.504668689,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.83225576,
+      "num_states": 64740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.736094868,
+      "num_states": 62400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.568032203,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.441202215,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.612414232,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.476486019,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.44557969,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.628185224,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.491440212,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.677795316,
+      "num_states": 51480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.435849509,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.598353596,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.452131567,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.505154934,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.608829745,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.56481817,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.466390395,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.490915487,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.623813619,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.571078715,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.425804165,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.664178346,
+      "num_states": 44460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.450981236,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.750122843,
+      "num_states": 51480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.485661013,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.852905593,
+      "num_states": 87360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.46596242,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.511375609,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.637545442,
+      "num_states": 54600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.511726333,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.618466374,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.626665779,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.521291731,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.906785701,
+      "num_states": 98280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.785832302,
+      "num_states": 63960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.452068447,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 1.001194835,
+      "num_states": 97500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.446033894,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.50955611,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.543611361,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.56777099,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.547009147,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.534597409,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.463626826,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.668017006,
+      "num_states": 55380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.605671902,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.936488547,
+      "num_states": 106860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.570267787,
+      "num_states": 31980
+    },
+    {
+      "cost": 0.0,
+      "time": 0.641588753,
+      "num_states": 47580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.458642964,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.624711539,
+      "num_states": 44460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.524570235,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.730906034,
+      "num_states": 52260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.462639525,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.476331477,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 1.016614404,
+      "num_states": 138840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.461388093,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.465763378,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.510676152,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.616692075,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.518924907,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.632779821,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.499894961,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.504379637,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.424102858,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.441430517,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 1.132264988,
+      "num_states": 141180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.424889906,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.579643964,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.626896211,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.467197803,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.474024043,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.557462954,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.643387081,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.426682824,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434809199,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.600430668,
+      "num_states": 47580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.437007721,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.480386009,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.634857953,
+      "num_states": 45240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.863268381,
+      "num_states": 106080
+    },
+    {
+      "cost": 0.0,
+      "time": 0.482940685,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.518303011,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.580988827,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.703245219,
+      "num_states": 58500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.737218601,
+      "num_states": 53820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.440280575,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.450578911,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.509437539,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.662438808,
+      "num_states": 41340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434814289,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.434140452,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.509897563,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.639175859,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.466178962,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.475037354,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.440428416,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.652019811,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.429647685,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.539650031,
+      "num_states": 24960
+    },
+    {
+      "cost": 0.0,
+      "time": 0.477635781,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.505803861,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.544775824,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.513128706,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.427967027,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.501064162,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.497409615,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.435383684,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.457556414,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.523744717,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.436235603,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.490644274,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.4930536,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.45143784,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.529803339,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.429684645,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.460063919,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.669569682,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.457245759,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.506477239,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 1.009730243,
+      "num_states": 102180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.48427659,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.663392788,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.427783886,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.512027465,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.457580833,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.461899568,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.46399484,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.585924268,
+      "num_states": 39780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.532671708,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.429609255,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.58799083,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.640512022,
+      "num_states": 46020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.500959731,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.524292772,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.575282718,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.530049632,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.552521963,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.886256258,
+      "num_states": 72540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.574266798,
+      "num_states": 41340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.443321107,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.443788161,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.62391703,
+      "num_states": 39780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.438214093,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.721500027,
+      "num_states": 58500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.590286444,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.644693985,
+      "num_states": 54600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.61512898,
+      "num_states": 46020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.424452871,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.565343715,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.488540383,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.465449095,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.894506844,
+      "num_states": 92040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.446990093,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.556357593,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.442040074,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.558272873,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.602249606,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.727393468,
+      "num_states": 50700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.818379768,
+      "num_states": 79560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.528811209,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.493213701,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.640903476,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.526348403,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.491394583,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.563411396,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.49797515,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.483994436,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.764128048,
+      "num_states": 66300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.426754976,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.424948347,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.426977768,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.474483049,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.523979809,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.626269615,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.541180806,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.549003647,
+      "num_states": 28080
+    },
+    {
+      "cost": 0.0,
+      "time": 0.772888509,
+      "num_states": 85020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.587992519,
+      "num_states": 28080
+    },
+    {
+      "cost": 0.0,
+      "time": 0.470732049,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.533940172,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.738205741,
+      "num_states": 68640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.493223841,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.647502144,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.443373636,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.777763598,
+      "num_states": 56940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.695468859,
+      "num_states": 56940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.63449303,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.647173181,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.596547808,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.59865063,
+      "num_states": 34320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.439575678,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.942491499,
+      "num_states": 100620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.516886836,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.469671148,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.603885423,
+      "num_states": 28860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.539397488,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.437379615,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.457899837,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.566548088,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.558736987,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.745511826,
+      "num_states": 68640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.757244987,
+      "num_states": 67860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.490068579,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.666435169,
+      "num_states": 57720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.869507725,
+      "num_states": 80340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.492786997,
+      "num_states": 11700
+    },
+    {
+      "cost": 0.0,
+      "time": 1.040210008,
+      "num_states": 124020
+    },
+    {
+      "cost": 0.0,
+      "time": 1.094180165,
+      "num_states": 141180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.522702476,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.430312932,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.589161352,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.489866157,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.649656816,
+      "num_states": 41340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.486474542,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.58228219,
+      "num_states": 34320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.517306819,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.424613512,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.632938404,
+      "num_states": 44460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.426996118,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.527310613,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.432403503,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.516092887,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.775433324,
+      "num_states": 77220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.672636434,
+      "num_states": 41340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.446635291,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.626608038,
+      "num_states": 39780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.445698201,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.455690544,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.481772833,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.660554019,
+      "num_states": 53820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.52216774,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.524954419,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 1.092278616,
+      "num_states": 109980
+    },
+    {
+      "cost": 0.0,
+      "time": 1.330252211,
+      "num_states": 158340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.554379643,
+      "num_states": 20280
+    },
+    {
+      "cost": 0.0,
+      "time": 0.579735155,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.431664056,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.723292746,
+      "num_states": 58500
+    },
+    {
+      "cost": 0.0,
+      "time": 1.102811754,
+      "num_states": 124020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.444538209,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.825988606,
+      "num_states": 70200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.511172557,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.44461274,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.581684365,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.577815304,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.539214616,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.4505262,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.443608588,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.517413361,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.44855538,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.664108156,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.513897805,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.555342133,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.575988666,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.550474672,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.477888843,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.433016989,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.496175931,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.504297866,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.443455268,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.431199381,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.489496663,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.450862034,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.438596088,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.556424563,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.497080681,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.570378578,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 1.026000661,
+      "num_states": 112320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.649814988,
+      "num_states": 45240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.906273815,
+      "num_states": 109200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.501139913,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.450277208,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.532663368,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.58601973,
+      "num_states": 26520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.901607357,
+      "num_states": 102180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.914216067,
+      "num_states": 95160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.592296364,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 1.586728769,
+      "num_states": 196560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.547837685,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 1.230477751,
+      "num_states": 152100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.660623059,
+      "num_states": 49920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.461703455,
+      "num_states": 10140
+    },
+    {
+      "cost": 0.0,
+      "time": 0.460462753,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.442269035,
+      "num_states": 4680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.553643775,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.429830927,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.471566937,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 1.475694334,
+      "num_states": 210600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.453602073,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.565448607,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.439816649,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.519389002,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.741029829,
+      "num_states": 70980
+    },
+    {
+      "cost": 0.0,
+      "time": 0.66356672,
+      "num_states": 46020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.701518712,
+      "num_states": 48360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.47948689,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.68005471,
+      "num_states": 51480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.428952138,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.439643009,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.533868911,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.459115778,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.435843029,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.44759144,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.52414551,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.447163136,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.528765639,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.644047288,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.525593355,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.522648555,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.66935321,
+      "num_states": 55380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.752426787,
+      "num_states": 65520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.512653042,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.552443452,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.638785314,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.765613943,
+      "num_states": 62400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.565075863,
+      "num_states": 27300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.617651576,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.594169754,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.721912982,
+      "num_states": 53040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.520487302,
+      "num_states": 21060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.5889706,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.671410421,
+      "num_states": 53820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.471645489,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.43791276,
+      "num_states": 3900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.472937592,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.512823994,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.453900406,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.625128753,
+      "num_states": 41340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.811641378,
+      "num_states": 88920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.46493761,
+      "num_states": 12480
+    },
+    {
+      "cost": 0.0,
+      "time": 0.429297422,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.504474168,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.509802563,
+      "num_states": 19500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.629454328,
+      "num_states": 35880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.709760107,
+      "num_states": 57720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.433560725,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.616653746,
+      "num_states": 41340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.818774442,
+      "num_states": 77220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.515008546,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.646026459,
+      "num_states": 46800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.617806458,
+      "num_states": 43680
+    },
+    {
+      "cost": 0.0,
+      "time": 0.748449476,
+      "num_states": 60060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.686357565,
+      "num_states": 47580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.426552104,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.521021878,
+      "num_states": 24180
+    },
+    {
+      "cost": 0.0,
+      "time": 0.530971201,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.65387547,
+      "num_states": 45240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.646065299,
+      "num_states": 53040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.9289923,
+      "num_states": 117780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.630123894,
+      "num_states": 36660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.456736425,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.73141294,
+      "num_states": 77220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.591341484,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.463868199,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.532160553,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.521436903,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.507217716,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.534268286,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.821856994,
+      "num_states": 74100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.480038195,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.513427149,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.65589566,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.401812427,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.674482292,
+      "num_states": 53040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.542008975,
+      "num_states": 35880
+    },
+    {
+      "cost": 0.0,
+      "time": 0.456532753,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.507884533,
+      "num_states": 17160
+    },
+    {
+      "cost": 0.0,
+      "time": 0.687551618,
+      "num_states": 53820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.509950173,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.477645651,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.428193491,
+      "num_states": 8580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.600250947,
+      "num_states": 42900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.450381029,
+      "num_states": 7800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.509852774,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.593305624,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.4010936,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.430592905,
+      "num_states": 7020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.380284616,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.582549743,
+      "num_states": 38220
+    },
+    {
+      "cost": 0.0,
+      "time": 0.666755203,
+      "num_states": 48360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.657996272,
+      "num_states": 65520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.506021744,
+      "num_states": 25740
+    },
+    {
+      "cost": 0.0,
+      "time": 0.493163211,
+      "num_states": 21840
+    },
+    {
+      "cost": 0.0,
+      "time": 0.523194261,
+      "num_states": 15600
+    },
+    {
+      "cost": 0.0,
+      "time": 0.394652294,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.680400284,
+      "num_states": 66300
+    },
+    {
+      "cost": 0.0,
+      "time": 0.348619289,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.39917482,
+      "num_states": 780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.253896521,
+      "num_states": 1560
+    },
+    {
+      "cost": 0.0,
+      "time": 0.395751085,
+      "num_states": 34320
+    },
+    {
+      "cost": 0.0,
+      "time": 0.558353884,
+      "num_states": 46800
+    },
+    {
+      "cost": 0.0,
+      "time": 0.478603281,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.293036385,
+      "num_states": 5460
+    },
+    {
+      "cost": 0.0,
+      "time": 0.491978699,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.534392397,
+      "num_states": 17940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.353082185,
+      "num_states": 33540
+    },
+    {
+      "cost": 0.0,
+      "time": 0.415472388,
+      "num_states": 22620
+    },
+    {
+      "cost": 0.0,
+      "time": 0.356641172,
+      "num_states": 32760
+    },
+    {
+      "cost": 0.0,
+      "time": 0.282184282,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.386253557,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.547816194,
+      "num_states": 42120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.758035554,
+      "num_states": 75660
+    },
+    {
+      "cost": 0.0,
+      "time": 1.067344268,
+      "num_states": 125580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.455979337,
+      "num_states": 30420
+    },
+    {
+      "cost": 0.0,
+      "time": 0.847747711,
+      "num_states": 97500
+    },
+    {
+      "cost": 0.0,
+      "time": 0.3633624,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.33709072,
+      "num_states": 9360
+    },
+    {
+      "cost": 0.0,
+      "time": 0.329561393,
+      "num_states": 3120
+    },
+    {
+      "cost": 0.0,
+      "time": 0.405171212,
+      "num_states": 13260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.349756341,
+      "num_states": 14040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.892022828,
+      "num_states": 125580
+    },
+    {
+      "cost": 0.0,
+      "time": 0.574152557,
+      "num_states": 45240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.656220434,
+      "num_states": 50700
+    },
+    {
+      "cost": 0.0,
+      "time": 0.699884935,
+      "num_states": 57720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.420627892,
+      "num_states": 31200
+    },
+    {
+      "cost": 0.0,
+      "time": 0.484496722,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 1.006738882,
+      "num_states": 117780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.422815735,
+      "num_states": 2340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.334680105,
+      "num_states": 18720
+    },
+    {
+      "cost": 0.0,
+      "time": 0.426120409,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.451146567,
+      "num_states": 6240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.57923615,
+      "num_states": 35100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.346547677,
+      "num_states": 29640
+    },
+    {
+      "cost": 0.0,
+      "time": 0.411572249,
+      "num_states": 16380
+    },
+    {
+      "cost": 0.0,
+      "time": 0.52888738,
+      "num_states": 37440
+    },
+    {
+      "cost": 0.0,
+      "time": 0.439224714,
+      "num_states": 14820
+    },
+    {
+      "cost": 0.0,
+      "time": 0.460730556,
+      "num_states": 52260
+    },
+    {
+      "cost": 0.0,
+      "time": 0.597170874,
+      "num_states": 53040
+    },
+    {
+      "cost": 0.0,
+      "time": 0.405477176,
+      "num_states": 39000
+    },
+    {
+      "cost": 0.0,
+      "time": 0.786252616,
+      "num_states": 80340
+    },
+    {
+      "cost": 0.0,
+      "time": 0.423407211,
+      "num_states": 10920
+    },
+    {
+      "cost": 0.0,
+      "time": 0.845830921,
+      "num_states": 124020
+    },
+    {
+      "cost": 0.0,
+      "time": 0.698148717,
+      "num_states": 75660
+    },
+    {
+      "cost": 0.0,
+      "time": 0.46688707,
+      "num_states": 23400
+    },
+    {
+      "cost": 0.0,
+      "time": 0.792200098,
+      "num_states": 106860
+    },
+    {
+      "cost": 0.0,
+      "time": 0.608542732,
+      "num_states": 56940
+    },
+    {
+      "cost": 0.0,
+      "time": 0.629270096,
+      "num_states": 60060
+    },
+    {
+      "cost": 0.0,
+      "time": 0.642152679,
+      "num_states": 78780
+    },
+    {
+      "cost": 0.0,
+      "time": 0.461955789,
+      "num_states": 65520
+    },
+    {
+      "cost": 0.0,
+      "time": 0.545789604,
+      "num_states": 74100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.553566715,
+      "num_states": 81900
+    },
+    {
+      "cost": 0.0,
+      "time": 0.692977654,
+      "num_states": 114660
+    },
+    {
+      "cost": 0.0,
+      "time": 1.107475773,
+      "num_states": 191100
+    },
+    {
+      "cost": 0.0,
+      "time": 0.594429167,
+      "num_states": 84240
+    },
+    {
+      "cost": 0.0,
+      "time": 0.794488951,
+      "num_states": 167700
+    }
+  ],
+  "baseline_mif_result": [],
+  "baseline_mil_result": []
+}

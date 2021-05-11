@@ -1,0 +1,335 @@
+{
+  "scenario": "Singaren.gml, s=42, FullMesh2RouteReflector",
+  "ideal_cost": 0.0,
+  "optimal_cost": null,
+  "optimal_cost_time": null,
+  "num_nodes": 11,
+  "num_edges": 10,
+  "num_commands": 21,
+  "strategy_result": [
+    {
+      "cost": 0.0,
+      "time": 0.011935278,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.011553614,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012726596,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012911668,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01211093,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.013024379,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012354443,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.011634745,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012463123,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012251011,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012610265,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01214667,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01217012,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01212739,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01305913,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012224381,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.013329792,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.013066619,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.011659145,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.011238921,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.011365472,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.011192861,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.013914208,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01108777,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012960079,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012406813,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01115957,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012470753,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012807496,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012913858,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012391072,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012962477,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012888688,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.010836577,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01320507,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.014490863,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012367232,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.013062499,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.013595094,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012688576,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012554004,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01211762,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012915517,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012364632,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012653425,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.011842478,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01211313,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.014876137,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012189341,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.014776446,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.010890318,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01320006,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.011972229,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.014810037,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.010950498,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012470273,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012299002,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.014958788,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012930028,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.012524714,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.013284201,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.013425013,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.01618756,
+      "num_states": 231
+    },
+    {
+      "cost": 0.0,
+      "time": 0.015267561,
+      "num_states": 231
+    }
+  ],
+  "tree_result": [],
+  "random_result": [],
+  "baseline_mif_result": [],
+  "baseline_mil_result": []
+}

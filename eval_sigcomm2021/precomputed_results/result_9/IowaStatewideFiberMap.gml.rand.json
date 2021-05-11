@@ -1,0 +1,5015 @@
+{
+  "scenario": "IowaStatewideFiberMap.gml, s=42, FullMesh2RouteReflector",
+  "ideal_cost": 0.19333333333333333,
+  "optimal_cost": null,
+  "optimal_cost_time": null,
+  "num_nodes": 33,
+  "num_edges": 41,
+  "num_commands": 435,
+  "strategy_result": [],
+  "tree_result": [],
+  "random_result": [
+    {
+      "cost": null,
+      "time": 1000.00235357,
+      "num_states": 179928180
+    },
+    {
+      "cost": null,
+      "time": 1000.00133954,
+      "num_states": 178923330
+    },
+    {
+      "cost": null,
+      "time": 1000.000037327,
+      "num_states": 179628030
+    },
+    {
+      "cost": null,
+      "time": 1000.001103068,
+      "num_states": 179705460
+    },
+    {
+      "cost": null,
+      "time": 1000.00231703,
+      "num_states": 179795505
+    },
+    {
+      "cost": null,
+      "time": 1000.000323289,
+      "num_states": 179446200
+    },
+    {
+      "cost": null,
+      "time": 1000.000919316,
+      "num_states": 179841180
+    },
+    {
+      "cost": null,
+      "time": 1000.001760334,
+      "num_states": 179751570
+    },
+    {
+      "cost": null,
+      "time": 1000.000731603,
+      "num_states": 179457075
+    },
+    {
+      "cost": null,
+      "time": 1000.004713414,
+      "num_states": 179610630
+    },
+    {
+      "cost": null,
+      "time": 1000.002254499,
+      "num_states": 180196575
+    },
+    {
+      "cost": null,
+      "time": 1000.000327848,
+      "num_states": 179848575
+    },
+    {
+      "cost": null,
+      "time": 1000.002834764,
+      "num_states": 179975160
+    },
+    {
+      "cost": null,
+      "time": 1000.000914314,
+      "num_states": 179535375
+    },
+    {
+      "cost": null,
+      "time": 1000.003024446,
+      "num_states": 180098265
+    },
+    {
+      "cost": null,
+      "time": 1000.003048986,
+      "num_states": 180344910
+    },
+    {
+      "cost": null,
+      "time": 1000.000987175,
+      "num_states": 180440175
+    },
+    {
+      "cost": null,
+      "time": 1000.001576761,
+      "num_states": 179852490
+    },
+    {
+      "cost": null,
+      "time": 1000.005087086,
+      "num_states": 179780715
+    },
+    {
+      "cost": null,
+      "time": 1000.000046746,
+      "num_states": 180237900
+    },
+    {
+      "cost": null,
+      "time": 1000.000001225,
+      "num_states": 178961175
+    },
+    {
+      "cost": null,
+      "time": 1000.007711633,
+      "num_states": 179940360
+    },
+    {
+      "cost": null,
+      "time": 1000.005591242,
+      "num_states": 179822910
+    },
+    {
+      "cost": null,
+      "time": 1000.002648912,
+      "num_states": 179601930
+    },
+    {
+      "cost": null,
+      "time": 1000.005306849,
+      "num_states": 179994300
+    },
+    {
+      "cost": null,
+      "time": 1000.000256187,
+      "num_states": 179536680
+    },
+    {
+      "cost": null,
+      "time": 1000.004538381,
+      "num_states": 179974725
+    },
+    {
+      "cost": null,
+      "time": 1000.004007805,
+      "num_states": 179392260
+    },
+    {
+      "cost": null,
+      "time": 1000.001272538,
+      "num_states": 179176500
+    },
+    {
+      "cost": null,
+      "time": 1000.000392578,
+      "num_states": 180069120
+    },
+    {
+      "cost": null,
+      "time": 1000.004320228,
+      "num_states": 179989080
+    },
+    {
+      "cost": null,
+      "time": 1000.001195016,
+      "num_states": 178711920
+    },
+    {
+      "cost": null,
+      "time": 1000.000725861,
+      "num_states": 179966895
+    },
+    {
+      "cost": null,
+      "time": 1000.002444599,
+      "num_states": 180443655
+    },
+    {
+      "cost": null,
+      "time": 1000.00058912,
+      "num_states": 180025185
+    },
+    {
+      "cost": null,
+      "time": 1000.003246917,
+      "num_states": 179811165
+    },
+    {
+      "cost": null,
+      "time": 1000.002894944,
+      "num_states": 179813340
+    },
+    {
+      "cost": null,
+      "time": 1000.008590521,
+      "num_states": 180138285
+    },
+    {
+      "cost": null,
+      "time": 1000.00063458,
+      "num_states": 177694020
+    },
+    {
+      "cost": null,
+      "time": 1000.001337167,
+      "num_states": 180157425
+    },
+    {
+      "cost": null,
+      "time": 1000.001192265,
+      "num_states": 179596275
+    },
+    {
+      "cost": null,
+      "time": 1000.007188626,
+      "num_states": 179920350
+    },
+    {
+      "cost": null,
+      "time": 1000.002554299,
+      "num_states": 179886855
+    },
+    {
+      "cost": null,
+      "time": 1000.001838382,
+      "num_states": 180210930
+    },
+    {
+      "cost": null,
+      "time": 1000.001237616,
+      "num_states": 180142200
+    },
+    {
+      "cost": null,
+      "time": 1000.000002153,
+      "num_states": 179675880
+    },
+    {
+      "cost": null,
+      "time": 1000.001488577,
+      "num_states": 179795505
+    },
+    {
+      "cost": null,
+      "time": 1000.00468232,
+      "num_states": 180022140
+    },
+    {
+      "cost": null,
+      "time": 1000.00176387,
+      "num_states": 179738955
+    },
+    {
+      "cost": null,
+      "time": 1000.000211884,
+      "num_states": 179815080
+    },
+    {
+      "cost": null,
+      "time": 1000.00169263,
+      "num_states": 180014310
+    },
+    {
+      "cost": null,
+      "time": 1000.000905651,
+      "num_states": 180849510
+    },
+    {
+      "cost": null,
+      "time": 1000.002410536,
+      "num_states": 179931225
+    },
+    {
+      "cost": null,
+      "time": 1000.000598647,
+      "num_states": 179634555
+    },
+    {
+      "cost": null,
+      "time": 1000.000743669,
+      "num_states": 179860755
+    },
+    {
+      "cost": null,
+      "time": 1000.002030972,
+      "num_states": 179764185
+    },
+    {
+      "cost": null,
+      "time": 1000.009914542,
+      "num_states": 179785500
+    },
+    {
+      "cost": null,
+      "time": 1000.002118703,
+      "num_states": 180267045
+    },
+    {
+      "cost": null,
+      "time": 1000.000855759,
+      "num_states": 179747655
+    },
+    {
+      "cost": null,
+      "time": 1000.000299784,
+      "num_states": 179858145
+    },
+    {
+      "cost": null,
+      "time": 1000.000036891,
+      "num_states": 179675010
+    },
+    {
+      "cost": null,
+      "time": 1000.000078872,
+      "num_states": 165572745
+    },
+    {
+      "cost": null,
+      "time": 1000.00687776,
+      "num_states": 179622810
+    },
+    {
+      "cost": null,
+      "time": 1000.000135282,
+      "num_states": 179756355
+    },
+    {
+      "cost": null,
+      "time": 1000.001751788,
+      "num_states": 178627530
+    },
+    {
+      "cost": null,
+      "time": 1000.007293094,
+      "num_states": 179874240
+    },
+    {
+      "cost": null,
+      "time": 1000.002659436,
+      "num_states": 179468385
+    },
+    {
+      "cost": null,
+      "time": 1000.00208305,
+      "num_states": 180081300
+    },
+    {
+      "cost": null,
+      "time": 1000.001227851,
+      "num_states": 179692410
+    },
+    {
+      "cost": null,
+      "time": 1000.007182442,
+      "num_states": 180314460
+    },
+    {
+      "cost": null,
+      "time": 1000.001286691,
+      "num_states": 179675445
+    },
+    {
+      "cost": null,
+      "time": 1000.00115998,
+      "num_states": 179470125
+    },
+    {
+      "cost": null,
+      "time": 1000.000064638,
+      "num_states": 179868150
+    },
+    {
+      "cost": null,
+      "time": 1000.007458193,
+      "num_states": 179505795
+    },
+    {
+      "cost": null,
+      "time": 1000.006819627,
+      "num_states": 179705460
+    },
+    {
+      "cost": null,
+      "time": 1000.002760125,
+      "num_states": 180079560
+    },
+    {
+      "cost": null,
+      "time": 1000.001905937,
+      "num_states": 179350065
+    },
+    {
+      "cost": null,
+      "time": 1000.003777026,
+      "num_states": 178958565
+    },
+    {
+      "cost": null,
+      "time": 1000.001348131,
+      "num_states": 180148725
+    },
+    {
+      "cost": null,
+      "time": 1000.000345119,
+      "num_states": 179820735
+    },
+    {
+      "cost": null,
+      "time": 1000.000114757,
+      "num_states": 180034320
+    },
+    {
+      "cost": null,
+      "time": 1000.000254728,
+      "num_states": 180159600
+    },
+    {
+      "cost": null,
+      "time": 1000.027324903,
+      "num_states": 179566695
+    },
+    {
+      "cost": null,
+      "time": 1000.001401999,
+      "num_states": 179665005
+    },
+    {
+      "cost": null,
+      "time": 1000.00055386,
+      "num_states": 179487090
+    },
+    {
+      "cost": null,
+      "time": 1000.005160887,
+      "num_states": 179840310
+    },
+    {
+      "cost": null,
+      "time": 1000.001270567,
+      "num_states": 180187875
+    },
+    {
+      "cost": null,
+      "time": 1000.001121535,
+      "num_states": 180304455
+    },
+    {
+      "cost": null,
+      "time": 1000.006722782,
+      "num_states": 179595405
+    },
+    {
+      "cost": null,
+      "time": 1000.003772062,
+      "num_states": 179966025
+    },
+    {
+      "cost": null,
+      "time": 1000.000061444,
+      "num_states": 179988645
+    },
+    {
+      "cost": null,
+      "time": 1000.001439558,
+      "num_states": 180295320
+    },
+    {
+      "cost": null,
+      "time": 1000.000320286,
+      "num_states": 180131760
+    },
+    {
+      "cost": null,
+      "time": 1000.001846291,
+      "num_states": 179831175
+    },
+    {
+      "cost": null,
+      "time": 1000.004196005,
+      "num_states": 179591490
+    },
+    {
+      "cost": null,
+      "time": 1000.001261045,
+      "num_states": 179628465
+    },
+    {
+      "cost": null,
+      "time": 1000.000302865,
+      "num_states": 179748960
+    },
+    {
+      "cost": null,
+      "time": 1000.003249136,
+      "num_states": 178151205
+    },
+    {
+      "cost": null,
+      "time": 1000.00078221,
+      "num_states": 179330490
+    },
+    {
+      "cost": null,
+      "time": 1000.002325905,
+      "num_states": 179592360
+    },
+    {
+      "cost": null,
+      "time": 1000.000128172,
+      "num_states": 179287425
+    },
+    {
+      "cost": null,
+      "time": 1000.000514446,
+      "num_states": 179710245
+    },
+    {
+      "cost": null,
+      "time": 1000.001339304,
+      "num_states": 179801595
+    },
+    {
+      "cost": null,
+      "time": 1000.001537856,
+      "num_states": 179797245
+    },
+    {
+      "cost": null,
+      "time": 1000.011145394,
+      "num_states": 179491875
+    },
+    {
+      "cost": null,
+      "time": 1000.000090991,
+      "num_states": 179542770
+    },
+    {
+      "cost": null,
+      "time": 1000.006016371,
+      "num_states": 179260890
+    },
+    {
+      "cost": null,
+      "time": 1000.004072361,
+      "num_states": 178498335
+    },
+    {
+      "cost": null,
+      "time": 1000.005063521,
+      "num_states": 179966895
+    },
+    {
+      "cost": null,
+      "time": 999.999999389,
+      "num_states": 181753005
+    },
+    {
+      "cost": null,
+      "time": 1000.001813287,
+      "num_states": 179927745
+    },
+    {
+      "cost": null,
+      "time": 1000.000334472,
+      "num_states": 179053395
+    },
+    {
+      "cost": null,
+      "time": 1000.004588365,
+      "num_states": 180150465
+    },
+    {
+      "cost": null,
+      "time": 1000.001813107,
+      "num_states": 180169605
+    },
+    {
+      "cost": null,
+      "time": 1000.001870617,
+      "num_states": 179890770
+    },
+    {
+      "cost": null,
+      "time": 1000.000346152,
+      "num_states": 179752875
+    },
+    {
+      "cost": null,
+      "time": 1000.00120007,
+      "num_states": 179566695
+    },
+    {
+      "cost": null,
+      "time": 1000.00030122,
+      "num_states": 180046500
+    },
+    {
+      "cost": null,
+      "time": 1000.002665755,
+      "num_states": 179782455
+    },
+    {
+      "cost": null,
+      "time": 1000.000806115,
+      "num_states": 180150030
+    },
+    {
+      "cost": null,
+      "time": 1000.000004657,
+      "num_states": 179490570
+    },
+    {
+      "cost": null,
+      "time": 1000.000281029,
+      "num_states": 179390955
+    },
+    {
+      "cost": null,
+      "time": 1000.000316229,
+      "num_states": 182404635
+    },
+    {
+      "cost": null,
+      "time": 1000.002157229,
+      "num_states": 180364920
+    },
+    {
+      "cost": null,
+      "time": 1000.000547601,
+      "num_states": 179414010
+    },
+    {
+      "cost": null,
+      "time": 1000.000701313,
+      "num_states": 179090370
+    },
+    {
+      "cost": null,
+      "time": 1000.000593941,
+      "num_states": 180009525
+    },
+    {
+      "cost": null,
+      "time": 1000.005537492,
+      "num_states": 165109035
+    },
+    {
+      "cost": 0.2999999999999998,
+      "time": 263.052972559,
+      "num_states": 47657295
+    },
+    {
+      "cost": null,
+      "time": 1000.000131615,
+      "num_states": 181014375
+    },
+    {
+      "cost": null,
+      "time": 1000.000812822,
+      "num_states": 179431410
+    },
+    {
+      "cost": null,
+      "time": 1000.000856283,
+      "num_states": 180829500
+    },
+    {
+      "cost": null,
+      "time": 1000.000704891,
+      "num_states": 180489765
+    },
+    {
+      "cost": null,
+      "time": 1000.00060664,
+      "num_states": 180389715
+    },
+    {
+      "cost": null,
+      "time": 1000.001031914,
+      "num_states": 180930855
+    },
+    {
+      "cost": null,
+      "time": 1000.000885603,
+      "num_states": 181465905
+    },
+    {
+      "cost": null,
+      "time": 1000.002010384,
+      "num_states": 181054395
+    },
+    {
+      "cost": null,
+      "time": 1000.000791413,
+      "num_states": 181085715
+    },
+    {
+      "cost": null,
+      "time": 1000.001992885,
+      "num_states": 180843420
+    },
+    {
+      "cost": null,
+      "time": 1000.000536651,
+      "num_states": 180914325
+    },
+    {
+      "cost": null,
+      "time": 1000.000161257,
+      "num_states": 180730755
+    },
+    {
+      "cost": null,
+      "time": 1000.001901464,
+      "num_states": 180786435
+    },
+    {
+      "cost": null,
+      "time": 1000.004833764,
+      "num_states": 180016485
+    },
+    {
+      "cost": null,
+      "time": 1000.000091237,
+      "num_states": 181010025
+    },
+    {
+      "cost": null,
+      "time": 1000.00040768,
+      "num_states": 180437130
+    },
+    {
+      "cost": null,
+      "time": 1000.002846654,
+      "num_states": 181335405
+    },
+    {
+      "cost": null,
+      "time": 1000.000318189,
+      "num_states": 180793395
+    },
+    {
+      "cost": null,
+      "time": 1000.000004395,
+      "num_states": 181157925
+    },
+    {
+      "cost": null,
+      "time": 1000.000412,
+      "num_states": 181164885
+    },
+    {
+      "cost": null,
+      "time": 1000.000329729,
+      "num_states": 181142700
+    },
+    {
+      "cost": null,
+      "time": 1000.000212468,
+      "num_states": 180754680
+    },
+    {
+      "cost": null,
+      "time": 1000.002634653,
+      "num_states": 180735105
+    },
+    {
+      "cost": null,
+      "time": 1000.002018106,
+      "num_states": 180780780
+    },
+    {
+      "cost": null,
+      "time": 1000.001528402,
+      "num_states": 180932160
+    },
+    {
+      "cost": null,
+      "time": 1000.001136078,
+      "num_states": 180502815
+    },
+    {
+      "cost": null,
+      "time": 1000.000971356,
+      "num_states": 180838635
+    },
+    {
+      "cost": null,
+      "time": 1000.006947486,
+      "num_states": 180578070
+    },
+    {
+      "cost": null,
+      "time": 1000.000642314,
+      "num_states": 181094415
+    },
+    {
+      "cost": null,
+      "time": 1000.000495762,
+      "num_states": 180687690
+    },
+    {
+      "cost": null,
+      "time": 1000.001478552,
+      "num_states": 180910410
+    },
+    {
+      "cost": null,
+      "time": 1000.000023837,
+      "num_states": 181068315
+    },
+    {
+      "cost": null,
+      "time": 1000.004871356,
+      "num_states": 180508470
+    },
+    {
+      "cost": null,
+      "time": 1000.002085759,
+      "num_states": 180839070
+    },
+    {
+      "cost": null,
+      "time": 1000.000997148,
+      "num_states": 180514560
+    },
+    {
+      "cost": null,
+      "time": 1000.002872506,
+      "num_states": 180759900
+    },
+    {
+      "cost": null,
+      "time": 1000.003037669,
+      "num_states": 178477455
+    },
+    {
+      "cost": null,
+      "time": 1000.004209941,
+      "num_states": 180656805
+    },
+    {
+      "cost": null,
+      "time": 1000.00417722,
+      "num_states": 180614175
+    },
+    {
+      "cost": null,
+      "time": 1000.000071929,
+      "num_states": 181148790
+    },
+    {
+      "cost": null,
+      "time": 1000.001388203,
+      "num_states": 181304955
+    },
+    {
+      "cost": null,
+      "time": 1000.001938548,
+      "num_states": 180502380
+    },
+    {
+      "cost": null,
+      "time": 1000.000343172,
+      "num_states": 180803400
+    },
+    {
+      "cost": null,
+      "time": 1000.002345442,
+      "num_states": 180424950
+    },
+    {
+      "cost": null,
+      "time": 1000.003535324,
+      "num_states": 180414945
+    },
+    {
+      "cost": null,
+      "time": 1000.002230301,
+      "num_states": 180733365
+    },
+    {
+      "cost": null,
+      "time": 1000.000677536,
+      "num_states": 180993495
+    },
+    {
+      "cost": null,
+      "time": 1000.002370473,
+      "num_states": 180600690
+    },
+    {
+      "cost": null,
+      "time": 1000.004642166,
+      "num_states": 180328815
+    },
+    {
+      "cost": null,
+      "time": 1000.009911238,
+      "num_states": 180700740
+    },
+    {
+      "cost": null,
+      "time": 1000.001207522,
+      "num_states": 180489765
+    },
+    {
+      "cost": null,
+      "time": 1000.001862748,
+      "num_states": 180431910
+    },
+    {
+      "cost": null,
+      "time": 1000.002662197,
+      "num_states": 180741630
+    },
+    {
+      "cost": null,
+      "time": 1000.005821848,
+      "num_states": 181246665
+    },
+    {
+      "cost": null,
+      "time": 1000.001210613,
+      "num_states": 181130085
+    },
+    {
+      "cost": null,
+      "time": 1000.000095092,
+      "num_states": 180550230
+    },
+    {
+      "cost": null,
+      "time": 1000.001688317,
+      "num_states": 180909975
+    },
+    {
+      "cost": null,
+      "time": 1000.000725878,
+      "num_states": 181198380
+    },
+    {
+      "cost": null,
+      "time": 1000.00091758,
+      "num_states": 181009155
+    },
+    {
+      "cost": null,
+      "time": 1000.001562907,
+      "num_states": 181015245
+    },
+    {
+      "cost": null,
+      "time": 1000.001823849,
+      "num_states": 184094175
+    },
+    {
+      "cost": null,
+      "time": 1000.001388935,
+      "num_states": 163208085
+    },
+    {
+      "cost": null,
+      "time": 1000.000443856,
+      "num_states": 181025250
+    },
+    {
+      "cost": null,
+      "time": 1000.000465706,
+      "num_states": 179403570
+    },
+    {
+      "cost": null,
+      "time": 1000.001497046,
+      "num_states": 181183590
+    },
+    {
+      "cost": null,
+      "time": 1000.001092004,
+      "num_states": 180325335
+    },
+    {
+      "cost": null,
+      "time": 1000.0006426,
+      "num_states": 180977835
+    },
+    {
+      "cost": null,
+      "time": 1000.000347847,
+      "num_states": 181276245
+    },
+    {
+      "cost": null,
+      "time": 1000.000321037,
+      "num_states": 181039605
+    },
+    {
+      "cost": null,
+      "time": 1000.000058345,
+      "num_states": 181041780
+    },
+    {
+      "cost": null,
+      "time": 1000.000113876,
+      "num_states": 180809055
+    },
+    {
+      "cost": null,
+      "time": 1000.000603201,
+      "num_states": 180356220
+    },
+    {
+      "cost": null,
+      "time": 1000.000180246,
+      "num_states": 181005675
+    },
+    {
+      "cost": null,
+      "time": 1000.000443639,
+      "num_states": 182252385
+    },
+    {
+      "cost": null,
+      "time": 1000.000678412,
+      "num_states": 180367965
+    },
+    {
+      "cost": null,
+      "time": 1000.001150206,
+      "num_states": 181365855
+    },
+    {
+      "cost": null,
+      "time": 1000.000954734,
+      "num_states": 180923895
+    },
+    {
+      "cost": null,
+      "time": 1000.008548091,
+      "num_states": 180917370
+    },
+    {
+      "cost": null,
+      "time": 1000.011627344,
+      "num_states": 180894315
+    },
+    {
+      "cost": null,
+      "time": 1000.001556152,
+      "num_states": 180277485
+    },
+    {
+      "cost": null,
+      "time": 1000.000862026,
+      "num_states": 180704220
+    },
+    {
+      "cost": null,
+      "time": 1000.00020956,
+      "num_states": 181458510
+    },
+    {
+      "cost": null,
+      "time": 1000.002160489,
+      "num_states": 181041345
+    },
+    {
+      "cost": null,
+      "time": 1000.000423393,
+      "num_states": 180504120
+    },
+    {
+      "cost": null,
+      "time": 1000.001754616,
+      "num_states": 180657240
+    },
+    {
+      "cost": null,
+      "time": 1000.000706647,
+      "num_states": 181090935
+    },
+    {
+      "cost": null,
+      "time": 1000.000452464,
+      "num_states": 180662460
+    },
+    {
+      "cost": null,
+      "time": 1000.00100056,
+      "num_states": 180699000
+    },
+    {
+      "cost": null,
+      "time": 1000.000385403,
+      "num_states": 180715095
+    },
+    {
+      "cost": null,
+      "time": 1000.000534534,
+      "num_states": 180849945
+    },
+    {
+      "cost": null,
+      "time": 1000.005839729,
+      "num_states": 180565020
+    },
+    {
+      "cost": null,
+      "time": 1000.001378604,
+      "num_states": 181257540
+    },
+    {
+      "cost": null,
+      "time": 1000.011525106,
+      "num_states": 180774690
+    },
+    {
+      "cost": null,
+      "time": 1000.001269483,
+      "num_states": 180365790
+    },
+    {
+      "cost": null,
+      "time": 1000.001644187,
+      "num_states": 180199620
+    },
+    {
+      "cost": null,
+      "time": 1000.002317974,
+      "num_states": 180579810
+    },
+    {
+      "cost": null,
+      "time": 1000.001674508,
+      "num_states": 179366595
+    },
+    {
+      "cost": null,
+      "time": 1000.001371475,
+      "num_states": 180754245
+    },
+    {
+      "cost": null,
+      "time": 1000.000377396,
+      "num_states": 180843855
+    },
+    {
+      "cost": null,
+      "time": 1000.003282725,
+      "num_states": 180735975
+    },
+    {
+      "cost": null,
+      "time": 1000.002189796,
+      "num_states": 180792960
+    },
+    {
+      "cost": null,
+      "time": 1000.000467538,
+      "num_states": 181034385
+    },
+    {
+      "cost": null,
+      "time": 1000.001119166,
+      "num_states": 180407985
+    },
+    {
+      "cost": null,
+      "time": 1000.008938134,
+      "num_states": 180710745
+    },
+    {
+      "cost": null,
+      "time": 1000.005106255,
+      "num_states": 180963480
+    },
+    {
+      "cost": null,
+      "time": 1000.000619491,
+      "num_states": 179390520
+    },
+    {
+      "cost": null,
+      "time": 1000.00057396,
+      "num_states": 181159665
+    },
+    {
+      "cost": null,
+      "time": 1000.00153107,
+      "num_states": 180208755
+    },
+    {
+      "cost": null,
+      "time": 1000.000361298,
+      "num_states": 180491940
+    },
+    {
+      "cost": null,
+      "time": 1000.004036246,
+      "num_states": 184452180
+    },
+    {
+      "cost": null,
+      "time": 1000.002749533,
+      "num_states": 180774690
+    },
+    {
+      "cost": null,
+      "time": 1000.000199637,
+      "num_states": 180527610
+    },
+    {
+      "cost": null,
+      "time": 1000.00144456,
+      "num_states": 180337950
+    },
+    {
+      "cost": null,
+      "time": 1000.001962696,
+      "num_states": 180935640
+    },
+    {
+      "cost": null,
+      "time": 1000.001461492,
+      "num_states": 180363615
+    },
+    {
+      "cost": null,
+      "time": 1000.001000466,
+      "num_states": 181113990
+    },
+    {
+      "cost": null,
+      "time": 1000.010701243,
+      "num_states": 181107900
+    },
+    {
+      "cost": null,
+      "time": 1000.000493272,
+      "num_states": 180816015
+    },
+    {
+      "cost": null,
+      "time": 1000.002552252,
+      "num_states": 180913455
+    },
+    {
+      "cost": null,
+      "time": 1000.003021808,
+      "num_states": 180994365
+    },
+    {
+      "cost": null,
+      "time": 1000.008521763,
+      "num_states": 180759465
+    },
+    {
+      "cost": null,
+      "time": 1000.001827207,
+      "num_states": 181442415
+    },
+    {
+      "cost": null,
+      "time": 1000.002679865,
+      "num_states": 180481065
+    },
+    {
+      "cost": null,
+      "time": 1000.001889567,
+      "num_states": 180438435
+    },
+    {
+      "cost": null,
+      "time": 1000.000531554,
+      "num_states": 180864300
+    },
+    {
+      "cost": null,
+      "time": 1000.000730646,
+      "num_states": 180397545
+    },
+    {
+      "cost": null,
+      "time": 1000.000944338,
+      "num_states": 162046200
+    },
+    {
+      "cost": null,
+      "time": 1000.001661876,
+      "num_states": 181053960
+    },
+    {
+      "cost": 0.2399999999999999,
+      "time": 352.496432445,
+      "num_states": 63802320
+    },
+    {
+      "cost": null,
+      "time": 1000.001421066,
+      "num_states": 179984730
+    },
+    {
+      "cost": null,
+      "time": 1000.000786699,
+      "num_states": 180358395
+    },
+    {
+      "cost": null,
+      "time": 1000.000435246,
+      "num_states": 180417990
+    },
+    {
+      "cost": null,
+      "time": 1000.000821229,
+      "num_states": 180635925
+    },
+    {
+      "cost": null,
+      "time": 1000.003629958,
+      "num_states": 179867715
+    },
+    {
+      "cost": null,
+      "time": 1000.00189119,
+      "num_states": 180893445
+    },
+    {
+      "cost": null,
+      "time": 1000.000043561,
+      "num_states": 180953910
+    },
+    {
+      "cost": null,
+      "time": 1000.003111483,
+      "num_states": 181025685
+    },
+    {
+      "cost": null,
+      "time": 1000.000335724,
+      "num_states": 180729015
+    },
+    {
+      "cost": null,
+      "time": 1000.005048862,
+      "num_states": 181035255
+    },
+    {
+      "cost": null,
+      "time": 1000.001016691,
+      "num_states": 180648975
+    },
+    {
+      "cost": null,
+      "time": 1000.00093501,
+      "num_states": 180893010
+    },
+    {
+      "cost": null,
+      "time": 1000.000521805,
+      "num_states": 180246165
+    },
+    {
+      "cost": null,
+      "time": 1000.000788929,
+      "num_states": 181015680
+    },
+    {
+      "cost": null,
+      "time": 1000.000353894,
+      "num_states": 180468450
+    },
+    {
+      "cost": null,
+      "time": 1000.001380524,
+      "num_states": 180435390
+    },
+    {
+      "cost": null,
+      "time": 1000.006692039,
+      "num_states": 183281595
+    },
+    {
+      "cost": null,
+      "time": 1000.000763879,
+      "num_states": 180826890
+    },
+    {
+      "cost": null,
+      "time": 1000.001745649,
+      "num_states": 180889095
+    },
+    {
+      "cost": null,
+      "time": 1000.003581758,
+      "num_states": 180788175
+    },
+    {
+      "cost": null,
+      "time": 1000.001052142,
+      "num_states": 180398850
+    },
+    {
+      "cost": null,
+      "time": 1000.004529218,
+      "num_states": 180930855
+    },
+    {
+      "cost": null,
+      "time": 1000.003305295,
+      "num_states": 180438435
+    },
+    {
+      "cost": null,
+      "time": 1000.000579937,
+      "num_states": 180743805
+    },
+    {
+      "cost": null,
+      "time": 1000.003534958,
+      "num_states": 181100505
+    },
+    {
+      "cost": null,
+      "time": 1000.002413225,
+      "num_states": 180822105
+    },
+    {
+      "cost": null,
+      "time": 1000.005022902,
+      "num_states": 180693345
+    },
+    {
+      "cost": null,
+      "time": 1000.000241093,
+      "num_states": 180779040
+    },
+    {
+      "cost": null,
+      "time": 1000.002142143,
+      "num_states": 181051350
+    },
+    {
+      "cost": null,
+      "time": 1000.010280665,
+      "num_states": 179912520
+    },
+    {
+      "cost": null,
+      "time": 1000.001213124,
+      "num_states": 181023945
+    },
+    {
+      "cost": null,
+      "time": 1000.003480527,
+      "num_states": 180391890
+    },
+    {
+      "cost": null,
+      "time": 1000.000137053,
+      "num_states": 177576135
+    },
+    {
+      "cost": null,
+      "time": 1000.000633938,
+      "num_states": 181226220
+    },
+    {
+      "cost": null,
+      "time": 1000.012104905,
+      "num_states": 180495855
+    },
+    {
+      "cost": null,
+      "time": 1000.000977381,
+      "num_states": 180602430
+    },
+    {
+      "cost": null,
+      "time": 1000.000427136,
+      "num_states": 180745545
+    },
+    {
+      "cost": null,
+      "time": 1000.003415446,
+      "num_states": 180903450
+    },
+    {
+      "cost": null,
+      "time": 1000.000270864,
+      "num_states": 180023010
+    },
+    {
+      "cost": null,
+      "time": 1000.00472033,
+      "num_states": 180980445
+    },
+    {
+      "cost": null,
+      "time": 1000.001324894,
+      "num_states": 181004805
+    },
+    {
+      "cost": null,
+      "time": 1000.001632617,
+      "num_states": 180757725
+    },
+    {
+      "cost": null,
+      "time": 1000.002355494,
+      "num_states": 180578070
+    },
+    {
+      "cost": null,
+      "time": 1000.000615997,
+      "num_states": 180074775
+    },
+    {
+      "cost": null,
+      "time": 1000.002949941,
+      "num_states": 180622875
+    },
+    {
+      "cost": null,
+      "time": 1000.000909709,
+      "num_states": 180378405
+    },
+    {
+      "cost": null,
+      "time": 1000.000763109,
+      "num_states": 180899535
+    },
+    {
+      "cost": null,
+      "time": 1000.000153912,
+      "num_states": 180645495
+    },
+    {
+      "cost": null,
+      "time": 1000.001082352,
+      "num_states": 180492810
+    },
+    {
+      "cost": null,
+      "time": 1000.007283235,
+      "num_states": 180649410
+    },
+    {
+      "cost": null,
+      "time": 1000.001280914,
+      "num_states": 180495420
+    },
+    {
+      "cost": null,
+      "time": 1000.00388148,
+      "num_states": 180189180
+    },
+    {
+      "cost": null,
+      "time": 1000.000863779,
+      "num_states": 181035255
+    },
+    {
+      "cost": null,
+      "time": 1000.001469715,
+      "num_states": 181032645
+    },
+    {
+      "cost": null,
+      "time": 1000.001945881,
+      "num_states": 180287925
+    },
+    {
+      "cost": null,
+      "time": 1000.009180295,
+      "num_states": 180804270
+    },
+    {
+      "cost": null,
+      "time": 1000.001997791,
+      "num_states": 180140895
+    },
+    {
+      "cost": null,
+      "time": 1000.000573467,
+      "num_states": 181187940
+    },
+    {
+      "cost": null,
+      "time": 1000.003062002,
+      "num_states": 180443220
+    },
+    {
+      "cost": null,
+      "time": 1000.000107893,
+      "num_states": 183383385
+    },
+    {
+      "cost": null,
+      "time": 1000.001579738,
+      "num_states": 163207215
+    },
+    {
+      "cost": null,
+      "time": 1000.002079572,
+      "num_states": 181096590
+    },
+    {
+      "cost": null,
+      "time": 1000.002207954,
+      "num_states": 180710310
+    },
+    {
+      "cost": null,
+      "time": 1000.000284653,
+      "num_states": 180773820
+    },
+    {
+      "cost": null,
+      "time": 1000.000069321,
+      "num_states": 181317570
+    },
+    {
+      "cost": null,
+      "time": 1000.005572248,
+      "num_states": 179434455
+    },
+    {
+      "cost": null,
+      "time": 1000.001469635,
+      "num_states": 180783825
+    },
+    {
+      "cost": null,
+      "time": 1000.001363765,
+      "num_states": 180271830
+    },
+    {
+      "cost": null,
+      "time": 1000.000361945,
+      "num_states": 180446700
+    },
+    {
+      "cost": null,
+      "time": 1000.005896001,
+      "num_states": 180748155
+    },
+    {
+      "cost": null,
+      "time": 1000.000647348,
+      "num_states": 180200055
+    },
+    {
+      "cost": null,
+      "time": 1000.005180594,
+      "num_states": 180849510
+    },
+    {
+      "cost": null,
+      "time": 1000.000393615,
+      "num_states": 180334905
+    },
+    {
+      "cost": null,
+      "time": 1000.001454907,
+      "num_states": 180111750
+    },
+    {
+      "cost": null,
+      "time": 1000.012208626,
+      "num_states": 180796875
+    },
+    {
+      "cost": null,
+      "time": 1000.002581198,
+      "num_states": 180442785
+    },
+    {
+      "cost": null,
+      "time": 1000.001516346,
+      "num_states": 180832980
+    },
+    {
+      "cost": null,
+      "time": 1000.000756319,
+      "num_states": 180547620
+    },
+    {
+      "cost": null,
+      "time": 1000.001616307,
+      "num_states": 179865540
+    },
+    {
+      "cost": null,
+      "time": 1000.001251733,
+      "num_states": 180966525
+    },
+    {
+      "cost": null,
+      "time": 1000.002354525,
+      "num_states": 180955650
+    },
+    {
+      "cost": null,
+      "time": 1000.001276394,
+      "num_states": 180678120
+    },
+    {
+      "cost": null,
+      "time": 1000.005924592,
+      "num_states": 180411900
+    },
+    {
+      "cost": null,
+      "time": 1000.000254304,
+      "num_states": 180207015
+    },
+    {
+      "cost": null,
+      "time": 1000.000142923,
+      "num_states": 180411030
+    },
+    {
+      "cost": null,
+      "time": 1000.000338914,
+      "num_states": 181172280
+    },
+    {
+      "cost": null,
+      "time": 1000.001160573,
+      "num_states": 181297560
+    },
+    {
+      "cost": null,
+      "time": 1000.003426477,
+      "num_states": 180898230
+    },
+    {
+      "cost": null,
+      "time": 1000.004416077,
+      "num_states": 180661155
+    },
+    {
+      "cost": null,
+      "time": 1000.001905171,
+      "num_states": 180885180
+    },
+    {
+      "cost": null,
+      "time": 1000.00089973,
+      "num_states": 180849510
+    },
+    {
+      "cost": null,
+      "time": 1000.000192423,
+      "num_states": 181398045
+    },
+    {
+      "cost": null,
+      "time": 1000.000267374,
+      "num_states": 180893445
+    },
+    {
+      "cost": null,
+      "time": 1000.000445996,
+      "num_states": 180048240
+    },
+    {
+      "cost": null,
+      "time": 1000.000070422,
+      "num_states": 180600255
+    },
+    {
+      "cost": null,
+      "time": 1000.000834519,
+      "num_states": 180753375
+    },
+    {
+      "cost": null,
+      "time": 1000.003115753,
+      "num_states": 180118710
+    },
+    {
+      "cost": null,
+      "time": 1000.001574097,
+      "num_states": 180545010
+    },
+    {
+      "cost": null,
+      "time": 1000.001533817,
+      "num_states": 180762075
+    },
+    {
+      "cost": null,
+      "time": 1000.014698711,
+      "num_states": 178865475
+    },
+    {
+      "cost": null,
+      "time": 1000.011486879,
+      "num_states": 180775125
+    },
+    {
+      "cost": null,
+      "time": 1000.002246654,
+      "num_states": 180731625
+    },
+    {
+      "cost": null,
+      "time": 1000.001474127,
+      "num_states": 179250015
+    },
+    {
+      "cost": null,
+      "time": 1000.003162404,
+      "num_states": 181341495
+    },
+    {
+      "cost": null,
+      "time": 1000.000270414,
+      "num_states": 180355350
+    },
+    {
+      "cost": null,
+      "time": 1000.000148572,
+      "num_states": 181091805
+    },
+    {
+      "cost": null,
+      "time": 1000.005577049,
+      "num_states": 180692910
+    },
+    {
+      "cost": null,
+      "time": 1000.005550658,
+      "num_states": 180528915
+    },
+    {
+      "cost": null,
+      "time": 1000.003443477,
+      "num_states": 181639905
+    },
+    {
+      "cost": null,
+      "time": 1000.000068581,
+      "num_states": 180508470
+    },
+    {
+      "cost": null,
+      "time": 1000.004488097,
+      "num_states": 180859515
+    },
+    {
+      "cost": null,
+      "time": 1000.000942071,
+      "num_states": 180548925
+    },
+    {
+      "cost": null,
+      "time": 1000.014004524,
+      "num_states": 180550665
+    },
+    {
+      "cost": null,
+      "time": 1000.000011771,
+      "num_states": 180607650
+    },
+    {
+      "cost": null,
+      "time": 1000.001279634,
+      "num_states": 180500640
+    },
+    {
+      "cost": null,
+      "time": 1000.006365956,
+      "num_states": 180440175
+    },
+    {
+      "cost": null,
+      "time": 1000.000677488,
+      "num_states": 182022705
+    },
+    {
+      "cost": null,
+      "time": 1000.002320565,
+      "num_states": 180533700
+    },
+    {
+      "cost": null,
+      "time": 1000.001944171,
+      "num_states": 180994800
+    },
+    {
+      "cost": null,
+      "time": 1000.000529107,
+      "num_states": 180959130
+    },
+    {
+      "cost": null,
+      "time": 1000.002622748,
+      "num_states": 181190985
+    },
+    {
+      "cost": null,
+      "time": 1000.009123174,
+      "num_states": 180405810
+    },
+    {
+      "cost": null,
+      "time": 1000.000666587,
+      "num_states": 180103920
+    },
+    {
+      "cost": null,
+      "time": 1000.002046472,
+      "num_states": 180186570
+    },
+    {
+      "cost": null,
+      "time": 1000.001396406,
+      "num_states": 162126240
+    },
+    {
+      "cost": null,
+      "time": 1000.007975053,
+      "num_states": 180444525
+    },
+    {
+      "cost": null,
+      "time": 1000.004040537,
+      "num_states": 181077015
+    },
+    {
+      "cost": null,
+      "time": 1000.002855453,
+      "num_states": 180893445
+    },
+    {
+      "cost": null,
+      "time": 1000.000184749,
+      "num_states": 180119145
+    },
+    {
+      "cost": null,
+      "time": 1000.00040686,
+      "num_states": 180777735
+    },
+    {
+      "cost": null,
+      "time": 1000.003406649,
+      "num_states": 180536310
+    },
+    {
+      "cost": null,
+      "time": 1000.000101906,
+      "num_states": 180411030
+    },
+    {
+      "cost": null,
+      "time": 1000.000610881,
+      "num_states": 180740325
+    },
+    {
+      "cost": null,
+      "time": 1000.003146337,
+      "num_states": 180457575
+    },
+    {
+      "cost": null,
+      "time": 1000.001703592,
+      "num_states": 180116100
+    },
+    {
+      "cost": null,
+      "time": 1000.000768122,
+      "num_states": 180912585
+    },
+    {
+      "cost": null,
+      "time": 1000.001157385,
+      "num_states": 180183960
+    },
+    {
+      "cost": null,
+      "time": 1000.002336376,
+      "num_states": 180210060
+    },
+    {
+      "cost": null,
+      "time": 1000.003635979,
+      "num_states": 180613740
+    },
+    {
+      "cost": null,
+      "time": 1000.000744999,
+      "num_states": 180521085
+    },
+    {
+      "cost": null,
+      "time": 1000.002939251,
+      "num_states": 180267480
+    },
+    {
+      "cost": null,
+      "time": 1000.002451885,
+      "num_states": 180664635
+    },
+    {
+      "cost": null,
+      "time": 1000.000438314,
+      "num_states": 181134870
+    },
+    {
+      "cost": null,
+      "time": 1000.001865577,
+      "num_states": 180993060
+    },
+    {
+      "cost": null,
+      "time": 1000.001078919,
+      "num_states": 180529785
+    },
+    {
+      "cost": null,
+      "time": 1000.000210939,
+      "num_states": 180620700
+    },
+    {
+      "cost": null,
+      "time": 1000.001038187,
+      "num_states": 180937815
+    },
+    {
+      "cost": null,
+      "time": 1000.000895635,
+      "num_states": 180634620
+    },
+    {
+      "cost": null,
+      "time": 1000.00139714,
+      "num_states": 180745110
+    },
+    {
+      "cost": null,
+      "time": 1000.001955935,
+      "num_states": 180244860
+    },
+    {
+      "cost": null,
+      "time": 1000.000279787,
+      "num_states": 180194400
+    },
+    {
+      "cost": null,
+      "time": 1000.000340388,
+      "num_states": 180741195
+    },
+    {
+      "cost": null,
+      "time": 1000.00151496,
+      "num_states": 180298800
+    },
+    {
+      "cost": null,
+      "time": 1000.000368337,
+      "num_states": 180764685
+    },
+    {
+      "cost": null,
+      "time": 1000.000035703,
+      "num_states": 178334775
+    },
+    {
+      "cost": null,
+      "time": 1000.001978643,
+      "num_states": 180874740
+    },
+    {
+      "cost": null,
+      "time": 1000.000496828,
+      "num_states": 180789480
+    },
+    {
+      "cost": null,
+      "time": 1000.00171034,
+      "num_states": 179855100
+    },
+    {
+      "cost": null,
+      "time": 1000.000000212,
+      "num_states": 181006110
+    },
+    {
+      "cost": null,
+      "time": 1000.004326557,
+      "num_states": 181030470
+    },
+    {
+      "cost": null,
+      "time": 1000.016312068,
+      "num_states": 181013505
+    },
+    {
+      "cost": null,
+      "time": 1000.001245433,
+      "num_states": 180601995
+    },
+    {
+      "cost": null,
+      "time": 1000.002574427,
+      "num_states": 180538485
+    },
+    {
+      "cost": null,
+      "time": 1000.002431214,
+      "num_states": 180371880
+    },
+    {
+      "cost": null,
+      "time": 1000.001187182,
+      "num_states": 181013070
+    },
+    {
+      "cost": null,
+      "time": 1000.000549325,
+      "num_states": 180974355
+    },
+    {
+      "cost": null,
+      "time": 1000.002112971,
+      "num_states": 180581115
+    },
+    {
+      "cost": null,
+      "time": 1000.004212481,
+      "num_states": 180854295
+    },
+    {
+      "cost": null,
+      "time": 1000.00016067,
+      "num_states": 180006480
+    },
+    {
+      "cost": null,
+      "time": 1000.000829607,
+      "num_states": 180330990
+    },
+    {
+      "cost": null,
+      "time": 1000.000168519,
+      "num_states": 180579375
+    },
+    {
+      "cost": null,
+      "time": 1000.002735306,
+      "num_states": 180471495
+    },
+    {
+      "cost": null,
+      "time": 1000.000221189,
+      "num_states": 180191790
+    },
+    {
+      "cost": null,
+      "time": 1000.004884857,
+      "num_states": 180531960
+    },
+    {
+      "cost": null,
+      "time": 1000.010156301,
+      "num_states": 180829935
+    },
+    {
+      "cost": null,
+      "time": 1000.002679224,
+      "num_states": 180361440
+    },
+    {
+      "cost": null,
+      "time": 1000.000196618,
+      "num_states": 180267045
+    },
+    {
+      "cost": null,
+      "time": 1000.000121087,
+      "num_states": 180749460
+    },
+    {
+      "cost": null,
+      "time": 1000.001392121,
+      "num_states": 179755485
+    },
+    {
+      "cost": null,
+      "time": 1000.000644852,
+      "num_states": 180707700
+    },
+    {
+      "cost": null,
+      "time": 1000.001925295,
+      "num_states": 180731625
+    },
+    {
+      "cost": null,
+      "time": 1000.000678211,
+      "num_states": 180533700
+    },
+    {
+      "cost": null,
+      "time": 1000.000518459,
+      "num_states": 180716835
+    },
+    {
+      "cost": null,
+      "time": 1000.000051044,
+      "num_states": 180581550
+    },
+    {
+      "cost": null,
+      "time": 1000.004799951,
+      "num_states": 181041345
+    },
+    {
+      "cost": null,
+      "time": 1000.012466039,
+      "num_states": 180392325
+    },
+    {
+      "cost": null,
+      "time": 1000.002794668,
+      "num_states": 180717270
+    },
+    {
+      "cost": null,
+      "time": 1000.003523904,
+      "num_states": 163169370
+    },
+    {
+      "cost": null,
+      "time": 1000.001364032,
+      "num_states": 181462860
+    },
+    {
+      "cost": null,
+      "time": 1000.001235179,
+      "num_states": 180658545
+    },
+    {
+      "cost": null,
+      "time": 1000.000768463,
+      "num_states": 179159535
+    },
+    {
+      "cost": null,
+      "time": 1000.001327379,
+      "num_states": 180912585
+    },
+    {
+      "cost": null,
+      "time": 1000.002486649,
+      "num_states": 180619830
+    },
+    {
+      "cost": null,
+      "time": 1000.000087524,
+      "num_states": 180816015
+    },
+    {
+      "cost": null,
+      "time": 1000.001356194,
+      "num_states": 180497595
+    },
+    {
+      "cost": null,
+      "time": 1000.000225791,
+      "num_states": 180699435
+    },
+    {
+      "cost": null,
+      "time": 1000.001872648,
+      "num_states": 180808620
+    },
+    {
+      "cost": null,
+      "time": 1000.000349741,
+      "num_states": 180618960
+    },
+    {
+      "cost": null,
+      "time": 1000.001900186,
+      "num_states": 180779040
+    },
+    {
+      "cost": null,
+      "time": 1000.002696174,
+      "num_states": 180994365
+    },
+    {
+      "cost": null,
+      "time": 1000.001277638,
+      "num_states": 180420165
+    },
+    {
+      "cost": null,
+      "time": 1000.024713858,
+      "num_states": 180584160
+    },
+    {
+      "cost": null,
+      "time": 1000.003979744,
+      "num_states": 180543705
+    },
+    {
+      "cost": null,
+      "time": 1000.002470759,
+      "num_states": 180481935
+    },
+    {
+      "cost": null,
+      "time": 1000.004305907,
+      "num_states": 180944775
+    },
+    {
+      "cost": null,
+      "time": 1000.00201243,
+      "num_states": 179826390
+    },
+    {
+      "cost": null,
+      "time": 1000.000372902,
+      "num_states": 180746415
+    },
+    {
+      "cost": null,
+      "time": 1000.001589125,
+      "num_states": 179962545
+    },
+    {
+      "cost": null,
+      "time": 1000.004562479,
+      "num_states": 180789915
+    },
+    {
+      "cost": null,
+      "time": 1000.002429667,
+      "num_states": 180667245
+    },
+    {
+      "cost": null,
+      "time": 1000.000980152,
+      "num_states": 179880765
+    },
+    {
+      "cost": null,
+      "time": 1000.005194995,
+      "num_states": 180871695
+    },
+    {
+      "cost": null,
+      "time": 1000.00082703,
+      "num_states": 180665070
+    },
+    {
+      "cost": null,
+      "time": 1000.003231174,
+      "num_states": 180384495
+    },
+    {
+      "cost": null,
+      "time": 1000.004760748,
+      "num_states": 180813840
+    },
+    {
+      "cost": null,
+      "time": 1000.004882069,
+      "num_states": 180352740
+    },
+    {
+      "cost": null,
+      "time": 1000.001081908,
+      "num_states": 181007415
+    },
+    {
+      "cost": null,
+      "time": 1000.001223219,
+      "num_states": 180578940
+    },
+    {
+      "cost": null,
+      "time": 1000.001369021,
+      "num_states": 180276180
+    },
+    {
+      "cost": null,
+      "time": 1000.002706863,
+      "num_states": 180968265
+    },
+    {
+      "cost": null,
+      "time": 1000.000968744,
+      "num_states": 180336210
+    },
+    {
+      "cost": null,
+      "time": 1000.000893424,
+      "num_states": 180734235
+    },
+    {
+      "cost": null,
+      "time": 1000.003417438,
+      "num_states": 180465405
+    },
+    {
+      "cost": null,
+      "time": 1000.007220866,
+      "num_states": 180685080
+    },
+    {
+      "cost": null,
+      "time": 1000.003099778,
+      "num_states": 180773385
+    },
+    {
+      "cost": null,
+      "time": 1000.002773613,
+      "num_states": 180245295
+    },
+    {
+      "cost": null,
+      "time": 1000.000200526,
+      "num_states": 180749460
+    },
+    {
+      "cost": null,
+      "time": 1000.003430938,
+      "num_states": 180691170
+    },
+    {
+      "cost": null,
+      "time": 1000.002313876,
+      "num_states": 178685820
+    },
+    {
+      "cost": null,
+      "time": 1000.00265357,
+      "num_states": 180581115
+    },
+    {
+      "cost": null,
+      "time": 1000.000172883,
+      "num_states": 180506730
+    },
+    {
+      "cost": null,
+      "time": 1000.000652797,
+      "num_states": 180187875
+    },
+    {
+      "cost": null,
+      "time": 1000.001426594,
+      "num_states": 180217890
+    },
+    {
+      "cost": null,
+      "time": 1000.001597925,
+      "num_states": 180891270
+    },
+    {
+      "cost": null,
+      "time": 1000.000120911,
+      "num_states": 180383190
+    },
+    {
+      "cost": null,
+      "time": 1000.005698737,
+      "num_states": 179441415
+    },
+    {
+      "cost": null,
+      "time": 1000.003676464,
+      "num_states": 180414075
+    },
+    {
+      "cost": null,
+      "time": 1000.002271819,
+      "num_states": 180707265
+    },
+    {
+      "cost": null,
+      "time": 1000.000377578,
+      "num_states": 180826020
+    },
+    {
+      "cost": null,
+      "time": 1000.000570381,
+      "num_states": 180361005
+    },
+    {
+      "cost": null,
+      "time": 1000.001453929,
+      "num_states": 180802530
+    },
+    {
+      "cost": null,
+      "time": 1000.002988565,
+      "num_states": 180395370
+    },
+    {
+      "cost": null,
+      "time": 1000.001309566,
+      "num_states": 184952430
+    },
+    {
+      "cost": null,
+      "time": 1000.002202575,
+      "num_states": 180390150
+    },
+    {
+      "cost": null,
+      "time": 1000.001292804,
+      "num_states": 180760335
+    },
+    {
+      "cost": null,
+      "time": 1000.011535749,
+      "num_states": 180436260
+    },
+    {
+      "cost": null,
+      "time": 1000.003953731,
+      "num_states": 181160100
+    },
+    {
+      "cost": null,
+      "time": 1000.000751187,
+      "num_states": 180951300
+    },
+    {
+      "cost": null,
+      "time": 1000.003924518,
+      "num_states": 185072490
+    },
+    {
+      "cost": null,
+      "time": 1000.002386641,
+      "num_states": 180543270
+    },
+    {
+      "cost": null,
+      "time": 1000.00348295,
+      "num_states": 180474975
+    },
+    {
+      "cost": null,
+      "time": 1000.005207927,
+      "num_states": 180091740
+    },
+    {
+      "cost": null,
+      "time": 1000.003263825,
+      "num_states": 180794265
+    },
+    {
+      "cost": null,
+      "time": 1000.004067573,
+      "num_states": 162020100
+    },
+    {
+      "cost": null,
+      "time": 1000.001797172,
+      "num_states": 181358895
+    },
+    {
+      "cost": null,
+      "time": 1000.000948139,
+      "num_states": 180856905
+    },
+    {
+      "cost": null,
+      "time": 1000.001741048,
+      "num_states": 181167495
+    },
+    {
+      "cost": null,
+      "time": 1000.000670119,
+      "num_states": 180654195
+    },
+    {
+      "cost": null,
+      "time": 1000.000981612,
+      "num_states": 180519780
+    },
+    {
+      "cost": null,
+      "time": 1000.000555249,
+      "num_states": 180380145
+    },
+    {
+      "cost": null,
+      "time": 1000.002140824,
+      "num_states": 180337080
+    },
+    {
+      "cost": null,
+      "time": 1000.000915753,
+      "num_states": 180649845
+    },
+    {
+      "cost": null,
+      "time": 1000.003193694,
+      "num_states": 180732930
+    },
+    {
+      "cost": null,
+      "time": 1000.002644249,
+      "num_states": 180823845
+    },
+    {
+      "cost": null,
+      "time": 1000.000093746,
+      "num_states": 180486720
+    },
+    {
+      "cost": null,
+      "time": 1000.000570761,
+      "num_states": 180856905
+    },
+    {
+      "cost": null,
+      "time": 1000.000672261,
+      "num_states": 180546750
+    },
+    {
+      "cost": null,
+      "time": 1000.002196148,
+      "num_states": 180943035
+    },
+    {
+      "cost": null,
+      "time": 1000.001910326,
+      "num_states": 180605910
+    },
+    {
+      "cost": null,
+      "time": 1000.001933216,
+      "num_states": 180873870
+    },
+    {
+      "cost": null,
+      "time": 1000.000514884,
+      "num_states": 180321420
+    },
+    {
+      "cost": null,
+      "time": 1000.000177411,
+      "num_states": 180936075
+    },
+    {
+      "cost": null,
+      "time": 1000.001867247,
+      "num_states": 180825585
+    },
+    {
+      "cost": null,
+      "time": 1000.000362923,
+      "num_states": 180527175
+    },
+    {
+      "cost": null,
+      "time": 1000.003362702,
+      "num_states": 180983925
+    },
+    {
+      "cost": null,
+      "time": 1000.000434075,
+      "num_states": 180975225
+    },
+    {
+      "cost": null,
+      "time": 1000.002280483,
+      "num_states": 180759900
+    },
+    {
+      "cost": null,
+      "time": 1000.001726228,
+      "num_states": 180953040
+    },
+    {
+      "cost": null,
+      "time": 1000.000658348,
+      "num_states": 181012635
+    },
+    {
+      "cost": null,
+      "time": 1000.003429774,
+      "num_states": 181101375
+    },
+    {
+      "cost": null,
+      "time": 1000.016282046,
+      "num_states": 180601995
+    },
+    {
+      "cost": null,
+      "time": 1000.000665589,
+      "num_states": 180501945
+    },
+    {
+      "cost": null,
+      "time": 1000.002543456,
+      "num_states": 180771645
+    },
+    {
+      "cost": null,
+      "time": 1000.000971981,
+      "num_states": 178571850
+    },
+    {
+      "cost": null,
+      "time": 1000.000320996,
+      "num_states": 180856470
+    },
+    {
+      "cost": null,
+      "time": 1000.00177838,
+      "num_states": 180502380
+    },
+    {
+      "cost": null,
+      "time": 1000.002946881,
+      "num_states": 180846900
+    },
+    {
+      "cost": null,
+      "time": 1000.000727051,
+      "num_states": 181003935
+    },
+    {
+      "cost": null,
+      "time": 1000.002203635,
+      "num_states": 180604605
+    },
+    {
+      "cost": null,
+      "time": 1000.000326498,
+      "num_states": 180998715
+    },
+    {
+      "cost": null,
+      "time": 1000.004916341,
+      "num_states": 180937815
+    },
+    {
+      "cost": null,
+      "time": 1000.002055824,
+      "num_states": 181071360
+    },
+    {
+      "cost": null,
+      "time": 1000.003831882,
+      "num_states": 180677250
+    },
+    {
+      "cost": null,
+      "time": 1000.002989694,
+      "num_states": 180509340
+    },
+    {
+      "cost": null,
+      "time": 1000.000158757,
+      "num_states": 181237095
+    },
+    {
+      "cost": null,
+      "time": 1000.000445171,
+      "num_states": 180981750
+    },
+    {
+      "cost": null,
+      "time": 1000.000125547,
+      "num_states": 180489765
+    },
+    {
+      "cost": null,
+      "time": 1000.000926835,
+      "num_states": 180824715
+    },
+    {
+      "cost": null,
+      "time": 1000.000704993,
+      "num_states": 180677250
+    },
+    {
+      "cost": null,
+      "time": 1000.002978985,
+      "num_states": 181180980
+    },
+    {
+      "cost": null,
+      "time": 1000.000279539,
+      "num_states": 181152270
+    },
+    {
+      "cost": null,
+      "time": 1000.002890835,
+      "num_states": 179929485
+    },
+    {
+      "cost": null,
+      "time": 1000.00035053,
+      "num_states": 180671595
+    },
+    {
+      "cost": null,
+      "time": 1000.000020237,
+      "num_states": 180400590
+    },
+    {
+      "cost": null,
+      "time": 1000.005766151,
+      "num_states": 180203535
+    },
+    {
+      "cost": null,
+      "time": 1000.000258791,
+      "num_states": 180995670
+    },
+    {
+      "cost": null,
+      "time": 1000.005081607,
+      "num_states": 180250080
+    },
+    {
+      "cost": null,
+      "time": 1000.001545123,
+      "num_states": 180777735
+    },
+    {
+      "cost": null,
+      "time": 1000.003484781,
+      "num_states": 180117405
+    },
+    {
+      "cost": null,
+      "time": 1000.000499744,
+      "num_states": 180975225
+    },
+    {
+      "cost": null,
+      "time": 1000.00418371,
+      "num_states": 180741630
+    },
+    {
+      "cost": null,
+      "time": 1000.000694006,
+      "num_states": 180463230
+    },
+    {
+      "cost": null,
+      "time": 1000.001638288,
+      "num_states": 180632445
+    },
+    {
+      "cost": null,
+      "time": 1000.002116552,
+      "num_states": 180467580
+    },
+    {
+      "cost": null,
+      "time": 1000.002304035,
+      "num_states": 181007415
+    },
+    {
+      "cost": null,
+      "time": 1000.001106344,
+      "num_states": 163636560
+    },
+    {
+      "cost": null,
+      "time": 1000.001321466,
+      "num_states": 181127040
+    },
+    {
+      "cost": null,
+      "time": 1000.000078576,
+      "num_states": 180982620
+    },
+    {
+      "cost": null,
+      "time": 1000.002964614,
+      "num_states": 181205775
+    },
+    {
+      "cost": null,
+      "time": 1000.001121817,
+      "num_states": 179530590
+    },
+    {
+      "cost": null,
+      "time": 1000.003071617,
+      "num_states": 180937815
+    },
+    {
+      "cost": null,
+      "time": 1000.000831297,
+      "num_states": 180851685
+    },
+    {
+      "cost": null,
+      "time": 1000.004506133,
+      "num_states": 180944775
+    },
+    {
+      "cost": null,
+      "time": 1000.001503994,
+      "num_states": 180823845
+    },
+    {
+      "cost": null,
+      "time": 1000.000685577,
+      "num_states": 180505860
+    },
+    {
+      "cost": null,
+      "time": 1000.005307293,
+      "num_states": 180716835
+    },
+    {
+      "cost": null,
+      "time": 1000.003447726,
+      "num_states": 180949560
+    },
+    {
+      "cost": null,
+      "time": 1000.000384938,
+      "num_states": 180855165
+    },
+    {
+      "cost": null,
+      "time": 1000.004938561,
+      "num_states": 183475605
+    },
+    {
+      "cost": null,
+      "time": 1000.001760783,
+      "num_states": 180365355
+    },
+    {
+      "cost": null,
+      "time": 1000.005445707,
+      "num_states": 180973485
+    },
+    {
+      "cost": null,
+      "time": 1000.006546798,
+      "num_states": 181042650
+    },
+    {
+      "cost": null,
+      "time": 1000.000046228,
+      "num_states": 180745980
+    },
+    {
+      "cost": null,
+      "time": 1000.000991427,
+      "num_states": 180994800
+    },
+    {
+      "cost": null,
+      "time": 1000.00420686,
+      "num_states": 179802465
+    },
+    {
+      "cost": null,
+      "time": 1000.000467207,
+      "num_states": 180631140
+    },
+    {
+      "cost": null,
+      "time": 1000.015338998,
+      "num_states": 180712050
+    },
+    {
+      "cost": null,
+      "time": 1000.001829372,
+      "num_states": 180784695
+    },
+    {
+      "cost": null,
+      "time": 1000.002792241,
+      "num_states": 180926940
+    },
+    {
+      "cost": null,
+      "time": 1000.000933182,
+      "num_states": 180988275
+    },
+    {
+      "cost": null,
+      "time": 1000.002946362,
+      "num_states": 180018660
+    },
+    {
+      "cost": null,
+      "time": 1000.000673202,
+      "num_states": 180719445
+    },
+    {
+      "cost": null,
+      "time": 1000.000175357,
+      "num_states": 180657675
+    },
+    {
+      "cost": null,
+      "time": 1000.001742193,
+      "num_states": 180595470
+    },
+    {
+      "cost": null,
+      "time": 1000.002720823,
+      "num_states": 180792090
+    },
+    {
+      "cost": null,
+      "time": 1000.000888585,
+      "num_states": 180593730
+    },
+    {
+      "cost": null,
+      "time": 1000.003201849,
+      "num_states": 180190920
+    },
+    {
+      "cost": null,
+      "time": 1000.012213145,
+      "num_states": 180842550
+    },
+    {
+      "cost": null,
+      "time": 1000.001909837,
+      "num_states": 180892140
+    },
+    {
+      "cost": null,
+      "time": 1000.00105336,
+      "num_states": 180648540
+    },
+    {
+      "cost": null,
+      "time": 1000.003570304,
+      "num_states": 180544575
+    },
+    {
+      "cost": null,
+      "time": 1000.004329581,
+      "num_states": 181087890
+    },
+    {
+      "cost": null,
+      "time": 1000.002081566,
+      "num_states": 180630705
+    },
+    {
+      "cost": null,
+      "time": 1000.000387579,
+      "num_states": 180646365
+    },
+    {
+      "cost": null,
+      "time": 1000.000938817,
+      "num_states": 180287490
+    },
+    {
+      "cost": null,
+      "time": 1000.002264969,
+      "num_states": 180296625
+    },
+    {
+      "cost": null,
+      "time": 1000.000000148,
+      "num_states": 180618090
+    },
+    {
+      "cost": null,
+      "time": 1000.001801246,
+      "num_states": 179568870
+    },
+    {
+      "cost": null,
+      "time": 1000.003082449,
+      "num_states": 180857340
+    },
+    {
+      "cost": null,
+      "time": 1000.000198231,
+      "num_states": 179492310
+    },
+    {
+      "cost": null,
+      "time": 1000.00107279,
+      "num_states": 180998715
+    },
+    {
+      "cost": null,
+      "time": 1000.001809767,
+      "num_states": 180627225
+    },
+    {
+      "cost": null,
+      "time": 1000.002656395,
+      "num_states": 180612870
+    },
+    {
+      "cost": null,
+      "time": 1000.00205507,
+      "num_states": 180463665
+    },
+    {
+      "cost": null,
+      "time": 1000.001416056,
+      "num_states": 180602865
+    },
+    {
+      "cost": null,
+      "time": 1000.001611658,
+      "num_states": 180503685
+    },
+    {
+      "cost": null,
+      "time": 1000.001836891,
+      "num_states": 180700305
+    },
+    {
+      "cost": null,
+      "time": 1000.00059779,
+      "num_states": 181132695
+    },
+    {
+      "cost": null,
+      "time": 1000.000595371,
+      "num_states": 180616785
+    },
+    {
+      "cost": null,
+      "time": 1000.001285147,
+      "num_states": 184242945
+    },
+    {
+      "cost": null,
+      "time": 1000.003857872,
+      "num_states": 180645495
+    },
+    {
+      "cost": null,
+      "time": 1000.005344648,
+      "num_states": 180754680
+    },
+    {
+      "cost": null,
+      "time": 1000.001245969,
+      "num_states": 180510645
+    },
+    {
+      "cost": null,
+      "time": 1000.001314099,
+      "num_states": 180129585
+    },
+    {
+      "cost": null,
+      "time": 1000.000617122,
+      "num_states": 180510645
+    },
+    {
+      "cost": null,
+      "time": 1000.000635915,
+      "num_states": 182409855
+    },
+    {
+      "cost": null,
+      "time": 1000.002397112,
+      "num_states": 181023945
+    },
+    {
+      "cost": null,
+      "time": 1000.001399082,
+      "num_states": 180802095
+    },
+    {
+      "cost": null,
+      "time": 1000.002021991,
+      "num_states": 180344910
+    },
+    {
+      "cost": null,
+      "time": 1000.002707298,
+      "num_states": 180627660
+    },
+    {
+      "cost": null,
+      "time": 1000.000398247,
+      "num_states": 180405810
+    },
+    {
+      "cost": null,
+      "time": 1000.003933412,
+      "num_states": 162097965
+    },
+    {
+      "cost": null,
+      "time": 1000.001468103,
+      "num_states": 180155250
+    },
+    {
+      "cost": null,
+      "time": 1000.011581417,
+      "num_states": 180561105
+    },
+    {
+      "cost": null,
+      "time": 1000.000217454,
+      "num_states": 180504555
+    },
+    {
+      "cost": null,
+      "time": 1000.003333055,
+      "num_states": 180561105
+    },
+    {
+      "cost": null,
+      "time": 1000.001000401,
+      "num_states": 181268415
+    },
+    {
+      "cost": null,
+      "time": 1000.001890469,
+      "num_states": 180919110
+    },
+    {
+      "cost": null,
+      "time": 1000.000497876,
+      "num_states": 180595905
+    },
+    {
+      "cost": null,
+      "time": 1000.000581696,
+      "num_states": 180697695
+    },
+    {
+      "cost": null,
+      "time": 1000.001367744,
+      "num_states": 180360570
+    },
+    {
+      "cost": null,
+      "time": 1000.00198045,
+      "num_states": 180640275
+    },
+    {
+      "cost": null,
+      "time": 1000.000260823,
+      "num_states": 180307065
+    },
+    {
+      "cost": null,
+      "time": 1000.000219541,
+      "num_states": 180357960
+    },
+    {
+      "cost": null,
+      "time": 1000.001955558,
+      "num_states": 181013505
+    },
+    {
+      "cost": null,
+      "time": 1000.000683775,
+      "num_states": 180518475
+    },
+    {
+      "cost": null,
+      "time": 1000.000522823,
+      "num_states": 181020465
+    },
+    {
+      "cost": null,
+      "time": 1000.000357041,
+      "num_states": 180521955
+    },
+    {
+      "cost": null,
+      "time": 1000.001029187,
+      "num_states": 180772515
+    },
+    {
+      "cost": null,
+      "time": 1000.004853245,
+      "num_states": 180760335
+    },
+    {
+      "cost": null,
+      "time": 1000.001680613,
+      "num_states": 180591120
+    },
+    {
+      "cost": null,
+      "time": 1000.002245198,
+      "num_states": 181284510
+    },
+    {
+      "cost": null,
+      "time": 1000.000121156,
+      "num_states": 184469145
+    },
+    {
+      "cost": null,
+      "time": 1000.000666911,
+      "num_states": 180711615
+    },
+    {
+      "cost": null,
+      "time": 1000.000369748,
+      "num_states": 180788610
+    },
+    {
+      "cost": null,
+      "time": 1000.001076635,
+      "num_states": 180234855
+    },
+    {
+      "cost": null,
+      "time": 1000.000022084,
+      "num_states": 180267915
+    },
+    {
+      "cost": null,
+      "time": 1000.002091265,
+      "num_states": 180428865
+    },
+    {
+      "cost": null,
+      "time": 1000.002004314,
+      "num_states": 180924765
+    },
+    {
+      "cost": null,
+      "time": 1000.002419618,
+      "num_states": 180386235
+    },
+    {
+      "cost": null,
+      "time": 1000.000992083,
+      "num_states": 181173585
+    },
+    {
+      "cost": null,
+      "time": 1000.002264576,
+      "num_states": 180855600
+    },
+    {
+      "cost": null,
+      "time": 1000.005867552,
+      "num_states": 180432780
+    },
+    {
+      "cost": null,
+      "time": 1000.000400666,
+      "num_states": 180317940
+    },
+    {
+      "cost": null,
+      "time": 1000.004449746,
+      "num_states": 178666680
+    },
+    {
+      "cost": null,
+      "time": 1000.005610238,
+      "num_states": 180488460
+    },
+    {
+      "cost": null,
+      "time": 1000.000342994,
+      "num_states": 180538485
+    },
+    {
+      "cost": null,
+      "time": 1000.003330234,
+      "num_states": 180161340
+    },
+    {
+      "cost": null,
+      "time": 1000.000196383,
+      "num_states": 180621570
+    },
+    {
+      "cost": null,
+      "time": 1000.000238303,
+      "num_states": 180284445
+    },
+    {
+      "cost": null,
+      "time": 1000.001043641,
+      "num_states": 180952170
+    },
+    {
+      "cost": null,
+      "time": 1000.000606997,
+      "num_states": 180767730
+    },
+    {
+      "cost": null,
+      "time": 1000.001400854,
+      "num_states": 180624615
+    },
+    {
+      "cost": null,
+      "time": 1000.001318734,
+      "num_states": 180094785
+    },
+    {
+      "cost": null,
+      "time": 1000.000968099,
+      "num_states": 180672030
+    },
+    {
+      "cost": null,
+      "time": 1000.004272802,
+      "num_states": 180296190
+    },
+    {
+      "cost": null,
+      "time": 1000.005702576,
+      "num_states": 180861690
+    },
+    {
+      "cost": null,
+      "time": 1000.003416113,
+      "num_states": 180993495
+    },
+    {
+      "cost": null,
+      "time": 1000.006851338,
+      "num_states": 180887790
+    },
+    {
+      "cost": null,
+      "time": 1000.004603945,
+      "num_states": 180645930
+    },
+    {
+      "cost": null,
+      "time": 1000.004187801,
+      "num_states": 180577200
+    },
+    {
+      "cost": null,
+      "time": 1000.002870187,
+      "num_states": 180587205
+    },
+    {
+      "cost": null,
+      "time": 1000.00212705,
+      "num_states": 181019160
+    },
+    {
+      "cost": null,
+      "time": 1000.0011377,
+      "num_states": 180776430
+    },
+    {
+      "cost": null,
+      "time": 1000.00106292,
+      "num_states": 180927810
+    },
+    {
+      "cost": null,
+      "time": 1000.002714875,
+      "num_states": 180460185
+    },
+    {
+      "cost": null,
+      "time": 1000.000803316,
+      "num_states": 180863430
+    },
+    {
+      "cost": null,
+      "time": 1000.003728816,
+      "num_states": 180636795
+    },
+    {
+      "cost": null,
+      "time": 1000.002064138,
+      "num_states": 180655935
+    },
+    {
+      "cost": null,
+      "time": 1000.010276299,
+      "num_states": 180495420
+    },
+    {
+      "cost": null,
+      "time": 1000.00150617,
+      "num_states": 180769905
+    },
+    {
+      "cost": null,
+      "time": 1000.002607242,
+      "num_states": 180147855
+    },
+    {
+      "cost": null,
+      "time": 1000.002382239,
+      "num_states": 180865170
+    },
+    {
+      "cost": null,
+      "time": 1000.001408569,
+      "num_states": 162965790
+    },
+    {
+      "cost": null,
+      "time": 1000.002104196,
+      "num_states": 180494115
+    },
+    {
+      "cost": null,
+      "time": 1000.000281607,
+      "num_states": 180656370
+    },
+    {
+      "cost": null,
+      "time": 1000.000483139,
+      "num_states": 180440175
+    },
+    {
+      "cost": null,
+      "time": 1000.000015434,
+      "num_states": 179241315
+    },
+    {
+      "cost": null,
+      "time": 1000.002058791,
+      "num_states": 180650280
+    },
+    {
+      "cost": null,
+      "time": 1000.002539695,
+      "num_states": 181074405
+    },
+    {
+      "cost": null,
+      "time": 1000.002597326,
+      "num_states": 180753375
+    },
+    {
+      "cost": null,
+      "time": 1000.00103403,
+      "num_states": 181080930
+    },
+    {
+      "cost": null,
+      "time": 1000.001789497,
+      "num_states": 180577200
+    },
+    {
+      "cost": null,
+      "time": 1000.000029767,
+      "num_states": 180791655
+    },
+    {
+      "cost": null,
+      "time": 1000.001784265,
+      "num_states": 180670725
+    },
+    {
+      "cost": null,
+      "time": 1000.000808135,
+      "num_states": 180857775
+    },
+    {
+      "cost": null,
+      "time": 1000.002603331,
+      "num_states": 185115555
+    },
+    {
+      "cost": null,
+      "time": 1000.001813874,
+      "num_states": 180778170
+    },
+    {
+      "cost": null,
+      "time": 1000.001003195,
+      "num_states": 180848640
+    },
+    {
+      "cost": null,
+      "time": 1000.000618161,
+      "num_states": 180994800
+    },
+    {
+      "cost": null,
+      "time": 1000.004176306,
+      "num_states": 180362310
+    },
+    {
+      "cost": null,
+      "time": 1000.002066312,
+      "num_states": 180427560
+    },
+    {
+      "cost": null,
+      "time": 1000.000287223,
+      "num_states": 180925200
+    },
+    {
+      "cost": null,
+      "time": 1000.000776908,
+      "num_states": 180759030
+    },
+    {
+      "cost": null,
+      "time": 1000.000334153,
+      "num_states": 180981750
+    },
+    {
+      "cost": null,
+      "time": 1000.002407643,
+      "num_states": 180800790
+    },
+    {
+      "cost": null,
+      "time": 1000.002932477,
+      "num_states": 180511080
+    },
+    {
+      "cost": null,
+      "time": 1000.002485903,
+      "num_states": 179973420
+    },
+    {
+      "cost": null,
+      "time": 1000.00125432,
+      "num_states": 180621570
+    },
+    {
+      "cost": null,
+      "time": 1000.000569422,
+      "num_states": 180604605
+    },
+    {
+      "cost": null,
+      "time": 1000.000943515,
+      "num_states": 180749460
+    },
+    {
+      "cost": null,
+      "time": 1000.002218009,
+      "num_states": 180082605
+    },
+    {
+      "cost": null,
+      "time": 1000.00445225,
+      "num_states": 180997845
+    },
+    {
+      "cost": null,
+      "time": 1000.001775851,
+      "num_states": 180294450
+    },
+    {
+      "cost": null,
+      "time": 1000.002001083,
+      "num_states": 181069620
+    },
+    {
+      "cost": null,
+      "time": 1000.002741921,
+      "num_states": 180994365
+    },
+    {
+      "cost": null,
+      "time": 1000.005556838,
+      "num_states": 180823410
+    },
+    {
+      "cost": null,
+      "time": 1000.025740951,
+      "num_states": 180816015
+    },
+    {
+      "cost": null,
+      "time": 1000.006109973,
+      "num_states": 180814710
+    },
+    {
+      "cost": null,
+      "time": 1000.006059413,
+      "num_states": 180487590
+    },
+    {
+      "cost": null,
+      "time": 1000.000625017,
+      "num_states": 180574155
+    },
+    {
+      "cost": null,
+      "time": 1000.001384604,
+      "num_states": 180768165
+    },
+    {
+      "cost": null,
+      "time": 1000.000065599,
+      "num_states": 180824715
+    },
+    {
+      "cost": null,
+      "time": 1000.000912776,
+      "num_states": 180866040
+    },
+    {
+      "cost": null,
+      "time": 1000.000423412,
+      "num_states": 178722360
+    },
+    {
+      "cost": null,
+      "time": 1000.000880015,
+      "num_states": 180272265
+    },
+    {
+      "cost": null,
+      "time": 1000.00436117,
+      "num_states": 180513690
+    },
+    {
+      "cost": null,
+      "time": 1000.000635813,
+      "num_states": 178866780
+    },
+    {
+      "cost": null,
+      "time": 1000.000662493,
+      "num_states": 180754680
+    },
+    {
+      "cost": null,
+      "time": 1000.002439529,
+      "num_states": 180020400
+    },
+    {
+      "cost": null,
+      "time": 1000.002777862,
+      "num_states": 180575895
+    },
+    {
+      "cost": null,
+      "time": 1000.004278467,
+      "num_states": 181077015
+    },
+    {
+      "cost": null,
+      "time": 1000.000063644,
+      "num_states": 180839940
+    },
+    {
+      "cost": null,
+      "time": 1000.000329117,
+      "num_states": 180485850
+    },
+    {
+      "cost": null,
+      "time": 1000.000293606,
+      "num_states": 181053960
+    },
+    {
+      "cost": null,
+      "time": 1000.000566147,
+      "num_states": 180819060
+    },
+    {
+      "cost": null,
+      "time": 1000.002035821,
+      "num_states": 180818625
+    },
+    {
+      "cost": null,
+      "time": 1000.001421365,
+      "num_states": 181313655
+    },
+    {
+      "cost": null,
+      "time": 1000.000744868,
+      "num_states": 180416685
+    },
+    {
+      "cost": null,
+      "time": 1000.005186353,
+      "num_states": 180771210
+    },
+    {
+      "cost": null,
+      "time": 1000.001351774,
+      "num_states": 179954280
+    },
+    {
+      "cost": null,
+      "time": 1000.001465684,
+      "num_states": 180724665
+    },
+    {
+      "cost": null,
+      "time": 1000.002637396,
+      "num_states": 180827760
+    },
+    {
+      "cost": null,
+      "time": 1000.000697947,
+      "num_states": 181085715
+    },
+    {
+      "cost": null,
+      "time": 1000.000013689,
+      "num_states": 180615915
+    },
+    {
+      "cost": null,
+      "time": 1000.001823077,
+      "num_states": 181106160
+    },
+    {
+      "cost": null,
+      "time": 1000.000238449,
+      "num_states": 180042150
+    },
+    {
+      "cost": null,
+      "time": 1000.000798094,
+      "num_states": 180826455
+    },
+    {
+      "cost": null,
+      "time": 1000.002558021,
+      "num_states": 180591555
+    },
+    {
+      "cost": null,
+      "time": 1000.007144523,
+      "num_states": 162173220
+    },
+    {
+      "cost": null,
+      "time": 1000.000198116,
+      "num_states": 181161840
+    },
+    {
+      "cost": null,
+      "time": 1000.00151306,
+      "num_states": 180926940
+    },
+    {
+      "cost": null,
+      "time": 1000.000312815,
+      "num_states": 181176195
+    },
+    {
+      "cost": null,
+      "time": 1000.000538929,
+      "num_states": 179638470
+    },
+    {
+      "cost": null,
+      "time": 1000.001064594,
+      "num_states": 180080430
+    },
+    {
+      "cost": null,
+      "time": 1000.003272215,
+      "num_states": 180739455
+    },
+    {
+      "cost": null,
+      "time": 1000.003235006,
+      "num_states": 181022205
+    },
+    {
+      "cost": null,
+      "time": 1000.000927705,
+      "num_states": 181077450
+    },
+    {
+      "cost": null,
+      "time": 1000.000635162,
+      "num_states": 181089630
+    },
+    {
+      "cost": null,
+      "time": 1000.003232626,
+      "num_states": 180844290
+    },
+    {
+      "cost": null,
+      "time": 1000.005902833,
+      "num_states": 180434520
+    },
+    {
+      "cost": null,
+      "time": 1000.000628693,
+      "num_states": 180735540
+    },
+    {
+      "cost": null,
+      "time": 1000.00342908,
+      "num_states": 180521085
+    },
+    {
+      "cost": null,
+      "time": 1000.005688531,
+      "num_states": 180866475
+    },
+    {
+      "cost": null,
+      "time": 1000.001753634,
+      "num_states": 184407375
+    },
+    {
+      "cost": null,
+      "time": 1000.000778306,
+      "num_states": 180521955
+    },
+    {
+      "cost": null,
+      "time": 1000.002313251,
+      "num_states": 181154010
+    },
+    {
+      "cost": null,
+      "time": 1000.000861118,
+      "num_states": 180481935
+    },
+    {
+      "cost": null,
+      "time": 1000.000082751,
+      "num_states": 180115665
+    },
+    {
+      "cost": null,
+      "time": 1000.007919726,
+      "num_states": 180555450
+    },
+    {
+      "cost": null,
+      "time": 1000.002833577,
+      "num_states": 181297125
+    },
+    {
+      "cost": null,
+      "time": 1000.000887969,
+      "num_states": 180698565
+    },
+    {
+      "cost": null,
+      "time": 1000.001627426,
+      "num_states": 180889095
+    },
+    {
+      "cost": null,
+      "time": 1000.003400563,
+      "num_states": 180091740
+    },
+    {
+      "cost": null,
+      "time": 1000.007346042,
+      "num_states": 180407550
+    },
+    {
+      "cost": null,
+      "time": 1000.000439485,
+      "num_states": 180608085
+    },
+    {
+      "cost": null,
+      "time": 1000.001640407,
+      "num_states": 181194900
+    },
+    {
+      "cost": null,
+      "time": 1000.003705856,
+      "num_states": 180401895
+    },
+    {
+      "cost": null,
+      "time": 1000.000093202,
+      "num_states": 179876850
+    },
+    {
+      "cost": null,
+      "time": 1000.001567887,
+      "num_states": 180166560
+    },
+    {
+      "cost": null,
+      "time": 1000.000132463,
+      "num_states": 180862125
+    },
+    {
+      "cost": null,
+      "time": 1000.004230023,
+      "num_states": 180635490
+    },
+    {
+      "cost": null,
+      "time": 1000.001896001,
+      "num_states": 177956760
+    },
+    {
+      "cost": null,
+      "time": 1000.001505177,
+      "num_states": 180860385
+    },
+    {
+      "cost": null,
+      "time": 1000.004046921,
+      "num_states": 181087020
+    },
+    {
+      "cost": null,
+      "time": 1000.000990842,
+      "num_states": 179965155
+    },
+    {
+      "cost": null,
+      "time": 1000.00169538,
+      "num_states": 180786870
+    },
+    {
+      "cost": null,
+      "time": 1000.001093893,
+      "num_states": 181193160
+    },
+    {
+      "cost": null,
+      "time": 1000.000855302,
+      "num_states": 180438435
+    },
+    {
+      "cost": null,
+      "time": 1000.00164662,
+      "num_states": 181057875
+    },
+    {
+      "cost": null,
+      "time": 1000.000960844,
+      "num_states": 180360570
+    },
+    {
+      "cost": null,
+      "time": 1000.002962303,
+      "num_states": 180133935
+    },
+    {
+      "cost": null,
+      "time": 1000.003339647,
+      "num_states": 180871695
+    },
+    {
+      "cost": null,
+      "time": 1000.000754252,
+      "num_states": 180351435
+    },
+    {
+      "cost": null,
+      "time": 1000.001977454,
+      "num_states": 180612870
+    },
+    {
+      "cost": null,
+      "time": 1000.001954223,
+      "num_states": 180767730
+    },
+    {
+      "cost": null,
+      "time": 1000.00255651,
+      "num_states": 180364920
+    },
+    {
+      "cost": null,
+      "time": 1000.000341048,
+      "num_states": 180501945
+    },
+    {
+      "cost": null,
+      "time": 1000.001236497,
+      "num_states": 180554145
+    },
+    {
+      "cost": null,
+      "time": 1000.001933154,
+      "num_states": 180561105
+    },
+    {
+      "cost": null,
+      "time": 1000.00571212,
+      "num_states": 180448005
+    },
+    {
+      "cost": null,
+      "time": 1000.005709341,
+      "num_states": 180654195
+    },
+    {
+      "cost": null,
+      "time": 1000.001267948,
+      "num_states": 180696825
+    },
+    {
+      "cost": null,
+      "time": 1000.002873163,
+      "num_states": 180735975
+    },
+    {
+      "cost": null,
+      "time": 1000.00148604,
+      "num_states": 180607215
+    },
+    {
+      "cost": null,
+      "time": 1000.011278286,
+      "num_states": 180645060
+    },
+    {
+      "cost": null,
+      "time": 1000.00025336,
+      "num_states": 180701610
+    },
+    {
+      "cost": null,
+      "time": 1000.001875426,
+      "num_states": 180729015
+    },
+    {
+      "cost": null,
+      "time": 1000.000874216,
+      "num_states": 180455835
+    },
+    {
+      "cost": null,
+      "time": 1000.006738442,
+      "num_states": 180926940
+    },
+    {
+      "cost": null,
+      "time": 1000.001631554,
+      "num_states": 182867910
+    },
+    {
+      "cost": null,
+      "time": 1000.000846037,
+      "num_states": 180862995
+    },
+    {
+      "cost": null,
+      "time": 1000.00224825,
+      "num_states": 163469520
+    },
+    {
+      "cost": null,
+      "time": 1000.000723916,
+      "num_states": 178714530
+    },
+    {
+      "cost": null,
+      "time": 1000.001996789,
+      "num_states": 180857775
+    },
+    {
+      "cost": null,
+      "time": 1000.00511674,
+      "num_states": 180478890
+    },
+    {
+      "cost": null,
+      "time": 1000.003383945,
+      "num_states": 180381015
+    },
+    {
+      "cost": null,
+      "time": 1000.00072519,
+      "num_states": 180905625
+    },
+    {
+      "cost": null,
+      "time": 1000.001377226,
+      "num_states": 180582855
+    },
+    {
+      "cost": null,
+      "time": 1000.000599979,
+      "num_states": 180402765
+    },
+    {
+      "cost": null,
+      "time": 1000.003427297,
+      "num_states": 180446700
+    },
+    {
+      "cost": null,
+      "time": 1000.000921014,
+      "num_states": 180440175
+    },
+    {
+      "cost": null,
+      "time": 1000.002893574,
+      "num_states": 180439740
+    },
+    {
+      "cost": null,
+      "time": 1000.002200087,
+      "num_states": 180639840
+    },
+    {
+      "cost": null,
+      "time": 1000.001580023,
+      "num_states": 181028730
+    },
+    {
+      "cost": null,
+      "time": 1000.001087958,
+      "num_states": 180558495
+    },
+    {
+      "cost": null,
+      "time": 1000.002884546,
+      "num_states": 181930920
+    },
+    {
+      "cost": null,
+      "time": 1000.000123249,
+      "num_states": 180260520
+    },
+    {
+      "cost": null,
+      "time": 1000.004464983,
+      "num_states": 180659850
+    },
+    {
+      "cost": null,
+      "time": 1000.000472345,
+      "num_states": 180478020
+    },
+    {
+      "cost": null,
+      "time": 1000.000211053,
+      "num_states": 181023945
+    },
+    {
+      "cost": null,
+      "time": 1000.000444537,
+      "num_states": 181121385
+    },
+    {
+      "cost": null,
+      "time": 1000.000050354,
+      "num_states": 180792525
+    },
+    {
+      "cost": null,
+      "time": 1000.004200153,
+      "num_states": 180334470
+    },
+    {
+      "cost": null,
+      "time": 1000.000774051,
+      "num_states": 180580680
+    },
+    {
+      "cost": null,
+      "time": 1000.000870162,
+      "num_states": 181004370
+    },
+    {
+      "cost": null,
+      "time": 1000.004623039,
+      "num_states": 181083540
+    },
+    {
+      "cost": null,
+      "time": 1000.000872863,
+      "num_states": 180539790
+    },
+    {
+      "cost": null,
+      "time": 1000.001382738,
+      "num_states": 180827325
+    },
+    {
+      "cost": null,
+      "time": 1000.000883534,
+      "num_states": 180555450
+    },
+    {
+      "cost": null,
+      "time": 1000.005683921,
+      "num_states": 180190485
+    },
+    {
+      "cost": null,
+      "time": 1000.001050428,
+      "num_states": 180561975
+    },
+    {
+      "cost": null,
+      "time": 1000.002529843,
+      "num_states": 181101810
+    },
+    {
+      "cost": null,
+      "time": 1000.000905827,
+      "num_states": 180906495
+    },
+    {
+      "cost": null,
+      "time": 1000.002026668,
+      "num_states": 180516735
+    },
+    {
+      "cost": null,
+      "time": 1000.001893668,
+      "num_states": 181036995
+    },
+    {
+      "cost": null,
+      "time": 1000.002961068,
+      "num_states": 180594600
+    },
+    {
+      "cost": null,
+      "time": 1000.000628167,
+      "num_states": 180361005
+    },
+    {
+      "cost": null,
+      "time": 1000.001535356,
+      "num_states": 181311045
+    },
+    {
+      "cost": null,
+      "time": 1000.000564076,
+      "num_states": 180552840
+    },
+    {
+      "cost": null,
+      "time": 1000.000432957,
+      "num_states": 180629835
+    },
+    {
+      "cost": null,
+      "time": 1000.012982738,
+      "num_states": 180718140
+    },
+    {
+      "cost": null,
+      "time": 1000.001898281,
+      "num_states": 179439240
+    },
+    {
+      "cost": null,
+      "time": 1000.001493378,
+      "num_states": 180187440
+    },
+    {
+      "cost": null,
+      "time": 1000.00071676,
+      "num_states": 178278660
+    },
+    {
+      "cost": null,
+      "time": 1000.002013954,
+      "num_states": 181382385
+    },
+    {
+      "cost": null,
+      "time": 1000.000180797,
+      "num_states": 180406245
+    },
+    {
+      "cost": null,
+      "time": 1000.000016426,
+      "num_states": 180956955
+    },
+    {
+      "cost": null,
+      "time": 1000.00148511,
+      "num_states": 180614175
+    },
+    {
+      "cost": null,
+      "time": 1000.001609121,
+      "num_states": 180650715
+    },
+    {
+      "cost": null,
+      "time": 1000.005232807,
+      "num_states": 179793330
+    },
+    {
+      "cost": null,
+      "time": 1000.001517081,
+      "num_states": 180805575
+    },
+    {
+      "cost": null,
+      "time": 1000.001431331,
+      "num_states": 180320550
+    },
+    {
+      "cost": null,
+      "time": 1000.000359271,
+      "num_states": 180688125
+    },
+    {
+      "cost": null,
+      "time": 1000.001020328,
+      "num_states": 180561540
+    },
+    {
+      "cost": null,
+      "time": 1000.000424323,
+      "num_states": 180395805
+    },
+    {
+      "cost": null,
+      "time": 1000.001379972,
+      "num_states": 181085715
+    },
+    {
+      "cost": null,
+      "time": 1000.000167511,
+      "num_states": 180211365
+    },
+    {
+      "cost": null,
+      "time": 1000.002374142,
+      "num_states": 180786000
+    },
+    {
+      "cost": null,
+      "time": 1000.003683915,
+      "num_states": 181004805
+    },
+    {
+      "cost": null,
+      "time": 1000.000388873,
+      "num_states": 181145310
+    },
+    {
+      "cost": null,
+      "time": 1000.002605575,
+      "num_states": 181151835
+    },
+    {
+      "cost": null,
+      "time": 1000.001292213,
+      "num_states": 180882135
+    },
+    {
+      "cost": null,
+      "time": 1000.001349734,
+      "num_states": 180851250
+    },
+    {
+      "cost": null,
+      "time": 1000.00179616,
+      "num_states": 180069120
+    },
+    {
+      "cost": null,
+      "time": 1000.000509709,
+      "num_states": 180568065
+    },
+    {
+      "cost": null,
+      "time": 1000.00179481,
+      "num_states": 180743370
+    },
+    {
+      "cost": null,
+      "time": 1000.002215399,
+      "num_states": 161906130
+    },
+    {
+      "cost": null,
+      "time": 1000.001135179,
+      "num_states": 182455965
+    },
+    {
+      "cost": null,
+      "time": 1000.0013352,
+      "num_states": 189885765
+    },
+    {
+      "cost": 0.31333333333333324,
+      "time": 820.361031632,
+      "num_states": 169457295
+    },
+    {
+      "cost": null,
+      "time": 1000.000988989,
+      "num_states": 192046410
+    },
+    {
+      "cost": null,
+      "time": 1000.000475384,
+      "num_states": 221133555
+    },
+    {
+      "cost": null,
+      "time": 1000.001176241,
+      "num_states": 217940220
+    },
+    {
+      "cost": null,
+      "time": 1000.001632206,
+      "num_states": 201692970
+    },
+    {
+      "cost": null,
+      "time": 1000.001958049,
+      "num_states": 210860160
+    },
+    {
+      "cost": null,
+      "time": 1000.000824048,
+      "num_states": 215528580
+    },
+    {
+      "cost": null,
+      "time": 1000.001357743,
+      "num_states": 239840730
+    },
+    {
+      "cost": null,
+      "time": 1000.000800478,
+      "num_states": 220580235
+    },
+    {
+      "cost": null,
+      "time": 1000.000507355,
+      "num_states": 187194420
+    },
+    {
+      "cost": null,
+      "time": 1000.001850728,
+      "num_states": 196214145
+    },
+    {
+      "cost": null,
+      "time": 1000.001139522,
+      "num_states": 208829580
+    },
+    {
+      "cost": null,
+      "time": 1000.003211783,
+      "num_states": 199742865
+    },
+    {
+      "cost": null,
+      "time": 1000.000910019,
+      "num_states": 213506700
+    },
+    {
+      "cost": null,
+      "time": 1000.007794209,
+      "num_states": 214815615
+    },
+    {
+      "cost": null,
+      "time": 1000.000343713,
+      "num_states": 185525325
+    },
+    {
+      "cost": null,
+      "time": 1000.000425804,
+      "num_states": 216957990
+    },
+    {
+      "cost": null,
+      "time": 1000.000520996,
+      "num_states": 185783715
+    },
+    {
+      "cost": null,
+      "time": 1000.000412464,
+      "num_states": 209912295
+    },
+    {
+      "cost": null,
+      "time": 1000.000691277,
+      "num_states": 215278890
+    },
+    {
+      "cost": null,
+      "time": 1000.001052082,
+      "num_states": 220227015
+    },
+    {
+      "cost": null,
+      "time": 1000.000824699,
+      "num_states": 213648945
+    },
+    {
+      "cost": null,
+      "time": 1000.000762498,
+      "num_states": 214838670
+    },
+    {
+      "cost": null,
+      "time": 1000.000233093,
+      "num_states": 205919430
+    },
+    {
+      "cost": null,
+      "time": 1000.003488835,
+      "num_states": 234994395
+    },
+    {
+      "cost": null,
+      "time": 1000.001480886,
+      "num_states": 210762285
+    },
+    {
+      "cost": null,
+      "time": 1000.000723199,
+      "num_states": 185945100
+    },
+    {
+      "cost": null,
+      "time": 1000.006096632,
+      "num_states": 216834450
+    },
+    {
+      "cost": null,
+      "time": 1000.00190442,
+      "num_states": 212102085
+    },
+    {
+      "cost": null,
+      "time": 1000.004393475,
+      "num_states": 222849630
+    },
+    {
+      "cost": null,
+      "time": 1000.00489082,
+      "num_states": 211670130
+    },
+    {
+      "cost": null,
+      "time": 1000.001382135,
+      "num_states": 207461505
+    },
+    {
+      "cost": null,
+      "time": 1000.002205824,
+      "num_states": 197166795
+    },
+    {
+      "cost": null,
+      "time": 1000.003140923,
+      "num_states": 197178540
+    },
+    {
+      "cost": null,
+      "time": 1000.004990951,
+      "num_states": 208331940
+    },
+    {
+      "cost": null,
+      "time": 1000.000620248,
+      "num_states": 197094150
+    },
+    {
+      "cost": null,
+      "time": 1000.000304935,
+      "num_states": 213604575
+    },
+    {
+      "cost": null,
+      "time": 1000.000080452,
+      "num_states": 241624665
+    },
+    {
+      "cost": null,
+      "time": 1000.003134284,
+      "num_states": 185865930
+    },
+    {
+      "cost": null,
+      "time": 1000.000419316,
+      "num_states": 215482035
+    },
+    {
+      "cost": null,
+      "time": 1000.000063593,
+      "num_states": 204787995
+    },
+    {
+      "cost": null,
+      "time": 1000.001413567,
+      "num_states": 192003780
+    },
+    {
+      "cost": null,
+      "time": 1000.000202224,
+      "num_states": 207955665
+    },
+    {
+      "cost": null,
+      "time": 1000.002726379,
+      "num_states": 211231650
+    },
+    {
+      "cost": null,
+      "time": 1000.000726919,
+      "num_states": 230254200
+    },
+    {
+      "cost": null,
+      "time": 1000.002442866,
+      "num_states": 242138400
+    },
+    {
+      "cost": null,
+      "time": 1000.001410366,
+      "num_states": 212821575
+    },
+    {
+      "cost": null,
+      "time": 1000.002265425,
+      "num_states": 204507420
+    },
+    {
+      "cost": null,
+      "time": 1000.001680168,
+      "num_states": 229235865
+    },
+    {
+      "cost": null,
+      "time": 1000.003833561,
+      "num_states": 192912495
+    },
+    {
+      "cost": null,
+      "time": 1000.003549268,
+      "num_states": 215677785
+    },
+    {
+      "cost": null,
+      "time": 1000.006670419,
+      "num_states": 207620715
+    },
+    {
+      "cost": null,
+      "time": 1000.001114334,
+      "num_states": 204805830
+    },
+    {
+      "cost": null,
+      "time": 1000.00277594,
+      "num_states": 211508310
+    },
+    {
+      "cost": null,
+      "time": 1000.001133713,
+      "num_states": 201840000
+    },
+    {
+      "cost": null,
+      "time": 1000.001341736,
+      "num_states": 205838955
+    },
+    {
+      "cost": null,
+      "time": 1000.00067729,
+      "num_states": 209691315
+    },
+    {
+      "cost": null,
+      "time": 1000.000552168,
+      "num_states": 198999015
+    },
+    {
+      "cost": null,
+      "time": 1000.0017561,
+      "num_states": 227187450
+    },
+    {
+      "cost": null,
+      "time": 1000.00075413,
+      "num_states": 178779780
+    },
+    {
+      "cost": null,
+      "time": 1000.005157765,
+      "num_states": 185436585
+    },
+    {
+      "cost": null,
+      "time": 1000.003464948,
+      "num_states": 211909815
+    },
+    {
+      "cost": null,
+      "time": 1000.003712441,
+      "num_states": 209665215
+    },
+    {
+      "cost": null,
+      "time": 1000.000849802,
+      "num_states": 208337595
+    },
+    {
+      "cost": null,
+      "time": 1000.005524699,
+      "num_states": 211914165
+    },
+    {
+      "cost": null,
+      "time": 1000.001399998,
+      "num_states": 222291960
+    },
+    {
+      "cost": null,
+      "time": 1000.002041305,
+      "num_states": 203556510
+    },
+    {
+      "cost": null,
+      "time": 1000.001370528,
+      "num_states": 205893765
+    },
+    {
+      "cost": null,
+      "time": 1000.001935303,
+      "num_states": 199451415
+    },
+    {
+      "cost": null,
+      "time": 1000.000662791,
+      "num_states": 205565775
+    },
+    {
+      "cost": null,
+      "time": 1000.000430848,
+      "num_states": 216047100
+    },
+    {
+      "cost": null,
+      "time": 1000.003090366,
+      "num_states": 228520725
+    },
+    {
+      "cost": null,
+      "time": 1000.000808133,
+      "num_states": 227510655
+    },
+    {
+      "cost": null,
+      "time": 1000.002393089,
+      "num_states": 196094955
+    },
+    {
+      "cost": null,
+      "time": 1000.002845033,
+      "num_states": 208012650
+    },
+    {
+      "cost": null,
+      "time": 1000.001305738,
+      "num_states": 233203500
+    },
+    {
+      "cost": null,
+      "time": 1000.001238428,
+      "num_states": 213065610
+    },
+    {
+      "cost": null,
+      "time": 1000.000249428,
+      "num_states": 215480295
+    },
+    {
+      "cost": null,
+      "time": 1000.000602772,
+      "num_states": 212660625
+    },
+    {
+      "cost": null,
+      "time": 1000.000005617,
+      "num_states": 224459130
+    },
+    {
+      "cost": null,
+      "time": 1000.000504711,
+      "num_states": 193789455
+    },
+    {
+      "cost": null,
+      "time": 1000.000111707,
+      "num_states": 206781600
+    },
+    {
+      "cost": null,
+      "time": 1000.000665323,
+      "num_states": 203940615
+    },
+    {
+      "cost": null,
+      "time": 1000.002144227,
+      "num_states": 185978595
+    },
+    {
+      "cost": null,
+      "time": 1000.000996686,
+      "num_states": 185672790
+    },
+    {
+      "cost": null,
+      "time": 1000.000547211,
+      "num_states": 212069460
+    },
+    {
+      "cost": null,
+      "time": 1000.002158258,
+      "num_states": 242931840
+    },
+    {
+      "cost": null,
+      "time": 1000.000157078,
+      "num_states": 194448915
+    },
+    {
+      "cost": null,
+      "time": 1000.001326,
+      "num_states": 185669310
+    },
+    {
+      "cost": null,
+      "time": 1000.000197839,
+      "num_states": 212423985
+    },
+    {
+      "cost": null,
+      "time": 1000.000540112,
+      "num_states": 201828690
+    },
+    {
+      "cost": null,
+      "time": 1000.000957556,
+      "num_states": 189375075
+    },
+    {
+      "cost": null,
+      "time": 1000.00133189,
+      "num_states": 215571645
+    },
+    {
+      "cost": null,
+      "time": 1000.00031367,
+      "num_states": 214438470
+    },
+    {
+      "cost": null,
+      "time": 1000.000358521,
+      "num_states": 215947485
+    },
+    {
+      "cost": null,
+      "time": 1000.000363802,
+      "num_states": 215094015
+    },
+    {
+      "cost": null,
+      "time": 1000.000446003,
+      "num_states": 186384450
+    },
+    {
+      "cost": null,
+      "time": 1000.000027968,
+      "num_states": 204672720
+    },
+    {
+      "cost": null,
+      "time": 1000.002905787,
+      "num_states": 199777665
+    },
+    {
+      "cost": null,
+      "time": 1000.001069679,
+      "num_states": 191824995
+    },
+    {
+      "cost": null,
+      "time": 1000.002754436,
+      "num_states": 226102995
+    },
+    {
+      "cost": null,
+      "time": 1000.005008938,
+      "num_states": 209101890
+    }
+  ],
+  "baseline_mif_result": [],
+  "baseline_mil_result": []
+}

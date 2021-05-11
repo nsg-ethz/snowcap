@@ -1,0 +1,3 @@
+*.pdf
+./result_*/
+!precomputed_results/*

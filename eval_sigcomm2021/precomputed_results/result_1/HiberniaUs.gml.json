@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 41,
+        "failures": 959,
+        "success_rate": 0.041
+      },
+      "total_severity": {
+        "min": 0.0002631578947368421,
+        "max": 0.7621052631578947,
+        "mean": 0.23824927281707892,
+        "median": 0.21394736842105264,
+        "std": 0.1801925053277611,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.5008063864887792,
+        "median": 0.5,
+        "std": 0.26995305890172655,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 144,
+        "failures": 856,
+        "success_rate": 0.144
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.8925,
+        "mean": 0.3019129672897193,
+        "median": 0.26,
+        "std": 0.23400140477567558,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6532798281091609,
+        "median": 0.8,
+        "std": 0.30922625732297837,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 46,
+        "failures": 954,
+        "success_rate": 0.046
+      },
+      "total_severity": {
+        "min": 0.0002631578947368421,
+        "max": 0.7871052631578948,
+        "mean": 0.2194609952554341,
+        "median": 0.19552631578947366,
+        "std": 0.16377523015376977,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.4603469425540607,
+        "median": 0.45,
+        "std": 0.2551124890339458,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 149,
+        "failures": 851,
+        "success_rate": 0.149
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.8625,
+        "mean": 0.28888954171562836,
+        "median": 0.24,
+        "std": 0.22398708052207053,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6312620362048467,
+        "median": 0.75,
+        "std": 0.31740653989094936,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 79,
+        "failures": 921,
+        "success_rate": 0.079
+      },
+      "total_severity": {
+        "min": 0.0002631578947368421,
+        "max": 0.7339473684210527,
+        "mean": 0.21595005428881653,
+        "median": 0.1968421052631579,
+        "std": 0.16107180498432797,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.4650164894663072,
+        "median": 0.45,
+        "std": 0.2501310293046862,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 130,
+        "failures": 870,
+        "success_rate": 0.13
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.9025,
+        "mean": 0.2916005747126437,
+        "median": 0.25375000000000003,
+        "std": 0.2245511229959677,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6286519638210362,
+        "median": 0.75,
+        "std": 0.3096918211416833,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 62,
+        "failures": 938,
+        "success_rate": 0.062
+      },
+      "total_severity": {
+        "min": 0.0005263157894736842,
+        "max": 0.7802631578947369,
+        "mean": 0.256995286724273,
+        "median": 0.2301315789473684,
+        "std": 0.18841989087949013,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.5355170236645067,
+        "median": 0.55,
+        "std": 0.2954218168469348,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 126,
+        "failures": 874,
+        "success_rate": 0.126
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.9025,
+        "mean": 0.3261699084668189,
+        "median": 0.31125,
+        "std": 0.22627188825078876,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6839551343569493,
+        "median": 0.85,
+        "std": 0.31189365344313236,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 61,
+        "failures": 939,
+        "success_rate": 0.061
+      },
+      "total_severity": {
+        "min": 0.0002631578947368421,
+        "max": 0.7989473684210526,
+        "mean": 0.2333151168656466,
+        "median": 0.2131578947368421,
+        "std": 0.17024136665809672,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.4943264811711013,
+        "median": 0.5,
+        "std": 0.2598376609745209,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 130,
+        "failures": 870,
+        "success_rate": 0.13
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.88,
+        "mean": 0.31059482758620666,
+        "median": 0.28125,
+        "std": 0.22823419089344732,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6495612980768658,
+        "median": 0.75,
+        "std": 0.3063276782840903,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 58,
+        "failures": 942,
+        "success_rate": 0.058
+      },
+      "total_severity": {
+        "min": 0.0002631578947368421,
+        "max": 0.761578947368421,
+        "mean": 0.23150184378142816,
+        "median": 0.2036842105263158,
+        "std": 0.1731628440087721,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.48640253565773367,
+        "median": 0.45,
+        "std": 0.2758376349550905,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 140,
+        "failures": 860,
+        "success_rate": 0.14
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.9025,
+        "mean": 0.3001715116279067,
+        "median": 0.2725,
+        "std": 0.22864723120907363,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6352836224928836,
+        "median": 0.8,
+        "std": 0.3245492508444666,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 68,
+        "failures": 932,
+        "success_rate": 0.068
+      },
+      "total_severity": {
+        "min": 0.0002631578947368421,
+        "max": 0.8205263157894737,
+        "mean": 0.2264451095550033,
+        "median": 0.20723684210526316,
+        "std": 0.17024317145914847,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.4905964397135055,
+        "median": 0.5,
+        "std": 0.26477753701303025,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 147,
+        "failures": 853,
+        "success_rate": 0.147
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.8675,
+        "mean": 0.3074384525205157,
+        "median": 0.28,
+        "std": 0.2236148008394425,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6403247466731222,
+        "median": 0.75,
+        "std": 0.3127583998060619,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 71,
+        "failures": 929,
+        "success_rate": 0.071
+      },
+      "total_severity": {
+        "min": 0.0005263157894736842,
+        "max": 0.763421052631579,
+        "mean": 0.22308509432893323,
+        "median": 0.2013157894736842,
+        "std": 0.17033817179710642,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.47423012537155385,
+        "median": 0.5,
+        "std": 0.2712144490191926,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 123,
+        "failures": 877,
+        "success_rate": 0.123
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.9025,
+        "mean": 0.300649942987457,
+        "median": 0.27,
+        "std": 0.22602122742787079,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6365765330757529,
+        "median": 0.75,
+        "std": 0.32187045960532346,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 56,
+        "failures": 944,
+        "success_rate": 0.056
+      },
+      "total_severity": {
+        "min": 0.0005263157894736842,
+        "max": 0.7207894736842105,
+        "mean": 0.24045244201605723,
+        "median": 0.22236842105263158,
+        "std": 0.1718028619403559,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.5301546423433093,
+        "median": 0.55,
+        "std": 0.24255403182289237,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 136,
+        "failures": 864,
+        "success_rate": 0.136
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.9025,
+        "mean": 0.3156192129629626,
+        "median": 0.29374999999999996,
+        "std": 0.22785710099414186,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6672253486664476,
+        "median": 0.8,
+        "std": 0.29338074606467335,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/HiberniaUs.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 62,
+        "failures": 938,
+        "success_rate": 0.062
+      },
+      "total_severity": {
+        "min": 0.0002631578947368421,
+        "max": 0.7681578947368422,
+        "mean": 0.2215435978004713,
+        "median": 0.20407894736842105,
+        "std": 0.16603347224797746,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.48314998592756836,
+        "median": 0.45,
+        "std": 0.25316555417297637,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 150,
+        "failures": 850,
+        "success_rate": 0.15
+      },
+      "total_severity": {
+        "min": 0.0025,
+        "max": 0.9025,
+        "mean": 0.32100294117647066,
+        "median": 0.29,
+        "std": 0.2333023820322839,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.95,
+        "mean": 0.6520552037279894,
+        "median": 0.8,
+        "std": 0.30884802292725405,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  }
+]

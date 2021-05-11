@@ -1,0 +1,335 @@
+{
+  "scenario": "Reuna.gml, s=42, FullMesh2RouteReflector",
+  "ideal_cost": 0.0,
+  "optimal_cost": null,
+  "optimal_cost_time": null,
+  "num_nodes": 37,
+  "num_edges": 36,
+  "num_commands": 595,
+  "strategy_result": [
+    {
+      "cost": 0.0,
+      "time": 35.414591634,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.435964494,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.45398038,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.480623054,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.469254127,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.478281981,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.476975538,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.49659284,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.493345786,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.506219019,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.490776869,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.507225719,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.509729955,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.515563295,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.520958861,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.528483578,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.514396973,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.54215457,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.530361428,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.536284959,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.541186389,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.545235801,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.541674635,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.569568712,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.56641193,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.571108168,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.565439329,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.57324596,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.567918906,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.579217421,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.576288451,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.591067823,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.600656833,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.591163265,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.617144133,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.601668003,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.601518782,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.624870592,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.609369673,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.624335777,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.617763348,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.619744859,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.617134572,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.613568826,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.641916678,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.647189312,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.641670736,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.665852155,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.649596847,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.664256389,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.674725947,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.674527384,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.661589371,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.664945246,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.685061953,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.669794045,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.701158459,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.735795236,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.750155614,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.759501751,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.866900898,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.870717157,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 35.869270123,
+      "num_states": 177310
+    },
+    {
+      "cost": 0.0,
+      "time": 36.000587067,
+      "num_states": 177310
+    }
+  ],
+  "tree_result": [],
+  "random_result": [],
+  "baseline_mif_result": [],
+  "baseline_mil_result": []
+}

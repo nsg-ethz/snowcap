@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.00018115942028985507,
+        "max": 0.3294685990338164,
+        "mean": 0.08614813484982571,
+        "median": 0.07726449275362318,
+        "std": 0.051080854205656626,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.6583333333333333,
+        "mean": 0.1169285934633084,
+        "median": 0.09166666666666666,
+        "std": 0.09038287509834143,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 32,
+        "failures": 968,
+        "success_rate": 0.032
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.5881944444444445,
+        "mean": 0.16204301538108357,
+        "median": 0.11805555555555555,
+        "std": 0.143918266964493,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.85,
+        "mean": 0.2761173047772702,
+        "median": 0.19166666666666668,
+        "std": 0.2481804568675574,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 112,
+        "failures": 888,
+        "success_rate": 0.112
+      },
+      "total_severity": {
+        "min": 0.00018115942028985507,
+        "max": 0.0832427536231884,
+        "mean": 0.020929795284414826,
+        "median": 0.01884057971014493,
+        "std": 0.014812618673574252,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016666666666666666,
+        "max": 0.125,
+        "mean": 0.04797061399818144,
+        "median": 0.05,
+        "std": 0.022562168409968112,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 60,
+        "failures": 940,
+        "success_rate": 0.06
+      },
+      "total_severity": {
+        "min": 0.00006038647342995169,
+        "max": 0.3754528985507246,
+        "mean": 0.06273839808818993,
+        "median": 0.03845108695652174,
+        "std": 0.06734368916989975,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.6916666666666667,
+        "mean": 0.1304517002876932,
+        "median": 0.06666666666666667,
+        "std": 0.13998787183034664,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 125,
+        "failures": 875,
+        "success_rate": 0.125
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.6576388888888889,
+        "mean": 0.1623476190476192,
+        "median": 0.11597222222222223,
+        "std": 0.14992831982517812,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.8583333333333333,
+        "mean": 0.34884886933387443,
+        "median": 0.3416666666666667,
+        "std": 0.2580469531339496,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 2,
+        "failures": 998,
+        "success_rate": 0.002
+      },
+      "total_severity": {
+        "min": 0.00030193236714975844,
+        "max": 0.2907004830917874,
+        "mean": 0.0696965791486355,
+        "median": 0.06047705314009662,
+        "std": 0.053043462225887725,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.6833333333333333,
+        "mean": 0.11109121140047375,
+        "median": 0.09166666666666666,
+        "std": 0.09273845483751174,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 77,
+        "failures": 923,
+        "success_rate": 0.077
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.6371527777777778,
+        "mean": 0.15195279583483814,
+        "median": 0.10173611111111111,
+        "std": 0.1421830756004827,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.85,
+        "mean": 0.290779054365352,
+        "median": 0.21666666666666667,
+        "std": 0.250094450465299,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 473,
+        "failures": 527,
+        "success_rate": 0.473
+      },
+      "total_severity": {
+        "min": 0.00009057971014492754,
+        "max": 0.02711352657004831,
+        "mean": 0.008630682286940021,
+        "median": 0.007608695652173913,
+        "std": 0.006078669124679011,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.025,
+        "max": 0.03333333333333333,
+        "mean": 0.02932444112217366,
+        "median": 0.03333333333333333,
+        "std": 0.004163678461684709,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 52,
+        "failures": 948,
+        "success_rate": 0.052
+      },
+      "total_severity": {
+        "min": 0.00006038647342995169,
+        "max": 0.32080314009661837,
+        "mean": 0.07203692237917607,
+        "median": 0.05754830917874396,
+        "std": 0.05961205544369037,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.6666666666666666,
+        "mean": 0.14553560857596323,
+        "median": 0.1,
+        "std": 0.11241999462852549,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 91,
+        "failures": 909,
+        "success_rate": 0.091
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.6371527777777778,
+        "mean": 0.16254507395183956,
+        "median": 0.12013888888888889,
+        "std": 0.1424929378194743,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.8416666666666667,
+        "mean": 0.3044109651758386,
+        "median": 0.24166666666666667,
+        "std": 0.2433131071329559,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 482,
+        "failures": 518,
+        "success_rate": 0.482
+      },
+      "total_severity": {
+        "min": 0.00024154589371980676,
+        "max": 0.07602657004830918,
+        "mean": 0.024436004327308677,
+        "median": 0.02246376811594203,
+        "std": 0.017333536620013166,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.06666666666666667,
+        "max": 0.09166666666666666,
+        "mean": 0.07747813680483702,
+        "median": 0.06666666666666667,
+        "std": 0.01121140623419911,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.00006038647342995169,
+        "max": 0.4244867149758454,
+        "mean": 0.09598239734299518,
+        "median": 0.08407306763285025,
+        "std": 0.06375938964987747,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.7083333333333334,
+        "mean": 0.13727402666945526,
+        "median": 0.10833333333333334,
+        "std": 0.1103634170518834,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 50,
+        "failures": 950,
+        "success_rate": 0.05
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.6541666666666667,
+        "mean": 0.19221600877192996,
+        "median": 0.1451388888888889,
+        "std": 0.16654995117370208,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.8833333333333333,
+        "mean": 0.34804042249046707,
+        "median": 0.3,
+        "std": 0.27409269248118556,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 486,
+        "failures": 514,
+        "success_rate": 0.486
+      },
+      "total_severity": {
+        "min": 0.00012077294685990338,
+        "max": 0.04214975845410628,
+        "mean": 0.012683509088516705,
+        "median": 0.010628019323671498,
+        "std": 0.009309138407873487,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03333333333333333,
+        "max": 0.05,
+        "mean": 0.04151764769220227,
+        "median": 0.03333333333333333,
+        "std": 0.008332000827510453,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 7,
+        "failures": 993,
+        "success_rate": 0.007
+      },
+      "total_severity": {
+        "min": 0.00009057971014492754,
+        "max": 0.23897946859903382,
+        "mean": 0.054708655029652026,
+        "median": 0.05,
+        "std": 0.03421090220605194,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.525,
+        "mean": 0.09409998535621276,
+        "median": 0.08333333333333333,
+        "std": 0.06521150598914209,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 72,
+        "failures": 928,
+        "success_rate": 0.072
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.5052083333333334,
+        "mean": 0.13331836685823759,
+        "median": 0.09652777777777778,
+        "std": 0.11625314767568458,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.8166666666666667,
+        "mean": 0.23071225071224627,
+        "median": 0.14166666666666666,
+        "std": 0.21345760692757154,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 70,
+        "failures": 930,
+        "success_rate": 0.07
+      },
+      "total_severity": {
+        "min": 0.00006038647342995169,
+        "max": 0.11826690821256039,
+        "mean": 0.034199554568593846,
+        "median": 0.03002717391304348,
+        "std": 0.025613153549191803,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016666666666666666,
+        "max": 0.16666666666666666,
+        "mean": 0.0824884810669471,
+        "median": 0.06666666666666667,
+        "std": 0.04487441164357745,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 15,
+        "failures": 985,
+        "success_rate": 0.015
+      },
+      "total_severity": {
+        "min": 0.000030193236714975845,
+        "max": 0.20797101449275363,
+        "mean": 0.046728769709899726,
+        "median": 0.0410024154589372,
+        "std": 0.031102868810221715,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.55,
+        "mean": 0.07727066289546966,
+        "median": 0.058333333333333334,
+        "std": 0.06024115390016152,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 57,
+        "failures": 943,
+        "success_rate": 0.057
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.5486111111111112,
+        "mean": 0.1463248939554611,
+        "median": 0.09965277777777778,
+        "std": 0.1336868178743304,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.8416666666666667,
+        "mean": 0.2519112277498903,
+        "median": 0.15833333333333333,
+        "std": 0.24264021678088576,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 168,
+        "failures": 832,
+        "success_rate": 0.168
+      },
+      "total_severity": {
+        "min": 0.00012077294685990338,
+        "max": 0.043780193236714976,
+        "mean": 0.015001248374210326,
+        "median": 0.013617149758454107,
+        "std": 0.010403416882465499,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03333333333333333,
+        "max": 0.05,
+        "mean": 0.04146923805401048,
+        "median": 0.03333333333333333,
+        "std": 0.008330994321654525,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 10,
+        "failures": 990,
+        "success_rate": 0.01
+      },
+      "total_severity": {
+        "min": 0.000030193236714975845,
+        "max": 0.48692632850241546,
+        "mean": 0.08936798540965205,
+        "median": 0.08057065217391304,
+        "std": 0.06504778295539786,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.7833333333333333,
+        "mean": 0.13873197360077016,
+        "median": 0.13333333333333333,
+        "std": 0.11453907386734292,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 56,
+        "failures": 944,
+        "success_rate": 0.056
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.6670138888888889,
+        "mean": 0.17698917137476464,
+        "median": 0.12864583333333332,
+        "std": 0.15457746512579226,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.8833333333333333,
+        "mean": 0.31857207171420165,
+        "median": 0.225,
+        "std": 0.25921283294853537,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 367,
+        "failures": 633,
+        "success_rate": 0.367
+      },
+      "total_severity": {
+        "min": 0.00009057971014492754,
+        "max": 0.10929951690821256,
+        "mean": 0.028126502507040338,
+        "median": 0.022916666666666665,
+        "std": 0.02354830731436964,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.025,
+        "max": 0.13333333333333333,
+        "mean": 0.08525347421012618,
+        "median": 0.1,
+        "std": 0.03645417501056682,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 46,
+        "failures": 954,
+        "success_rate": 0.046
+      },
+      "total_severity": {
+        "min": 0.00006038647342995169,
+        "max": 0.3791062801932367,
+        "mean": 0.08264936473936338,
+        "median": 0.07143719806763285,
+        "std": 0.06691509801342664,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016666666666666666,
+        "max": 0.7083333333333334,
+        "mean": 0.17248494719960697,
+        "median": 0.15833333333333333,
+        "std": 0.10836436939686295,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 138,
+        "failures": 862,
+        "success_rate": 0.138
+      },
+      "total_severity": {
+        "min": 0.0006944444444444445,
+        "max": 0.6409722222222223,
+        "mean": 0.17288645591647334,
+        "median": 0.13194444444444445,
+        "std": 0.15205275186358597,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016666666666666666,
+        "max": 0.85,
+        "mean": 0.3720664724851732,
+        "median": 0.35,
+        "std": 0.24539299657483288,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Canerie.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 33,
+        "failures": 967,
+        "success_rate": 0.033
+      },
+      "total_severity": {
+        "min": 0.000030193236714975845,
+        "max": 0.30320048309178743,
+        "mean": 0.04922783997522095,
+        "median": 0.0373792270531401,
+        "std": 0.04283566459426776,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.5666666666666667,
+        "mean": 0.09244729182353298,
+        "median": 0.06666666666666667,
+        "std": 0.0800528983103653,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 94,
+        "failures": 906,
+        "success_rate": 0.094
+      },
+      "total_severity": {
+        "min": 0.00034722222222222224,
+        "max": 0.5600694444444444,
+        "mean": 0.13953274466519508,
+        "median": 0.08854166666666667,
+        "std": 0.1346211614495861,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008333333333333333,
+        "max": 0.8583333333333333,
+        "mean": 0.2802512469979626,
+        "median": 0.2,
+        "std": 0.24443546394701687,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 489,
+        "failures": 511,
+        "success_rate": 0.489
+      },
+      "total_severity": {
+        "min": 0.00018115942028985507,
+        "max": 0.04528985507246377,
+        "mean": 0.01564175104228709,
+        "median": 0.01394927536231884,
+        "std": 0.01075100865687666,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05,
+        "max": 0.05,
+        "mean": 0.049999999999983225,
+        "median": 0.05,
+        "std": 1.6778245459647678e-14,
+        "values": []
+      }
+    }
+  }
+]

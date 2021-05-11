@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0014559386973180077,
+        "max": 0.2902375478927203,
+        "mean": 0.10216718773946347,
+        "median": 0.09553256704980843,
+        "std": 0.055343459637232806,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.6733333333333333,
+        "mean": 0.13188926808521315,
+        "median": 0.11333333333333333,
+        "std": 0.09924831054729405,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 13,
+        "failures": 987,
+        "success_rate": 0.013
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.5906666666666667,
+        "mean": 0.16600112574580658,
+        "median": 0.1282222222222222,
+        "std": 0.13665717016282938,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.88,
+        "mean": 0.24342776016902898,
+        "median": 0.15333333333333332,
+        "std": 0.23885500274709498,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 12,
+        "failures": 988,
+        "success_rate": 0.012
+      },
+      "total_severity": {
+        "min": 0.00010727969348659004,
+        "max": 0.16905747126436782,
+        "mean": 0.043935315742938234,
+        "median": 0.03739463601532567,
+        "std": 0.03128919827499342,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.2866666666666667,
+        "mean": 0.07654817066994088,
+        "median": 0.06,
+        "std": 0.05606537921688747,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.0004904214559386973,
+        "max": 0.40553256704980845,
+        "mean": 0.13871908690299498,
+        "median": 0.13002298850574712,
+        "std": 0.07652860802483624,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.7866666666666666,
+        "mean": 0.191937123098332,
+        "median": 0.17333333333333334,
+        "std": 0.13565701438159783,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 32,
+        "failures": 968,
+        "success_rate": 0.032
+      },
+      "total_severity": {
+        "min": 0.0011111111111111111,
+        "max": 0.6106666666666667,
+        "mean": 0.185230945821855,
+        "median": 0.16555555555555557,
+        "std": 0.13380494465212808,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.8733333333333333,
+        "mean": 0.28022018476070354,
+        "median": 0.22,
+        "std": 0.2288721009885009,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 8,
+        "failures": 992,
+        "success_rate": 0.008
+      },
+      "total_severity": {
+        "min": 0.0001839080459770115,
+        "max": 0.32099616858237545,
+        "mean": 0.09727430169323939,
+        "median": 0.09066666666666667,
+        "std": 0.05949003453595582,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.5133333333333333,
+        "mean": 0.16090143962017336,
+        "median": 0.14,
+        "std": 0.11073743346173227,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 3,
+        "failures": 997,
+        "success_rate": 0.003
+      },
+      "total_severity": {
+        "min": 0.0032950191570881226,
+        "max": 0.4862681992337165,
+        "mean": 0.1723853091842578,
+        "median": 0.1608888888888889,
+        "std": 0.09855307690294471,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.7466666666666667,
+        "mean": 0.22790154692801753,
+        "median": 0.19333333333333333,
+        "std": 0.16956704478372397,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 30,
+        "failures": 970,
+        "success_rate": 0.03
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.7066666666666667,
+        "mean": 0.21336701030927846,
+        "median": 0.18988888888888888,
+        "std": 0.15726074663471476,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9,
+        "mean": 0.32224309736348217,
+        "median": 0.26666666666666666,
+        "std": 0.26296542054128574,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 30,
+        "failures": 970,
+        "success_rate": 0.03
+      },
+      "total_severity": {
+        "min": 0.0001839080459770115,
+        "max": 0.42140996168582373,
+        "mean": 0.11321990757198712,
+        "median": 0.0945823754789272,
+        "std": 0.08704854877400485,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.58,
+        "mean": 0.20265267944630627,
+        "median": 0.18,
+        "std": 0.1536409521413852,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 137,
+        "failures": 863,
+        "success_rate": 0.137
+      },
+      "total_severity": {
+        "min": 0.00004597701149425287,
+        "max": 0.3716168582375479,
+        "mean": 0.07488085312307144,
+        "median": 0.04902681992337165,
+        "std": 0.07604652250932088,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.8266666666666667,
+        "mean": 0.1606432822059955,
+        "median": 0.08,
+        "std": 0.16384338614426655,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 104,
+        "failures": 896,
+        "success_rate": 0.104
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.6395555555555555,
+        "mean": 0.17217981150793646,
+        "median": 0.11722222222222223,
+        "std": 0.15957305912140382,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.8866666666666667,
+        "mean": 0.338813567593935,
+        "median": 0.2866666666666667,
+        "std": 0.2749601764644502,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 529,
+        "failures": 471,
+        "success_rate": 0.529
+      },
+      "total_severity": {
+        "min": 0.00012260536398467432,
+        "max": 0.04904214559386973,
+        "mean": 0.016530639139029194,
+        "median": 0.01446743295019157,
+        "std": 0.012077520662873022,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.05333333333333334,
+        "max": 0.05333333333333334,
+        "mean": 0.053333333333293015,
+        "median": 0.05333333333333334,
+        "std": 4.0321912475604904e-14,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 6,
+        "failures": 994,
+        "success_rate": 0.006
+      },
+      "total_severity": {
+        "min": 0.0003831417624521073,
+        "max": 0.47114176245210726,
+        "mean": 0.09456060500936665,
+        "median": 0.06732567049808429,
+        "std": 0.0869136048072557,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.84,
+        "mean": 0.14966200090777096,
+        "median": 0.08,
+        "std": 0.1651151731511949,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 45,
+        "failures": 955,
+        "success_rate": 0.045
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.7104444444444444,
+        "mean": 0.18811099476439802,
+        "median": 0.136,
+        "std": 0.17180372576327094,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9133333333333333,
+        "mean": 0.3288412959911978,
+        "median": 0.21333333333333335,
+        "std": 0.3019589834832543,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 244,
+        "failures": 756,
+        "success_rate": 0.244
+      },
+      "total_severity": {
+        "min": 0.00006130268199233716,
+        "max": 0.04971647509578544,
+        "mean": 0.01453240487340103,
+        "median": 0.012934865900383142,
+        "std": 0.010167919053946968,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02666666666666667,
+        "max": 0.08,
+        "mean": 0.038775246378669144,
+        "median": 0.04,
+        "std": 0.011862678379888827,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 15,
+        "failures": 985,
+        "success_rate": 0.015
+      },
+      "total_severity": {
+        "min": 0.00010727969348659004,
+        "max": 0.32140996168582375,
+        "mean": 0.08359473325942776,
+        "median": 0.07201532567049808,
+        "std": 0.057453359480194414,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.6466666666666666,
+        "mean": 0.1384601389049455,
+        "median": 0.10666666666666667,
+        "std": 0.1037036522965555,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 56,
+        "failures": 944,
+        "success_rate": 0.056
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.6257777777777778,
+        "mean": 0.15049505649717523,
+        "median": 0.09577777777777778,
+        "std": 0.14434016046347548,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.8733333333333333,
+        "mean": 0.2713970962811938,
+        "median": 0.15333333333333332,
+        "std": 0.25097306707462336,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 162,
+        "failures": 838,
+        "success_rate": 0.162
+      },
+      "total_severity": {
+        "min": 0.00013793103448275863,
+        "max": 0.09630651340996169,
+        "mean": 0.03270501741969111,
+        "median": 0.031103448275862068,
+        "std": 0.02140510292915428,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.04,
+        "max": 0.11333333333333333,
+        "mean": 0.08697208888352694,
+        "median": 0.09333333333333334,
+        "std": 0.022129683606867342,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 34,
+        "failures": 966,
+        "success_rate": 0.034
+      },
+      "total_severity": {
+        "min": 0.00006130268199233716,
+        "max": 0.3467586206896552,
+        "mean": 0.07766442175737524,
+        "median": 0.06118007662835249,
+        "std": 0.06635509009986736,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.72,
+        "mean": 0.1397396921636646,
+        "median": 0.10666666666666667,
+        "std": 0.12063725403664743,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 70,
+        "failures": 930,
+        "success_rate": 0.07
+      },
+      "total_severity": {
+        "min": 0.00044444444444444447,
+        "max": 0.63,
+        "mean": 0.1588344086021507,
+        "median": 0.1118888888888889,
+        "std": 0.13860603821618578,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.88,
+        "mean": 0.278639336016089,
+        "median": 0.16666666666666666,
+        "std": 0.2549709542155544,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 260,
+        "failures": 740,
+        "success_rate": 0.26
+      },
+      "total_severity": {
+        "min": 0.00006130268199233716,
+        "max": 0.1158007662835249,
+        "mean": 0.02368439473956713,
+        "median": 0.016904214559386975,
+        "std": 0.021482187058089745,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02666666666666667,
+        "max": 0.15333333333333332,
+        "mean": 0.0635021669901114,
+        "median": 0.06,
+        "std": 0.040487115931818134,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 4,
+        "failures": 996,
+        "success_rate": 0.004
+      },
+      "total_severity": {
+        "min": 0.00009195402298850575,
+        "max": 0.40560919540229884,
+        "mean": 0.09925885919155567,
+        "median": 0.08318007662835249,
+        "std": 0.0729702521681016,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.7933333333333333,
+        "mean": 0.14661025655011578,
+        "median": 0.11333333333333333,
+        "std": 0.13001886668876125,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 26,
+        "failures": 974,
+        "success_rate": 0.026
+      },
+      "total_severity": {
+        "min": 0.00022222222222222223,
+        "max": 0.7335555555555555,
+        "mean": 0.17419644079397664,
+        "median": 0.12544444444444444,
+        "std": 0.16280865344424855,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.9066666666666666,
+        "mean": 0.2981851200937228,
+        "median": 0.20666666666666667,
+        "std": 0.2821342025149781,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 210,
+        "failures": 790,
+        "success_rate": 0.21
+      },
+      "total_severity": {
+        "min": 0.00003065134099616858,
+        "max": 0.031800766283524906,
+        "mean": 0.007747805422183429,
+        "median": 0.006605363984674329,
+        "std": 0.00595360123735614,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.06,
+        "mean": 0.021990050573022918,
+        "median": 0.02,
+        "std": 0.009975675724053378,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 52,
+        "failures": 948,
+        "success_rate": 0.052
+      },
+      "total_severity": {
+        "min": 0.00006130268199233716,
+        "max": 0.26778544061302684,
+        "mean": 0.0442796288213137,
+        "median": 0.030068965517241378,
+        "std": 0.042330901665575286,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.6666666666666666,
+        "mean": 0.08759994499027356,
+        "median": 0.04666666666666667,
+        "std": 0.09192458192067876,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 80,
+        "failures": 920,
+        "success_rate": 0.08
+      },
+      "total_severity": {
+        "min": 0.00044444444444444447,
+        "max": 0.5506666666666666,
+        "mean": 0.12361425120772938,
+        "median": 0.07666666666666666,
+        "std": 0.1253529126140334,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.8466666666666667,
+        "mean": 0.2250348481850325,
+        "median": 0.13333333333333333,
+        "std": 0.23405429556009918,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 168,
+        "failures": 832,
+        "success_rate": 0.168
+      },
+      "total_severity": {
+        "min": 0.00006130268199233716,
+        "max": 0.05013026819923372,
+        "mean": 0.013606063955201881,
+        "median": 0.011302681992337164,
+        "std": 0.010378685944127358,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.08666666666666667,
+        "mean": 0.033769761806788125,
+        "median": 0.03333333333333333,
+        "std": 0.015626793470029987,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/SwitchL3.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 14,
+        "failures": 986,
+        "success_rate": 0.014
+      },
+      "total_severity": {
+        "min": 0.0003218390804597701,
+        "max": 0.25871264367816094,
+        "mean": 0.06375864400456972,
+        "median": 0.05329501915708812,
+        "std": 0.048524934056653424,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.68,
+        "mean": 0.10586168586084635,
+        "median": 0.07333333333333333,
+        "std": 0.09433592345841321,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 48,
+        "failures": 952,
+        "success_rate": 0.048
+      },
+      "total_severity": {
+        "min": 0.00044444444444444447,
+        "max": 0.6171111111111112,
+        "mean": 0.15573015873015877,
+        "median": 0.11477777777777778,
+        "std": 0.137975122643911,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006666666666666667,
+        "max": 0.8666666666666667,
+        "mean": 0.265833084294618,
+        "median": 0.16,
+        "std": 0.2442489990924634,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 62,
+        "failures": 938,
+        "success_rate": 0.062
+      },
+      "total_severity": {
+        "min": 0.00004597701149425287,
+        "max": 0.14251340996168582,
+        "mean": 0.03361966848842813,
+        "median": 0.025701149425287357,
+        "std": 0.02806066723785965,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013333333333333334,
+        "max": 0.35333333333333333,
+        "mean": 0.07563535647598958,
+        "median": 0.05333333333333334,
+        "std": 0.05357671043827205,
+        "values": []
+      }
+    }
+  }
+]

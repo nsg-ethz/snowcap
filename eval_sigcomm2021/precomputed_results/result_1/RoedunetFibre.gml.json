@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.00006721277042638101,
+        "max": 0.7546481831547994,
+        "mean": 0.304721024321948,
+        "median": 0.28281453476160473,
+        "std": 0.18725877460468132,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004347826086956522,
+        "max": 0.9739130434782609,
+        "mean": 0.457993124254416,
+        "median": 0.45217391304347826,
+        "std": 0.32056172196362265,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 40,
+        "failures": 960,
+        "success_rate": 0.04
+      },
+      "total_severity": {
+        "min": 0.0000945179584120983,
+        "max": 0.9178638941398866,
+        "mean": 0.33049759766855746,
+        "median": 0.2936200378071834,
+        "std": 0.24843316684607866,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004347826086956522,
+        "max": 0.9782608695652174,
+        "mean": 0.6495804661315938,
+        "median": 0.8130434782608695,
+        "std": 0.34096547801159627,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 8.401596303297626e-6,
+        "max": 0.6101029195547154,
+        "mean": 0.23275955891619404,
+        "median": 0.22474060071413568,
+        "std": 0.12657072591635313,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008695652173913044,
+        "max": 0.9434782608695652,
+        "mean": 0.3352260017957396,
+        "median": 0.34782608695652173,
+        "std": 0.21264307577966654,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 26,
+        "failures": 974,
+        "success_rate": 0.026
+      },
+      "total_severity": {
+        "min": 0.0001890359168241966,
+        "max": 0.8398865784499054,
+        "mean": 0.2858061974280246,
+        "median": 0.25127599243856336,
+        "std": 0.22531360739590323,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008695652173913044,
+        "max": 0.9739130434782609,
+        "mean": 0.5200317117270065,
+        "median": 0.5434782608695652,
+        "std": 0.34274464890102013,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 504,
+        "failures": 496,
+        "success_rate": 0.504
+      },
+      "total_severity": {
+        "min": 0.00001260239445494644,
+        "max": 0.011909262759924386,
+        "mean": 0.004076061548468402,
+        "median": 0.0036231884057971015,
+        "std": 0.00279969873889374,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013043478260869565,
+        "max": 0.013043478260869565,
+        "mean": 0.01304347826089377,
+        "median": 0.013043478260869565,
+        "std": 2.4206331383780366e-14,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0003413148498214661,
+        "max": 0.5602604494854022,
+        "mean": 0.19202749422390253,
+        "median": 0.18162150808653643,
+        "std": 0.10803252171055852,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.005434782608695652,
+        "max": 0.9347826086956522,
+        "mean": 0.26833894073362324,
+        "median": 0.2391304347826087,
+        "std": 0.177442235418595,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 30,
+        "failures": 970,
+        "success_rate": 0.03
+      },
+      "total_severity": {
+        "min": 0.00011814744801512288,
+        "max": 0.8718100189035917,
+        "mean": 0.2518592997875781,
+        "median": 0.20197306238185256,
+        "std": 0.20896141679146446,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.005434782608695652,
+        "max": 0.967391304347826,
+        "mean": 0.45032907058792204,
+        "median": 0.41847826086956524,
+        "std": 0.3288520118481378,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 502,
+        "failures": 498,
+        "success_rate": 0.502
+      },
+      "total_severity": {
+        "min": 0.0000315059861373661,
+        "max": 0.030308758664146188,
+        "mean": 0.01112060086597175,
+        "median": 0.01017643352236925,
+        "std": 0.007426716406124188,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03260869565217391,
+        "max": 0.03260869565217391,
+        "mean": 0.032608695652081444,
+        "median": 0.03260869565217391,
+        "std": 9.246770016346773e-14,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0003108590632220122,
+        "max": 0.6708674648183155,
+        "mean": 0.23917353497164445,
+        "median": 0.2295085066162571,
+        "std": 0.1243920156469483,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008695652173913044,
+        "max": 0.9608695652173913,
+        "mean": 0.339484472510042,
+        "median": 0.3565217391304348,
+        "std": 0.21280295652323689,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 27,
+        "failures": 973,
+        "success_rate": 0.027
+      },
+      "total_severity": {
+        "min": 0.0001890359168241966,
+        "max": 0.8612476370510397,
+        "mean": 0.27996656415078575,
+        "median": 0.23412098298676748,
+        "std": 0.22925394030693186,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.008695652173913044,
+        "max": 0.9739130434782609,
+        "mean": 0.5026371230750559,
+        "median": 0.5217391304347826,
+        "std": 0.3457333509969515,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 504,
+        "failures": 496,
+        "success_rate": 0.504
+      },
+      "total_severity": {
+        "min": 0.00002520478890989288,
+        "max": 0.012350346565847511,
+        "mean": 0.004131679777222191,
+        "median": 0.0035097668557025835,
+        "std": 0.0029371359488731407,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013043478260869565,
+        "max": 0.013043478260869565,
+        "mean": 0.013043478260893818,
+        "median": 0.013043478260869565,
+        "std": 2.425316891763174e-14,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0001540292655604565,
+        "max": 0.5879927186165371,
+        "mean": 0.21509917384303034,
+        "median": 0.19987397605545054,
+        "std": 0.11845157485206044,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007246376811594203,
+        "max": 0.927536231884058,
+        "mean": 0.3033284941155681,
+        "median": 0.30434782608695654,
+        "std": 0.1979137676857398,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 29,
+        "failures": 971,
+        "success_rate": 0.029
+      },
+      "total_severity": {
+        "min": 0.0001575299306868305,
+        "max": 0.8451480781348456,
+        "mean": 0.2559650468501476,
+        "median": 0.20226843100189035,
+        "std": 0.21510858122362053,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007246376811594203,
+        "max": 0.9710144927536232,
+        "mean": 0.4833404406277443,
+        "median": 0.4855072463768116,
+        "std": 0.3355150696862348,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 499,
+        "failures": 501,
+        "success_rate": 0.499
+      },
+      "total_severity": {
+        "min": 0.000021003990758244067,
+        "max": 0.018987607645452636,
+        "mean": 0.006724505200898351,
+        "median": 0.005692081495484142,
+        "std": 0.0049401487977140356,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.021739130434782608,
+        "max": 0.021739130434782608,
+        "mean": 0.021739130434853045,
+        "median": 0.021739130434782608,
+        "std": 7.043671201856228e-14,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 14,
+        "failures": 986,
+        "success_rate": 0.014
+      },
+      "total_severity": {
+        "min": 0.00001575299306868305,
+        "max": 0.6132640201638311,
+        "mean": 0.19188506237077527,
+        "median": 0.17474795211090108,
+        "std": 0.14561059731972908,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016304347826086956,
+        "max": 0.9510869565217391,
+        "mean": 0.338921941932566,
+        "median": 0.3423913043478261,
+        "std": 0.23618628427683128,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 36,
+        "failures": 964,
+        "success_rate": 0.036
+      },
+      "total_severity": {
+        "min": 0.00035444234404536864,
+        "max": 0.9129253308128544,
+        "mean": 0.267410325596718,
+        "median": 0.2147329867674858,
+        "std": 0.2275049034531167,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016304347826086956,
+        "max": 0.9728260869565217,
+        "mean": 0.487463762158199,
+        "median": 0.5163043478260869,
+        "std": 0.3531012025038756,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 529,
+        "failures": 471,
+        "success_rate": 0.529
+      },
+      "total_severity": {
+        "min": 0.00001575299306868305,
+        "max": 0.015012602394454946,
+        "mean": 0.005216782589965979,
+        "median": 0.004930686830497795,
+        "std": 0.00351719192768484,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.016304347826086956,
+        "max": 0.016304347826086956,
+        "mean": 0.016304347826044892,
+        "median": 0.016304347826086956,
+        "std": 4.206357484548562e-14,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 27,
+        "failures": 973,
+        "success_rate": 0.027
+      },
+      "total_severity": {
+        "min": 0.000010501995379122034,
+        "max": 0.584078975005251,
+        "mean": 0.1768710875210172,
+        "median": 0.15873766015542953,
+        "std": 0.1360258967578345,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.010869565217391304,
+        "max": 0.9347826086956522,
+        "mean": 0.3630064442469887,
+        "median": 0.358695652173913,
+        "std": 0.21084727637962777,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 72,
+        "failures": 928,
+        "success_rate": 0.072
+      },
+      "total_severity": {
+        "min": 0.00023629489603024575,
+        "max": 0.8140359168241966,
+        "mean": 0.249124333892836,
+        "median": 0.20652173913043478,
+        "std": 0.20639498321971217,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.010869565217391304,
+        "max": 0.967391304347826,
+        "mean": 0.5257375699633219,
+        "median": 0.5543478260869565,
+        "std": 0.31882300741663966,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0002205419029615627,
+        "max": 0.6778092837639151,
+        "mean": 0.232711925015753,
+        "median": 0.2208097038437303,
+        "std": 0.13093098245893062,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.005434782608695652,
+        "max": 0.9456521739130435,
+        "mean": 0.3542095731541628,
+        "median": 0.33695652173913043,
+        "std": 0.21546873925160973,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 34,
+        "failures": 966,
+        "success_rate": 0.034
+      },
+      "total_severity": {
+        "min": 0.00011814744801512288,
+        "max": 0.8937854442344045,
+        "mean": 0.2853529942428193,
+        "median": 0.24704631379962194,
+        "std": 0.2296109752152318,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.005434782608695652,
+        "max": 0.9728260869565217,
+        "mean": 0.581622203209661,
+        "median": 0.6358695652173914,
+        "std": 0.31497969246655294,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 22,
+        "failures": 978,
+        "success_rate": 0.022
+      },
+      "total_severity": {
+        "min": 0.000028005321010992087,
+        "max": 0.6609395785199188,
+        "mean": 0.18570046304707924,
+        "median": 0.17194917034236507,
+        "std": 0.1413338183557485,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.014492753623188406,
+        "max": 0.9492753623188406,
+        "mean": 0.37829387757555644,
+        "median": 0.37681159420289856,
+        "std": 0.2031562026080736,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 68,
+        "failures": 932,
+        "success_rate": 0.068
+      },
+      "total_severity": {
+        "min": 0.000315059861373661,
+        "max": 0.8982356647763075,
+        "mean": 0.26077795446370866,
+        "median": 0.2277882797731569,
+        "std": 0.2138113922226841,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.014492753623188406,
+        "max": 0.9710144927536232,
+        "mean": 0.5416176951733527,
+        "median": 0.5797101449275363,
+        "std": 0.3169795339615781,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/RoedunetFibre.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0008296576349506406,
+        "max": 0.5706364209199748,
+        "mean": 0.19257989392984667,
+        "median": 0.176399390884268,
+        "std": 0.10865181032330071,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.005434782608695652,
+        "max": 0.9293478260869565,
+        "mean": 0.2560994976401759,
+        "median": 0.23369565217391305,
+        "std": 0.18480159525553977,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 8,
+        "failures": 992,
+        "success_rate": 0.008
+      },
+      "total_severity": {
+        "min": 0.00011814744801512288,
+        "max": 0.7943052930056711,
+        "mean": 0.25519455740441493,
+        "median": 0.21420132325141777,
+        "std": 0.20962520164305654,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.005434782608695652,
+        "max": 0.967391304347826,
+        "mean": 0.4222276302929092,
+        "median": 0.3695652173913043,
+        "std": 0.3374893550076249,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 171,
+        "failures": 829,
+        "success_rate": 0.171
+      },
+      "total_severity": {
+        "min": 0.0000630119722747322,
+        "max": 0.03877336693971855,
+        "mean": 0.014327546721211174,
+        "median": 0.013232514177693762,
+        "std": 0.009605986583620604,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03260869565217391,
+        "max": 0.043478260869565216,
+        "mean": 0.03814971589249999,
+        "median": 0.043478260869565216,
+        "std": 0.0054337441575253494,
+        "values": []
+      }
+    }
+  }
+]

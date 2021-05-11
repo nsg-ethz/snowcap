@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 142,
+        "failures": 858,
+        "success_rate": 0.142
+      },
+      "total_severity": {
+        "min": 0.000023668639053254438,
+        "max": 0.1533491124260355,
+        "mean": 0.04565040482200245,
+        "median": 0.03884023668639053,
+        "std": 0.03697166936383603,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.18461538461538463,
+        "mean": 0.11146480726956395,
+        "median": 0.15384615384615385,
+        "std": 0.07020783710688673,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 146,
+        "failures": 854,
+        "success_rate": 0.146
+      },
+      "total_severity": {
+        "min": 0.0002958579881656805,
+        "max": 0.1757396449704142,
+        "mean": 0.06086567908762109,
+        "median": 0.056213017751479286,
+        "std": 0.04706666832199746,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.18461538461538463,
+        "mean": 0.1322369411410676,
+        "median": 0.16923076923076924,
+        "std": 0.06745905371513258,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 2,
+        "failures": 998,
+        "success_rate": 0.002
+      },
+      "total_severity": {
+        "min": 0.000047337278106508875,
+        "max": 0.19950295857988165,
+        "mean": 0.05348102121402578,
+        "median": 0.043100591715976334,
+        "std": 0.03856192710587566,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.36153846153846153,
+        "mean": 0.07549273311953217,
+        "median": 0.038461538461538464,
+        "std": 0.07229361495683838,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 32,
+        "failures": 968,
+        "success_rate": 0.032
+      },
+      "total_severity": {
+        "min": 0.000591715976331361,
+        "max": 0.2964497041420118,
+        "mean": 0.08348085480952613,
+        "median": 0.06582840236686391,
+        "std": 0.07127349580099987,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.36923076923076925,
+        "mean": 0.12931106313677773,
+        "median": 0.07692307692307693,
+        "std": 0.12233405971908685,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 52,
+        "failures": 948,
+        "success_rate": 0.052
+      },
+      "total_severity": {
+        "min": 0.000047337278106508875,
+        "max": 0.034366863905325444,
+        "mean": 0.00987766209772051,
+        "median": 0.009207100591715978,
+        "std": 0.0064262013490153005,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015384615384615385,
+        "max": 0.06153846153846154,
+        "mean": 0.02060270314463843,
+        "median": 0.015384615384615385,
+        "std": 0.00861973998342684,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 7,
+        "failures": 993,
+        "success_rate": 0.007
+      },
+      "total_severity": {
+        "min": 0.000047337278106508875,
+        "max": 0.2761420118343195,
+        "mean": 0.05760060065428418,
+        "median": 0.035976331360946745,
+        "std": 0.05576871439573995,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.36153846153846153,
+        "mean": 0.09099662159606302,
+        "median": 0.03076923076923077,
+        "std": 0.10781534985045152,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 51,
+        "failures": 949,
+        "success_rate": 0.051
+      },
+      "total_severity": {
+        "min": 0.000591715976331361,
+        "max": 0.3269230769230769,
+        "mean": 0.08525074665951704,
+        "median": 0.0683431952662722,
+        "std": 0.07504254075860839,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.3769230769230769,
+        "mean": 0.14470809872570903,
+        "median": 0.05384615384615385,
+        "std": 0.13603056809898542,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 99,
+        "failures": 901,
+        "success_rate": 0.099
+      },
+      "total_severity": {
+        "min": 0.000047337278106508875,
+        "max": 0.03550295857988166,
+        "mean": 0.010112944854172537,
+        "median": 0.008662721893491125,
+        "std": 0.006921503870247866,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015384615384615385,
+        "max": 0.06153846153846154,
+        "mean": 0.022343537430747233,
+        "median": 0.015384615384615385,
+        "std": 0.010346377040053383,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 6,
+        "failures": 994,
+        "success_rate": 0.006
+      },
+      "total_severity": {
+        "min": 0.00009467455621301775,
+        "max": 0.39349112426035504,
+        "mean": 0.0877450501827533,
+        "median": 0.07307692307692308,
+        "std": 0.06943791653659004,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.5615384615384615,
+        "mean": 0.14491987884085422,
+        "median": 0.1076923076923077,
+        "std": 0.12369076801562265,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 81,
+        "failures": 919,
+        "success_rate": 0.081
+      },
+      "total_severity": {
+        "min": 0.000591715976331361,
+        "max": 0.5254437869822485,
+        "mean": 0.14175460849521274,
+        "median": 0.11479289940828402,
+        "std": 0.11975347645049865,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015384615384615385,
+        "max": 0.5692307692307692,
+        "mean": 0.2965923481072233,
+        "median": 0.2846153846153846,
+        "std": 0.1930024616541461,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.003047337278106509,
+        "max": 0.5665976331360947,
+        "mean": 0.14801239644970404,
+        "median": 0.13428994082840237,
+        "std": 0.09343164316476972,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009615384615384616,
+        "max": 0.9134615384615384,
+        "mean": 0.18849984265371214,
+        "median": 0.125,
+        "std": 0.17181499739038783,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 33,
+        "failures": 967,
+        "success_rate": 0.033
+      },
+      "total_severity": {
+        "min": 0.0003698224852071006,
+        "max": 0.7806952662721893,
+        "mean": 0.2311421127992999,
+        "median": 0.1797337278106509,
+        "std": 0.19832711493009753,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009615384615384616,
+        "max": 0.9423076923076923,
+        "mean": 0.39979189598238946,
+        "median": 0.34615384615384615,
+        "std": 0.3303463177804613,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 240,
+        "failures": 760,
+        "success_rate": 0.24
+      },
+      "total_severity": {
+        "min": 0.000059171597633136094,
+        "max": 0.04195266272189349,
+        "mean": 0.01112566178760511,
+        "median": 0.009349112426035503,
+        "std": 0.008526983802989238,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.019230769230769232,
+        "max": 0.057692307692307696,
+        "mean": 0.03192349691614281,
+        "median": 0.038461538461538464,
+        "std": 0.012758289830496183,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.000023668639053254438,
+        "max": 0.2386508875739645,
+        "mean": 0.06248390402236559,
+        "median": 0.05218934911242604,
+        "std": 0.04626537876884086,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.3769230769230769,
+        "mean": 0.08910608919165387,
+        "median": 0.05384615384615385,
+        "std": 0.084992335903412,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 48,
+        "failures": 952,
+        "success_rate": 0.048
+      },
+      "total_severity": {
+        "min": 0.0002958579881656805,
+        "max": 0.3319526627218935,
+        "mean": 0.09372886728655955,
+        "median": 0.07189349112426036,
+        "std": 0.08265415430264712,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.3769230769230769,
+        "mean": 0.16117666549096643,
+        "median": 0.13076923076923078,
+        "std": 0.1372466764922669,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 234,
+        "failures": 766,
+        "success_rate": 0.234
+      },
+      "total_severity": {
+        "min": 0.000047337278106508875,
+        "max": 0.022863905325443787,
+        "mean": 0.0065302578522100484,
+        "median": 0.0058934911242603544,
+        "std": 0.004464747963987009,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015384615384615385,
+        "max": 0.03076923076923077,
+        "mean": 0.01707407123150821,
+        "median": 0.015384615384615385,
+        "std": 0.004810131739888488,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0032662721893491125,
+        "max": 0.40584615384615386,
+        "mean": 0.11744681656804731,
+        "median": 0.10074556213017752,
+        "std": 0.07063033267092815,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.7,
+        "mean": 0.14710669466410267,
+        "median": 0.09230769230769231,
+        "std": 0.126782959081349,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 9,
+        "failures": 991,
+        "success_rate": 0.009
+      },
+      "total_severity": {
+        "min": 0.001183431952662722,
+        "max": 0.5636094674556213,
+        "mean": 0.16890475820849177,
+        "median": 0.12958579881656804,
+        "std": 0.13528169654281946,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.7384615384615385,
+        "mean": 0.23260288615714772,
+        "median": 0.1076923076923077,
+        "std": 0.2275581584183513,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 6,
+        "failures": 994,
+        "success_rate": 0.006
+      },
+      "total_severity": {
+        "min": 0.0013727810650887573,
+        "max": 0.09969230769230769,
+        "mean": 0.03727291560010955,
+        "median": 0.03552662721893491,
+        "std": 0.017963752252660167,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015384615384615385,
+        "max": 0.16923076923076924,
+        "mean": 0.05901417095323273,
+        "median": 0.06153846153846154,
+        "std": 0.02829696780502893,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 487,
+        "failures": 513,
+        "success_rate": 0.487
+      },
+      "total_severity": {
+        "min": 0.000059171597633136094,
+        "max": 0.01911242603550296,
+        "mean": 0.0063517768780926714,
+        "median": 0.005384615384615384,
+        "std": 0.004483085824458107,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.019230769230769232,
+        "max": 0.019230769230769232,
+        "mean": 0.019230769230743912,
+        "median": 0.019230769230769232,
+        "std": 2.5320023855357476e-14,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 666,
+        "failures": 334,
+        "success_rate": 0.666
+      },
+      "total_severity": {
+        "min": 0.0007396449704142012,
+        "max": 0.01849112426035503,
+        "mean": 0.0065992275803422665,
+        "median": 0.005917159763313609,
+        "std": 0.004469493977053304,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.019230769230769232,
+        "max": 0.019230769230769232,
+        "mean": 0.019230769230768358,
+        "median": 0.019230769230769232,
+        "std": 8.743006318923108e-16,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 466,
+        "failures": 534,
+        "success_rate": 0.466
+      },
+      "total_severity": {
+        "min": 0.000059171597633136094,
+        "max": 0.01680473372781065,
+        "mean": 0.005945637479777499,
+        "median": 0.005266272189349113,
+        "std": 0.004236192888096627,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.019230769230769232,
+        "max": 0.019230769230769232,
+        "mean": 0.019230769230744627,
+        "median": 0.019230769230769232,
+        "std": 2.4605317783255032e-14,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 41,
+        "failures": 959,
+        "success_rate": 0.041
+      },
+      "total_severity": {
+        "min": 0.000047337278106508875,
+        "max": 0.4991715976331361,
+        "mean": 0.0816512516119478,
+        "median": 0.05195266272189349,
+        "std": 0.09190297264942464,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.7461538461538462,
+        "mean": 0.17383672723038512,
+        "median": 0.1,
+        "std": 0.19606680545662278,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 125,
+        "failures": 875,
+        "success_rate": 0.125
+      },
+      "total_severity": {
+        "min": 0.0002958579881656805,
+        "max": 0.6662721893491125,
+        "mean": 0.17257041420118338,
+        "median": 0.12781065088757396,
+        "std": 0.1620493568028725,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.007692307692307693,
+        "max": 0.7461538461538462,
+        "mean": 0.35889724134535134,
+        "median": 0.2923076923076923,
+        "std": 0.27326056096054835,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/GtsHungary.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 96,
+        "failures": 904,
+        "success_rate": 0.096
+      },
+      "total_severity": {
+        "min": 0.00009467455621301775,
+        "max": 0.27365680473372783,
+        "mean": 0.03254893438760014,
+        "median": 0.02255621301775148,
+        "std": 0.035082506584229435,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015384615384615385,
+        "max": 0.4,
+        "mean": 0.07163740297453736,
+        "median": 0.046153846153846156,
+        "std": 0.08293946543746449,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 121,
+        "failures": 879,
+        "success_rate": 0.121
+      },
+      "total_severity": {
+        "min": 0.000591715976331361,
+        "max": 0.3165680473372781,
+        "mean": 0.07402171644754998,
+        "median": 0.049112426035502955,
+        "std": 0.07328146846876459,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.015384615384615385,
+        "max": 0.4,
+        "mean": 0.1449980550006373,
+        "median": 0.07692307692307693,
+        "std": 0.13448482940082088,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 485,
+        "failures": 515,
+        "success_rate": 0.485
+      },
+      "total_severity": {
+        "min": 0.00009467455621301775,
+        "max": 0.02736094674556213,
+        "mean": 0.00904996840351583,
+        "median": 0.007479289940828402,
+        "std": 0.006664391707018719,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03076923076923077,
+        "max": 0.03076923076923077,
+        "mean": 0.030769230769237464,
+        "median": 0.03076923076923077,
+        "std": 6.692563170318522e-15,
+        "values": []
+      }
+    }
+  }
+]

@@ -1,0 +1,335 @@
+{
+  "scenario": "AsnetAm.gml, s=42, FullMesh2RouteReflector",
+  "ideal_cost": 0.0,
+  "optimal_cost": null,
+  "optimal_cost_time": null,
+  "num_nodes": 65,
+  "num_edges": 77,
+  "num_commands": 2016,
+  "strategy_result": [
+    {
+      "cost": 0.0,
+      "time": 1.064252747,
+      "num_states": 2027
+    },
+    {
+      "cost": 0.0,
+      "time": 1.066734792,
+      "num_states": 2074
+    },
+    {
+      "cost": 0.0,
+      "time": 1.067777464,
+      "num_states": 2018
+    },
+    {
+      "cost": 0.0,
+      "time": 1.075694228,
+      "num_states": 2062
+    },
+    {
+      "cost": 0.0,
+      "time": 1.063894583,
+      "num_states": 2033
+    },
+    {
+      "cost": 0.0,
+      "time": 1.083896636,
+      "num_states": 2067
+    },
+    {
+      "cost": 0.0,
+      "time": 1.079173966,
+      "num_states": 2050
+    },
+    {
+      "cost": 0.0,
+      "time": 1.056574514,
+      "num_states": 2016
+    },
+    {
+      "cost": 0.0,
+      "time": 1.07866065,
+      "num_states": 2043
+    },
+    {
+      "cost": 0.0,
+      "time": 1.067677613,
+      "num_states": 2060
+    },
+    {
+      "cost": 0.0,
+      "time": 1.058739748,
+      "num_states": 2031
+    },
+    {
+      "cost": 0.0,
+      "time": 1.060772639,
+      "num_states": 2023
+    },
+    {
+      "cost": 0.0,
+      "time": 1.057445114,
+      "num_states": 2027
+    },
+    {
+      "cost": 0.0,
+      "time": 1.061968722,
+      "num_states": 2025
+    },
+    {
+      "cost": 0.0,
+      "time": 1.082945116,
+      "num_states": 2054
+    },
+    {
+      "cost": 0.0,
+      "time": 1.083706435,
+      "num_states": 2059
+    },
+    {
+      "cost": 0.0,
+      "time": 1.05804155,
+      "num_states": 2025
+    },
+    {
+      "cost": 0.0,
+      "time": 1.09172417,
+      "num_states": 2039
+    },
+    {
+      "cost": 0.0,
+      "time": 1.091184314,
+      "num_states": 2073
+    },
+    {
+      "cost": 0.0,
+      "time": 1.07297164,
+      "num_states": 2071
+    },
+    {
+      "cost": 0.0,
+      "time": 1.074741198,
+      "num_states": 2049
+    },
+    {
+      "cost": 0.0,
+      "time": 1.070453032,
+      "num_states": 2028
+    },
+    {
+      "cost": 0.0,
+      "time": 1.101360403,
+      "num_states": 2076
+    },
+    {
+      "cost": 0.0,
+      "time": 1.0927546910000001,
+      "num_states": 2064
+    },
+    {
+      "cost": 0.0,
+      "time": 1.062504438,
+      "num_states": 2056
+    },
+    {
+      "cost": 0.0,
+      "time": 1.1091323260000001,
+      "num_states": 2020
+    },
+    {
+      "cost": 0.0,
+      "time": 1.053227439,
+      "num_states": 2057
+    },
+    {
+      "cost": 0.0,
+      "time": 1.081991926,
+      "num_states": 2053
+    },
+    {
+      "cost": 0.0,
+      "time": 1.093673041,
+      "num_states": 2065
+    },
+    {
+      "cost": 0.0,
+      "time": 1.084986497,
+      "num_states": 2019
+    },
+    {
+      "cost": 0.0,
+      "time": 1.101818688,
+      "num_states": 2078
+    },
+    {
+      "cost": 0.0,
+      "time": 1.082181768,
+      "num_states": 2052
+    },
+    {
+      "cost": 0.0,
+      "time": 1.088364664,
+      "num_states": 2050
+    },
+    {
+      "cost": 0.0,
+      "time": 1.115912818,
+      "num_states": 2074
+    },
+    {
+      "cost": 0.0,
+      "time": 1.075182774,
+      "num_states": 2061
+    },
+    {
+      "cost": 0.0,
+      "time": 1.092956073,
+      "num_states": 2044
+    },
+    {
+      "cost": 0.0,
+      "time": 1.087207912,
+      "num_states": 2028
+    },
+    {
+      "cost": 0.0,
+      "time": 1.074192923,
+      "num_states": 2069
+    },
+    {
+      "cost": 0.0,
+      "time": 1.077976804,
+      "num_states": 2021
+    },
+    {
+      "cost": 0.0,
+      "time": 1.0909621330000001,
+      "num_states": 2018
+    },
+    {
+      "cost": 0.0,
+      "time": 1.089584107,
+      "num_states": 2077
+    },
+    {
+      "cost": 0.0,
+      "time": 1.099818057,
+      "num_states": 2033
+    },
+    {
+      "cost": 0.0,
+      "time": 1.085177121,
+      "num_states": 2066
+    },
+    {
+      "cost": 0.0,
+      "time": 1.105600179,
+      "num_states": 2050
+    },
+    {
+      "cost": 0.0,
+      "time": 1.094252217,
+      "num_states": 2023
+    },
+    {
+      "cost": 0.0,
+      "time": 1.101314593,
+      "num_states": 2053
+    },
+    {
+      "cost": 0.0,
+      "time": 1.105059242,
+      "num_states": 2066
+    },
+    {
+      "cost": 0.0,
+      "time": 1.091183594,
+      "num_states": 2026
+    },
+    {
+      "cost": 0.0,
+      "time": 1.106340176,
+      "num_states": 2084
+    },
+    {
+      "cost": 0.0,
+      "time": 1.101231211,
+      "num_states": 2040
+    },
+    {
+      "cost": 0.0,
+      "time": 1.104288914,
+      "num_states": 2056
+    },
+    {
+      "cost": 0.0,
+      "time": 1.116652017,
+      "num_states": 2034
+    },
+    {
+      "cost": 0.0,
+      "time": 1.117779928,
+      "num_states": 2059
+    },
+    {
+      "cost": 0.0,
+      "time": 1.112151199,
+      "num_states": 2031
+    },
+    {
+      "cost": 0.0,
+      "time": 1.12723473,
+      "num_states": 2048
+    },
+    {
+      "cost": 0.0,
+      "time": 1.172580224,
+      "num_states": 2043
+    },
+    {
+      "cost": 0.0,
+      "time": 1.188163871,
+      "num_states": 2078
+    },
+    {
+      "cost": 0.0,
+      "time": 1.227172049,
+      "num_states": 2065
+    },
+    {
+      "cost": 0.0,
+      "time": 1.2527950620000001,
+      "num_states": 2088
+    },
+    {
+      "cost": 0.0,
+      "time": 1.212318089,
+      "num_states": 2075
+    },
+    {
+      "cost": 0.0,
+      "time": 1.479341163,
+      "num_states": 2018
+    },
+    {
+      "cost": 0.0,
+      "time": 1.497478857,
+      "num_states": 2036
+    },
+    {
+      "cost": 0.0,
+      "time": 1.5197476349999999,
+      "num_states": 2050
+    },
+    {
+      "cost": 0.0,
+      "time": 1.495440396,
+      "num_states": 2023
+    }
+  ],
+  "tree_result": [],
+  "random_result": [],
+  "baseline_mif_result": [],
+  "baseline_mil_result": []
+}

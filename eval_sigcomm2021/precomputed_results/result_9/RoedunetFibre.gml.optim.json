@@ -1,0 +1,335 @@
+{
+  "scenario": "RoedunetFibre.gml, s=42, FullMesh2RouteReflector",
+  "ideal_cost": 0.0,
+  "optimal_cost": null,
+  "optimal_cost_time": null,
+  "num_nodes": 48,
+  "num_edges": 52,
+  "num_commands": 1035,
+  "strategy_result": [
+    {
+      "cost": 0.0,
+      "time": 186.874572325,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.039395816,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.065230403,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.121532243,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.105318116,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.203073426,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.232164575,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.289544698,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.315611277,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.344831058,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.362230527,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.377941749,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.410336164,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.440605927,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.448295235,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.459801255,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.486074396,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.511320406,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.499529044,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.504867969,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.509034782,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.527880657,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.586274869,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.577217636,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.605941922,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.623436073,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.617371011,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.627878579,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.621279241,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.640867403,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.672644451,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.665221284,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.671202736,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.674683022,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.653842347,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.71135269,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.69384773,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.721789648,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.73848195,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.73944101,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.760870001,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.786256703,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.779087429,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.770506541,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.791105653,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.791217954,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.823080053,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.86445629,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.868865596,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.850997191,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.856379467,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.860401959,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.865816424,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.891108016,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.875653495,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.887802942,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.899531273,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.994996017,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 187.997410482,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 188.000879139,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 188.052858035,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 188.220594106,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 188.359775271,
+      "num_states": 536130
+    },
+    {
+      "cost": 0.0,
+      "time": 188.788732639,
+      "num_states": 536130
+    }
+  ],
+  "tree_result": [],
+  "random_result": [],
+  "baseline_mif_result": [],
+  "baseline_mil_result": []
+}

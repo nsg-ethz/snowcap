@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 167,
+        "failures": 833,
+        "success_rate": 0.167
+      },
+      "total_severity": {
+        "min": 0.00009603841536614646,
+        "max": 0.6027851140456183,
+        "mean": 0.11212784753757435,
+        "median": 0.0739015606242497,
+        "std": 0.11478438803460618,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9142857142857143,
+        "mean": 0.27789466014419467,
+        "median": 0.2,
+        "std": 0.25304206546166286,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 129,
+        "failures": 871,
+        "success_rate": 0.129
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.8212244897959183,
+        "mean": 0.23541507532978767,
+        "median": 0.19020408163265307,
+        "std": 0.20983870365769722,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9428571428571428,
+        "mean": 0.49966083488330004,
+        "median": 0.45714285714285713,
+        "std": 0.34490926020151474,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 174,
+        "failures": 826,
+        "success_rate": 0.174
+      },
+      "total_severity": {
+        "min": 0.00004801920768307323,
+        "max": 0.5970228091236495,
+        "mean": 0.10635783611265329,
+        "median": 0.07212484993997599,
+        "std": 0.10976686307827863,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9142857142857143,
+        "mean": 0.260938317879592,
+        "median": 0.17142857142857143,
+        "std": 0.2496550340687404,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 129,
+        "failures": 871,
+        "success_rate": 0.129
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.8318367346938775,
+        "mean": 0.22557135827924732,
+        "median": 0.17551020408163265,
+        "std": 0.2061404973644727,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9428571428571428,
+        "mean": 0.4798704017545914,
+        "median": 0.42857142857142855,
+        "std": 0.34861819072174766,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 178,
+        "failures": 822,
+        "success_rate": 0.178
+      },
+      "total_severity": {
+        "min": 0.00009603841536614646,
+        "max": 0.6036974789915966,
+        "mean": 0.11094066823809819,
+        "median": 0.07661464585834334,
+        "std": 0.11374245913928412,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9714285714285714,
+        "mean": 0.27823914132754834,
+        "median": 0.2,
+        "std": 0.25104963029037625,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 131,
+        "failures": 869,
+        "success_rate": 0.131
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.8604081632653061,
+        "mean": 0.24516474483924752,
+        "median": 0.1893877551020408,
+        "std": 0.21801102702142575,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9714285714285714,
+        "mean": 0.5124869906726206,
+        "median": 0.5142857142857142,
+        "std": 0.35351638110395794,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 183,
+        "failures": 817,
+        "success_rate": 0.183
+      },
+      "total_severity": {
+        "min": 0.00004801920768307323,
+        "max": 0.5037214885954382,
+        "mean": 0.10001307744640077,
+        "median": 0.07841536614645858,
+        "std": 0.08999394197013794,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.8285714285714286,
+        "mean": 0.2414426468625852,
+        "median": 0.2,
+        "std": 0.18619726564074995,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 134,
+        "failures": 866,
+        "success_rate": 0.134
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.7869387755102041,
+        "mean": 0.19718810387896507,
+        "median": 0.14326530612244898,
+        "std": 0.1792116098187873,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9142857142857143,
+        "mean": 0.4296435503250613,
+        "median": 0.4,
+        "std": 0.3051309688645405,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 133,
+        "failures": 867,
+        "success_rate": 0.133
+      },
+      "total_severity": {
+        "min": 0.00004801920768307323,
+        "max": 0.5720528211284513,
+        "mean": 0.10684977105028864,
+        "median": 0.07490996398559424,
+        "std": 0.10551468808257596,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.8571428571428571,
+        "mean": 0.2557181959767562,
+        "median": 0.17142857142857143,
+        "std": 0.22977619391329926,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 137,
+        "failures": 863,
+        "success_rate": 0.137
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.7485714285714286,
+        "mean": 0.22231324047579648,
+        "median": 0.1763265306122449,
+        "std": 0.19259124581747789,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9142857142857143,
+        "mean": 0.4677792705379303,
+        "median": 0.4857142857142857,
+        "std": 0.32163743493980884,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 157,
+        "failures": 843,
+        "success_rate": 0.157
+      },
+      "total_severity": {
+        "min": 0.00009603841536614646,
+        "max": 0.5332533013205282,
+        "mean": 0.11170293028243325,
+        "median": 0.08004801920768308,
+        "std": 0.10507099843363359,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9428571428571428,
+        "mean": 0.2743550516146889,
+        "median": 0.22857142857142856,
+        "std": 0.21788901098621716,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 137,
+        "failures": 863,
+        "success_rate": 0.137
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.8048979591836735,
+        "mean": 0.220446945869889,
+        "median": 0.16081632653061226,
+        "std": 0.19684243231394927,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9428571428571428,
+        "mean": 0.47725057339450383,
+        "median": 0.45714285714285713,
+        "std": 0.3236242432513199,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 175,
+        "failures": 825,
+        "success_rate": 0.175
+      },
+      "total_severity": {
+        "min": 0.00004801920768307323,
+        "max": 0.4410564225690276,
+        "mean": 0.10046590272472629,
+        "median": 0.07673469387755102,
+        "std": 0.09156345282174855,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.8571428571428571,
+        "mean": 0.2402386983630319,
+        "median": 0.17142857142857143,
+        "std": 0.19572784867274562,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 128,
+        "failures": 872,
+        "success_rate": 0.128
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.7502040816326531,
+        "mean": 0.20819134993446903,
+        "median": 0.15428571428571428,
+        "std": 0.18538135618108323,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9142857142857143,
+        "mean": 0.4451138353765589,
+        "median": 0.42857142857142855,
+        "std": 0.30458133314393904,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 164,
+        "failures": 836,
+        "success_rate": 0.164
+      },
+      "total_severity": {
+        "min": 0.00009603841536614646,
+        "max": 0.33800720288115244,
+        "mean": 0.07052769433132106,
+        "median": 0.056566626650660264,
+        "std": 0.06214714792405521,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.7714285714285715,
+        "mean": 0.16966786792087704,
+        "median": 0.14285714285714285,
+        "std": 0.12248439560594745,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 136,
+        "failures": 864,
+        "success_rate": 0.136
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.6906122448979591,
+        "mean": 0.17024281934996233,
+        "median": 0.11224489795918367,
+        "std": 0.16428263461571274,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9142857142857143,
+        "mean": 0.37462835519889454,
+        "median": 0.2857142857142857,
+        "std": 0.29280396992983265,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 174,
+        "failures": 826,
+        "success_rate": 0.174
+      },
+      "total_severity": {
+        "min": 0.00004801920768307323,
+        "max": 0.5196158463385354,
+        "mean": 0.09325428960930625,
+        "median": 0.07150060024009604,
+        "std": 0.08829173120715327,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9428571428571428,
+        "mean": 0.23540852490762137,
+        "median": 0.2,
+        "std": 0.19251240116898738,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 149,
+        "failures": 851,
+        "success_rate": 0.149
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.7518367346938776,
+        "mean": 0.21291733614714964,
+        "median": 0.17551020408163265,
+        "std": 0.18118445926857218,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9428571428571428,
+        "mean": 0.4547682220970376,
+        "median": 0.42857142857142855,
+        "std": 0.3223210575406954,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BtNorthAmerica.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 180,
+        "failures": 820,
+        "success_rate": 0.18
+      },
+      "total_severity": {
+        "min": 0.00004801920768307323,
+        "max": 0.4557022809123649,
+        "mean": 0.09087108013937283,
+        "median": 0.06955582232893157,
+        "std": 0.08757279810261508,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.8857142857142857,
+        "mean": 0.22280180709859068,
+        "median": 0.17142857142857143,
+        "std": 0.182417462199908,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 150,
+        "failures": 850,
+        "success_rate": 0.15
+      },
+      "total_severity": {
+        "min": 0.0008163265306122449,
+        "max": 0.7836734693877551,
+        "mean": 0.1916388955582234,
+        "median": 0.13510204081632654,
+        "std": 0.18064383378299478,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.9142857142857143,
+        "mean": 0.4269325402768905,
+        "median": 0.37142857142857144,
+        "std": 0.3119895799294267,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  }
+]

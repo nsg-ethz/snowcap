@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 237,
+        "failures": 763,
+        "success_rate": 0.237
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.10308641975308643,
+        "mean": 0.019852596152290364,
+        "median": 0.013580246913580247,
+        "std": 0.018357377147841834,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.28888888888888886,
+        "mean": 0.05847840333631416,
+        "median": 0.044444444444444446,
+        "std": 0.04020266450806058,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 219,
+        "failures": 781,
+        "success_rate": 0.219
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.3111111111111111,
+        "mean": 0.0877602314222032,
+        "median": 0.06419753086419754,
+        "std": 0.07677796457708758,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.5555555555555556,
+        "mean": 0.1915140225602805,
+        "median": 0.13333333333333333,
+        "std": 0.15291906914555473,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 299,
+        "failures": 701,
+        "success_rate": 0.299
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.12407407407407407,
+        "mean": 0.014876455152251635,
+        "median": 0.009876543209876543,
+        "std": 0.015309564599423623,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.37777777777777777,
+        "mean": 0.04841658785429986,
+        "median": 0.044444444444444446,
+        "std": 0.03664928684372221,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 259,
+        "failures": 741,
+        "success_rate": 0.259
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.2740740740740741,
+        "mean": 0.07102847336765458,
+        "median": 0.04691358024691358,
+        "std": 0.06768845188851673,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.5111111111111111,
+        "mean": 0.16300374703678325,
+        "median": 0.1111111111111111,
+        "std": 0.14071577920435024,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 292,
+        "failures": 708,
+        "success_rate": 0.292
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.10987654320987654,
+        "mean": 0.012608111878356707,
+        "median": 0.008641975308641974,
+        "std": 0.013064759556840293,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.3333333333333333,
+        "mean": 0.04385310528869757,
+        "median": 0.022222222222222223,
+        "std": 0.03477573363152872,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 244,
+        "failures": 756,
+        "success_rate": 0.244
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.30617283950617286,
+        "mean": 0.07082108563590045,
+        "median": 0.044444444444444446,
+        "std": 0.06724442033867198,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.5333333333333333,
+        "mean": 0.16024830950005778,
+        "median": 0.1111111111111111,
+        "std": 0.1424427080659225,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 159,
+        "failures": 841,
+        "success_rate": 0.159
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.18950617283950616,
+        "mean": 0.03680069288471984,
+        "median": 0.022839506172839506,
+        "std": 0.03764495674341324,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.4444444444444444,
+        "mean": 0.09884472833373187,
+        "median": 0.06666666666666667,
+        "std": 0.0828955816991682,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 236,
+        "failures": 764,
+        "success_rate": 0.236
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.37777777777777777,
+        "mean": 0.10747527632344386,
+        "median": 0.09135802469135802,
+        "std": 0.08485157718737972,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.5555555555555556,
+        "mean": 0.23137132122729967,
+        "median": 0.2222222222222222,
+        "std": 0.15438207325454248,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 51,
+        "failures": 949,
+        "success_rate": 0.051
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.17098765432098764,
+        "mean": 0.034646606564414775,
+        "median": 0.028395061728395062,
+        "std": 0.028266557139328168,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.4888888888888889,
+        "mean": 0.07247974200395793,
+        "median": 0.044444444444444446,
+        "std": 0.05468265433423258,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 193,
+        "failures": 807,
+        "success_rate": 0.193
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.3925925925925926,
+        "mean": 0.11168020560833444,
+        "median": 0.08888888888888889,
+        "std": 0.09030866354703734,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.5777777777777777,
+        "mean": 0.23208392942298622,
+        "median": 0.2,
+        "std": 0.15842203129099172,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 326,
+        "failures": 674,
+        "success_rate": 0.326
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.19753086419753085,
+        "mean": 0.02606055610506651,
+        "median": 0.015740740740740743,
+        "std": 0.027677840798550502,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.4666666666666667,
+        "mean": 0.08575174034897301,
+        "median": 0.06666666666666667,
+        "std": 0.0671122140947466,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 304,
+        "failures": 696,
+        "success_rate": 0.304
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.39753086419753086,
+        "mean": 0.10186604228749824,
+        "median": 0.07777777777777778,
+        "std": 0.08295907301422793,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.5333333333333333,
+        "mean": 0.22895187975919706,
+        "median": 0.2,
+        "std": 0.15324278834135183,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 427,
+        "failures": 573,
+        "success_rate": 0.427
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.12962962962962962,
+        "mean": 0.018624092387908565,
+        "median": 0.012345679012345678,
+        "std": 0.019286898687082766,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.37777777777777777,
+        "mean": 0.0754473247796139,
+        "median": 0.044444444444444446,
+        "std": 0.060617756077983594,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 330,
+        "failures": 670,
+        "success_rate": 0.33
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.3234567901234568,
+        "mean": 0.08555371291689703,
+        "median": 0.06419753086419754,
+        "std": 0.07332615318228569,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.5333333333333333,
+        "mean": 0.20602591409300744,
+        "median": 0.17777777777777778,
+        "std": 0.15771541650772708,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 286,
+        "failures": 714,
+        "success_rate": 0.286
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.12160493827160494,
+        "mean": 0.017699795967769837,
+        "median": 0.011728395061728396,
+        "std": 0.01788571025197521,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.3111111111111111,
+        "mean": 0.055980750037599565,
+        "median": 0.044444444444444446,
+        "std": 0.03960559351887848,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 244,
+        "failures": 756,
+        "success_rate": 0.244
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.291358024691358,
+        "mean": 0.06897576588934612,
+        "median": 0.04691358024691358,
+        "std": 0.062381406122555084,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.4666666666666667,
+        "mean": 0.1493669990805572,
+        "median": 0.1111111111111111,
+        "std": 0.1274914460771608,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 386,
+        "failures": 614,
+        "success_rate": 0.386
+      },
+      "total_severity": {
+        "min": 0.0006172839506172839,
+        "max": 0.20679012345679013,
+        "mean": 0.03583665098323079,
+        "median": 0.024382716049382715,
+        "std": 0.03486572840784427,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.4666666666666667,
+        "mean": 0.1158428390367503,
+        "median": 0.1111111111111111,
+        "std": 0.07876341139366215,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 312,
+        "failures": 688,
+        "success_rate": 0.312
+      },
+      "total_severity": {
+        "min": 0.0024691358024691358,
+        "max": 0.4246913580246914,
+        "mean": 0.11537826586276204,
+        "median": 0.09135802469135802,
+        "std": 0.09244442988219816,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.022222222222222223,
+        "max": 0.6,
+        "mean": 0.26918697144770987,
+        "median": 0.2222222222222222,
+        "std": 0.1720692708340514,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Airtel.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 301,
+        "failures": 699,
+        "success_rate": 0.301
+      },
+      "total_severity": {
+        "min": 0.0007716049382716049,
+        "max": 0.0941358024691358,
+        "mean": 0.019762579699394222,
+        "median": 0.013888888888888888,
+        "std": 0.018631228666257896,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.027777777777777776,
+        "max": 0.3333333333333333,
+        "mean": 0.06817074099459332,
+        "median": 0.05555555555555555,
+        "std": 0.04343000672877915,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 264,
+        "failures": 736,
+        "success_rate": 0.264
+      },
+      "total_severity": {
+        "min": 0.0030864197530864196,
+        "max": 0.2962962962962963,
+        "mean": 0.08581588835212033,
+        "median": 0.06481481481481481,
+        "std": 0.07222559720592289,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.027777777777777776,
+        "max": 0.5,
+        "mean": 0.1944064447484423,
+        "median": 0.16666666666666666,
+        "std": 0.13758123828209426,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  }
+]

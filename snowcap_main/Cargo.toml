@@ -1,0 +1,18 @@
+[package]
+name = "snowcap_main"
+version = "0.1.0"
+authors = ["Tibor Schneider <tiborschneider@bluewin.ch>"]
+edition = "2018"
+default-run = "snowcap_main"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+snowcap = { path = "../snowcap", features = ["transient-violation"] }
+snowcap_runtime = { path = "../snowcap_runtime" }
+snowcap_bencher = { path = "../snowcap_bencher" }
+log = "0.4"
+pretty_env_logger = "0.4"
+clap = { git = "https://github.com/clap-rs/clap", branch = "master"}
+rand = "0.7"
+num_cpus = "1"

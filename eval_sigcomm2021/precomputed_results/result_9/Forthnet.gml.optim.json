@@ -1,0 +1,335 @@
+{
+  "scenario": "Forthnet.gml, s=42, FullMesh2RouteReflector",
+  "ideal_cost": 0.0,
+  "optimal_cost": null,
+  "optimal_cost_time": null,
+  "num_nodes": 62,
+  "num_edges": 62,
+  "num_commands": 1770,
+  "strategy_result": [
+    {
+      "cost": 0.0,
+      "time": 809.349501276,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.356327618,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.490241458,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.508237384,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.52731576,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.579279055,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.591931956,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.653765173,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.675831771,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.74466615,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.761999988,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.784661742,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.762086879,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.833237273,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.926553625,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.93877171,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.943601551,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 809.928453824,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.006278756,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.036776051,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.041062854,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.066065923,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.079162378,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.134482477,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.170031054,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.164736278,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.188052069,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.174332608,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.19889412,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.228624817,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.227770309,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.227071022,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.235386957,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.298849361,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.303086415,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.30454121,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.351307362,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.358566586,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.344717934,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.362280305,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.388959899,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.377420281,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.395206864,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.442847655,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.460029912,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.456239443,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.465963593,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.509845256,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.527691159,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.535928515,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.529017353,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.591495577,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.58498176,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.608161099,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.658771111,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.826163086,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 810.991239157,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 811.13322368,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 811.675911383,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 811.907701471,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 811.89973911,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 812.175543022,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 813.014101614,
+      "num_states": 1567335
+    },
+    {
+      "cost": 0.0,
+      "time": 817.090551107,
+      "num_states": 1567335
+    }
+  ],
+  "tree_result": [],
+  "random_result": [],
+  "baseline_mif_result": [],
+  "baseline_mil_result": []
+}

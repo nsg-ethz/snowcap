@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 748,
+        "failures": 252,
+        "success_rate": 0.748
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.01431578947368421,
+        "mean": 0.0019392230576441099,
+        "median": 0.0013684210526315789,
+        "std": 0.002042858953142085,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.12,
+        "mean": 0.0175852272727287,
+        "median": 0.01,
+        "std": 0.010865148339217345,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 329,
+        "failures": 671,
+        "success_rate": 0.329
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.164,
+        "mean": 0.026679582712369587,
+        "median": 0.016,
+        "std": 0.02871939141146531,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.39,
+        "mean": 0.06960342146189673,
+        "median": 0.04,
+        "std": 0.07407358235296506,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 330,
+        "failures": 670,
+        "success_rate": 0.33
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.028157894736842104,
+        "mean": 0.00639732914375491,
+        "median": 0.005157894736842105,
+        "std": 0.005178341678120254,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.09,
+        "mean": 0.021027653696185148,
+        "median": 0.02,
+        "std": 0.005848446551416322,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 276,
+        "failures": 724,
+        "success_rate": 0.276
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.14,
+        "mean": 0.022196132596685077,
+        "median": 0.012750000000000001,
+        "std": 0.023735511695135884,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.33,
+        "mean": 0.05071800536531584,
+        "median": 0.02,
+        "std": 0.05864337792886209,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 494,
+        "failures": 506,
+        "success_rate": 0.494
+      },
+      "total_severity": {
+        "min": 0.00010526315789473685,
+        "max": 0.01768421052631579,
+        "mean": 0.005966715206989806,
+        "median": 0.005157894736842105,
+        "std": 0.00420759052819317,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02,
+        "max": 0.02,
+        "mean": 0.01999999999999192,
+        "median": 0.02,
+        "std": 8.080341951099967e-15,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 765,
+        "failures": 235,
+        "success_rate": 0.765
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.01568421052631579,
+        "mean": 0.0027690929451287785,
+        "median": 0.001894736842105263,
+        "std": 0.002900905087983431,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.16,
+        "mean": 0.02293026706231546,
+        "median": 0.02,
+        "std": 0.016472606635407717,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 341,
+        "failures": 659,
+        "success_rate": 0.341
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.1615,
+        "mean": 0.027461305007587238,
+        "median": 0.0155,
+        "std": 0.03003719907366088,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.41,
+        "mean": 0.0678552680914886,
+        "median": 0.04,
+        "std": 0.07758042414024262,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 731,
+        "failures": 269,
+        "success_rate": 0.731
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.01757894736842105,
+        "mean": 0.0036086871453727245,
+        "median": 0.002263157894736842,
+        "std": 0.003714652041795745,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.1,
+        "mean": 0.024687458171597475,
+        "median": 0.03,
+        "std": 0.010649156123617642,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 403,
+        "failures": 597,
+        "success_rate": 0.403
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.123,
+        "mean": 0.023029313232830806,
+        "median": 0.0145,
+        "std": 0.023881888914432953,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.33,
+        "mean": 0.0628502857142848,
+        "median": 0.04,
+        "std": 0.06384008044596201,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 821,
+        "failures": 179,
+        "success_rate": 0.821
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.014526315789473684,
+        "mean": 0.001800352837400764,
+        "median": 0.0008947368421052632,
+        "std": 0.0024491212370246224,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.1,
+        "mean": 0.02016134343101728,
+        "median": 0.01,
+        "std": 0.014939466724929839,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 460,
+        "failures": 540,
+        "success_rate": 0.46
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.149,
+        "mean": 0.027166666666666672,
+        "median": 0.017,
+        "std": 0.027449111164183523,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.35,
+        "mean": 0.075833548720599,
+        "median": 0.05,
+        "std": 0.07424477481325242,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 405,
+        "failures": 595,
+        "success_rate": 0.405
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.03478947368421052,
+        "mean": 0.009173905351614333,
+        "median": 0.007368421052631579,
+        "std": 0.007424859340746739,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.14,
+        "mean": 0.02998987912785021,
+        "median": 0.03,
+        "std": 0.008182000317241755,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 315,
+        "failures": 685,
+        "success_rate": 0.315
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.1465,
+        "mean": 0.026540875912408758,
+        "median": 0.0165,
+        "std": 0.028269592533436003,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.34,
+        "mean": 0.06505814993737749,
+        "median": 0.03,
+        "std": 0.06788777813933912,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 459,
+        "failures": 541,
+        "success_rate": 0.459
+      },
+      "total_severity": {
+        "min": 0.00015789473684210527,
+        "max": 0.02542105263157895,
+        "mean": 0.008731783247397611,
+        "median": 0.007578947368421052,
+        "std": 0.0062510959308060355,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.03,
+        "max": 0.03,
+        "mean": 0.0299999999999808,
+        "median": 0.03,
+        "std": 1.91999194321113e-14,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 774,
+        "failures": 226,
+        "success_rate": 0.774
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.015578947368421053,
+        "mean": 0.0024312994876571964,
+        "median": 0.0016578947368421052,
+        "std": 0.0024778909458811594,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.09,
+        "mean": 0.020817547357927377,
+        "median": 0.02,
+        "std": 0.012810825866755774,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 407,
+        "failures": 593,
+        "success_rate": 0.407
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.1455,
+        "mean": 0.02374451939291736,
+        "median": 0.0155,
+        "std": 0.023779979558536835,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.34,
+        "mean": 0.06283132530120379,
+        "median": 0.04,
+        "std": 0.06512742886536421,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 774,
+        "failures": 226,
+        "success_rate": 0.774
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.013526315789473685,
+        "mean": 0.0017862133209129013,
+        "median": 0.0010526315789473684,
+        "std": 0.0019361170346748075,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.1,
+        "mean": 0.01677235950142256,
+        "median": 0.01,
+        "std": 0.009276943033157596,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 439,
+        "failures": 561,
+        "success_rate": 0.439
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.121,
+        "mean": 0.0222807486631016,
+        "median": 0.0135,
+        "std": 0.02197614701410761,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.32,
+        "mean": 0.0580696864111491,
+        "median": 0.04,
+        "std": 0.06237323328890415,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 539,
+        "failures": 461,
+        "success_rate": 0.539
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.0911578947368421,
+        "mean": 0.017371161091448796,
+        "median": 0.011842105263157895,
+        "std": 0.017945350065166822,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.17,
+        "mean": 0.08150524962503325,
+        "median": 0.1,
+        "std": 0.04013416438557467,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 319,
+        "failures": 681,
+        "success_rate": 0.319
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.2035,
+        "mean": 0.04008076358296619,
+        "median": 0.0305,
+        "std": 0.03611315749017709,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.38,
+        "mean": 0.10360599734294937,
+        "median": 0.1,
+        "std": 0.07420059966342923,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Internode.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 627,
+        "failures": 373,
+        "success_rate": 0.627
+      },
+      "total_severity": {
+        "min": 0.000052631578947368424,
+        "max": 0.048210526315789475,
+        "mean": 0.007920135459291662,
+        "median": 0.00531578947368421,
+        "std": 0.008307715481362473,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.12,
+        "mean": 0.038056817411352584,
+        "median": 0.04,
+        "std": 0.017060608710860334,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 310,
+        "failures": 690,
+        "success_rate": 0.31
+      },
+      "total_severity": {
+        "min": 0.0005,
+        "max": 0.184,
+        "mean": 0.03129782608695653,
+        "median": 0.02,
+        "std": 0.03135099440761914,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01,
+        "max": 0.4,
+        "mean": 0.07806072654979246,
+        "median": 0.05,
+        "std": 0.07797302382608583,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  }
+]

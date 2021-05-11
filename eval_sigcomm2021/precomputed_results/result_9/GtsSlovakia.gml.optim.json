@@ -1,0 +1,335 @@
+{
+  "scenario": "GtsSlovakia.gml, s=42, FullMesh2RouteReflector",
+  "ideal_cost": 0.0,
+  "optimal_cost": null,
+  "optimal_cost_time": null,
+  "num_nodes": 35,
+  "num_edges": 37,
+  "num_commands": 465,
+  "strategy_result": [
+    {
+      "cost": 0.0,
+      "time": 16.917212107,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.927488628,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.929161407,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.926600257,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.927962624,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.947456253,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.945705592,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.945659061,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.952489941,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.940654072,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.959011668,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.957321688,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.956087244,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.945983984,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.948671015,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.948790147,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.956084543,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.952814824,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.965754096,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.950112433,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.961665369,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.972079431,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.95844612,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.972523816,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.959948088,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.957110194,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.964407421,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.954559055,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.974926394,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.967278974,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.976360512,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.983732798,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.95926195,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.980814723,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.978734649,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.974021484,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.970940937,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.989754729,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.973502537,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.974412007,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.966418114,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.984456156,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.983287013,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.974211766,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.976761075,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.98991971,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.985293586,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.981448381,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.98146192,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.987539582,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.001154432,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.978545477,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.984298653,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.985407166999998,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.004034486,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.004378639,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.990743259,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 16.996435826,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.001716458,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.018409103,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.01554188,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.067497221,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.089369567,
+      "num_states": 108345
+    },
+    {
+      "cost": 0.0,
+      "time": 17.139790269,
+      "num_states": 108345
+    }
+  ],
+  "tree_result": [],
+  "random_result": [],
+  "baseline_mif_result": [],
+  "baseline_mil_result": []
+}

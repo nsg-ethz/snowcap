@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.00042466451503312384,
+        "max": 0.15045014438593513,
+        "mean": 0.05255062001019196,
+        "median": 0.05030575845082385,
+        "std": 0.02549725464394177,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.3103448275862069,
+        "mean": 0.06742134398089397,
+        "median": 0.05517241379310345,
+        "std": 0.044926358279930516,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 6,
+        "failures": 994,
+        "success_rate": 0.006
+      },
+      "total_severity": {
+        "min": 0.0004756242568370987,
+        "max": 0.17788347205707492,
+        "mean": 0.050829351854288614,
+        "median": 0.04304399524375743,
+        "std": 0.03422620401172643,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.3793103448275862,
+        "mean": 0.07256373299088924,
+        "median": 0.05517241379310345,
+        "std": 0.06053299991465502,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1,
+        "failures": 999,
+        "success_rate": 0.001
+      },
+      "total_severity": {
+        "min": 0.0017835909631391202,
+        "max": 0.15726176320706642,
+        "mean": 0.04802611342444879,
+        "median": 0.04525225072192968,
+        "std": 0.024414070934027275,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.3310344827586207,
+        "mean": 0.06737889382926215,
+        "median": 0.05517241379310345,
+        "std": 0.0451036391668181,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 17,
+        "failures": 983,
+        "success_rate": 0.017
+      },
+      "total_severity": {
+        "min": 0.00020383896721589944,
+        "max": 0.1321216239171055,
+        "mean": 0.035351666283331036,
+        "median": 0.030236113470358417,
+        "std": 0.02474143881920296,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.2896551724137931,
+        "mean": 0.06035763951834036,
+        "median": 0.04827586206896552,
+        "std": 0.04475865937721928,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 49,
+        "failures": 951,
+        "success_rate": 0.049
+      },
+      "total_severity": {
+        "min": 0.00023781212841854935,
+        "max": 0.17621878715814507,
+        "mean": 0.033187420213530806,
+        "median": 0.025208085612366232,
+        "std": 0.027987024499581653,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.33793103448275863,
+        "mean": 0.058086936730922675,
+        "median": 0.041379310344827586,
+        "std": 0.05043403377136143,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 12,
+        "failures": 988,
+        "success_rate": 0.012
+      },
+      "total_severity": {
+        "min": 0.00016986580601324953,
+        "max": 0.11635807711907593,
+        "mean": 0.031097202440840955,
+        "median": 0.025938508578223204,
+        "std": 0.02326323265652453,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.2620689655172414,
+        "mean": 0.059576262170232513,
+        "median": 0.04827586206896552,
+        "std": 0.04319276517226,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 14,
+        "failures": 986,
+        "success_rate": 0.014
+      },
+      "total_severity": {
+        "min": 0.00011890606420927467,
+        "max": 0.1105486665534228,
+        "mean": 0.030828938242236918,
+        "median": 0.02681331747919144,
+        "std": 0.02132475724910837,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.2,
+        "mean": 0.05257754676248807,
+        "median": 0.041379310344827586,
+        "std": 0.03748230748219583,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 70,
+        "failures": 930,
+        "success_rate": 0.07
+      },
+      "total_severity": {
+        "min": 0.00023781212841854935,
+        "max": 0.12437574316290131,
+        "mean": 0.03072762839937097,
+        "median": 0.025802615933412605,
+        "std": 0.024189705191136956,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.2482758620689655,
+        "mean": 0.056089620164547375,
+        "median": 0.041379310344827586,
+        "std": 0.042986830140440996,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 29,
+        "failures": 971,
+        "success_rate": 0.029
+      },
+      "total_severity": {
+        "min": 0.00006794632240529981,
+        "max": 0.10360115508748088,
+        "mean": 0.026726591451044127,
+        "median": 0.022592152199762187,
+        "std": 0.019634941188359747,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.1724137931034483,
+        "mean": 0.05236503954281937,
+        "median": 0.041379310344827586,
+        "std": 0.036905993856918784,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 36,
+        "failures": 964,
+        "success_rate": 0.036
+      },
+      "total_severity": {
+        "min": 0.000033973161202649904,
+        "max": 0.11245116358077119,
+        "mean": 0.025473826921545276,
+        "median": 0.02170885000849329,
+        "std": 0.0180655071378987,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.2413793103448276,
+        "mean": 0.04701234139117887,
+        "median": 0.041379310344827586,
+        "std": 0.028441766834920074,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 65,
+        "failures": 935,
+        "success_rate": 0.065
+      },
+      "total_severity": {
+        "min": 0.0004756242568370987,
+        "max": 0.17431629013079666,
+        "mean": 0.045652807009735,
+        "median": 0.034958382877526756,
+        "std": 0.03791832103536178,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.35172413793103446,
+        "mean": 0.08169180110006029,
+        "median": 0.05517241379310345,
+        "std": 0.06865915951328065,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 151,
+        "failures": 849,
+        "success_rate": 0.151
+      },
+      "total_severity": {
+        "min": 0.00005095974180397486,
+        "max": 0.07341600135892645,
+        "mean": 0.018381480985733882,
+        "median": 0.015169016476983183,
+        "std": 0.014618178318200673,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.12413793103448276,
+        "mean": 0.044831465636129296,
+        "median": 0.041379310344827586,
+        "std": 0.02328268961971842,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 5,
+        "failures": 995,
+        "success_rate": 0.005
+      },
+      "total_severity": {
+        "min": 0.00040767793443179887,
+        "max": 0.10570749108204519,
+        "mean": 0.03363158582107068,
+        "median": 0.030864616952607442,
+        "std": 0.019418659360625482,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.2482758620689655,
+        "mean": 0.054818900019497865,
+        "median": 0.04827586206896552,
+        "std": 0.036192528326147895,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 46,
+        "failures": 954,
+        "success_rate": 0.046
+      },
+      "total_severity": {
+        "min": 0.0004756242568370987,
+        "max": 0.14244946492271107,
+        "mean": 0.025639836772136583,
+        "median": 0.020927467300832343,
+        "std": 0.019897292988980915,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.22758620689655173,
+        "mean": 0.04767148683723631,
+        "median": 0.041379310344827586,
+        "std": 0.03460507249958025,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 5,
+        "failures": 995,
+        "success_rate": 0.005
+      },
+      "total_severity": {
+        "min": 0.000373704773229149,
+        "max": 0.11223033803295397,
+        "mean": 0.031763898479999775,
+        "median": 0.027705112960761,
+        "std": 0.019837636541146945,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.25517241379310346,
+        "mean": 0.05498843836332782,
+        "median": 0.04827586206896552,
+        "std": 0.03695600825010568,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 17,
+        "failures": 983,
+        "success_rate": 0.017
+      },
+      "total_severity": {
+        "min": 0.00006794632240529981,
+        "max": 0.08428741294377441,
+        "mean": 0.016572906386660532,
+        "median": 0.01403091557669441,
+        "std": 0.012606167416989823,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.21379310344827587,
+        "mean": 0.0352132681323058,
+        "median": 0.027586206896551724,
+        "std": 0.025816279677128233,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 104,
+        "failures": 896,
+        "success_rate": 0.104
+      },
+      "total_severity": {
+        "min": 0.00023781212841854935,
+        "max": 0.16884661117717004,
+        "mean": 0.035797626125360964,
+        "median": 0.023067776456599288,
+        "std": 0.03450583219128728,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.35172413793103446,
+        "mean": 0.06992674163595586,
+        "median": 0.041379310344827586,
+        "std": 0.06842674451918974,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 85,
+        "failures": 915,
+        "success_rate": 0.085
+      },
+      "total_severity": {
+        "min": 0.00005095974180397486,
+        "max": 0.053201970443349754,
+        "mean": 0.011731563758619766,
+        "median": 0.009784270426363173,
+        "std": 0.00853593960265179,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.11724137931034483,
+        "mean": 0.02915448787962788,
+        "median": 0.027586206896551724,
+        "std": 0.016131313983924235,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 471,
+        "failures": 529,
+        "success_rate": 0.471
+      },
+      "total_severity": {
+        "min": 0.00005095974180397486,
+        "max": 0.05007643961270596,
+        "mean": 0.008236083286264342,
+        "median": 0.00535077288941736,
+        "std": 0.008328763334485937,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.14482758620689656,
+        "mean": 0.04067363880718607,
+        "median": 0.041379310344827586,
+        "std": 0.02028973292718007,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 794,
+        "failures": 206,
+        "success_rate": 0.794
+      },
+      "total_severity": {
+        "min": 0.000713436385255648,
+        "max": 0.04851367419738407,
+        "mean": 0.008721702088359902,
+        "median": 0.005707491082045184,
+        "std": 0.008173973110996841,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.12413793103448276,
+        "mean": 0.042257460077746056,
+        "median": 0.027586206896551724,
+        "std": 0.022925502154487333,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 446,
+        "failures": 554,
+        "success_rate": 0.446
+      },
+      "total_severity": {
+        "min": 0.00005095974180397486,
+        "max": 0.041990827246475286,
+        "mean": 0.008124368752295798,
+        "median": 0.005962289791065059,
+        "std": 0.007325988805001691,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.12413793103448276,
+        "mean": 0.040714886084438684,
+        "median": 0.041379310344827586,
+        "std": 0.019230511102508233,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.0012909801257006965,
+        "max": 0.17090198742993035,
+        "mean": 0.04746181416680818,
+        "median": 0.04147273653813487,
+        "std": 0.02835417547168647,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.35172413793103446,
+        "mean": 0.06668707320790433,
+        "median": 0.05517241379310345,
+        "std": 0.04877669449937534,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 14,
+        "failures": 986,
+        "success_rate": 0.014
+      },
+      "total_severity": {
+        "min": 0.00023781212841854935,
+        "max": 0.33864447086801425,
+        "mean": 0.07314700696794352,
+        "median": 0.05089179548156956,
+        "std": 0.06664891102695156,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.6068965517241379,
+        "mean": 0.11494012844104798,
+        "median": 0.06206896551724138,
+        "std": 0.12407559074948825,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 5,
+        "failures": 995,
+        "success_rate": 0.005
+      },
+      "total_severity": {
+        "min": 0.00006794632240529981,
+        "max": 0.0987769661967046,
+        "mean": 0.031172441108207927,
+        "median": 0.02863937489383387,
+        "std": 0.016708388152868334,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.19310344827586207,
+        "mean": 0.049546470862695986,
+        "median": 0.041379310344827586,
+        "std": 0.02927933697071036,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 72,
+        "failures": 928,
+        "success_rate": 0.072
+      },
+      "total_severity": {
+        "min": 0.00006794632240529981,
+        "max": 0.18498386274842873,
+        "mean": 0.03692727034435899,
+        "median": 0.0229064039408867,
+        "std": 0.03802918228781458,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.30344827586206896,
+        "mean": 0.08975153559349439,
+        "median": 0.041379310344827586,
+        "std": 0.07209054646145088,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 144,
+        "failures": 856,
+        "success_rate": 0.144
+      },
+      "total_severity": {
+        "min": 0.00023781212841854935,
+        "max": 0.1980975029726516,
+        "mean": 0.039666840765888445,
+        "median": 0.02461355529131986,
+        "std": 0.04092528350604729,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.006896551724137931,
+        "max": 0.3310344827586207,
+        "mean": 0.08318040675557345,
+        "median": 0.041379310344827586,
+        "std": 0.07606104212268974,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 122,
+        "failures": 878,
+        "success_rate": 0.122
+      },
+      "total_severity": {
+        "min": 0.00005095974180397486,
+        "max": 0.18790555461185662,
+        "mean": 0.03845278175571591,
+        "median": 0.023322575165619162,
+        "std": 0.03865848202025583,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.2689655172413793,
+        "mean": 0.10264633442835752,
+        "median": 0.06206896551724138,
+        "std": 0.07367501435122352,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/BeyondTheNetwork.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 139,
+        "failures": 861,
+        "success_rate": 0.139
+      },
+      "total_severity": {
+        "min": 0.00005095974180397486,
+        "max": 0.051809070834041106,
+        "mean": 0.008625158250417712,
+        "median": 0.006386954306098183,
+        "std": 0.007548351010274001,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.12413793103448276,
+        "mean": 0.0251880676092744,
+        "median": 0.020689655172413793,
+        "std": 0.01504687654016628,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 420,
+        "failures": 580,
+        "success_rate": 0.42
+      },
+      "total_severity": {
+        "min": 0.0004756242568370987,
+        "max": 0.045422116527942924,
+        "mean": 0.009232440854483593,
+        "median": 0.006658739595719381,
+        "std": 0.008263348789121973,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.0896551724137931,
+        "mean": 0.02700689655172417,
+        "median": 0.020689655172413793,
+        "std": 0.012932180818753743,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 134,
+        "failures": 866,
+        "success_rate": 0.134
+      },
+      "total_severity": {
+        "min": 0.000033973161202649904,
+        "max": 0.04346865975879056,
+        "mean": 0.007507597866046096,
+        "median": 0.005563105146933922,
+        "std": 0.006703536490286813,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.013793103448275862,
+        "max": 0.12413793103448276,
+        "mean": 0.02428149553224406,
+        "median": 0.020689655172413793,
+        "std": 0.01443242208281283,
+        "values": []
+      }
+    }
+  }
+]

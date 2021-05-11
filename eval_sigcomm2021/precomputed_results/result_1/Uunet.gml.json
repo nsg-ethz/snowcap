@@ -1,0 +1,812 @@
+[
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 42,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.00728941983297384,
+        "max": 0.3280902604944417,
+        "mean": 0.10519074166251857,
+        "median": 0.09801725568276091,
+        "std": 0.049988049058285786,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009523809523809525,
+        "max": 0.48095238095238096,
+        "mean": 0.12653716450797944,
+        "median": 0.11428571428571428,
+        "std": 0.08723190686836027,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 23,
+        "failures": 977,
+        "success_rate": 0.023
+      },
+      "total_severity": {
+        "min": 0.00022675736961451248,
+        "max": 0.2693877551020408,
+        "mean": 0.0735206808755574,
+        "median": 0.06179138321995465,
+        "std": 0.05309883271744309,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009523809523809525,
+        "max": 0.49047619047619045,
+        "mean": 0.10747203943741218,
+        "median": 0.08571428571428572,
+        "std": 0.09067530750919166,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 0,
+        "failures": 1000,
+        "success_rate": 0.0
+      },
+      "total_severity": {
+        "min": 0.007383441181350589,
+        "max": 0.2809136662795199,
+        "mean": 0.10110619987832532,
+        "median": 0.09927824788451967,
+        "std": 0.04719256798362617,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009523809523809525,
+        "max": 0.5047619047619047,
+        "mean": 0.12735194101266364,
+        "median": 0.11428571428571428,
+        "std": 0.08629412697590125,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 43,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 146,
+        "failures": 854,
+        "success_rate": 0.146
+      },
+      "total_severity": {
+        "min": 5.530667551573475e-6,
+        "max": 0.09857308777169405,
+        "mean": 0.018011726310447645,
+        "median": 0.014161274265803882,
+        "std": 0.01642822940344286,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.1619047619047619,
+        "mean": 0.041836318878350064,
+        "median": 0.02857142857142857,
+        "std": 0.034314618447831784,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 108,
+        "failures": 892,
+        "success_rate": 0.108
+      },
+      "total_severity": {
+        "min": 0.00011337868480725624,
+        "max": 0.15612244897959185,
+        "mean": 0.036259316880713405,
+        "median": 0.02346938775510204,
+        "std": 0.03637844837124057,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.18571428571428572,
+        "mean": 0.07948154277801883,
+        "median": 0.06190476190476191,
+        "std": 0.06285242094186073,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 44,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 18,
+        "failures": 982,
+        "success_rate": 0.018
+      },
+      "total_severity": {
+        "min": 0.0004203307339195841,
+        "max": 0.1720148221890382,
+        "mean": 0.039514434422784725,
+        "median": 0.03457220286488579,
+        "std": 0.028487697577978654,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.2523809523809524,
+        "mean": 0.0674306627780931,
+        "median": 0.06190476190476191,
+        "std": 0.04747608031598518,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 40,
+        "failures": 960,
+        "success_rate": 0.04
+      },
+      "total_severity": {
+        "min": 0.00011337868480725624,
+        "max": 0.17743764172335602,
+        "mean": 0.04603587962962966,
+        "median": 0.0373015873015873,
+        "std": 0.03756301978264957,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.26666666666666666,
+        "mean": 0.07850144498484465,
+        "median": 0.06666666666666667,
+        "std": 0.05965729440919091,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 90,
+        "failures": 910,
+        "success_rate": 0.09
+      },
+      "total_severity": {
+        "min": 0.00005530667551573475,
+        "max": 0.08555942702284165,
+        "mean": 0.026249721187501178,
+        "median": 0.022609368950832365,
+        "std": 0.019100279202528343,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01904761904761905,
+        "max": 0.11904761904761904,
+        "mean": 0.05766323508544513,
+        "median": 0.05238095238095238,
+        "std": 0.02941272294308253,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 45,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 181,
+        "failures": 819,
+        "success_rate": 0.181
+      },
+      "total_severity": {
+        "min": 0.0000221226702062939,
+        "max": 0.05559427022841657,
+        "mean": 0.013704447203700568,
+        "median": 0.011725015209335768,
+        "std": 0.00981032105687821,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01904761904761905,
+        "max": 0.09523809523809523,
+        "mean": 0.0327016032544201,
+        "median": 0.02857142857142857,
+        "std": 0.013364498830368594,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 305,
+        "failures": 695,
+        "success_rate": 0.305
+      },
+      "total_severity": {
+        "min": 0.00045351473922902497,
+        "max": 0.05124716553287982,
+        "mean": 0.012954371196920023,
+        "median": 0.011111111111111112,
+        "std": 0.009495127338088369,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01904761904761905,
+        "max": 0.09523809523809523,
+        "mean": 0.032603732991734205,
+        "median": 0.02857142857142857,
+        "std": 0.011664298473432231,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 170,
+        "failures": 830,
+        "success_rate": 0.17
+      },
+      "total_severity": {
+        "min": 0.00003318400530944085,
+        "max": 0.04754161827332559,
+        "mean": 0.013054254515989969,
+        "median": 0.011503788507272829,
+        "std": 0.009223028580301077,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01904761904761905,
+        "max": 0.09523809523809523,
+        "mean": 0.0322474512164867,
+        "median": 0.02857142857142857,
+        "std": 0.012921736696516943,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 46,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 4,
+        "failures": 996,
+        "success_rate": 0.004
+      },
+      "total_severity": {
+        "min": 5.530667551573475e-6,
+        "max": 0.18837453680659255,
+        "mean": 0.05658485943108757,
+        "median": 0.05414246999612853,
+        "std": 0.03721602279140122,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.4238095238095238,
+        "mean": 0.08906619062988659,
+        "median": 0.0761904761904762,
+        "std": 0.06309468997237609,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 67,
+        "failures": 933,
+        "success_rate": 0.067
+      },
+      "total_severity": {
+        "min": 0.00011337868480725624,
+        "max": 0.41054421768707483,
+        "mean": 0.11317100616595327,
+        "median": 0.08605442176870748,
+        "std": 0.10182567748534267,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.5571428571428572,
+        "mean": 0.22958785709355597,
+        "median": 0.20476190476190476,
+        "std": 0.16576262868154848,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 1000,
+        "failures": 0,
+        "success_rate": 1.0
+      },
+      "total_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 47,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 108,
+        "failures": 892,
+        "success_rate": 0.108
+      },
+      "total_severity": {
+        "min": 0.0000221226702062939,
+        "max": 0.11355013550135501,
+        "mean": 0.019817454489178363,
+        "median": 0.01431613295724794,
+        "std": 0.019097960110784774,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.19523809523809524,
+        "mean": 0.04450916604669156,
+        "median": 0.02857142857142857,
+        "std": 0.038482874593965356,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 112,
+        "failures": 888,
+        "success_rate": 0.112
+      },
+      "total_severity": {
+        "min": 0.00011337868480725624,
+        "max": 0.16031746031746033,
+        "mean": 0.038327741006312435,
+        "median": 0.028458049886621314,
+        "std": 0.034757501408449555,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.21428571428571427,
+        "mean": 0.0754577401061812,
+        "median": 0.05714285714285714,
+        "std": 0.05950748303690713,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 513,
+        "failures": 487,
+        "success_rate": 0.513
+      },
+      "total_severity": {
+        "min": 0.00003318400530944085,
+        "max": 0.02385929981748797,
+        "mean": 0.00765319466462066,
+        "median": 0.00689121176926055,
+        "std": 0.005407261409188284,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.01904761904761905,
+        "max": 0.02857142857142857,
+        "mean": 0.02366460009025244,
+        "median": 0.01904761904761905,
+        "std": 0.0047596989481532535,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 48,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 82,
+        "failures": 918,
+        "success_rate": 0.082
+      },
+      "total_severity": {
+        "min": 0.0001106133510314695,
+        "max": 0.08601294176207068,
+        "mean": 0.028106509089634024,
+        "median": 0.02472484928930922,
+        "std": 0.019882905521878456,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009523809523809525,
+        "max": 0.1380952380952381,
+        "mean": 0.05885884305980252,
+        "median": 0.05714285714285714,
+        "std": 0.027845262906320115,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 273,
+        "failures": 727,
+        "success_rate": 0.273
+      },
+      "total_severity": {
+        "min": 0.00022675736961451248,
+        "max": 0.09081632653061225,
+        "mean": 0.023927737073738253,
+        "median": 0.02040816326530612,
+        "std": 0.017719065329900075,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009523809523809525,
+        "max": 0.13333333333333333,
+        "mean": 0.055286380916350436,
+        "median": 0.05714285714285714,
+        "std": 0.02440332777151151,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 100,
+        "failures": 900,
+        "success_rate": 0.1
+      },
+      "total_severity": {
+        "min": 0.0000221226702062939,
+        "max": 0.09879431447375699,
+        "mean": 0.026386224950684913,
+        "median": 0.023624246446546097,
+        "std": 0.01938777161783297,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009523809523809525,
+        "max": 0.1380952380952381,
+        "mean": 0.05813391367015599,
+        "median": 0.05714285714285714,
+        "std": 0.027759077839094398,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 49,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 7,
+        "failures": 993,
+        "success_rate": 0.007
+      },
+      "total_severity": {
+        "min": 0.00002074000331840053,
+        "max": 0.1546098114042365,
+        "mean": 0.04093466081607817,
+        "median": 0.03639179248935347,
+        "std": 0.028151670592175593,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.005952380952380952,
+        "max": 0.3630952380952381,
+        "mean": 0.06361207854523883,
+        "median": 0.05357142857142857,
+        "std": 0.050050651284733426,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 37,
+        "failures": 963,
+        "success_rate": 0.037
+      },
+      "total_severity": {
+        "min": 0.0001417233560090703,
+        "max": 0.32695578231292516,
+        "mean": 0.07946103328835859,
+        "median": 0.054563492063492064,
+        "std": 0.07392230141466713,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.005952380952380952,
+        "max": 0.5,
+        "mean": 0.1357098620209834,
+        "median": 0.07738095238095238,
+        "std": 0.12972611173913245,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 138,
+        "failures": 862,
+        "success_rate": 0.138
+      },
+      "total_severity": {
+        "min": 0.000013826668878933687,
+        "max": 0.08853907416625187,
+        "mean": 0.020643296837343568,
+        "median": 0.01678903268624523,
+        "std": 0.016379422639107848,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.011904761904761904,
+        "max": 0.13690476190476192,
+        "mean": 0.04632000669174476,
+        "median": 0.041666666666666664,
+        "std": 0.026627151754687935,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 50,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 52,
+        "failures": 948,
+        "success_rate": 0.052
+      },
+      "total_severity": {
+        "min": 0.000027653337757867374,
+        "max": 0.1705768486256291,
+        "mean": 0.04356130534955568,
+        "median": 0.03506443227697583,
+        "std": 0.03519431550151111,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.3380952380952381,
+        "mean": 0.08332229697378403,
+        "median": 0.06666666666666667,
+        "std": 0.06372830793042249,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 72,
+        "failures": 928,
+        "success_rate": 0.072
+      },
+      "total_severity": {
+        "min": 0.00011337868480725624,
+        "max": 0.23809523809523808,
+        "mean": 0.05234527719133625,
+        "median": 0.04240362811791383,
+        "std": 0.043495581661109506,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.004761904761904762,
+        "max": 0.3380952380952381,
+        "mean": 0.10047323568450545,
+        "median": 0.09047619047619047,
+        "std": 0.07397825902736611,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 357,
+        "failures": 643,
+        "success_rate": 0.357
+      },
+      "total_severity": {
+        "min": 0.00019910403185664509,
+        "max": 0.10561915823239865,
+        "mean": 0.0252647344767795,
+        "median": 0.018516674962667994,
+        "std": 0.02185555699899907,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.02857142857142857,
+        "max": 0.1523809523809524,
+        "mean": 0.07816445329699837,
+        "median": 0.0761904761904762,
+        "std": 0.03630506519634672,
+        "values": []
+      }
+    }
+  },
+  {
+    "scenario": {
+      "file": "eval_sigcomm2021/topology_zoo/Uunet.gml",
+      "seed": 51,
+      "random_root": false,
+      "many_prefixes": true,
+      "scenario": "FullMesh2RouteReflector"
+    },
+    "random_permutations": {
+      "result": {
+        "trials": 1000,
+        "success": 115,
+        "failures": 885,
+        "success_rate": 0.115
+      },
+      "total_severity": {
+        "min": 0.0000884906808251756,
+        "max": 0.1257341961174714,
+        "mean": 0.03158359885224586,
+        "median": 0.02534151872130966,
+        "std": 0.02492393101193196,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009523809523809525,
+        "max": 0.26666666666666666,
+        "mean": 0.070569655780492,
+        "median": 0.047619047619047616,
+        "std": 0.048158307544584326,
+        "values": []
+      }
+    },
+    "random_router_order": {
+      "result": {
+        "trials": 1000,
+        "success": 100,
+        "failures": 900,
+        "success_rate": 0.1
+      },
+      "total_severity": {
+        "min": 0.00022675736961451248,
+        "max": 0.25011337868480726,
+        "mean": 0.06484807256235828,
+        "median": 0.04399092970521542,
+        "std": 0.059428409862572355,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.009523809523809525,
+        "max": 0.38095238095238093,
+        "mean": 0.12714648803657877,
+        "median": 0.09523809523809523,
+        "std": 0.10647578606549805,
+        "values": []
+      }
+    },
+    "insert_before_order": {
+      "result": {
+        "trials": 1000,
+        "success": 480,
+        "failures": 520,
+        "success_rate": 0.48
+      },
+      "total_severity": {
+        "min": 0.0000884906808251756,
+        "max": 0.03455561086223107,
+        "mean": 0.01243481257418539,
+        "median": 0.011282561805209888,
+        "std": 0.00875862040741009,
+        "values": []
+      },
+      "per_step_severity": {
+        "min": 0.0380952380952381,
+        "max": 0.0380952380952381,
+        "mean": 0.038095238095279246,
+        "median": 0.0380952380952381,
+        "std": 4.1147640850169864e-14,
+        "values": []
+      }
+    }
+  }
+]

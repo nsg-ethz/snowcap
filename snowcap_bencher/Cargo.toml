@@ -1,0 +1,18 @@
+[package]
+name = "snowcap_bencher"
+version = "0.1.0"
+authors = ["Tibor Schneider <tiborschneider@bluewin.ch>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+snowcap = { path = "../snowcap", features = ["count-states", "strawman-strategies"] }
+clap = { git = "https://github.com/clap-rs/clap", branch = "master" }
+indicatif = "0.15"
+console = "0.13"
+num_cpus = "1.13"
+rand = "0.7"
+serde = { version = "1", features = ["derive"] }
+csv = "1.1"
+serde_json = "1"
