@@ -51,7 +51,7 @@ sudo virsh net-start default
 
 ### Adding the Virtual Machine
 In the next step, we setup the virtual machine.
-Extract the virtual machine image: `tar -xvf eval_sigcomm2021/SnowcapGNS3.tar.gz`.
+Extract the virtual machine image: `tar -xvf path/to/SnowcapVM.tar.gz`.
 Then, start up `virt-manager`.
 Create a new virtual machine, and choose _Import existing disk image_ and provide the extracted image (by clicking _Browse_, followed by _Browse Locally_).
 As the operating system, choose _Ubuntu 20.04 LTS_.

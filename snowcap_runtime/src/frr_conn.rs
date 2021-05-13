@@ -29,6 +29,8 @@ use std::error::Error;
 use std::str;
 use std::time::{Duration, SystemTime};
 
+const CMD_WAIT: u64 = 30;
+
 /// # Connection to FRRouting
 ///
 /// This struct can be used to communicate with an FRR instance, running inside GNS3, using telnet.
@@ -337,7 +339,7 @@ impl FrrConnection {
 
     fn check_normal_mode(&mut self) -> Result<(), Box<dyn Error>> {
         self.send("\n")?;
-        let prompt = self.receive_until_prompt(5)?;
+        let prompt = self.receive_until_prompt(CMD_WAIT)?;
         if !self.root_prompt_re.is_match(&prompt) {
             Err("Router is in an invalid state!".into())
         } else {
@@ -356,7 +358,7 @@ impl FrrConnection {
 
     fn send_wait(&mut self, data: impl AsRef<str>) -> Result<String, Box<dyn Error>> {
         self.c.write(data.as_ref().as_bytes())?;
-        self.receive_until_prompt(5)
+        self.receive_until_prompt(CMD_WAIT)
     }
 
     fn send(&mut self, data: impl AsRef<str>) -> Result<(), Box<dyn Error>> {
