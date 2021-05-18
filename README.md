@@ -1,6 +1,8 @@
-# Snowcap: Synthesizing Netwokrk-Wide Configuration updates
+# Snowcap: Synthesizing Network-Wide Configuration updates
 
 This project is a prototype implementation of the paper [Snowcap: Synthesizing Network-Wide Configuration Updates]() by Tibor Schneider, Rüdiger Birkner and Laurent Vanbever (Link will be created once the paper published in SIGCOMM '21).
+
+**The [documentation](https://nsg-ethz.github.io/snowcap/snowcap/index.html) is hosted on GitHub Pages.**
 
 ## Abstract
 

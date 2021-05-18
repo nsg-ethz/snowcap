@@ -344,7 +344,7 @@ impl ZooTopology {
     /// 2. Name of the router configured with local-pref 50
     /// 3. Name of the router added (or removed) during reconfiguration.
     ///
-    /// This function is called when calling [`apply_scenario`] with the scenario
+    /// This function is called when calling [`ZooTopology::apply_scenario`] with the scenario
     /// [`Scenario::VerifyTransientCondition`] or [`Scenario::VerifyTransientConditionReverse`]
     pub fn apply_transient_condition_scenario(
         &mut self,

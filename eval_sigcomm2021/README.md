@@ -2,6 +2,8 @@
 
 This folder contains material necessary to reproduce the results of Snowcap's SIGCOMM paper.
 To simplify the process, we have prepared a virtual machine (for KVM), which is preconfigured.
+The virtual machine can be downloaded [here]() (the compressed archive is about 7.3 GB large, and the uncompressed image is 43 GB large).
+It has all dependencies installed, and contains a clone of this repository.
 
 This document will first highlight some [important notes](#important-notes) about running the experiments.
 Then, we guide you through the [installation of KVM](#installing-kvm), enabling nested virtualization (tested on _Ubuntu 20.04 LTS_), and how to add and start the virtual machine.
