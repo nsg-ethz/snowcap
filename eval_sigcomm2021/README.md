@@ -2,7 +2,7 @@
 
 This folder contains material necessary to reproduce the results of Snowcap's SIGCOMM paper.
 To simplify the process, we have prepared a virtual machine (for KVM), which is preconfigured.
-The virtual machine can be downloaded [here]() (the compressed archive is about 7.3 GB large, and the uncompressed image is 43 GB large).
+The virtual machine can be downloaded [here](https://polybox.ethz.ch/index.php/s/pE917fiv5Aiqbd0) (the compressed archive is about 7.5 GB large, and the uncompressed image is 41 GB large).
 It has all dependencies installed, and contains a clone of this repository.
 
 This document will first highlight some [important notes](#important-notes) about running the experiments.
