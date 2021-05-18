@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["CommandLineMode",""]],"fn":[["main",""]],"mod":[["cost","Computes the cost"],["dep_groups","Computes the cost"],["plot",""],["probability","Computes the probability"],["tree","Computes the cost"],["utils","Utility functions"]],"struct":[["CommandLineArguments","This is a tool for performing measurements on reconfiguration scenarios."]]});

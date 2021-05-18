@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["ends_with","Returns `true` if and only if the encoded bytes end with the given suffix."],["starts_with","Returns `true` if and only if the encoded bytes start with the given prefix."]]});

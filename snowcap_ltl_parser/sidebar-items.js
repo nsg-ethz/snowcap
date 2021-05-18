@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["ltl","Generate LTL Expressions from the provided tokensThe result will be wrapped into a `LTLModal::Now` structure."]]});

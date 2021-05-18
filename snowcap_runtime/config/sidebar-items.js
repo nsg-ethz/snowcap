@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["apply_config","Apply an entire configuration on the physical network. This funciton generates no commands to be executed. If this is needed, use [`parse_modifier`]."],["parse_modifier","Apply the modifier to the settings in physnet, and generate a set of commands that can be executed"]]});

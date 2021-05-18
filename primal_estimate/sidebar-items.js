@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["nth_prime","Gives estimated bounds for pn, the `n`th prime number, 1-indexed (i.e. p1 = 2, p2 = 3)."],["prime_pi","Returns estimated bounds for π(n), the number of primes less than or equal to `n`."]]});

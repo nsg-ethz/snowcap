@@ -1,0 +1,987 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `App` struct in crate `clap`."><meta name="keywords" content="rust, rustlang, rust-lang, App"><title>clap::App - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../ayu.css" disabled ><script id="default-settings"></script><script src="../storage.js"></script><noscript><link rel="stylesheet" href="../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../favicon-32x32.png"><style type="text/css">#crate-search{background-image:url("../down-arrow.svg");}</style></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../clap/index.html'><div class='logo-container rust-logo'><img src='../rust-logo.png' alt='logo'></div></a><p class="location">Struct App</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#implementations">Methods</a><div class="sidebar-links"><a href="#method.about">about</a><a href="#method.after_help">after_help</a><a href="#method.after_long_help">after_long_help</a><a href="#method.alias">alias</a><a href="#method.aliases">aliases</a><a href="#method.arg">arg</a><a href="#method.args">args</a><a href="#method.author">author</a><a href="#method.before_help">before_help</a><a href="#method.before_long_help">before_long_help</a><a href="#method.bin_name">bin_name</a><a href="#method.display_order">display_order</a><a href="#method.find_subcommand">find_subcommand</a><a href="#method.generate_usage">generate_usage</a><a href="#method.get_about">get_about</a><a href="#method.get_all_aliases">get_all_aliases</a><a href="#method.get_all_long_flag_aliases">get_all_long_flag_aliases</a><a href="#method.get_all_short_flag_aliases">get_all_short_flag_aliases</a><a href="#method.get_arg_conflicts_with">get_arg_conflicts_with</a><a href="#method.get_arguments">get_arguments</a><a href="#method.get_bin_name">get_bin_name</a><a href="#method.get_flags">get_flags</a><a href="#method.get_flags_with_no_heading">get_flags_with_no_heading</a><a href="#method.get_long_flag">get_long_flag</a><a href="#method.get_matches">get_matches</a><a href="#method.get_matches_from">get_matches_from</a><a href="#method.get_matches_mut">get_matches_mut</a><a href="#method.get_name">get_name</a><a href="#method.get_opts">get_opts</a><a href="#method.get_opts_with_no_heading">get_opts_with_no_heading</a><a href="#method.get_positionals">get_positionals</a><a href="#method.get_short_flag">get_short_flag</a><a href="#method.get_subcommands">get_subcommands</a><a href="#method.get_subcommands_mut">get_subcommands_mut</a><a href="#method.get_visible_aliases">get_visible_aliases</a><a href="#method.get_visible_long_flag_aliases">get_visible_long_flag_aliases</a><a href="#method.get_visible_short_flag_aliases">get_visible_short_flag_aliases</a><a href="#method.global_setting">global_setting</a><a href="#method.group">group</a><a href="#method.groups">groups</a><a href="#method.has_subcommands">has_subcommands</a><a href="#method.help_about">help_about</a><a href="#method.help_heading">help_heading</a><a href="#method.help_template">help_template</a><a href="#method.is_set">is_set</a><a href="#method.long_about">long_about</a><a href="#method.long_flag">long_flag</a><a href="#method.long_flag_alias">long_flag_alias</a><a href="#method.long_flag_aliases">long_flag_aliases</a><a href="#method.long_version">long_version</a><a href="#method.max_term_width">max_term_width</a><a href="#method.mut_arg">mut_arg</a><a href="#method.name">name</a><a href="#method.new">new</a><a href="#method.override_help">override_help</a><a href="#method.override_usage">override_usage</a><a href="#method.print_help">print_help</a><a href="#method.print_long_help">print_long_help</a><a href="#method.render_long_version">render_long_version</a><a href="#method.render_version">render_version</a><a href="#method.replace">replace</a><a href="#method.set_bin_name">set_bin_name</a><a href="#method.setting">setting</a><a href="#method.short_flag">short_flag</a><a href="#method.short_flag_alias">short_flag_alias</a><a href="#method.short_flag_aliases">short_flag_aliases</a><a href="#method.stop_custom_headings">stop_custom_headings</a><a href="#method.subcommand">subcommand</a><a href="#method.subcommand_placeholder">subcommand_placeholder</a><a href="#method.subcommands">subcommands</a><a href="#method.term_width">term_width</a><a href="#method.try_get_matches">try_get_matches</a><a href="#method.try_get_matches_from">try_get_matches_from</a><a href="#method.try_get_matches_from_mut">try_get_matches_from_mut</a><a href="#method.unset_global_setting">unset_global_setting</a><a href="#method.unset_setting">unset_setting</a><a href="#method.version">version</a><a href="#method.version_about">version_about</a><a href="#method.visible_alias">visible_alias</a><a href="#method.visible_aliases">visible_aliases</a><a href="#method.visible_long_flag_alias">visible_long_flag_alias</a><a href="#method.visible_long_flag_aliases">visible_long_flag_aliases</a><a href="#method.visible_short_flag_alias">visible_short_flag_alias</a><a href="#method.visible_short_flag_aliases">visible_short_flag_aliases</a><a href="#method.write_help">write_help</a><a href="#method.write_long_help">write_long_help</a></div><a class="sidebar-title" href="#trait-implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-Clone">Clone</a><a href="#impl-Debug">Debug</a><a href="#impl-Default">Default</a><a href="#impl-Display">Display</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-RefUnwindSafe">RefUnwindSafe</a><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a><a href="#impl-Unpin">Unpin</a><a href="#impl-UnwindSafe">UnwindSafe</a></div><a class="sidebar-title" href="#blanket-implementations">Blanket Implementations</a><div class="sidebar-links"><a href="#impl-Any">Any</a><a href="#impl-Borrow%3CT%3E">Borrow&lt;T&gt;</a><a href="#impl-BorrowMut%3CT%3E">BorrowMut&lt;T&gt;</a><a href="#impl-From%3CT%3E">From&lt;T&gt;</a><a href="#impl-Into%3CU%3E">Into&lt;U&gt;</a><a href="#impl-ToOwned">ToOwned</a><a href="#impl-ToString">ToString</a><a href="#impl-TryFrom%3CU%3E">TryFrom&lt;U&gt;</a><a href="#impl-TryInto%3CU%3E">TryInto&lt;U&gt;</a></div></div><p class="location"><a href="index.html">clap</a></p><div id="sidebar-vars" data-name="App" data-ty="struct" data-relpath=""></div><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" class="help-button">?</button>
+                <a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class="fqn"><span class="in-band">Struct <a href="index.html">clap</a>::<wbr><a class="struct" href="">App</a></span><span class="out-of-band"><span id="render-detail"><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span><a class="srclink" href="../src/clap/build/app/mod.rs.html#75-111" title="goto source code">[src]</a></span></h1><div class="docblock type-decl hidden-by-usual-hider"><pre class="rust struct">pub struct App&lt;'help&gt; { /* fields omitted */ }</pre></div><div class="docblock"><p>Represents a command line interface which is made up of all possible
+command line arguments and subcommands. Interface arguments and settings are
+configured using the &quot;builder pattern.&quot; Once all configuration is complete,
+the <a href="./struct.App.html#method.get_matches"><code>App::get_matches</code></a> family of methods starts the runtime-parsing
+process. These methods then return information about the user supplied
+arguments (or lack thereof).</p>
+<p><strong>NOTE:</strong> There aren't any mandatory &quot;options&quot; that one must set. The &quot;options&quot; may
+also appear in any order (so long as one of the <a href="./struct.App.html#method.get_matches"><code>App::get_matches</code></a> methods is the last method
+called).</p>
+<h1 id="examples" class="section-header"><a href="#examples">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;My Program&quot;</span>)
+    .<span class="ident">author</span>(<span class="string">&quot;Me, me@mail.com&quot;</span>)
+    .<span class="ident">version</span>(<span class="string">&quot;1.0.2&quot;</span>)
+    .<span class="ident">about</span>(<span class="string">&quot;Explains in brief what the program does&quot;</span>)
+    .<span class="ident">arg</span>(
+        <span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;in_file&quot;</span>).<span class="ident">index</span>(<span class="number">1</span>)
+    )
+    .<span class="ident">after_help</span>(<span class="string">&quot;Longer explanation to appear after the options when \
+                 displaying the help information from --help or -h&quot;</span>)
+    .<span class="ident">get_matches</span>();
+
+<span class="comment">// Your program logic starts here...</span></pre></div>
+</div><h2 id="implementations" class="small-section-header">Implementations<a href="#implementations" class="anchor"></a></h2><h3 id="impl" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl" class="anchor"></a><a class="srclink" href="../src/clap/build/app/mod.rs.html#113-285" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.get_name" class="method"><code>pub fn <a href="#method.get_name" class="fnname">get_name</a>(&amp;self) -&gt; &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#116-118" title="goto source code">[src]</a></h4><div class="docblock"><p>Get the name of the app.</p>
+</div><h4 id="method.get_short_flag" class="method"><code>pub fn <a href="#method.get_short_flag" class="fnname">get_short_flag</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#122-124" title="goto source code">[src]</a></h4><div class="docblock"><p>Get the short flag of the subcommand.</p>
+</div><h4 id="method.get_long_flag" class="method"><code>pub fn <a href="#method.get_long_flag" class="fnname">get_long_flag</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#128-130" title="goto source code">[src]</a></h4><div class="docblock"><p>Get the long flag of the subcommand.</p>
+</div><h4 id="method.get_bin_name" class="method"><code>pub fn <a href="#method.get_bin_name" class="fnname">get_bin_name</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#134-136" title="goto source code">[src]</a></h4><div class="docblock"><p>Get the name of the binary.</p>
+</div><h4 id="method.set_bin_name" class="method"><code>pub fn <a href="#method.set_bin_name" class="fnname">set_bin_name</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;&gt;(&amp;mut self, name: S)</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#139-141" title="goto source code">[src]</a></h4><div class="docblock"><p>Set binary name. Uses <code>&amp;mut self</code> instead of <code>self</code>.</p>
+</div><h4 id="method.get_about" class="method"><code>pub fn <a href="#method.get_about" class="fnname">get_about</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#147-149" title="goto source code">[src]</a></h4><div class="docblock"><p>Get the help message specified via <a href="./struct.App.html#method.about"><code>App::about</code></a>.</p>
+</div><h4 id="method.get_visible_aliases" class="method"><code>pub fn <a href="#method.get_visible_aliases" class="fnname">get_visible_aliases</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#153-155" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the <em>visible</em> aliases for this subcommand.</p>
+</div><h4 id="method.get_visible_short_flag_aliases" class="method"><code>pub fn <a href="#method.get_visible_short_flag_aliases" class="fnname">get_visible_short_flag_aliases</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a>&gt; + '_</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#159-164" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the <em>visible</em> short aliases for this subcommand.</p>
+</div><h4 id="method.get_visible_long_flag_aliases" class="method"><code>pub fn <a href="#method.get_visible_long_flag_aliases" class="fnname">get_visible_long_flag_aliases</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self<br>) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt; + '_</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#168-173" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the <em>visible</em> long aliases for this subcommand.</p>
+</div><h4 id="method.get_all_aliases" class="method"><code>pub fn <a href="#method.get_all_aliases" class="fnname">get_all_aliases</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#177-179" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the set of <em>all</em> the aliases for this subcommand, both visible and hidden.</p>
+</div><h4 id="method.get_all_short_flag_aliases" class="method"><code>pub fn <a href="#method.get_all_short_flag_aliases" class="fnname">get_all_short_flag_aliases</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a>&gt; + '_</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#183-185" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the set of <em>all</em> the short aliases for this subcommand, both visible and hidden.</p>
+</div><h4 id="method.get_all_long_flag_aliases" class="method"><code>pub fn <a href="#method.get_all_long_flag_aliases" class="fnname">get_all_long_flag_aliases</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt; + '_</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#189-191" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the set of <em>all</em> the long aliases for this subcommand, both visible and hidden.</p>
+</div><h4 id="method.get_subcommands" class="method"><code>pub fn <a href="#method.get_subcommands" class="fnname">get_subcommands</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#195-197" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the set of subcommands, getting a reference to each.</p>
+</div><h4 id="method.get_subcommands_mut" class="method"><code>pub fn <a href="#method.get_subcommands_mut" class="fnname">get_subcommands_mut</a>(&amp;mut self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;mut <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#201-203" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the set of subcommands, getting a mutable reference to each.</p>
+</div><h4 id="method.get_arguments" class="method"><code>pub fn <a href="#method.get_arguments" class="fnname">get_arguments</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#207-209" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the set of arguments.</p>
+</div><h4 id="method.get_positionals" class="method"><code>pub fn <a href="#method.get_positionals" class="fnname">get_positionals</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#213-215" title="goto source code">[src]</a></h4><div class="docblock"><p>Get the list of <em>positional</em> arguments.</p>
+</div><h4 id="method.get_flags" class="method"><code>pub fn <a href="#method.get_flags" class="fnname">get_flags</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#218-221" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the <em>flags</em>.</p>
+</div><h4 id="method.get_opts" class="method"><code>pub fn <a href="#method.get_opts" class="fnname">get_opts</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#224-227" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the <em>options</em>.</p>
+</div><h4 id="method.get_flags_with_no_heading" class="method"><code>pub fn <a href="#method.get_flags_with_no_heading" class="fnname">get_flags_with_no_heading</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#230-232" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the <em>flags</em> that don't have custom heading.</p>
+</div><h4 id="method.get_opts_with_no_heading" class="method"><code>pub fn <a href="#method.get_opts_with_no_heading" class="fnname">get_opts_with_no_heading</a>(&amp;self) -&gt; impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator">Iterator</a>&lt;Item = &amp;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#235-237" title="goto source code">[src]</a></h4><div class="docblock"><p>Iterate through the <em>options</em> that don't have custom heading.</p>
+</div><h4 id="method.get_arg_conflicts_with" class="method"><code>pub fn <a href="#method.get_arg_conflicts_with" class="fnname">get_arg_conflicts_with</a>(&amp;self, arg: &amp;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'_&gt;) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;&amp;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#245-256" title="goto source code">[src]</a></h4><div class="docblock"><p>Get a list of all arguments the given argument conflicts with.</p>
+<h3 id="panics" class="section-header"><a href="#panics">Panics</a></h3>
+<p>If the given arg contains a conflict with an argument that is unknown to
+this <code>App</code>.</p>
+</div><h4 id="method.is_set" class="method"><code>pub fn <a href="#method.is_set" class="fnname">is_set</a>(&amp;self, s: <a class="enum" href="../clap/enum.AppSettings.html" title="enum clap::AppSettings">AppSettings</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#265-267" title="goto source code">[src]</a></h4><div class="docblock"><p>Returns <code>true</code> if the given <a href="./enum.AppSettings.html"><code>AppSettings</code></a> variant is currently set in
+this <code>App</code> (checks both <a href="./struct.App.html#method.setting">local</a> and <a href="./struct.App.html#method.global_setting">global settings</a>).</p>
+</div><h4 id="method.has_subcommands" class="method"><code>pub fn <a href="#method.has_subcommands" class="fnname">has_subcommands</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#271-273" title="goto source code">[src]</a></h4><div class="docblock"><p>Returns <code>true</code> if this <code>App</code> has subcommands.</p>
+</div><h4 id="method.find_subcommand" class="method"><code>pub fn <a href="#method.find_subcommand" class="fnname">find_subcommand</a>&lt;T:&nbsp;?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>&gt;(&amp;self, name: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html" title="trait core::cmp::PartialEq">PartialEq</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#279-284" title="goto source code">[src]</a></h4><div class="docblock"><p>Find subcommand such that its name or one of aliases equals <code>name</code>.</p>
+<p>This does not recurse through subcommands of subcommands.</p>
+</div></div><h3 id="impl-1" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-1" class="anchor"></a><a class="srclink" href="../src/clap/build/app/mod.rs.html#287-2171" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.new" class="method"><code>pub fn <a href="#method.new" class="fnname">new</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;&gt;(name: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#306-314" title="goto source code">[src]</a></h4><div class="docblock"><p>Creates a new instance of an <code>App</code> requiring a <code>name</code>.</p>
+<p>It is common, but not required, to use binary name as the <code>name</code>. This
+name will only be displayed to the user when they request to print
+version or help and usage information.</p>
+<p>An <code>App</code> represents a command line interface (CLI) which is made up of
+all possible command line arguments and subcommands. &quot;Subcommands&quot; are
+sub-CLIs with their own arguments, settings, and even subcommands
+forming a sort of hierarchy.</p>
+<h1 id="examples-1" class="section-header"><a href="#examples-1">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;My Program&quot;</span>)</pre></div>
+</div><h4 id="method.author" class="method"><code>pub fn <a href="#method.author" class="fnname">author</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, author: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#335-338" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets a string of author(s) that will be displayed to the user when they
+request the help message.</p>
+<p><strong>Pro-tip:</strong> Use <code>clap</code>s convenience macro <a href="./macro.crate_authors!.html"><code>crate_authors!</code></a> to
+automatically set your application's author(s) to the same thing as your
+crate at compile time.</p>
+<p>See the <a href="https://github.com/clap-rs/clap/tree/master/examples"><code>examples/</code></a> directory for more information.</p>
+<h1 id="examples-2" class="section-header"><a href="#examples-2">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+     .<span class="ident">author</span>(<span class="string">&quot;Me, me@mymain.com&quot;</span>)</pre></div>
+</div><h4 id="method.bin_name" class="method"><code>pub fn <a href="#method.bin_name" class="fnname">bin_name</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;&gt;(self, name: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#365-368" title="goto source code">[src]</a></h4><div class="docblock"><p>Overrides the runtime-determined name of the binary. This should only be
+used when absolutely necessary, such as when the binary name for your
+application is misleading, or perhaps <em>not</em> how the user should invoke
+your program.</p>
+<p>Normally, the binary name is used in help and error messages. <code>clap</code>
+automatically determines the binary name at runtime, however by manually
+setting the binary name, one can effectively override what will be
+displayed in the help or error messages.</p>
+<p><strong>Pro-tip:</strong> When building things such as third party <code>cargo</code>
+subcommands, this setting <strong>should</strong> be used!</p>
+<p><strong>NOTE:</strong> This <em>does not</em> change or set the name of the binary file on
+disk. It only changes what clap thinks the name is for the purposes of
+error or help messages.</p>
+<h1 id="examples-3" class="section-header"><a href="#examples-3">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;My Program&quot;</span>)
+     .<span class="ident">bin_name</span>(<span class="string">&quot;my_binary&quot;</span>)</pre></div>
+</div><h4 id="method.about" class="method"><code>pub fn <a href="#method.about" class="fnname">about</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, about: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#394-397" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets a string describing what the program does. This will be displayed
+when the user requests the short format help message (<code>-h</code>).</p>
+<p><code>clap</code> can display two different help messages, a <a href="./struct.App.html#method.long_about">long format</a> and a
+<a href="./struct.App.html#method.about">short format</a> depending on whether the user used <code>-h</code> (short) or
+<code>--help</code> (long). This method sets the message during the short format
+(<code>-h</code>) message. However, if no long format message is configured, this
+message will be displayed for <em>both</em> the long format, or short format
+help message.</p>
+<p><strong>NOTE:</strong> Only <a href="./struct.App.html#method.about"><code>App::about</code></a> (short format) is used in completion
+script generation in order to be concise.</p>
+<h1 id="examples-4" class="section-header"><a href="#examples-4">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">about</span>(<span class="string">&quot;Does really amazing things for great people&quot;</span>)</pre></div>
+</div><h4 id="method.long_about" class="method"><code>pub fn <a href="#method.long_about" class="fnname">long_about</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, about: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#428-431" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets a long format string describing what the program does. This will be
+displayed when the user requests the long format help message (<code>--help</code>).</p>
+<h2 id="advanced" class="section-header"><a href="#advanced">Advanced</a></h2>
+<p><code>clap</code> can display two different help messages, a <a href="./struct.App.html#method.long_about">long format</a> and a
+<a href="./struct.App.html#method.about">short format</a> depending on whether the user used <code>-h</code> (short) or
+<code>--help</code> (long). This method sets the message during the long format
+(<code>--help</code>) message. However, if no short format message is configured,
+this message will be displayed for <em>both</em> the long format, or short
+format help message.</p>
+<p><strong>NOTE:</strong> Only <a href="./struct.App.html#method.about"><code>App::about</code></a> (short format) is used in completion
+script generation in order to be concise.</p>
+<h1 id="examples-5" class="section-header"><a href="#examples-5">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">long_about</span>(
+<span class="string">&quot;Does really amazing things to great people. Now let&#39;s talk a little
+ more in depth about how this subcommand really works. It may take about
+ a few lines of text, but that&#39;s ok!&quot;</span>)</pre></div>
+</div><h4 id="method.help_about" class="method"><code>pub fn <a href="#method.help_about" class="fnname">help_about</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, help_about: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#451-454" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets the help text for the auto-generated help argument and subcommand.</p>
+<p>By default clap sets this to &quot;Prints help information&quot; for the help
+argument and &quot;Prints this message or the help of the given subcommand(s)&quot;
+for the help subcommand but if you're using a different convention
+for your help messages and would prefer a different phrasing you can
+override it.</p>
+<p><strong>NOTE:</strong> This setting propagates to subcommands.</p>
+<h1 id="examples-6" class="section-header"><a href="#examples-6">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">help_about</span>(<span class="string">&quot;Print help information&quot;</span>) <span class="comment">// Imperative tone</span></pre></div>
+</div><h4 id="method.version_about" class="method"><code>pub fn <a href="#method.version_about" class="fnname">version_about</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, version_about: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#472-475" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets the help text for the auto-generated version argument.</p>
+<p>By default clap sets this to &quot;Prints version information&quot; but if
+you're using a different convention for your help messages and
+would prefer a different phrasing you can override it.</p>
+<p><strong>NOTE:</strong> This setting propagates to subcommands.</p>
+<h1 id="examples-7" class="section-header"><a href="#examples-7">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">version_about</span>(<span class="string">&quot;Print version information&quot;</span>) <span class="comment">// Imperative tone</span></pre></div>
+</div><h4 id="method.name" class="method"><code>pub fn <a href="#method.name" class="fnname">name</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;&gt;(self, name: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#496-499" title="goto source code">[src]</a></h4><div class="docblock"><p>(Re)Sets the program's name. This will be displayed when displaying help
+or version messages.</p>
+<p><strong>Pro-tip:</strong> This function is particularly useful when configuring a
+program via <code>App::from(yaml)</code> in conjunction with the <a href="./macro.crate_name.html"><code>crate_name!</code></a>
+macro to derive the program's name from its <code>Cargo.toml</code>.</p>
+<h1 id="examples-8" class="section-header"><a href="#examples-8">Examples</a></h1>
+<div class='information'><div class='tooltip ignore'>ⓘ</div></div><div class="example-wrap"><pre class="rust rust-example-rendered ignore">
+<span class="kw">let</span> <span class="ident">yaml</span> <span class="op">=</span> <span class="macro">load_yaml</span><span class="macro">!</span>(<span class="string">&quot;app.yaml&quot;</span>);
+<span class="kw">let</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">from</span>(<span class="ident">yaml</span>)
+    .<span class="ident">name</span>(<span class="macro">crate_name</span><span class="macro">!</span>());
+
+<span class="comment">// continued logic goes here, such as `app.get_matches()` etc.</span></pre></div>
+</div><h4 id="method.after_help" class="method"><code>pub fn <a href="#method.after_help" class="fnname">after_help</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, help: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#518-521" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds additional help information to be displayed at the end of the
+auto-generated help. This is often used to describe how to use the
+arguments, caveats to be noted, or license and contact information.</p>
+<p><strong>NOTE:</strong> If only <code>after_long_help</code> is provided, and not <a href="./struct.App.html#method.after_help"><code>App::after_help</code></a> but the user requests
+<code>-h</code> clap will still display the contents of <code>after_help</code> appropriately.</p>
+<h1 id="examples-9" class="section-header"><a href="#examples-9">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">after_help</span>(<span class="string">&quot;Does really amazing things for great people... but be careful with -R!&quot;</span>)</pre></div>
+</div><h4 id="method.after_long_help" class="method"><code>pub fn <a href="#method.after_long_help" class="fnname">after_long_help</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, help: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#541-544" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds additional help information to be displayed in addition to auto-generated help. This
+information is displayed <strong>after</strong> the auto-generated help information and is meant to be
+more verbose than <code>after_help</code>. This is often used to describe how to use the arguments, or
+caveats to be noted in man pages.</p>
+<p><strong>NOTE:</strong> If only <code>after_help</code> is provided, and not <a href="./struct.App.html#method.after_long_help"><code>App::after_long_help</code></a> but the user
+requests <code>--help</code>, clap will still display the contents of <code>after_help</code> appropriately.</p>
+<h1 id="examples-10" class="section-header"><a href="#examples-10">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">after_long_help</span>(<span class="string">&quot;Does really amazing things to great people... but be careful with -R, \
+                     like, for real, be careful with this!&quot;</span>)</pre></div>
+</div><h4 id="method.before_help" class="method"><code>pub fn <a href="#method.before_help" class="fnname">before_help</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, help: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#562-565" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds additional help information to be displayed prior to the
+auto-generated help. This is often used for header, copyright, or
+license information.</p>
+<p><strong>NOTE:</strong> If only <code>before_long_help</code> is provided, and not <a href="./struct.App.html#method.before_help"><code>App::before_help</code></a> but the user
+requests <code>-h</code> clap will still display the contents of <code>before_long_help</code> appropriately.</p>
+<h1 id="examples-11" class="section-header"><a href="#examples-11">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">before_help</span>(<span class="string">&quot;Some info I&#39;d like to appear before the help info&quot;</span>)</pre></div>
+</div><h4 id="method.before_long_help" class="method"><code>pub fn <a href="#method.before_long_help" class="fnname">before_long_help</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, help: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#583-586" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds additional help information to be displayed prior to the
+auto-generated help. This is often used for header, copyright, or
+license information.</p>
+<p><strong>NOTE:</strong> If only <code>before_help</code> is provided, and not <a href="./struct.App.html#method.before_long_help"><code>App::before_long_help</code></a> but the user
+requests <code>--help</code>, clap will still display the contents of <code>before_help</code> appropriately.</p>
+<h1 id="examples-12" class="section-header"><a href="#examples-12">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">before_long_help</span>(<span class="string">&quot;Some verbose and long info I&#39;d like to appear before the help info&quot;</span>)</pre></div>
+</div><h4 id="method.short_flag" class="method"><code>pub fn <a href="#method.short_flag" class="fnname">short_flag</a>(self, short: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#612-615" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows the subcommand to be used as if it were an <a href="./struct.Arg.html#method.short"><code>Arg::short</code></a>.</p>
+<p>Sets the short version of the subcommand flag without the preceding <code>-</code>.</p>
+<h1 id="examples-13" class="section-header"><a href="#examples-13">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;pacman&quot;</span>)
+    .<span class="ident">subcommand</span>(
+        <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;sync&quot;</span>).<span class="ident">short_flag</span>(<span class="string">&#39;S&#39;</span>).<span class="ident">arg</span>(
+            <span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;search&quot;</span>)
+                .<span class="ident">short</span>(<span class="string">&#39;s&#39;</span>)
+                .<span class="ident">long</span>(<span class="string">&quot;search&quot;</span>)
+                .<span class="ident">about</span>(<span class="string">&quot;search remote repositories for matching strings&quot;</span>),
+        ),
+    )
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;pacman&quot;</span>, <span class="string">&quot;-Ss&quot;</span>]);
+
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">matches</span>.<span class="ident">subcommand_name</span>().<span class="ident">unwrap</span>(), <span class="string">&quot;sync&quot;</span>);
+<span class="kw">let</span> <span class="ident">sync_matches</span> <span class="op">=</span> <span class="ident">matches</span>.<span class="ident">subcommand_matches</span>(<span class="string">&quot;sync&quot;</span>).<span class="ident">unwrap</span>();
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">sync_matches</span>.<span class="ident">is_present</span>(<span class="string">&quot;search&quot;</span>));</pre></div>
+</div><h4 id="method.long_flag" class="method"><code>pub fn <a href="#method.long_flag" class="fnname">long_flag</a>(self, long: &amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#648-651" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows the subcommand to be used as if it were an <a href="./struct.Arg.html#method.long"><code>Arg::long</code></a>.</p>
+<p>Sets the long version of the subcommand flag without the preceding <code>--</code>.</p>
+<p><strong>NOTE:</strong> Any leading <code>-</code> characters will be stripped.</p>
+<h1 id="examples-14" class="section-header"><a href="#examples-14">Examples</a></h1>
+<p>To set <code>long_flag</code> use a word containing valid UTF-8 codepoints. If you supply a double leading
+<code>--</code> such as <code>--sync</code> they will be stripped. Hyphens in the middle of the word; however,
+will <em>not</em> be stripped (i.e. <code>sync-file</code> is allowed).</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;pacman&quot;</span>)
+    .<span class="ident">subcommand</span>(
+        <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;sync&quot;</span>).<span class="ident">long_flag</span>(<span class="string">&quot;sync&quot;</span>).<span class="ident">arg</span>(
+            <span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;search&quot;</span>)
+                .<span class="ident">short</span>(<span class="string">&#39;s&#39;</span>)
+                .<span class="ident">long</span>(<span class="string">&quot;search&quot;</span>)
+                .<span class="ident">about</span>(<span class="string">&quot;search remote repositories for matching strings&quot;</span>),
+        ),
+    )
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;pacman&quot;</span>, <span class="string">&quot;--sync&quot;</span>, <span class="string">&quot;--search&quot;</span>]);
+
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">matches</span>.<span class="ident">subcommand_name</span>().<span class="ident">unwrap</span>(), <span class="string">&quot;sync&quot;</span>);
+<span class="kw">let</span> <span class="ident">sync_matches</span> <span class="op">=</span> <span class="ident">matches</span>.<span class="ident">subcommand_matches</span>(<span class="string">&quot;sync&quot;</span>).<span class="ident">unwrap</span>();
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">sync_matches</span>.<span class="ident">is_present</span>(<span class="string">&quot;search&quot;</span>));</pre></div>
+</div><h4 id="method.version" class="method"><code>pub fn <a href="#method.version" class="fnname">version</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, ver: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#679-682" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets a string of the version number to be displayed when displaying the
+short format version message (<code>-V</code>) or the help message.</p>
+<p><strong>Pro-tip:</strong> Use <code>clap</code>s convenience macro <a href="./macro.crate_version!.html"><code>crate_version!</code></a> to
+automatically set your application's version to the same thing as your
+crate at compile time. See the <a href="https://github.com/clap-rs/clap/tree/master/examples"><code>examples/</code></a> directory for more
+information.</p>
+<p><code>clap</code> can display two different version messages, a [long format] and a
+[short format] depending on whether the user used <code>-V</code> (short) or
+<code>--version</code> (long). This method sets the message during the short format
+(<code>-V</code>). However, if no long format message is configured, this
+message will be displayed for <em>both</em> the long format, or short format
+version message.</p>
+<h1 id="examples-15" class="section-header"><a href="#examples-15">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">version</span>(<span class="string">&quot;v0.1.24&quot;</span>)</pre></div>
+</div><h4 id="method.long_version" class="method"><code>pub fn <a href="#method.long_version" class="fnname">long_version</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, ver: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#719-722" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets a string of the version number to be displayed when the user
+requests the long format version message (<code>--version</code>) or the help
+message.</p>
+<p>This is often used to display things such as commit ID, or compile time
+configured options.</p>
+<p><strong>Pro-tip:</strong> Use <code>clap</code>s convenience macro <a href="./macro.crate_version!.html"><code>crate_version!</code></a> to
+automatically set your application's version to the same thing as your
+crate at compile time. See the <a href="https://github.com/kbknapp/clap-rs/tree/master/examples"><code>examples/</code></a> directory for more
+information.</p>
+<p><code>clap</code> can display two different version messages, a [long format] and a
+[short format] depending on whether the user used <code>-V</code> (short) or
+<code>--version</code> (long). This method sets the message during the long format
+(<code>--version</code>). However, if no short format message is configured, this
+message will be displayed for <em>both</em> the long format, or short format
+version message.</p>
+<h1 id="examples-16" class="section-header"><a href="#examples-16">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">long_version</span>(
+<span class="string">&quot;v0.1.24
+ commit: abcdef89726d
+ revision: 123
+ release: 2
+ binary: myprog&quot;</span>)</pre></div>
+</div><h4 id="method.override_usage" class="method"><code>pub fn <a href="#method.override_usage" class="fnname">override_usage</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, usage: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#744-747" title="goto source code">[src]</a></h4><div class="docblock"><p>Overrides the <code>clap</code> generated usage string.</p>
+<p>This will be displayed to the user when errors are found in argument parsing.</p>
+<p><strong>CAUTION:</strong> Using this setting disables <code>clap</code>s &quot;context-aware&quot; usage
+strings. After this setting is set, this will be <em>the only</em> usage string
+displayed to the user!</p>
+<p><strong>NOTE:</strong> This will not replace the entire help message, <em>only</em> the portion
+showing the usage.</p>
+<h1 id="examples-17" class="section-header"><a href="#examples-17">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">override_usage</span>(<span class="string">&quot;myapp [-clDas] &lt;some_file&gt;&quot;</span>)</pre></div>
+</div><h4 id="method.override_help" class="method"><code>pub fn <a href="#method.override_help" class="fnname">override_help</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, help: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#785-788" title="goto source code">[src]</a></h4><div class="docblock"><p>Overrides the <code>clap</code> generated help message. This should only be used
+when the auto-generated message does not suffice.</p>
+<p>This will be displayed to the user when they use <code>--help</code> or <code>-h</code>.</p>
+<p><strong>NOTE:</strong> This replaces the <strong>entire</strong> help message, so nothing will be
+auto-generated.</p>
+<p><strong>NOTE:</strong> This <strong>only</strong> replaces the help message for the current
+command, meaning if you are using subcommands, those help messages will
+still be auto-generated unless you specify a <a href="./struct.Arg.html#method.override_help"><code>Arg::override_help</code></a> for
+them as well.</p>
+<h1 id="examples-18" class="section-header"><a href="#examples-18">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myapp&quot;</span>)
+    .<span class="ident">override_help</span>(<span class="string">&quot;myapp v1.0\n\
+           Does awesome things\n\
+           (C) me@mail.com\n\n\
+
+           USAGE: myapp &lt;opts&gt; &lt;comamnd&gt;\n\n\
+
+           Options:\n\
+           -h, --help       Display this message\n\
+           -V, --version    Display version info\n\
+           -s &lt;stuff&gt;       Do something with stuff\n\
+           -v               Be verbose\n\n\
+
+           Commmands:\n\
+           help             Prints this message\n\
+           work             Do some work&quot;</span>)</pre></div>
+</div><h4 id="method.help_template" class="method"><code>pub fn <a href="#method.help_template" class="fnname">help_template</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, s: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#836-839" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets the help template to be used, overriding the default format.</p>
+<p><strong>NOTE:</strong> The template system is by design very simple. Therefore, the
+tags have to be written in the lowercase and without spacing.</p>
+<p>Tags are given inside curly brackets.</p>
+<p>Valid tags are:</p>
+<ul>
+<li><code>{bin}</code>                 - Binary name.</li>
+<li><code>{version}</code>             - Version number.</li>
+<li><code>{author}</code>              - Author information.</li>
+<li><code>{author-with-newline}</code> - Author followed by <code>\n</code>.</li>
+<li><code>{about}</code>               - General description (from <a href="./struct.App.html#method.about"><code>App::about</code></a> or
+<a href="./struct.App.html#method.long_about"><code>App::long_about</code></a>).</li>
+<li><code>{about-with-newline}</code>  - About followed by <code>\n</code>.</li>
+<li><code>{usage-heading}</code>       - Automatically generated usage heading.</li>
+<li><code>{usage}</code>               - Automatically generated or given usage string.</li>
+<li><code>{all-args}</code>            - Help for all arguments (options, flags, positional
+arguments, and subcommands) including titles.</li>
+<li><code>{unified}</code>             - Unified help for options and flags. Note, you must <em>also</em>
+set <a href="./enum.AppSettings.html#variant.UnifiedHelpMessage"><code>AppSettings::UnifiedHelpMessage</code></a> to fully merge both
+options and flags, otherwise the ordering is &quot;best effort&quot;.</li>
+<li><code>{flags}</code>               - Help for flags.</li>
+<li><code>{options}</code>             - Help for options.</li>
+<li><code>{positionals}</code>         - Help for positional arguments.</li>
+<li><code>{subcommands}</code>         - Help for subcommands.</li>
+<li><code>{after-help}</code>          - Help from <a href="./struct.App.html#method.after_help"><code>App::after_help</code></a> or <a href="./struct.App.html#method.after_long_help"><code>App::after_long_help</code></a>.</li>
+<li><code>{before-help}</code>         - Help from <a href="./struct.App.html#method.before_help"><code>App::before_help</code></a> or <a href="./struct.App.html#method.before_long_help"><code>App::before_long_help</code></a>.</li>
+</ul>
+<h1 id="examples-19" class="section-header"><a href="#examples-19">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">version</span>(<span class="string">&quot;1.0&quot;</span>)
+    .<span class="ident">help_template</span>(<span class="string">&quot;{bin} ({version}) - {usage}&quot;</span>)</pre></div>
+</div><h4 id="method.setting" class="method"><code>pub fn <a href="#method.setting" class="fnname">setting</a>(self, setting: <a class="enum" href="../clap/enum.AppSettings.html" title="enum clap::AppSettings">AppSettings</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#856-859" title="goto source code">[src]</a></h4><div class="docblock"><p>Enables a single settings for the current (this <code>App</code> instance) command or subcommand.</p>
+<p>See <a href="./enum.AppSettings.html"><code>AppSettings</code></a> for a full list of possibilities and examples.</p>
+<h1 id="examples-20" class="section-header"><a href="#examples-20">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">setting</span>(<span class="ident">AppSettings</span>::<span class="ident">SubcommandRequired</span>)
+    .<span class="ident">setting</span>(<span class="ident">AppSettings</span>::<span class="ident">WaitOnError</span>)</pre></div>
+</div><h4 id="method.unset_setting" class="method"><code>pub fn <a href="#method.unset_setting" class="fnname">unset_setting</a>(self, setting: <a class="enum" href="../clap/enum.AppSettings.html" title="enum clap::AppSettings">AppSettings</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#876-880" title="goto source code">[src]</a></h4><div class="docblock"><p>Disables a single setting for the current (this <code>App</code> instance) command or subcommand.</p>
+<p>See <a href="./enum.AppSettings.html"><code>AppSettings</code></a> for a full list of possibilities and examples.</p>
+<h1 id="examples-21" class="section-header"><a href="#examples-21">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">unset_setting</span>(<span class="ident">AppSettings</span>::<span class="ident">ColorAuto</span>)</pre></div>
+</div><h4 id="method.global_setting" class="method"><code>pub fn <a href="#method.global_setting" class="fnname">global_setting</a>(self, setting: <a class="enum" href="../clap/enum.AppSettings.html" title="enum clap::AppSettings">AppSettings</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#899-903" title="goto source code">[src]</a></h4><div class="docblock"><p>Enables a single setting that is propagated <strong>down</strong> through all child
+subcommands.</p>
+<p>See <a href="./enum.AppSettings.html"><code>AppSettings</code></a> for a full list of possibilities and examples.</p>
+<p><strong>NOTE</strong>: The setting is <em>only</em> propagated <em>down</em> and not up through parent commands.</p>
+<h1 id="examples-22" class="section-header"><a href="#examples-22">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">global_setting</span>(<span class="ident">AppSettings</span>::<span class="ident">SubcommandRequired</span>)</pre></div>
+</div><h4 id="method.unset_global_setting" class="method"><code>pub fn <a href="#method.unset_global_setting" class="fnname">unset_global_setting</a>(self, setting: <a class="enum" href="../clap/enum.AppSettings.html" title="enum clap::AppSettings">AppSettings</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#924-928" title="goto source code">[src]</a></h4><div class="docblock"><p>Disables a global setting, and stops propagating down to child
+subcommands.</p>
+<p>See <a href="./enum.AppSettings.html"><code>AppSettings</code></a> for a full list of possibilities and examples.</p>
+<p><strong>NOTE:</strong> The setting being unset will be unset from both local and
+<a href="./struct.App.html#method.global_setting">global</a> settings.</p>
+<h1 id="examples-23" class="section-header"><a href="#examples-23">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">unset_global_setting</span>(<span class="ident">AppSettings</span>::<span class="ident">ColorAuto</span>)</pre></div>
+</div><h4 id="method.term_width" class="method"><code>pub fn <a href="#method.term_width" class="fnname">term_width</a>(self, width: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#957-960" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets the terminal width at which to wrap help messages. Defaults to
+<code>120</code>. Using <code>0</code> will ignore terminal widths and use source formatting.</p>
+<p><code>clap</code> automatically tries to determine the terminal width on Unix,
+Linux, OSX and Windows if the <code>wrap_help</code> cargo &quot;feature&quot; has been enabled
+at compile time. If the terminal width cannot be determined, <code>clap</code>
+fall back to <code>100</code>.</p>
+<p><strong>NOTE:</strong> This setting applies globally and <em>not</em> on a per-command basis.</p>
+<p><strong>NOTE:</strong> This setting must be set <strong>before</strong> any subcommands are added!</p>
+<h1 id="platform-specific" class="section-header"><a href="#platform-specific">Platform Specific</a></h1>
+<p>Only Unix, Linux, OSX and Windows support automatic determination of
+terminal width. Even on those platforms, this setting is useful if for
+any reason the terminal width cannot be determined.</p>
+<h1 id="examples-24" class="section-header"><a href="#examples-24">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">term_width</span>(<span class="number">80</span>)</pre></div>
+</div><h4 id="method.max_term_width" class="method"><code>pub fn <a href="#method.max_term_width" class="fnname">max_term_width</a>(self, w: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#987-990" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets the maximum terminal width at which to wrap help messages. Using <code>0</code>
+will ignore terminal widths and use source formatting.</p>
+<p><code>clap</code> automatically tries to determine the terminal width on Unix,
+Linux, OSX and Windows if the <code>wrap_help</code> cargo &quot;feature&quot; has been
+enabled at compile time, but one might want to limit the size to some
+maximum (e.g. when the terminal is running fullscreen).</p>
+<p><strong>NOTE:</strong> This setting applies globally and <em>not</em> on a per-command basis.</p>
+<p><strong>NOTE:</strong> This setting must be set <strong>before</strong> any subcommands are added!</p>
+<h1 id="platform-specific-1" class="section-header"><a href="#platform-specific-1">Platform Specific</a></h1>
+<p>Only Unix, Linux, OSX and Windows support automatic determination of terminal width.</p>
+<h1 id="examples-25" class="section-header"><a href="#examples-25">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">max_term_width</span>(<span class="number">100</span>)</pre></div>
+</div><h4 id="method.arg" class="method"><code>pub fn <a href="#method.arg" class="fnname">arg</a>&lt;A:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;&gt;(self, a: A) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1013-1020" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds an <a href="./struct.Arg.html">argument</a> to the list of valid possibilities.</p>
+<h1 id="examples-26" class="section-header"><a href="#examples-26">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    <span class="comment">// Adding a single &quot;flag&quot; argument with a short and help text, using Arg::new()</span>
+    .<span class="ident">arg</span>(
+        <span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;debug&quot;</span>)
+           .<span class="ident">short</span>(<span class="string">&#39;d&#39;</span>)
+           .<span class="ident">about</span>(<span class="string">&quot;turns on debugging mode&quot;</span>)
+    )
+    <span class="comment">// Adding a single &quot;option&quot; argument with a short, a long, and help text using the less</span>
+    <span class="comment">// verbose Arg::from()</span>
+    .<span class="ident">arg</span>(
+        <span class="ident">Arg</span>::<span class="ident">from</span>(<span class="string">&quot;-c --config=[CONFIG] &#39;Optionally sets a config file to use&#39;&quot;</span>)
+    )</pre></div>
+</div><h4 id="method.help_heading" class="method"><code>pub fn <a href="#method.help_heading" class="fnname">help_heading</a>(self, heading: &amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1034-1037" title="goto source code">[src]</a></h4><div class="docblock"><p>Set a custom section heading for future args. Every call to <a href="./struct.App.html#method.arg"><code>App::arg</code></a>
+(and its related methods) will use this header (instead of the default
+header for the specified argument type) until a subsequent call to
+<a href="./struct.App.html#method.help_heading"><code>App::help_heading</code></a> or <a href="./struct.App.html#method.stop_custom_headings"><code>App::stop_custom_headings</code></a>.</p>
+<p>This is useful if the default <code>FLAGS</code>, <code>OPTIONS</code>, or <code>ARGS</code> headings are
+not specific enough for one's use case.</p>
+</div><h4 id="method.stop_custom_headings" class="method"><code>pub fn <a href="#method.stop_custom_headings" class="fnname">stop_custom_headings</a>(self) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1043-1046" title="goto source code">[src]</a></h4><div class="docblock"><p>Stop using <a href="./struct.App.html#method.help_heading">custom argument headings</a> and return to default headings.</p>
+</div><h4 id="method.args" class="method"><code>pub fn <a href="#method.args" class="fnname">args</a>&lt;I, T&gt;(self, args: I) -&gt; Self <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html" title="trait core::iter::traits::collect::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;&gt;,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1062-1073" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds multiple <a href="./struct.Arg.html">arguments</a> to the list of valid possibilities.</p>
+<h1 id="examples-27" class="section-header"><a href="#examples-27">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">args</span>(<span class="kw-2">&amp;</span>[
+        <span class="ident">Arg</span>::<span class="ident">from</span>(<span class="string">&quot;[debug] -d &#39;turns on debugging info&#39;&quot;</span>),
+        <span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;input&quot;</span>).<span class="ident">index</span>(<span class="number">1</span>).<span class="ident">about</span>(<span class="string">&quot;the input file to use&quot;</span>)
+    ])</pre></div>
+</div><h4 id="method.alias" class="method"><code>pub fn <a href="#method.alias" class="fnname">alias</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, name: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1101-1104" title="goto source code">[src]</a></h4><div class="docblock"><p>If this <code>App</code> instance is a subcommand, this method adds an alias, which
+allows this subcommand to be accessed via <em>either</em> the original name, or
+this given alias. This is more efficient and easier than creating
+multiple hidden subcommands as one only needs to check for the existence
+of this command, and not all aliased variants.</p>
+<p><strong>NOTE:</strong> Aliases defined with this method are <em>hidden</em> from the help
+message. If you're looking for aliases that will be displayed in the help
+message, see <a href="./struct.App.html#method.visible_alias"><code>App::visible_alias</code></a>.</p>
+<p><strong>NOTE:</strong> When using aliases and checking for the existence of a
+particular subcommand within an <a href="./struct.ArgMatches.html"><code>ArgMatches</code></a> struct, one only needs to
+search for the original name and not all aliases.</p>
+<h1 id="examples-28" class="section-header"><a href="#examples-28">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>)
+        .<span class="ident">alias</span>(<span class="string">&quot;do-stuff&quot;</span>))
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;do-stuff&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.short_flag_alias" class="method"><code>pub fn <a href="#method.short_flag_alias" class="fnname">short_flag_alias</a>(self, name: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1121-1127" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows adding an alias, which function as &quot;hidden&quot; short flag subcommands that
+automatically dispatch as if this subcommand was used. This is more efficient, and easier
+than creating multiple hidden subcommands as one only needs to check for the existence of
+this command, and not all variants.</p>
+<h1 id="examples-29" class="section-header"><a href="#examples-29">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+            .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>).<span class="ident">short_flag</span>(<span class="string">&#39;t&#39;</span>)
+                .<span class="ident">short_flag_alias</span>(<span class="string">&#39;d&#39;</span>))
+            .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;-d&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.long_flag_alias" class="method"><code>pub fn <a href="#method.long_flag_alias" class="fnname">long_flag_alias</a>(self, name: &amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1144-1147" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows adding an alias, which function as &quot;hidden&quot; long flag subcommands that
+automatically dispatch as if this subcommand was used. This is more efficient, and easier
+than creating multiple hidden subcommands as one only needs to check for the existence of
+this command, and not all variants.</p>
+<h1 id="examples-30" class="section-header"><a href="#examples-30">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+            .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>).<span class="ident">long_flag</span>(<span class="string">&quot;test&quot;</span>)
+                .<span class="ident">long_flag_alias</span>(<span class="string">&quot;testing&quot;</span>))
+            .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;--testing&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.aliases" class="method"><code>pub fn <a href="#method.aliases" class="fnname">aliases</a>(self, names: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a>&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1179-1182" title="goto source code">[src]</a></h4><div class="docblock"><p>If this <code>App</code> instance is a subcommand, this method adds a multiple
+aliases, which allows this subcommand to be accessed via <em>either</em> the
+original name or any of the given aliases. This is more efficient, and
+easier than creating multiple hidden subcommands as one only needs to
+check for the existence of this command and not all aliased variants.</p>
+<p><strong>NOTE:</strong> Aliases defined with this method are <em>hidden</em> from the help
+message. If looking for aliases that will be displayed in the help
+message, see <a href="./struct.App.html#method.visible_aliases"><code>App::visible_aliases</code></a>.</p>
+<p><strong>NOTE:</strong> When using aliases and checking for the existence of a
+particular subcommand within an <a href="./struct.ArgMatches.html"><code>ArgMatches</code></a> struct, one only needs to
+search for the original name and not all aliases.</p>
+<h1 id="examples-31" class="section-header"><a href="#examples-31">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>)
+        .<span class="ident">aliases</span>(<span class="kw-2">&amp;</span>[<span class="string">&quot;do-stuff&quot;</span>, <span class="string">&quot;do-tests&quot;</span>, <span class="string">&quot;tests&quot;</span>]))
+        .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;input&quot;</span>)
+            .<span class="ident">about</span>(<span class="string">&quot;the file to add&quot;</span>)
+            .<span class="ident">index</span>(<span class="number">1</span>)
+            .<span class="ident">required</span>(<span class="bool-val">false</span>))
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;do-tests&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.short_flag_aliases" class="method"><code>pub fn <a href="#method.short_flag_aliases" class="fnname">short_flag_aliases</a>(self, names: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1203-1211" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows adding aliases, which function as &quot;hidden&quot; short flag subcommands that
+automatically dispatch as if this subcommand was used. This is more efficient, and easier
+than creating multiple hidden subcommands as one only needs to check for the existence of
+this command, and not all variants.</p>
+<h1 id="examples-32" class="section-header"><a href="#examples-32">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>).<span class="ident">short_flag</span>(<span class="string">&#39;t&#39;</span>)
+        .<span class="ident">short_flag_aliases</span>(<span class="kw-2">&amp;</span>[<span class="string">&#39;a&#39;</span>, <span class="string">&#39;b&#39;</span>, <span class="string">&#39;c&#39;</span>]))
+        .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;input&quot;</span>)
+            .<span class="ident">about</span>(<span class="string">&quot;the file to add&quot;</span>)
+            .<span class="ident">index</span>(<span class="number">1</span>)
+            .<span class="ident">required</span>(<span class="bool-val">false</span>))
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;-a&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.long_flag_aliases" class="method"><code>pub fn <a href="#method.long_flag_aliases" class="fnname">long_flag_aliases</a>(self, names: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a>&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1232-1237" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows adding aliases, which function as &quot;hidden&quot; long flag subcommands that
+automatically dispatch as if this subcommand was used. This is more efficient, and easier
+than creating multiple hidden subcommands as one only needs to check for the existence of
+this command, and not all variants.</p>
+<h1 id="examples-33" class="section-header"><a href="#examples-33">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+            .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>).<span class="ident">long_flag</span>(<span class="string">&quot;test&quot;</span>)
+                .<span class="ident">long_flag_aliases</span>(<span class="kw-2">&amp;</span>[<span class="string">&quot;testing&quot;</span>, <span class="string">&quot;testall&quot;</span>, <span class="string">&quot;test_all&quot;</span>]))
+                .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;input&quot;</span>)
+                            .<span class="ident">about</span>(<span class="string">&quot;the file to add&quot;</span>)
+                            .<span class="ident">index</span>(<span class="number">1</span>)
+                            .<span class="ident">required</span>(<span class="bool-val">false</span>))
+            .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;--testing&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.visible_alias" class="method"><code>pub fn <a href="#method.visible_alias" class="fnname">visible_alias</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(self, name: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1266-1269" title="goto source code">[src]</a></h4><div class="docblock"><p>If this <code>App</code> instance is a subcommand, this method adds a visible
+alias, which allows this subcommand to be accessed via <em>either</em> the
+original name or the given alias. This is more efficient and easier
+than creating hidden subcommands as one only needs to check for
+the existence of this command and not all aliased variants.</p>
+<p><strong>NOTE:</strong> The alias defined with this method is <em>visible</em> from the help
+message and displayed as if it were just another regular subcommand. If
+looking for an alias that will not be displayed in the help message, see
+<a href="./struct.App.html#method.alias"><code>App::alias</code></a>.</p>
+<p><strong>NOTE:</strong> When using aliases and checking for the existence of a
+particular subcommand within an <a href="./struct.ArgMatches.html"><code>ArgMatches</code></a> struct, one only needs to
+search for the original name and not all aliases.</p>
+<h1 id="examples-34" class="section-header"><a href="#examples-34">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>)
+        .<span class="ident">visible_alias</span>(<span class="string">&quot;do-stuff&quot;</span>))
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;do-stuff&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.visible_short_flag_alias" class="method"><code>pub fn <a href="#method.visible_short_flag_alias" class="fnname">visible_short_flag_alias</a>(self, name: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1285-1291" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows adding an alias that functions exactly like those defined with
+<a href="./struct.App.html#method.short_flag_alias"><code>App::short_flag_alias</code></a>, except that they are visible inside the help message.</p>
+<h1 id="examples-35" class="section-header"><a href="#examples-35">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+            .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>).<span class="ident">short_flag</span>(<span class="string">&#39;t&#39;</span>)
+                .<span class="ident">visible_short_flag_alias</span>(<span class="string">&#39;d&#39;</span>))
+            .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;-d&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.visible_long_flag_alias" class="method"><code>pub fn <a href="#method.visible_long_flag_alias" class="fnname">visible_long_flag_alias</a>(self, name: &amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1307-1310" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows adding an alias that functions exactly like those defined with
+<a href="./struct.App.html#method.long_flag_alias"><code>App::long_flag_alias</code></a>, except that they are visible inside the help message.</p>
+<h1 id="examples-36" class="section-header"><a href="#examples-36">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+            .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>).<span class="ident">long_flag</span>(<span class="string">&quot;test&quot;</span>)
+                .<span class="ident">visible_long_flag_alias</span>(<span class="string">&quot;testing&quot;</span>))
+            .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;--testing&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.visible_aliases" class="method"><code>pub fn <a href="#method.visible_aliases" class="fnname">visible_aliases</a>(self, names: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a>&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1339-1342" title="goto source code">[src]</a></h4><div class="docblock"><p>If this <code>App</code> instance is a subcommand, this method adds multiple visible
+aliases, which allows this subcommand to be accessed via <em>either</em> the
+original name or any of the given aliases. This is more efficient and easier
+than creating multiple hidden subcommands as one only needs to check for
+the existence of this command and not all aliased variants.</p>
+<p><strong>NOTE:</strong> The alias defined with this method is <em>visible</em> from the help
+message and displayed as if it were just another regular subcommand. If
+looking for an alias that will not be displayed in the help message, see
+<a href="./struct.App.html#method.alias"><code>App::alias</code></a>.</p>
+<p><strong>NOTE:</strong> When using aliases, and checking for the existence of a
+particular subcommand within an <a href="./struct.ArgMatches.html"><code>ArgMatches</code></a> struct, one only needs to
+search for the original name and not all aliases.</p>
+<h1 id="examples-37" class="section-header"><a href="#examples-37">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>)
+        .<span class="ident">visible_aliases</span>(<span class="kw-2">&amp;</span>[<span class="string">&quot;do-stuff&quot;</span>, <span class="string">&quot;tests&quot;</span>]))
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;do-stuff&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.visible_short_flag_aliases" class="method"><code>pub fn <a href="#method.visible_short_flag_aliases" class="fnname">visible_short_flag_aliases</a>(self, names: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1358-1366" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows adding multiple short flag aliases that functions exactly like those defined
+with <a href="./struct.App.html#method.short_flag_aliases"><code>App::short_flag_aliases</code></a>, except that they are visible inside the help message.</p>
+<h1 id="examples-38" class="section-header"><a href="#examples-38">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+            .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>).<span class="ident">short_flag</span>(<span class="string">&#39;b&#39;</span>)
+                .<span class="ident">visible_short_flag_aliases</span>(<span class="kw-2">&amp;</span>[<span class="string">&#39;t&#39;</span>]))
+            .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;-t&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.visible_long_flag_aliases" class="method"><code>pub fn <a href="#method.visible_long_flag_aliases" class="fnname">visible_long_flag_aliases</a>(self, names: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a>&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1382-1387" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows adding multiple long flag aliases that functions exactly like those defined
+with <a href="./struct.App.html#method.long_flag_aliases"><code>App::long_flag_aliases</code></a>, except that they are visible inside the help message.</p>
+<h1 id="examples-39" class="section-header"><a href="#examples-39">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+            .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;test&quot;</span>).<span class="ident">long_flag</span>(<span class="string">&quot;test&quot;</span>)
+                .<span class="ident">visible_long_flag_aliases</span>(<span class="kw-2">&amp;</span>[<span class="string">&quot;testing&quot;</span>, <span class="string">&quot;testall&quot;</span>, <span class="string">&quot;test_all&quot;</span>]))
+            .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;myprog&quot;</span>, <span class="string">&quot;--testing&quot;</span>]);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_name</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;test&quot;</span>));</pre></div>
+</div><h4 id="method.replace" class="method"><code>pub fn <a href="#method.replace" class="fnname">replace</a>(self, name: &amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, target: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;'help [</a>&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1493-1496" title="goto source code">[src]</a></h4><div class="docblock"><p>Replaces an argument or subcommand used on the CLI at runtime with other arguments or subcommands.</p>
+<p>When this method is used, <code>name</code> is removed from the CLI, and <code>target</code>
+is inserted in its place. Parsing continues as if the user typed
+<code>target</code> instead of <code>name</code>.</p>
+<p>This can be used to create &quot;shortcuts&quot; for subcommands, or if a
+particular argument has the semantic meaning of several other specific
+arguments and values.</p>
+<p>Some examples may help to clear this up.</p>
+<h1 id="examples-40" class="section-header"><a href="#examples-40">Examples</a></h1>
+<p>We'll start with the &quot;subcommand short&quot; example. In this example, let's
+assume we have a program with a subcommand <code>module</code> which can be invoked
+via <code>app module</code>. Now let's also assume <code>module</code> also has a subcommand
+called <code>install</code> which can be invoked <code>app module install</code>. If for some
+reason users needed to be able to reach <code>app module install</code> via the
+short-hand <code>app install</code>, we'd have several options.</p>
+<p>We <em>could</em> create another sibling subcommand to <code>module</code> called
+<code>install</code>, but then we would need to manage another subcommand and manually
+dispatch to <code>app module install</code> handling code. This is error prone and
+tedious.</p>
+<p>We could instead use <a href="./struct.App.html#method.replace"><code>App::replace</code></a> so that, when the user types <code>app install</code>, <code>clap</code> will replace <code>install</code> with <code>module install</code> which will
+end up getting parsed as if the user typed the entire incantation.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;app&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;module&quot;</span>)
+        .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;install&quot;</span>)))
+    .<span class="ident">replace</span>(<span class="string">&quot;install&quot;</span>, <span class="kw-2">&amp;</span>[<span class="string">&quot;module&quot;</span>, <span class="string">&quot;install&quot;</span>])
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;app&quot;</span>, <span class="string">&quot;install&quot;</span>]);
+
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_matches</span>(<span class="string">&quot;module&quot;</span>).<span class="ident">is_some</span>());
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">subcommand_matches</span>(<span class="string">&quot;module&quot;</span>).<span class="ident">unwrap</span>().<span class="ident">subcommand_matches</span>(<span class="string">&quot;install&quot;</span>).<span class="ident">is_some</span>());</pre></div>
+<p>Now let's show an argument example!</p>
+<p>Let's assume we have an application with two flags <code>--save-context</code> and
+<code>--save-runtime</code>. But often users end up needing to do <em>both</em> at the
+same time. We can add a third flag <code>--save-all</code> which semantically means
+the same thing as <code>app --save-context --save-runtime</code>. To implement that,
+we have several options.</p>
+<p>We could create this third argument and manually check if that argument
+and in our own consumer code handle the fact that both <code>--save-context</code>
+and <code>--save-runtime</code> <em>should</em> have been used. But again this is error
+prone and tedious. If we had code relying on checking <code>--save-context</code>
+and we forgot to update that code to <em>also</em> check <code>--save-all</code> it'd mean
+an error!</p>
+<p>Luckily we can use <a href="./struct.App.html#method.replace"><code>App::replace</code></a> so that when the user types
+<code>--save-all</code>, <code>clap</code> will replace that argument with <code>--save-context --save-runtime</code>, and parsing will continue like normal. Now all our code
+that was originally checking for things like <code>--save-context</code> doesn't
+need to change!</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;app&quot;</span>)
+    .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;save-context&quot;</span>)
+        .<span class="ident">long</span>(<span class="string">&quot;save-context&quot;</span>))
+    .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;save-runtime&quot;</span>)
+        .<span class="ident">long</span>(<span class="string">&quot;save-runtime&quot;</span>))
+    .<span class="ident">replace</span>(<span class="string">&quot;--save-all&quot;</span>, <span class="kw-2">&amp;</span>[<span class="string">&quot;--save-context&quot;</span>, <span class="string">&quot;--save-runtime&quot;</span>])
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;app&quot;</span>, <span class="string">&quot;--save-all&quot;</span>]);
+
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">is_present</span>(<span class="string">&quot;save-context&quot;</span>));
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">is_present</span>(<span class="string">&quot;save-runtime&quot;</span>));</pre></div>
+<p>This can also be used with options, for example if our application with
+<code>--save-*</code> above also had a <code>--format=TYPE</code> option. Let's say it
+accepted <code>txt</code> or <code>json</code> values. However, when <code>--save-all</code> is used,
+only <code>--format=json</code> is allowed, or valid. We could change the example
+above to enforce this:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;app&quot;</span>)
+    .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;save-context&quot;</span>)
+        .<span class="ident">long</span>(<span class="string">&quot;save-context&quot;</span>))
+    .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;save-runtime&quot;</span>)
+        .<span class="ident">long</span>(<span class="string">&quot;save-runtime&quot;</span>))
+    .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;format&quot;</span>)
+        .<span class="ident">long</span>(<span class="string">&quot;format&quot;</span>)
+        .<span class="ident">takes_value</span>(<span class="bool-val">true</span>)
+        .<span class="ident">possible_values</span>(<span class="kw-2">&amp;</span>[<span class="string">&quot;txt&quot;</span>, <span class="string">&quot;json&quot;</span>]))
+    .<span class="ident">replace</span>(<span class="string">&quot;--save-all&quot;</span>, <span class="kw-2">&amp;</span>[<span class="string">&quot;--save-context&quot;</span>, <span class="string">&quot;--save-runtime&quot;</span>, <span class="string">&quot;--format=json&quot;</span>])
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;app&quot;</span>, <span class="string">&quot;--save-all&quot;</span>]);
+
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">is_present</span>(<span class="string">&quot;save-context&quot;</span>));
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">is_present</span>(<span class="string">&quot;save-runtime&quot;</span>));
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">m</span>.<span class="ident">value_of</span>(<span class="string">&quot;format&quot;</span>), <span class="prelude-val">Some</span>(<span class="string">&quot;json&quot;</span>));</pre></div>
+</div><h4 id="method.group" class="method"><code>pub fn <a href="#method.group" class="fnname">group</a>&lt;G:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../clap/struct.ArgGroup.html" title="struct clap::ArgGroup">ArgGroup</a>&lt;'help&gt;&gt;&gt;(self, group: G) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1532-1535" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds an <a href="./struct.ArgGroup.html"><code>ArgGroup</code></a> to the application. <a href="./struct.ArgGroup.html"><code>ArgGroup</code></a>s are a family of related arguments.
+By placing them in a logical group, you can build easier requirement and exclusion rules.
+For instance, you can make an entire <a href="./struct.ArgGroup.html"><code>ArgGroup</code></a> required, meaning that one (and <em>only</em>
+one) argument from that group must be present at runtime.</p>
+<p>You can also do things such as name an <a href="./struct.ArgGroup.html"><code>ArgGroup</code></a> as a conflict to another argument.
+Meaning any of the arguments that belong to that group will cause a failure if present with
+the conflicting argument.</p>
+<p>Another added benefit of <a href="./struct.ArgGroup.html"><code>ArgGroup</code></a>s is that you can extract a value from a group instead
+of determining exactly which argument was used.</p>
+<p>Finally, using <a href="./struct.ArgGroup.html"><code>ArgGroup</code></a>s to ensure exclusion between arguments is another very common
+use.</p>
+<h1 id="examples-41" class="section-header"><a href="#examples-41">Examples</a></h1>
+<p>The following example demonstrates using an <a href="./struct.ArgGroup.html"><code>ArgGroup</code></a> to ensure that one, and only one,
+of the arguments from the specified group is present at runtime.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;app&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;--set-ver [ver] &#39;set the version manually&#39;&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;--major &#39;auto increase major&#39;&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;--minor &#39;auto increase minor&#39;&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;--patch &#39;auto increase patch&#39;&quot;</span>)
+    .<span class="ident">group</span>(<span class="ident">ArgGroup</span>::<span class="ident">new</span>(<span class="string">&quot;vers&quot;</span>)
+         .<span class="ident">args</span>(<span class="kw-2">&amp;</span>[<span class="string">&quot;set-ver&quot;</span>, <span class="string">&quot;major&quot;</span>, <span class="string">&quot;minor&quot;</span>,<span class="string">&quot;patch&quot;</span>])
+         .<span class="ident">required</span>(<span class="bool-val">true</span>))</pre></div>
+</div><h4 id="method.groups" class="method"><code>pub fn <a href="#method.groups" class="fnname">groups</a>&lt;I, T&gt;(self, groups: I) -&gt; Self <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html" title="trait core::iter::traits::collect::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../clap/struct.ArgGroup.html" title="struct clap::ArgGroup">ArgGroup</a>&lt;'help&gt;&gt;,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1561-1570" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds multiple <a href="./struct.ArgGroup.html"><code>ArgGroup</code></a>s to the <a href="./struct.App.html"><code>App</code></a> at once.</p>
+<h1 id="examples-42" class="section-header"><a href="#examples-42">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;app&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;--set-ver [ver] &#39;set the version manually&#39;&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;--major         &#39;auto increase major&#39;&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;--minor         &#39;auto increase minor&#39;&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;--patch         &#39;auto increase patch&#39;&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;-c [FILE]       &#39;a config file&#39;&quot;</span>)
+    .<span class="ident">arg</span>(<span class="string">&quot;-i [IFACE]      &#39;an interface&#39;&quot;</span>)
+    .<span class="ident">groups</span>(<span class="kw-2">&amp;</span>[
+        <span class="ident">ArgGroup</span>::<span class="ident">new</span>(<span class="string">&quot;vers&quot;</span>)
+            .<span class="ident">args</span>(<span class="kw-2">&amp;</span>[<span class="string">&quot;set-ver&quot;</span>, <span class="string">&quot;major&quot;</span>, <span class="string">&quot;minor&quot;</span>,<span class="string">&quot;patch&quot;</span>])
+            .<span class="ident">required</span>(<span class="bool-val">true</span>),
+        <span class="ident">ArgGroup</span>::<span class="ident">new</span>(<span class="string">&quot;input&quot;</span>)
+            .<span class="ident">args</span>(<span class="kw-2">&amp;</span>[<span class="string">&quot;c&quot;</span>, <span class="string">&quot;i&quot;</span>])
+    ])</pre></div>
+</div><h4 id="method.subcommand" class="method"><code>pub fn <a href="#method.subcommand" class="fnname">subcommand</a>&lt;S:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;&gt;&gt;(self, subcmd: S) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1589-1592" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds a subcommand to the list of valid possibilities. Subcommands are effectively
+sub-<a href="./struct.App.html"><code>App</code></a>s, because they can contain their own arguments, subcommands, version, usage,
+etc. They also function just like <a href="./struct.App.html"><code>App</code></a>s, in that they get their own auto generated help,
+version, and usage.</p>
+<h1 id="examples-43" class="section-header"><a href="#examples-43">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;config&quot;</span>)
+        .<span class="ident">about</span>(<span class="string">&quot;Controls configuration features&quot;</span>)
+        .<span class="ident">arg</span>(<span class="string">&quot;&lt;config&gt; &#39;Required configuration file to use&#39;&quot;</span>))</pre></div>
+</div><h4 id="method.subcommands" class="method"><code>pub fn <a href="#method.subcommands" class="fnname">subcommands</a>&lt;I, T&gt;(self, subcmds: I) -&gt; Self <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html" title="trait core::iter::traits::collect::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;&gt;,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1610-1619" title="goto source code">[src]</a></h4><div class="docblock"><p>Adds multiple subcommands to the list of valid possibilities by iterating over an
+<a href="https://doc.rust-lang.org/std/iter/trait.IntoIterator.html"><code>IntoIterator</code></a> of <a href="./struct.App.html"><code>App</code></a>s.</p>
+<h1 id="examples-44" class="section-header"><a href="#examples-44">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+.<span class="ident">subcommands</span>( <span class="macro">vec</span><span class="macro">!</span>[
+       <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;config&quot;</span>).<span class="ident">about</span>(<span class="string">&quot;Controls configuration functionality&quot;</span>)
+                                .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;config_file&quot;</span>).<span class="ident">index</span>(<span class="number">1</span>)),
+       <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;debug&quot;</span>).<span class="ident">about</span>(<span class="string">&quot;Controls debug functionality&quot;</span>)])</pre></div>
+</div><h4 id="method.display_order" class="method"><code>pub fn <a href="#method.display_order" class="fnname">display_order</a>(self, ord: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>) -&gt; Self</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1668-1671" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows custom ordering of subcommands within the help message. Subcommands with a lower
+value will be displayed first in the help message. This is helpful when one would like to
+emphasize frequently used subcommands, or prioritize those towards the top of the list.
+Duplicate values <strong>are</strong> allowed. Subcommands with duplicate display orders will be
+displayed in alphabetical order.</p>
+<p><strong>NOTE:</strong> The default is 999 for all subcommands.</p>
+<h1 id="examples-45" class="section-header"><a href="#examples-45">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">m</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;cust-ord&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;alpha&quot;</span>) <span class="comment">// typically subcommands are grouped</span>
+                                               <span class="comment">// alphabetically by name. Subcommands</span>
+                                               <span class="comment">// without a display_order have a value of</span>
+                                               <span class="comment">// 999 and are displayed alphabetically with</span>
+                                               <span class="comment">// all other 999 subcommands</span>
+        .<span class="ident">about</span>(<span class="string">&quot;Some help and text&quot;</span>))
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;beta&quot;</span>)
+        .<span class="ident">display_order</span>(<span class="number">1</span>)   <span class="comment">// In order to force this subcommand to appear *first*</span>
+                            <span class="comment">// all we have to do is give it a value lower than 999.</span>
+                            <span class="comment">// Any other subcommands with a value of 1 will be displayed</span>
+                            <span class="comment">// alphabetically with this one...then 2 values, then 3, etc.</span>
+        .<span class="ident">about</span>(<span class="string">&quot;I should be first!&quot;</span>))
+    .<span class="ident">get_matches_from</span>(<span class="macro">vec</span><span class="macro">!</span>[
+        <span class="string">&quot;cust-ord&quot;</span>, <span class="string">&quot;--help&quot;</span>
+    ]);</pre></div>
+<p>The above example displays the following help message</p>
+<pre><code class="language-text">cust-ord
+
+USAGE:
+    cust-ord [FLAGS] [OPTIONS]
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+SUBCOMMANDS:
+    beta    I should be first!
+    alpha   Some help and text
+</code></pre>
+</div><h4 id="method.mut_arg" class="method"><code>pub fn <a href="#method.mut_arg" class="fnname">mut_arg</a>&lt;T, F&gt;(self, arg_id: T, f: F) -&gt; Self <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;F: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnOnce.html" title="trait core::ops::function::FnOnce">FnOnce</a>(<a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;) -&gt; <a class="struct" href="../clap/struct.Arg.html" title="struct clap::Arg">Arg</a>&lt;'help&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;T: Key + <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1697-1712" title="goto source code">[src]</a></h4><div class="docblock"><p>Allows one to mutate an <a href="./struct.Arg.html"><code>Arg</code></a> after it's been added to an <a href="./struct.App.html"><code>App</code></a>.</p>
+<h1 id="examples-46" class="section-header"><a href="#examples-46">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;foo&quot;</span>)
+    .<span class="ident">arg</span>(<span class="ident">Arg</span>::<span class="ident">new</span>(<span class="string">&quot;bar&quot;</span>)
+        .<span class="ident">short</span>(<span class="string">&#39;b&#39;</span>))
+    .<span class="ident">mut_arg</span>(<span class="string">&quot;bar&quot;</span>, <span class="op">|</span><span class="ident">a</span><span class="op">|</span> <span class="ident">a</span>.<span class="ident">short</span>(<span class="string">&#39;B&#39;</span>));
+
+<span class="kw">let</span> <span class="ident">res</span> <span class="op">=</span> <span class="ident">app</span>.<span class="ident">try_get_matches_from_mut</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;foo&quot;</span>, <span class="string">&quot;-b&quot;</span>]);
+
+<span class="comment">// Since we changed `bar`&#39;s short to &quot;B&quot; this should err as there</span>
+<span class="comment">// is no `-b` anymore, only `-B`</span>
+
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">res</span>.<span class="ident">is_err</span>());
+
+<span class="kw">let</span> <span class="ident">res</span> <span class="op">=</span> <span class="ident">app</span>.<span class="ident">try_get_matches_from_mut</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;foo&quot;</span>, <span class="string">&quot;-B&quot;</span>]);
+<span class="macro">assert</span><span class="macro">!</span>(<span class="ident">res</span>.<span class="ident">is_ok</span>());</pre></div>
+</div><h4 id="method.print_help" class="method"><code>pub fn <a href="#method.print_help" class="fnname">print_help</a>(&amp;mut self) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1731-1738" title="goto source code">[src]</a></h4><div class="docblock"><p>Prints the full help message to <a href="https://doc.rust-lang.org/std/io/fn.stdout.html"><code>io::stdout()</code></a> using a <a href="https://doc.rust-lang.org/std/io/struct.BufWriter.html"><code>BufWriter</code></a> using the same
+method as if someone ran <code>-h</code> to request the help message.</p>
+<p><strong>NOTE:</strong> clap has the ability to distinguish between &quot;short&quot; and &quot;long&quot; help messages
+depending on if the user ran <a href="./struct.Arg.html#method.about"><code>-h</code> (short)</a> or <a href="./struct.Arg.html#method.long_about"><code>--help</code> (long)</a>.</p>
+<h1 id="examples-47" class="section-header"><a href="#examples-47">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>);
+<span class="ident">app</span>.<span class="ident">print_help</span>();</pre></div>
+</div><h4 id="method.print_long_help" class="method"><code>pub fn <a href="#method.print_long_help" class="fnname">print_long_help</a>(&amp;mut self) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1757-1764" title="goto source code">[src]</a></h4><div class="docblock"><p>Prints the full help message to <a href="https://doc.rust-lang.org/std/io/fn.stdout.html"><code>io::stdout()</code></a> using a <a href="https://doc.rust-lang.org/std/io/struct.BufWriter.html"><code>BufWriter</code></a> using the same
+method as if someone ran <code>--help</code> to request the help message.</p>
+<p><strong>NOTE:</strong> clap has the ability to distinguish between &quot;short&quot; and &quot;long&quot; help messages
+depending on if the user ran <a href="./struct.Arg.html#method.about"><code>-h</code> (short)</a> or <a href="./struct.Arg.html#method.long_about"><code>--help</code> (long)</a>.</p>
+<h1 id="examples-48" class="section-header"><a href="#examples-48">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>);
+<span class="ident">app</span>.<span class="ident">print_long_help</span>();</pre></div>
+</div><h4 id="method.write_help" class="method"><code>pub fn <a href="#method.write_help" class="fnname">write_help</a>&lt;W:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/std/io/trait.Write.html" title="trait std::io::Write">Write</a>&gt;(&amp;mut self, w: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>W) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1784-1790" title="goto source code">[src]</a></h4><div class="docblock"><p>Writes the full help message to the user to a <a href="https://doc.rust-lang.org/std/io/trait.Write.html"><code>io::Write</code></a> object in the same method as if
+the user ran <code>-h</code>.</p>
+<p><strong>NOTE:</strong> clap has the ability to distinguish between &quot;short&quot; and &quot;long&quot; help messages
+depending on if the user ran <a href="./struct.Arg.html#method.about"><code>-h</code> (short)</a> or <a href="./struct.Arg.html#method.long_about"><code>--help</code> (long)</a>.</p>
+<h1 id="examples-49" class="section-header"><a href="#examples-49">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">io</span>;
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>);
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">out</span> <span class="op">=</span> <span class="ident">io</span>::<span class="ident">stdout</span>();
+<span class="ident">app</span>.<span class="ident">write_help</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">out</span>).<span class="ident">expect</span>(<span class="string">&quot;failed to write to stdout&quot;</span>);</pre></div>
+</div><h4 id="method.write_long_help" class="method"><code>pub fn <a href="#method.write_long_help" class="fnname">write_long_help</a>&lt;W:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/std/io/trait.Write.html" title="trait std::io::Write">Write</a>&gt;(&amp;mut self, w: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>W) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1810-1816" title="goto source code">[src]</a></h4><div class="docblock"><p>Writes the full help message to the user to a <a href="https://doc.rust-lang.org/std/io/trait.Write.html"><code>io::Write</code></a> object in the same method as if
+the user ran <code>--help</code>.</p>
+<p><strong>NOTE:</strong> clap has the ability to distinguish between &quot;short&quot; and &quot;long&quot; help messages
+depending on if the user ran <a href="./struct.Arg.html#method.about"><code>-h</code> (short)</a> or <a href="./struct.Arg.html#method.long_about"><code>--help</code> (long)</a>.</p>
+<h1 id="examples-50" class="section-header"><a href="#examples-50">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">io</span>;
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>);
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">out</span> <span class="op">=</span> <span class="ident">io</span>::<span class="ident">stdout</span>();
+<span class="ident">app</span>.<span class="ident">write_long_help</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">out</span>).<span class="ident">expect</span>(<span class="string">&quot;failed to write to stdout&quot;</span>);</pre></div>
+</div><h4 id="method.render_version" class="method"><code>pub fn <a href="#method.render_version" class="fnname">render_version</a>(&amp;self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1839-1841" title="goto source code">[src]</a></h4><div class="docblock"><p>Returns the version message rendered as if the user ran <code>-V</code>.</p>
+<p><strong>NOTE:</strong> clap has the ability to distinguish between &quot;short&quot; and &quot;long&quot; version messages
+depending on if the user ran <a href="./struct.App.html#method.version"><code>-V</code> (short)</a> or <a href="./struct.App.html#method.long_version"><code>--version</code> (long)</a>.</p>
+<h3 id="coloring" class="section-header"><a href="#coloring">Coloring</a></h3>
+<p>This function does not try to color the message nor it inserts any <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape codes</a>.</p>
+<h3 id="examples-51" class="section-header"><a href="#examples-51">Examples</a></h3>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">io</span>;
+<span class="kw">let</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>);
+<span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">app</span>.<span class="ident">render_version</span>());</pre></div>
+</div><h4 id="method.render_long_version" class="method"><code>pub fn <a href="#method.render_long_version" class="fnname">render_long_version</a>(&amp;self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1864-1866" title="goto source code">[src]</a></h4><div class="docblock"><p>Returns the version message rendered as if the user ran <code>--version</code>.</p>
+<p><strong>NOTE:</strong> clap has the ability to distinguish between &quot;short&quot; and &quot;long&quot; version messages
+depending on if the user ran <a href="./struct.App.html#method.version"><code>-V</code> (short)</a> or <a href="./struct.App.html#method.long_version"><code>--version</code> (long)</a>.</p>
+<h3 id="coloring-1" class="section-header"><a href="#coloring-1">Coloring</a></h3>
+<p>This function does not try to color the message nor it inserts any <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape codes</a>.</p>
+<h3 id="examples-52" class="section-header"><a href="#examples-52">Examples</a></h3>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">io</span>;
+<span class="kw">let</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>);
+<span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">app</span>.<span class="ident">render_long_version</span>());</pre></div>
+</div><h4 id="method.generate_usage" class="method"><code>pub fn <a href="#method.generate_usage" class="fnname">generate_usage</a>(&amp;mut self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1869-1879" title="goto source code">[src]</a></h4><div class="docblock"><p>@TODO-v3-alpha @docs @p2: write docs</p>
+</div><h4 id="method.get_matches" class="method"><code>pub fn <a href="#method.get_matches" class="fnname">get_matches</a>(self) -&gt; <a class="struct" href="../clap/struct.ArgMatches.html" title="struct clap::ArgMatches">ArgMatches</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1896-1898" title="goto source code">[src]</a></h4><div class="docblock"><p>Starts the parsing process, upon a failed parse an error will be displayed to the user and
+the process will exit with the appropriate error code. By default this method gets all user
+provided arguments from <a href="https://doc.rust-lang.org/std/env/fn.args_os.html"><code>env::args_os</code></a> in order to allow for invalid UTF-8 code points,
+which are legal on many platforms.</p>
+<h1 id="examples-53" class="section-header"><a href="#examples-53">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    <span class="comment">// Args and options go here...</span>
+    .<span class="ident">get_matches</span>();</pre></div>
+</div><h4 id="method.get_matches_mut" class="method"><code>pub fn <a href="#method.get_matches_mut" class="fnname">get_matches_mut</a>(&amp;mut self) -&gt; <a class="struct" href="../clap/struct.ArgMatches.html" title="struct clap::ArgMatches">ArgMatches</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1913-1933" title="goto source code">[src]</a></h4><div class="docblock"><p>Starts the parsing process, just like <a href="./struct.App.html#method.get_matches"><code>App::get_matches</code></a> but doesn't consume the <code>App</code>.</p>
+<h1 id="examples-54" class="section-header"><a href="#examples-54">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    <span class="comment">// Args and options go here...</span>
+    ;
+<span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">app</span>.<span class="ident">get_matches_mut</span>();</pre></div>
+</div><h4 id="method.try_get_matches" class="method"><code>pub fn <a href="#method.try_get_matches" class="fnname">try_get_matches</a>(self) -&gt; <a class="type" href="../clap/type.Result.html" title="type clap::Result">ClapResult</a>&lt;<a class="struct" href="../clap/struct.ArgMatches.html" title="struct clap::ArgMatches">ArgMatches</a>&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1961-1964" title="goto source code">[src]</a></h4><div class="docblock"><p>Starts the parsing process. This method will return a <a href="./type.Result.html"><code>clap::Result</code></a> type instead of exiting
+the process on failed parse. By default this method gets matches from <a href="https://doc.rust-lang.org/std/env/fn.args_os.html"><code>env::args_os</code></a>.</p>
+<p><strong>NOTE:</strong> This method WILL NOT exit when <code>--help</code> or <code>--version</code> (or short versions) are
+used. It will return a <a href="./struct.Error.html"><code>clap::Error</code></a>, where the <a href="./struct.Error.html"><code>kind</code></a> is a
+<a href="./enum.ErrorKind.html#variant.DisplayHelp"><code>ErrorKind::DisplayHelp</code></a> or <a href="./enum.ErrorKind.html#variant.DisplayVersion"><code>ErrorKind::DisplayVersion</code></a> respectively. You must call
+<a href="./struct.Error.html#method.exit"><code>Error::exit</code></a> or perform a <a href="https://doc.rust-lang.org/std/process/fn.exit.html"><code>std::process::exit</code></a>.</p>
+<h1 id="examples-55" class="section-header"><a href="#examples-55">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    <span class="comment">// Args and options go here...</span>
+    .<span class="ident">try_get_matches</span>()
+    .<span class="ident">unwrap_or_else</span>(<span class="op">|</span><span class="ident">e</span><span class="op">|</span> <span class="ident">e</span>.<span class="ident">exit</span>());</pre></div>
+</div><h4 id="method.get_matches_from" class="method"><code>pub fn <a href="#method.get_matches_from" class="fnname">get_matches_from</a>&lt;I, T&gt;(self, itr: I) -&gt; <a class="struct" href="../clap/struct.ArgMatches.html" title="struct clap::ArgMatches">ArgMatches</a> <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html" title="trait core::iter::traits::collect::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/std/ffi/os_str/struct.OsString.html" title="struct std::ffi::os_str::OsString">OsString</a>&gt; + <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a>,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#1987-2012" title="goto source code">[src]</a></h4><div class="docblock"><p>Starts the parsing process. Like <a href="./struct.App.html#method.get_matches"><code>App::get_matches</code></a> this method does not return a <a href="./type.Result.html"><code>clap::Result</code></a>
+and will automatically exit with an error message. This method, however, lets you specify
+what iterator to use when performing matches, such as a <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html"><code>Vec</code></a> of your making.</p>
+<p><strong>NOTE:</strong> The first argument will be parsed as the binary name unless
+<a href="./enum.AppSettings.html#variant.NoBinaryName"><code>AppSettings::NoBinaryName</code></a> is used.</p>
+<h1 id="examples-56" class="section-header"><a href="#examples-56">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">arg_vec</span> <span class="op">=</span> <span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;my_prog&quot;</span>, <span class="string">&quot;some&quot;</span>, <span class="string">&quot;args&quot;</span>, <span class="string">&quot;to&quot;</span>, <span class="string">&quot;parse&quot;</span>];
+
+<span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    <span class="comment">// Args and options go here...</span>
+    .<span class="ident">get_matches_from</span>(<span class="ident">arg_vec</span>);</pre></div>
+</div><h4 id="method.try_get_matches_from" class="method"><code>pub fn <a href="#method.try_get_matches_from" class="fnname">try_get_matches_from</a>&lt;I, T&gt;(self, itr: I) -&gt; <a class="type" href="../clap/type.Result.html" title="type clap::Result">ClapResult</a>&lt;<a class="struct" href="../clap/struct.ArgMatches.html" title="struct clap::ArgMatches">ArgMatches</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html" title="trait core::iter::traits::collect::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/std/ffi/os_str/struct.OsString.html" title="struct std::ffi::os_str::OsString">OsString</a>&gt; + <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a>,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#2046-2052" title="goto source code">[src]</a></h4><div class="docblock"><p>Starts the parsing process. A combination of <a href="./struct.App.html#method.get_matches_from"><code>App::get_matches_from</code></a>, and
+<a href="./struct.App.html#method.try_get_matches"><code>App::try_get_matches</code></a>.</p>
+<p><strong>NOTE:</strong> This method WILL NOT exit when <code>--help</code> or <code>--version</code> (or short versions) are
+used. It will return a <a href="./struct.Error.html"><code>clap::Error</code></a>, where the <a href="./struct.Error.html"><code>kind</code></a> is a <a href="./enum.ErrorKind.html#variant.DisplayHelp"><code>ErrorKind::DisplayHelp</code></a>
+or <a href="./enum.ErrorKind.html#variant.DisplayVersion"><code>ErrorKind::DisplayVersion</code></a> respectively. You must call <a href="./struct.Error.html#method.exit"><code>Error::exit</code></a> or
+perform a <a href="https://doc.rust-lang.org/std/process/fn.exit.html"><code>std::process::exit</code></a> yourself.</p>
+<p><strong>NOTE:</strong> The first argument will be parsed as the binary name unless
+<a href="./enum.AppSettings.html#variant.NoBinaryName"><code>AppSettings::NoBinaryName</code></a> is used.</p>
+<h1 id="examples-57" class="section-header"><a href="#examples-57">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">arg_vec</span> <span class="op">=</span> <span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;my_prog&quot;</span>, <span class="string">&quot;some&quot;</span>, <span class="string">&quot;args&quot;</span>, <span class="string">&quot;to&quot;</span>, <span class="string">&quot;parse&quot;</span>];
+
+<span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    <span class="comment">// Args and options go here...</span>
+    .<span class="ident">try_get_matches_from</span>(<span class="ident">arg_vec</span>)
+    .<span class="ident">unwrap_or_else</span>(<span class="op">|</span><span class="ident">e</span><span class="op">|</span> <span class="ident">e</span>.<span class="ident">exit</span>());</pre></div>
+</div><h4 id="method.try_get_matches_from_mut" class="method"><code>pub fn <a href="#method.try_get_matches_from_mut" class="fnname">try_get_matches_from_mut</a>&lt;I, T&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;mut self, <br>&nbsp;&nbsp;&nbsp;&nbsp;itr: I<br>) -&gt; <a class="type" href="../clap/type.Result.html" title="type clap::Result">ClapResult</a>&lt;<a class="struct" href="../clap/struct.ArgMatches.html" title="struct clap::ArgMatches">ArgMatches</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html" title="trait core::iter::traits::collect::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/std/ffi/os_str/struct.OsString.html" title="struct std::ffi::os_str::OsString">OsString</a>&gt; + <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a>,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#2075-2103" title="goto source code">[src]</a></h4><div class="docblock"><p>Starts the parsing process without consuming the <a href="./struct.App.html"><code>App</code></a> struct <code>self</code>. This is normally not
+the desired functionality, instead prefer <a href="./struct.App.html#method.try_get_matches_from"><code>App::try_get_matches_from</code></a> which <em>does</em>
+consume <code>self</code>.</p>
+<p><strong>NOTE:</strong> The first argument will be parsed as the binary name unless
+<a href="./enum.AppSettings.html#variant.NoBinaryName"><code>AppSettings::NoBinaryName</code></a> is used.</p>
+<h1 id="examples-58" class="section-header"><a href="#examples-58">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">arg_vec</span> <span class="op">=</span> <span class="macro">vec</span><span class="macro">!</span>[<span class="string">&quot;my_prog&quot;</span>, <span class="string">&quot;some&quot;</span>, <span class="string">&quot;args&quot;</span>, <span class="string">&quot;to&quot;</span>, <span class="string">&quot;parse&quot;</span>];
+
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>);
+    <span class="comment">// Args and options go here...</span>
+<span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">app</span>.<span class="ident">try_get_matches_from_mut</span>(<span class="ident">arg_vec</span>)
+    .<span class="ident">unwrap_or_else</span>(<span class="op">|</span><span class="ident">e</span><span class="op">|</span> <span class="ident">e</span>.<span class="ident">exit</span>());</pre></div>
+</div><h4 id="method.subcommand_placeholder" class="method"><code>pub fn <a href="#method.subcommand_placeholder" class="fnname">subcommand_placeholder</a>&lt;S, T&gt;(self, placeholder: S, header: T) -&gt; Self <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;&amp;'help <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;,&nbsp;</span></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#2162-2170" title="goto source code">[src]</a></h4><div class="docblock"><p>Sets the placeholder text used for subcommands when printing usage and help.
+By default, this is &quot;SUBCOMMAND&quot; with a header of &quot;SUBCOMMANDS&quot;.</p>
+<h1 id="examples-59" class="section-header"><a href="#examples-59">Examples</a></h1>
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;sub1&quot;</span>))
+    .<span class="ident">print_help</span>()</pre></div>
+<p>will produce</p>
+<pre><code class="language-text">myprog
+
+USAGE:
+    myprog [SUBCOMMAND]
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+SUBCOMMANDS:
+    help    Prints this message or the help of the given subcommand(s)
+    sub1
+</code></pre>
+<p>but usage of <code>subcommand_placeholder</code></p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;myprog&quot;</span>)
+    .<span class="ident">subcommand</span>(<span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;sub1&quot;</span>))
+    .<span class="ident">subcommand_placeholder</span>(<span class="string">&quot;THING&quot;</span>, <span class="string">&quot;THINGS&quot;</span>)
+    .<span class="ident">print_help</span>()</pre></div>
+<p>will produce</p>
+<pre><code class="language-text">myprog
+
+USAGE:
+    myprog [THING]
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+THINGS:
+    help    Prints this message or the help of the given subcommand(s)
+    sub1
+</code></pre>
+</div></div><h2 id="trait-implementations" class="small-section-header">Trait Implementations<a href="#trait-implementations" class="anchor"></a></h2><div id="trait-implementations-list"><h3 id="impl-Clone" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-Clone" class="anchor"></a><a class="srclink" href="../src/clap/build/app/mod.rs.html#74" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.clone" class="method hidden"><code>fn <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone" class="fnname">clone</a>(&amp;self) -&gt; <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#74" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id="method.clone_from" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from" class="fnname">clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code><span class="since" title="Stable since Rust version 1.0.0">1.0.0</span><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/clone.rs.html#128" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 id="impl-Debug" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-Debug" class="anchor"></a><a class="srclink" href="../src/clap/build/app/mod.rs.html#74" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.fmt" class="method hidden"><code>fn <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt" class="fnname">fmt</a>(&amp;self, f: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>&lt;'_&gt;) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#74" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Formats the value using the given formatter. <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt">Read more</a></p>
+</div></div><h3 id="impl-Default" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-Default" class="anchor"></a><a class="srclink" href="../src/clap/build/app/mod.rs.html#74" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.default" class="method hidden"><code>fn <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default" class="fnname">default</a>() -&gt; <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a class="srclink" href="../src/clap/build/app/mod.rs.html#74" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 id="impl-Display" class="impl"><code class="in-band">impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html" title="trait core::fmt::Display">Display</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'_&gt;</code><a href="#impl-Display" class="anchor"></a><a class="srclink" href="../src/clap/build/app/mod.rs.html#2890-2894" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.fmt-1" class="method hidden"><code>fn <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt" class="fnname">fmt</a>(&amp;self, f: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>&lt;'_&gt;) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code><a class="srclink" href="../src/clap/build/app/mod.rs.html#2891-2893" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Formats the value using the given formatter. <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt">Read more</a></p>
+</div></div></div><h2 id="synthetic-implementations" class="small-section-header">Auto Trait Implementations<a href="#synthetic-implementations" class="anchor"></a></h2><div id="synthetic-implementations-list"><h3 id="impl-RefUnwindSafe" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/std/panic/trait.RefUnwindSafe.html" title="trait std::panic::RefUnwindSafe">RefUnwindSafe</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-RefUnwindSafe" class="anchor"></a><a class="srclink" href="../src/clap/lib.rs.html#1" title="goto source code">[src]</a></h3><div class="impl-items"></div><h3 id="impl-Send" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-Send" class="anchor"></a><a class="srclink" href="../src/clap/lib.rs.html#1" title="goto source code">[src]</a></h3><div class="impl-items"></div><h3 id="impl-Sync" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-Sync" class="anchor"></a><a class="srclink" href="../src/clap/lib.rs.html#1" title="goto source code">[src]</a></h3><div class="impl-items"></div><h3 id="impl-Unpin" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Unpin.html" title="trait core::marker::Unpin">Unpin</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-Unpin" class="anchor"></a><a class="srclink" href="../src/clap/lib.rs.html#1" title="goto source code">[src]</a></h3><div class="impl-items"></div><h3 id="impl-UnwindSafe" class="impl"><code class="in-band">impl&lt;'help&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/std/panic/trait.UnwindSafe.html" title="trait std::panic::UnwindSafe">UnwindSafe</a> for <a class="struct" href="../clap/struct.App.html" title="struct clap::App">App</a>&lt;'help&gt;</code><a href="#impl-UnwindSafe" class="anchor"></a><a class="srclink" href="../src/clap/lib.rs.html#1" title="goto source code">[src]</a></h3><div class="impl-items"></div></div><h2 id="blanket-implementations" class="small-section-header">Blanket Implementations<a href="#blanket-implementations" class="anchor"></a></h2><div id="blanket-implementations-list"><h3 id="impl-Any" class="impl"><code class="in-band">impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: 'static + ?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code><a href="#impl-Any" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/any.rs.html#131-135" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.type_id" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html#tymethod.type_id" class="fnname">type_id</a>(&amp;self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/core/any/struct.TypeId.html" title="struct core::any::TypeId">TypeId</a></code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/any.rs.html#132" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Gets the <code>TypeId</code> of <code>self</code>. <a href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html#tymethod.type_id">Read more</a></p>
+</div></div><h3 id="impl-Borrow%3CT%3E" class="impl"><code class="in-band">impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/borrow/trait.Borrow.html" title="trait core::borrow::Borrow">Borrow</a>&lt;T&gt; for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: ?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code><a href="#impl-Borrow%3CT%3E" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/borrow.rs.html#207-211" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.borrow" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/core/borrow/trait.Borrow.html#tymethod.borrow" class="fnname">borrow</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/borrow.rs.html#208" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Immutably borrows from an owned value. <a href="https://doc.rust-lang.org/nightly/core/borrow/trait.Borrow.html#tymethod.borrow">Read more</a></p>
+</div></div><h3 id="impl-BorrowMut%3CT%3E" class="impl"><code class="in-band">impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html" title="trait core::borrow::BorrowMut">BorrowMut</a>&lt;T&gt; for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: ?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code><a href="#impl-BorrowMut%3CT%3E" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/borrow.rs.html#214-218" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.borrow_mut" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html#tymethod.borrow_mut" class="fnname">borrow_mut</a>(&amp;mut self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>T</code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/borrow.rs.html#215" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Mutably borrows from an owned value. <a href="https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html#tymethod.borrow_mut">Read more</a></p>
+</div></div><h3 id="impl-From%3CT%3E" class="impl"><code class="in-band">impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;T&gt; for T</code><a href="#impl-From%3CT%3E" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/convert/mod.rs.html#545-549" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.from" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from" class="fnname">from</a>(t: T) -&gt; T</code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/convert/mod.rs.html#546" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Performs the conversion.</p>
+</div></div><h3 id="impl-Into%3CU%3E" class="impl"><code class="in-band">impl&lt;T, U&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;U&gt; for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;U: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;T&gt;,&nbsp;</span></code><a href="#impl-Into%3CU%3E" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/convert/mod.rs.html#534-541" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.into" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html#tymethod.into" class="fnname">into</a>(self) -&gt; U</code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/convert/mod.rs.html#538" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Performs the conversion.</p>
+</div></div><h3 id="impl-ToOwned" class="impl"><code class="in-band">impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html" title="trait alloc::borrow::ToOwned">ToOwned</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a>,&nbsp;</span></code><a href="#impl-ToOwned" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/alloc/borrow.rs.html#80-92" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="associatedtype.Owned" class="type"><code>type <a href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#associatedtype.Owned" class="type">Owned</a> = T</code></h4><div class='docblock'><p>The resulting type after obtaining ownership.</p>
+</div><h4 id="method.to_owned" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#tymethod.to_owned" class="fnname">to_owned</a>(&amp;self) -&gt; T</code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/alloc/borrow.rs.html#85" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Creates owned data from borrowed data, usually by cloning. <a href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#tymethod.to_owned">Read more</a></p>
+</div><h4 id="method.clone_into" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#method.clone_into" class="fnname">clone_into</a>(&amp;self, target: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>T)</code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/alloc/borrow.rs.html#89" title="goto source code">[src]</a></h4><div class="item-info hidden"><div class="stab unstable"><details><summary><span class="emoji">🔬</span> This is a nightly-only experimental API. (<code>toowned_clone_into</code>)</summary><p>recently added</p>
+</details></div></div><div class='docblock hidden'><p>Uses borrowed data to replace owned data, usually by cloning. <a href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#method.clone_into">Read more</a></p>
+</div></div><h3 id="impl-ToString" class="impl"><code class="in-band">impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/alloc/string/trait.ToString.html" title="trait alloc::string::ToString">ToString</a> for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html" title="trait core::fmt::Display">Display</a> + ?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code><a href="#impl-ToString" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/alloc/string.rs.html#2203-2216" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="method.to_string" class="method hidden"><code>pub default fn <a href="https://doc.rust-lang.org/nightly/alloc/string/trait.ToString.html#tymethod.to_string" class="fnname">to_string</a>(&amp;self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/alloc/string.rs.html#2209" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Converts the given value to a <code>String</code>. <a href="https://doc.rust-lang.org/nightly/alloc/string/trait.ToString.html#tymethod.to_string">Read more</a></p>
+</div></div><h3 id="impl-TryFrom%3CU%3E" class="impl"><code class="in-band">impl&lt;T, U&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;U&gt; for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;U: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;T&gt;,&nbsp;</span></code><a href="#impl-TryFrom%3CU%3E" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/convert/mod.rs.html#582-591" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="associatedtype.Error" class="type"><code>type <a href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#associatedtype.Error" class="type">Error</a> = <a class="enum" href="https://doc.rust-lang.org/nightly/core/convert/enum.Infallible.html" title="enum core::convert::Infallible">Infallible</a></code></h4><div class='docblock'><p>The type returned in the event of a conversion error.</p>
+</div><h4 id="method.try_from" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#tymethod.try_from" class="fnname">try_from</a>(value: U) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;T, &lt;T as <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;U&gt;&gt;::<a class="type" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#associatedtype.Error" title="type core::convert::TryFrom::Error">Error</a>&gt;</code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/convert/mod.rs.html#588" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Performs the conversion.</p>
+</div></div><h3 id="impl-TryInto%3CU%3E" class="impl"><code class="in-band">impl&lt;T, U&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryInto.html" title="trait core::convert::TryInto">TryInto</a>&lt;U&gt; for T <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;U: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;T&gt;,&nbsp;</span></code><a href="#impl-TryInto%3CU%3E" class="anchor"></a><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/convert/mod.rs.html#568-577" title="goto source code">[src]</a></h3><div class="impl-items"><h4 id="associatedtype.Error-1" class="type"><code>type <a href="https://doc.rust-lang.org/nightly/core/convert/trait.TryInto.html#associatedtype.Error" class="type">Error</a> = &lt;U as <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;T&gt;&gt;::<a class="type" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#associatedtype.Error" title="type core::convert::TryFrom::Error">Error</a></code></h4><div class='docblock'><p>The type returned in the event of a conversion error.</p>
+</div><h4 id="method.try_into" class="method hidden"><code>pub fn <a href="https://doc.rust-lang.org/nightly/core/convert/trait.TryInto.html#tymethod.try_into" class="fnname">try_into</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;U, &lt;U as <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html" title="trait core::convert::TryFrom">TryFrom</a>&lt;T&gt;&gt;::<a class="type" href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html#associatedtype.Error" title="type core::convert::TryFrom::Error">Error</a>&gt;</code><a class="srclink" href="https://doc.rust-lang.org/nightly/src/core/convert/mod.rs.html#574" title="goto source code">[src]</a></h4><div class='docblock hidden'><p>Performs the conversion.</p>
+</div></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><div id="rustdoc-vars" data-root-path="../" data-current-crate="clap"></div>
+    <script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ColorWrapper",""],["NamedColor",""]],"struct":[["Rgb",""],["Rgba",""]],"trait":[["Color",""]]});

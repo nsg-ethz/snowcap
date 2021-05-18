@@ -1,0 +1,323 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `snowcap_bencher/src/lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings"></script><script src="../../storage.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"                  integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "$", right: "$", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+</script>
+
+<style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../snowcap_bencher/index.html'><div class='logo-container rust-logo'><img src='../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" class="help-button">?</button>
+                <a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
+<span id="2">  2</span>
+<span id="3">  3</span>
+<span id="4">  4</span>
+<span id="5">  5</span>
+<span id="6">  6</span>
+<span id="7">  7</span>
+<span id="8">  8</span>
+<span id="9">  9</span>
+<span id="10"> 10</span>
+<span id="11"> 11</span>
+<span id="12"> 12</span>
+<span id="13"> 13</span>
+<span id="14"> 14</span>
+<span id="15"> 15</span>
+<span id="16"> 16</span>
+<span id="17"> 17</span>
+<span id="18"> 18</span>
+<span id="19"> 19</span>
+<span id="20"> 20</span>
+<span id="21"> 21</span>
+<span id="22"> 22</span>
+<span id="23"> 23</span>
+<span id="24"> 24</span>
+<span id="25"> 25</span>
+<span id="26"> 26</span>
+<span id="27"> 27</span>
+<span id="28"> 28</span>
+<span id="29"> 29</span>
+<span id="30"> 30</span>
+<span id="31"> 31</span>
+<span id="32"> 32</span>
+<span id="33"> 33</span>
+<span id="34"> 34</span>
+<span id="35"> 35</span>
+<span id="36"> 36</span>
+<span id="37"> 37</span>
+<span id="38"> 38</span>
+<span id="39"> 39</span>
+<span id="40"> 40</span>
+<span id="41"> 41</span>
+<span id="42"> 42</span>
+<span id="43"> 43</span>
+<span id="44"> 44</span>
+<span id="45"> 45</span>
+<span id="46"> 46</span>
+<span id="47"> 47</span>
+<span id="48"> 48</span>
+<span id="49"> 49</span>
+<span id="50"> 50</span>
+<span id="51"> 51</span>
+<span id="52"> 52</span>
+<span id="53"> 53</span>
+<span id="54"> 54</span>
+<span id="55"> 55</span>
+<span id="56"> 56</span>
+<span id="57"> 57</span>
+<span id="58"> 58</span>
+<span id="59"> 59</span>
+<span id="60"> 60</span>
+<span id="61"> 61</span>
+<span id="62"> 62</span>
+<span id="63"> 63</span>
+<span id="64"> 64</span>
+<span id="65"> 65</span>
+<span id="66"> 66</span>
+<span id="67"> 67</span>
+<span id="68"> 68</span>
+<span id="69"> 69</span>
+<span id="70"> 70</span>
+<span id="71"> 71</span>
+<span id="72"> 72</span>
+<span id="73"> 73</span>
+<span id="74"> 74</span>
+<span id="75"> 75</span>
+<span id="76"> 76</span>
+<span id="77"> 77</span>
+<span id="78"> 78</span>
+<span id="79"> 79</span>
+<span id="80"> 80</span>
+<span id="81"> 81</span>
+<span id="82"> 82</span>
+<span id="83"> 83</span>
+<span id="84"> 84</span>
+<span id="85"> 85</span>
+<span id="86"> 86</span>
+<span id="87"> 87</span>
+<span id="88"> 88</span>
+<span id="89"> 89</span>
+<span id="90"> 90</span>
+<span id="91"> 91</span>
+<span id="92"> 92</span>
+<span id="93"> 93</span>
+<span id="94"> 94</span>
+<span id="95"> 95</span>
+<span id="96"> 96</span>
+<span id="97"> 97</span>
+<span id="98"> 98</span>
+<span id="99"> 99</span>
+<span id="100">100</span>
+<span id="101">101</span>
+<span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
+<span id="107">107</span>
+<span id="108">108</span>
+<span id="109">109</span>
+<span id="110">110</span>
+<span id="111">111</span>
+<span id="112">112</span>
+<span id="113">113</span>
+<span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
+<span id="139">139</span>
+<span id="140">140</span>
+<span id="141">141</span>
+<span id="142">142</span>
+<span id="143">143</span>
+<span id="144">144</span>
+<span id="145">145</span>
+<span id="146">146</span>
+<span id="147">147</span>
+<span id="148">148</span>
+<span id="149">149</span>
+<span id="150">150</span>
+</pre><div class="example-wrap"><pre class="rust ">
+<span class="comment">// Snowcap: Synthesizing Network-Wide Configuration Updates</span>
+<span class="comment">// Copyright (C) 2021  Tibor Schneider</span>
+<span class="comment">//</span>
+<span class="comment">// This program is free software; you can redistribute it and/or modify</span>
+<span class="comment">// it under the terms of the GNU General Public License as published by</span>
+<span class="comment">// the Free Software Foundation; either version 2 of the License, or</span>
+<span class="comment">// (at your option) any later version.</span>
+<span class="comment">//</span>
+<span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="comment">// GNU General Public License for more details.</span>
+<span class="comment">//</span>
+<span class="comment">// You should have received a copy of the GNU General Public License along</span>
+<span class="comment">// with this program; if not, write to the Free Software Foundation, Inc.,</span>
+<span class="comment">// 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span>
+
+<span class="doccomment">//! # Net Update Bencher</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! This library benchmarks the system based on a specific reconfiguration scenario.</span>
+<span class="attribute">#![<span class="ident">deny</span>(<span class="ident">missing_docs</span>)]</span>
+
+<span class="kw">mod</span> <span class="ident">runner_optimizer</span>;
+<span class="kw">mod</span> <span class="ident">runner_strategy</span>;
+<span class="kw">mod</span> <span class="ident">utils</span>;
+
+<span class="kw">use</span> <span class="ident">runner_optimizer</span>::<span class="ident">bench</span> <span class="kw">as</span> <span class="ident">optimizer_bench</span>;
+<span class="kw">use</span> <span class="ident">runner_strategy</span>::<span class="ident">bench</span> <span class="kw">as</span> <span class="ident">strategy_bench</span>;
+
+<span class="kw">use</span> <span class="ident">snowcap</span>::{
+    <span class="ident">hard_policies</span>::<span class="ident">HardPolicy</span>,
+    <span class="ident">netsim</span>::{<span class="ident">config</span>::<span class="ident">Config</span>, <span class="ident">Network</span>},
+};
+
+<span class="kw">use</span> <span class="ident">clap</span>::<span class="ident">Clap</span>;
+<span class="kw">use</span> <span class="ident">serde</span>::<span class="ident">Serialize</span>;
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">error</span>::<span class="ident">Error</span>;
+
+<span class="doccomment">/// Perform a benchmark of the specified configuration</span>
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">bench</span>(
+    <span class="ident">net</span>: <span class="ident">Network</span>,
+    <span class="ident">final_config</span>: <span class="ident">Config</span>,
+    <span class="ident">hard_policy</span>: <span class="ident">HardPolicy</span>,
+    <span class="ident">scenario</span>: <span class="ident">String</span>,
+    <span class="ident">args</span>: <span class="ident">BencherArguments</span>,
+) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">BencherResult</span>, <span class="ident">Box</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="ident">Error</span><span class="op">&gt;</span><span class="op">&gt;</span> {
+    <span class="kw">match</span> <span class="ident">args</span>.<span class="ident">bench_type</span> {
+        <span class="ident">BencherType</span>::<span class="ident">Strategy</span> <span class="op">=</span><span class="op">&gt;</span> <span class="ident">strategy_bench</span>(<span class="ident">net</span>, <span class="ident">final_config</span>, <span class="ident">hard_policy</span>, <span class="ident">scenario</span>, <span class="ident">args</span>),
+        <span class="ident">BencherType</span>::<span class="ident">Optimizer</span> <span class="op">=</span><span class="op">&gt;</span> <span class="ident">optimizer_bench</span>(<span class="ident">net</span>, <span class="ident">final_config</span>, <span class="ident">hard_policy</span>, <span class="ident">scenario</span>, <span class="ident">args</span>),
+    }
+}
+
+<span class="doccomment">/// Arguments required for the bencher</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clap</span>, <span class="ident">Debug</span>, <span class="ident">Clone</span>)]</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">BencherArguments</span> {
+    <span class="doccomment">/// Type of benchmark</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">arg_enum</span>, <span class="ident">default_value</span> <span class="op">=</span> <span class="string">&quot;Optimizer&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">bench_type</span>: <span class="ident">BencherType</span>,
+    <span class="doccomment">/// Number of iterations to repeat</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">short</span> <span class="op">=</span> <span class="string">&#39;i&#39;</span>, <span class="ident">long</span>, <span class="ident">default_value</span> <span class="op">=</span> <span class="string">&quot;10000&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">iterations</span>: <span class="ident">usize</span>,
+    <span class="doccomment">/// Maximum allowed time per run, in seconds. If the time exceeds the limit, then the cost will</span>
+    <span class="doccomment">/// be set to nan.</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">short</span> <span class="op">=</span> <span class="string">&#39;t&#39;</span>, <span class="ident">long</span>, <span class="ident">default_value</span> <span class="op">=</span> <span class="string">&quot;300&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">max_time</span>: <span class="ident">u64</span>,
+    <span class="doccomment">/// If this flag is set, then nan values will be ignored, and not added to the resulting csv</span>
+    <span class="doccomment">/// file</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">short</span> <span class="op">=</span> <span class="string">&#39;n&#39;</span>, <span class="ident">long</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">ignore_nan</span>: <span class="ident">bool</span>,
+    <span class="doccomment">/// Perform benching the random baseline</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">long</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">random</span>: <span class="ident">bool</span>,
+    <span class="doccomment">/// Perform benching the tree strategy</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">long</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">tree</span>: <span class="ident">bool</span>,
+    <span class="doccomment">/// Perform benching the main strategy</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">long</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">main</span>: <span class="ident">bool</span>,
+    <span class="doccomment">/// Perform benching the most-important-first baseline strategy</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">long</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">mif</span>: <span class="ident">bool</span>,
+    <span class="doccomment">/// Perform benching the most-important-first baseline strategy</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">long</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">mil</span>: <span class="ident">bool</span>,
+    <span class="doccomment">/// search for the global optimum</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">long</span> <span class="op">=</span> <span class="string">&quot;optimum&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">global_optimum</span>: <span class="ident">bool</span>,
+    <span class="doccomment">/// Number of threads to use. Defaults to the number of threads available on the system.</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">short</span> <span class="op">=</span> <span class="string">&#39;p&#39;</span>, <span class="ident">long</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">threads</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span>,
+    <span class="doccomment">/// Output file to store the results. Two different files will be created: &quot;NAME_strategy.csv&quot;,</span>
+    <span class="doccomment">/// &quot;NAME_tree.csv&quot; and &quot;NAME_random.csv&quot;! Don&#39;t provide the file ending &quot;.csv&quot;!</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">long</span> <span class="op">=</span> <span class="string">&quot;csv&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">output_csv</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">String</span><span class="op">&gt;</span>,
+    <span class="doccomment">/// Output file to store the results in json format. Give the entire path, including the json</span>
+    <span class="doccomment">/// ending.</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">long</span> <span class="op">=</span> <span class="string">&quot;json&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="ident">output_json</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">String</span><span class="op">&gt;</span>,
+}
+
+<span class="doccomment">/// Type of benchmark to perform</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clap</span>, <span class="ident">Debug</span>, <span class="ident">Clone</span>, <span class="ident">PartialEq</span>, <span class="ident">Eq</span>, <span class="ident">Copy</span>)]</span>
+<span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">BencherType</span> {
+    <span class="doccomment">/// Benchmark the strategy</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">name</span> <span class="op">=</span> <span class="string">&quot;strategy&quot;</span>)]</span>
+    <span class="ident">Strategy</span>,
+    <span class="doccomment">/// Benchmark the optimizers</span>
+    <span class="attribute">#[<span class="ident">clap</span>(<span class="ident">name</span> <span class="op">=</span> <span class="string">&quot;optimizer&quot;</span>)]</span>
+    <span class="ident">Optimizer</span>,
+}
+
+<span class="doccomment">/// Result type that contains the entire output</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>, <span class="ident">Clone</span>, <span class="ident">Serialize</span>)]</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">BencherResult</span> {
+    <span class="doccomment">/// String describing the scenario</span>
+    <span class="kw">pub</span> <span class="ident">scenario</span>: <span class="ident">String</span>,
+    <span class="doccomment">/// Ideal cost of the scenario</span>
+    <span class="kw">pub</span> <span class="ident">ideal_cost</span>: <span class="ident">f64</span>,
+    <span class="doccomment">/// Optimal cost of the scenario, if computed</span>
+    <span class="kw">pub</span> <span class="ident">optimal_cost</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">f64</span><span class="op">&gt;</span>,
+    <span class="doccomment">/// Time for computing the optimal cost (in seconds)</span>
+    <span class="kw">pub</span> <span class="ident">optimal_cost_time</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">f64</span><span class="op">&gt;</span>,
+    <span class="doccomment">/// Number of nodes in the network</span>
+    <span class="kw">pub</span> <span class="ident">num_nodes</span>: <span class="ident">usize</span>,
+    <span class="doccomment">/// Number of edges in the network</span>
+    <span class="kw">pub</span> <span class="ident">num_edges</span>: <span class="ident">usize</span>,
+    <span class="doccomment">/// Number of commands for the reconfiguration</span>
+    <span class="kw">pub</span> <span class="ident">num_commands</span>: <span class="ident">usize</span>,
+    <span class="doccomment">/// Result of the strategy</span>
+    <span class="kw">pub</span> <span class="ident">strategy_result</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Run</span><span class="op">&gt;</span>,
+    <span class="doccomment">/// Result of the tree strategy</span>
+    <span class="kw">pub</span> <span class="ident">tree_result</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Run</span><span class="op">&gt;</span>,
+    <span class="doccomment">/// Result of the random approach</span>
+    <span class="kw">pub</span> <span class="ident">random_result</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Run</span><span class="op">&gt;</span>,
+    <span class="doccomment">/// Result of the most-important-first baseline approach</span>
+    <span class="kw">pub</span> <span class="ident">baseline_mif_result</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Run</span><span class="op">&gt;</span>,
+    <span class="doccomment">/// Result of the most-important-last baseline approach</span>
+    <span class="kw">pub</span> <span class="ident">baseline_mil_result</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Run</span><span class="op">&gt;</span>,
+}
+
+<span class="doccomment">/// Result of a single run</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>, <span class="ident">Clone</span>, <span class="ident">Serialize</span>)]</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Run</span> {
+    <span class="doccomment">/// Cost of the run</span>
+    <span class="ident">cost</span>: <span class="ident">f64</span>,
+    <span class="doccomment">/// Running time, measured in seconds</span>
+    <span class="ident">time</span>: <span class="ident">f64</span>,
+    <span class="doccomment">/// Number of states explored</span>
+    <span class="ident">num_states</span>: <span class="ident">usize</span>,
+}
+</pre></div>
+</section><section id="search" class="content hidden"></section><section class="footer"></section><div id="rustdoc-vars" data-root-path="../../" data-current-crate="snowcap_bencher"></div>
+    <script src="../../main.js"></script><script src="../../source-script.js"></script><script src="../../source-files.js"></script><script defer src="../../search-index.js"></script></body></html>

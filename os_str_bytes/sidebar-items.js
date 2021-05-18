@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["raw","Functions that cannot be implemented outside of this crate."]],"struct":[["EncodingError","The error that occurs when a byte sequence is not representable in the platform encoding."]],"trait":[["OsStrBytes","A platform agnostic variant of `OsStrExt`."],["OsStringBytes","A platform agnostic variant of `OsStringExt`."]]});

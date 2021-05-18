@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `strategies` mod in crate `snowcap`."><meta name="keywords" content="rust, rustlang, rust-lang, strategies"><title>snowcap::strategies - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings"></script><script src="../../storage.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"                  integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "$", right: "$", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+</script>
+
+<style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../snowcap/index.html'><div class='logo-container rust-logo'><img src='../../rust-logo.png' alt='logo'></div></a><p class="location">Module strategies</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#traits">Traits</a></li></ul></div><p class="location"><a href="../index.html">snowcap</a></p><div id="sidebar-vars" data-name="strategies" data-ty="mod" data-relpath="../"></div><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" class="help-button">?</button>
+                <a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class="fqn"><span class="in-band">Module <a href="../index.html">snowcap</a>::<wbr><a class="mod" href="">strategies</a></span><span class="out-of-band"><span id="render-detail"><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span><a class="srclink" href="../../src/snowcap/strategies/mod.rs.html#18-219" title="goto source code">[src]</a></span></h1><div class="docblock"><h1 id="strategies" class="section-header"><a href="#strategies">Strategies</a></h1>
+<p>This module contains the source codes for different strategies for finding a valid update
+sequence. It contains the trait definition for <code>Strategy</code>, which <code>Snowcap</code> will use.</p>
+<h2 id="modifier-dependency-properties" class="section-header"><a href="#modifier-dependency-properties">Modifier Dependency Properties</a></h2>
+<ul>
+<li>
+<p><strong>Statically Determinable</strong>: If a dependency can be identified using domain-specific
+knowledge, without simulating it, it is called <em>statically determinable</em>.</p>
+<p><em>Example</em>: A router has a single BGP session before reconfiguration, and a singe, but
+different session after reconfiguration, the new session must be added before the old one can
+be removed.</p>
+</li>
+<li>
+<p><strong>Immediate Effect</strong>: If the order of the dependency is incorrect, and the problem is visible
+immediately after the wrong modifier is applied, then it has an <em>immediate effect</em>. This
+property must hold for all possible orderings, in order for a dependency to have an
+<em>immediate effect</em>.</p>
+<p><em>Example</em>: <a href="../../snowcap/example_networks/struct.ChainGadget.html"><code>ChainGadget</code></a> has an <em>immediate effect</em>,
+since every wrong modifier will immediately cause a forwarding loop. The
+<a href="../../snowcap/example_networks/struct.DifficultGadgetMinimal.html"><code>DifficultGadget</code></a> has <em>no immediate</em>
+<em>effect</em>, since the problem only arises when a specific modifier is applied.</p>
+</li>
+<li>
+<p><strong>Sparse Solution</strong>: A modifier dependency has <em>sparse solutions</em> if the number of correct
+solutions is very small compared to the total possible orderings of this dependency. If
+there exists one or two valid sequences, we call this dependency to have a <em>sparse solution</em>.</p>
+<p><em>Example</em>: <a href="../../snowcap/example_networks/struct.ChainGadget.html"><code>ChainGadget</code></a> has a <em>sparse solution</em>,
+since only a single ordering is valid. The
+<a href="../../snowcap/example_networks/struct.BipartiteGadget.html"><code>BipartiteGadget</code></a> with <code>N &gt;&gt; 2</code> has <em>no sparse</em>
+<em>solution</em>, since the only requirement is that one single modifier is applied first.</p>
+</li>
+<li>
+<p><strong>State Specific</strong>: If a modifier dependency is only problematic at a specific state of the
+network, it is called state specific. It might only be a problem when it is applied at the
+beginning of the sequence, or at the end, or only in between.</p>
+<p><em>Example</em>:
+<a href="../../snowcap/example_networks/struct.StateSpecificChainGadget.html"><code>StateSpecificChainGadget</code></a> has a
+<em>sparse</em>, <em>state specific</em> dependency with <em>immediate effect</em>. The immediate effect is only
+the case in this special state, but neither in the initial and the final state of the network.
+In the initial and final configuration, the dependency is not actually there.</p>
+<p><em>Note</em>: This can also be modelled by extending the modifier dependency to include other
+modifiers.</p>
+</li>
+</ul>
+<h2 id="strategies-1" class="section-header"><a href="#strategies-1">Strategies</a></h2>
+<ul>
+<li>
+<p><strong>One Strategy To Rule Them All</strong> (<a href="../../snowcap/strategies/struct.StrategyTRTA.html" title="StrategyTRTA"><code>StrategyTRTA</code></a>): This strategy combines the best of both
+the simple <a href="../../snowcap/strategies/struct.TreeStrategy.html" title="TreeStrategy"><code>TreeStrategy</code></a>, and the more complex, <a href="../../snowcap/strategies/struct.DepGroupsStrategy.html" title="DepGroupsStrategy"><code>DepGroupsStrategy</code></a>. It does this by
+exploring the search space similar to the tree strategy. But as soon as we would need to
+backtrace, we try to find a single dependency. If it succeeds, we repeat the tree traversal
+using the new dependency. Using this approach, we only search for the dependencies, which are
+not solvable by using the naive Tree strategy.</p>
+<p><em>Type Arguments</em>: None, this algorithm is as good as it gets (using this approach)</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/strategies/struct.PermutationStrategy.html" title="PermutationStrategy"><code>PermutationStrategy</code></a></strong>: This is the simplest strategy, naively checking every single
+permutation one after the other. It does benefit from dependencies, which have an <em>immediate</em>
+<em>effect</em> (only if the permutator makes use of the feedback mechanism, when the function
+<code>fail_pos</code> is reimplemented), and has problems if the problem has a <em>sparse</em> <em>solution</em>. This
+strategy is an <a href="../../snowcap/strategies/trait.ExhaustiveStrategy.html" title="ExhaustiveStrategy"><code>ExhaustiveStrategy</code></a>.</p>
+<p><em>Type Arguments:</em> The first type argument <code>P</code> is the chosen
+<a href="../../snowcap/permutators/index.html"><code>Permutator</code></a>, with an ordering of your choice.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/strategies/struct.TreeStrategy.html" title="TreeStrategy"><code>TreeStrategy</code></a></strong>: This is a strategy trying out all possible
+permutations, in a similar fashion to the
+<a href="../../snowcap/permutators/struct.LexicographicPermutator.html"><code>LexicographicPermutator</code></a>. However, as soon as
+a problem was found for a given ordering up to a specific modifier, it does not need to check
+again all permutations starting with the same modifiers in the same ordering. Thus, this
+strategy benefits from from dependencies with an <em>immediate effect</em>, and is able to solve the
+<a href="../../snowcap/example_networks/struct.ChainGadget.html"><code>ChainGadget</code></a> in <code>O(n^3)</code> time. This strategy is an
+<a href="../../snowcap/strategies/trait.ExhaustiveStrategy.html" title="ExhaustiveStrategy"><code>ExhaustiveStrategy</code></a>.</p>
+<p><em>Type Arguments</em>: The first type argument <code>O</code> represents the chosen
+<a href="../../snowcap/modifier_ordering/index.html"><code>ModifierOrdering</code></a>, which is used to order the modifiers before
+the tree algorithm starts.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/strategies/struct.PushBackTreeStrategy.html" title="PushBackTreeStrategy"><code>PushBackTreeStrategy</code></a></strong>: This is a strategy very similar to the <a href="../../snowcap/strategies/struct.TreeStrategy.html" title="TreeStrategy"><code>TreeStrategy</code></a>.
+However, once a modifier is causing an error, it is pushed back in the queue of remaining
+modifiers, and another is tried. As the <code>TreeStrategy</code>, the <code>PushBackTreeStrategy</code> benefits
+from dependencies with an <em>immediate</em> <em>effect</em>, and is an <a href="../../snowcap/strategies/trait.ExhaustiveStrategy.html" title="ExhaustiveStrategy"><code>ExhaustiveStrategy</code></a>.
+Additionally, the <code>PushBackTreeStrategy</code> implements <a href="../../snowcap/strategies/trait.GroupStrategy.html" title="GroupStrategy"><code>GroupStrategy</code></a>.</p>
+<p><em>Type Arguments</em>: The first type argument <code>O</code> represents the chosen
+<a href="../../snowcap/modifier_ordering/index.html"><code>ModifierOrdering</code></a>, which is used to order the modifiers before
+the tree algorithm starts.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/strategies/struct.DepGroupsStrategy.html" title="DepGroupsStrategy"><code>DepGroupsStrategy</code></a></strong>: This is a sophisticated algoirthm. It builds a set of groups of
+dependencies, which are solvable by their own. Then, it tries to use these to either build
+larger dependency groups, or find a solution to the entire problem. This strategy benefits
+from dependencies with an <em>immediate effect</em>, and having a <em>sparse</em> <em>solution</em>. However,
+this strategy cannot capture <em>state specific</em> dependencies, and may build larger dependencies
+than are actually needed. By adding more groups, the strategy scales with <code>O(g^4)</code>, but
+increasing each group size (with <em>no immediate effect</em>) scales with <code>O(n!)</code>. This strategy is
+not exhaustive.</p>
+<p><em>Type Arguments</em>: The first type argument is a <a href="../../snowcap/strategies/trait.GroupStrategy.html" title="GroupStrategy"><code>GroupStrategy</code></a>, used to solve a smaller
+problem with the group information learned before. The last type argument <code>P</code> is a
+<a href="../../snowcap/permutators/index.html"><code>Permutator&lt;usize&gt;</code></a>, used to generate all permutations of the groups.
+As soon as a new group is formed, the permutator is reset.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/strategies/struct.NaiveRandomStrategy.html" title="NaiveRandomStrategy"><code>NaiveRandomStrategy</code></a></strong>: This strategy just exists for evaluation purpose. It simply
+shuffles the sequence and checks if this sequence is correct.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/strategies/struct.NaiveRandomIBRStrategy.html" title="NaiveRandomIBRStrategy"><code>NaiveRandomIBRStrategy</code></a></strong>: This strategy is similar to the random strategy, but it always
+schedules insert before modify before remove commands.</p>
+</li>
+</ul>
+</div><h2 id="structs" class="section-header"><a href="#structs">Structs</a></h2>
+<table><tr class="module-item"><td><a class="struct" href="struct.DepGroupsStrategy.html" title="snowcap::strategies::DepGroupsStrategy struct">DepGroupsStrategy</a></td><td class="docblock-short"><p>The Dependency Groups Builder Strategy</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.NaiveRandomIBRStrategy.html" title="snowcap::strategies::NaiveRandomIBRStrategy struct">NaiveRandomIBRStrategy</a></td><td class="docblock-short"><p>The Random Strategy with Insert before Remove</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.NaiveRandomStrategy.html" title="snowcap::strategies::NaiveRandomStrategy struct">NaiveRandomStrategy</a></td><td class="docblock-short"><p>The Naive Random Strategy</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.PermutationStrategy.html" title="snowcap::strategies::PermutationStrategy struct">PermutationStrategy</a></td><td class="docblock-short"><p>The Permutation Strategy</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.PushBackTreeStrategy.html" title="snowcap::strategies::PushBackTreeStrategy struct">PushBackTreeStrategy</a></td><td class="docblock-short"><p>The Push-Back Tree Strategy</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.StrategyTRTA.html" title="snowcap::strategies::StrategyTRTA struct">StrategyTRTA</a></td><td class="docblock-short"><p>One Strategy To Rule Them All</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.TreeStrategy.html" title="snowcap::strategies::TreeStrategy struct">TreeStrategy</a></td><td class="docblock-short"><p>The Tree Strategy</p>
+</td></tr></table><h2 id="traits" class="section-header"><a href="#traits">Traits</a></h2>
+<table><tr class="module-item"><td><a class="trait" href="trait.ExhaustiveStrategy.html" title="snowcap::strategies::ExhaustiveStrategy trait">ExhaustiveStrategy</a></td><td class="docblock-short"><p>Marking to tell that this strategy is exhaustive.</p>
+</td></tr><tr class="module-item"><td><a class="trait" href="trait.GroupStrategy.html" title="snowcap::strategies::GroupStrategy trait">GroupStrategy</a></td><td class="docblock-short"><p>Trait for a strategy being able to solve groups of modifiers</p>
+</td></tr><tr class="module-item"><td><a class="trait" href="trait.Strategy.html" title="snowcap::strategies::Strategy trait">Strategy</a></td><td class="docblock-short"><p>Infterface for all strategies</p>
+</td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><div id="rustdoc-vars" data-root-path="../../" data-current-crate="snowcap"></div>
+    <script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

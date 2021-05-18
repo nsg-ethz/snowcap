@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `etherparse` crate."><meta name="keywords" content="rust, rustlang, rust-lang, etherparse"><title>etherparse - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../ayu.css" disabled ><script id="default-settings"></script><script src="../storage.js"></script><noscript><link rel="stylesheet" href="../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../favicon-32x32.png"><style type="text/css">#crate-search{background-image:url("../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../etherparse/index.html'><div class='logo-container rust-logo'><img src='../rust-logo.png' alt='logo'></div></a><p class="location">Crate etherparse</p><div class="block version"><p>Version 0.9.0</p></div><div class="sidebar-elems"><a id="all-types" href="all.html"><p>See all etherparse's items</p></a><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#constants">Constants</a></li><li><a href="#traits">Traits</a></li></ul></div><p class="location"></p><div id="sidebar-vars" data-name="etherparse" data-ty="mod" data-relpath="../"></div></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" class="help-button">?</button>
+                <a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class="fqn"><span class="in-band">Crate <a class="mod" href="">etherparse</a></span><span class="out-of-band"><span id="render-detail"><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span><a class="srclink" href="../src/etherparse/lib.rs.html#1-525" title="goto source code">[src]</a></span></h1><div class="docblock"><p>A zero allocation library for parsing &amp; writing a bunch of packet based protocols (EthernetII, IPv4, IPv6, UDP, TCP ...).</p>
+<p>Currently supported are:</p>
+<ul>
+<li>Ethernet II</li>
+<li>IEEE 802.1Q VLAN Tagging Header</li>
+<li>IPv4</li>
+<li>IPv6 (missing extension headers, but supporting skipping them)</li>
+<li>UDP</li>
+<li>TCP</li>
+</ul>
+<h1 id="usage" class="section-header"><a href="#usage">Usage</a></h1>
+<p>First, add the following to your <code>Cargo.toml</code>:</p>
+<pre><code class="language-toml">[dependencies]
+etherparse = &quot;0.9.0&quot;
+</code></pre>
+<p>Next, add this to your crate root:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">etherparse</span>;</pre></div>
+<h1 id="what-is-etherparse" class="section-header"><a href="#what-is-etherparse">What is etherparse?</a></h1>
+<p>Etherparse is intended to provide the basic network parsing functions that allow for easy analysis, transformation or generation of recorded network data.</p>
+<p>Some key points are:</p>
+<ul>
+<li>It is completly written in Rust and thoroughly tested.</li>
+<li>Special attention has been paid to not use allocations or syscalls.</li>
+<li>The package is still in development and can &amp; will still change. </li>
+<li>The current focus of development is on the most popular protocols in the internet &amp; transport layer.</li>
+</ul>
+<h1 id="how-to-parse-network-packages" class="section-header"><a href="#how-to-parse-network-packages">How to parse network packages?</a></h1>
+<p>Etherparse gives you two options for parsing network packages automatically:</p>
+<h2 id="slicing-the-packet" class="section-header"><a href="#slicing-the-packet">Slicing the packet</a></h2>
+<p>Here the different components in a packet are seperated without parsing all their fields. For each header a slice is generated that allows access to the fields of a header.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">match</span> <span class="ident">SlicedPacket</span>::<span class="ident">from_ethernet</span>(<span class="kw-2">&amp;</span><span class="ident">packet</span>) {
+    <span class="prelude-val">Err</span>(<span class="ident">value</span>) <span class="op">=</span><span class="op">&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Err {:?}&quot;</span>, <span class="ident">value</span>),
+    <span class="prelude-val">Ok</span>(<span class="ident">value</span>) <span class="op">=</span><span class="op">&gt;</span> {
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;link: {:?}&quot;</span>, <span class="ident">value</span>.<span class="ident">link</span>);
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;vlan: {:?}&quot;</span>, <span class="ident">value</span>.<span class="ident">vlan</span>);
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;ip: {:?}&quot;</span>, <span class="ident">value</span>.<span class="ident">ip</span>);
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;transport: {:?}&quot;</span>, <span class="ident">value</span>.<span class="ident">transport</span>);
+    }
+}</pre></div>
+<p>This is the faster option if your code is not interested in all fields of all the headers. It is a good choice if you just want filter or find packages based on a subset of the headers and/or their fields.</p>
+<p>Depending from which point downward you want to slice a package check out the functions:</p>
+<ul>
+<li><a href="struct.SlicedPacket.html#method.from_ethernet"><code>SlicedPacket.from_ethernet</code></a> for parsing from an Ethernet II header downwards</li>
+<li><a href="struct.SlicedPacket.html#method.from_ip"><code>SlicedPacket.from_ip</code></a> for parsing from an IPv4 or IPv6 downwards</li>
+</ul>
+<h2 id="deserializing-all-headers-into-structs" class="section-header"><a href="#deserializing-all-headers-into-structs">Deserializing all headers into structs</a></h2>
+<p>This option deserializes all known headers and transferes their contents to header structs.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">match</span> <span class="ident">PacketHeaders</span>::<span class="ident">from_ethernet_slice</span>(<span class="kw-2">&amp;</span><span class="ident">packet</span>) {
+    <span class="prelude-val">Err</span>(<span class="ident">value</span>) <span class="op">=</span><span class="op">&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Err {:?}&quot;</span>, <span class="ident">value</span>),
+    <span class="prelude-val">Ok</span>(<span class="ident">value</span>) <span class="op">=</span><span class="op">&gt;</span> {
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;link: {:?}&quot;</span>, <span class="ident">value</span>.<span class="ident">link</span>);
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;vlan: {:?}&quot;</span>, <span class="ident">value</span>.<span class="ident">vlan</span>);
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;ip: {:?}&quot;</span>, <span class="ident">value</span>.<span class="ident">ip</span>);
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;transport: {:?}&quot;</span>, <span class="ident">value</span>.<span class="ident">transport</span>);
+    }
+}</pre></div>
+<p>This option is slower then slicing when only few fields are accessed. But it can be the faster option or useful if you are interested in most fields anyways or if you want to re-serialize the headers with modified values.</p>
+<p>Depending from which point downward you want to unpack a package check out the functions</p>
+<ul>
+<li><a href="struct.PacketHeaders.html#method.from_ethernet_slice"><code>PacketHeaders.from_ethernet_slice</code></a> for parsing from an Ethernet II header downwards</li>
+<li><a href="struct.PacketHeaders.html#method.from_ip_slice"><code>PacketHeaders.from_ip_slice</code></a> for parsing from an IPv4 or IPv6 downwards</li>
+</ul>
+<h2 id="manually-slicing--parsing-packets" class="section-header"><a href="#manually-slicing--parsing-packets">Manually slicing &amp; parsing packets</a></h2>
+<p>It is also possible to manually slice &amp; parse a packet. For each header type there is are metods that create a slice or struct from a memory slice. </p>
+<p>Have a look at the documentation for the <NAME>Slice.from_slice methods, if you want to create your own slices:</p>
+<ul>
+<li><a href="struct.Ethernet2HeaderSlice.html#method.from_slice"><code>Ethernet2HeaderSlice.from_slice</code></a></li>
+<li><a href="struct.SingleVlanHeaderSlice.html#method.from_slice"><code>SingleVlanHeaderSlice.from_slice</code></a></li>
+<li><a href="struct.DoubleVlanHeaderSlice.html#method.from_slice"><code>DoubleVlanHeaderSlice.from_slice</code></a></li>
+<li><a href="struct.Ipv4HeaderSlice.html#method.from_slice"><code>Ipv4HeaderSlice.from_slice</code></a></li>
+<li><a href="struct.Ipv6HeaderSlice.html#method.from_slice"><code>Ipv6HeaderSlice.from_slice</code></a></li>
+<li><a href="struct.Ipv6ExtensionHeaderSlice.html"><code>Ipv6ExtensionHeaderSlice.from_slice</code></a></li>
+<li><a href="struct.UdpHeaderSlice.html#method.from_slice"><code>UdpHeaderSlice.from_slice</code></a></li>
+<li><a href="struct.TcpHeaderSlice.html#method.from_slice"><code>TcpHeaderSlice.from_slice</code></a></li>
+</ul>
+<p>And for deserialization into the corresponding header structs have a look at:</p>
+<ul>
+<li><a href="struct.Ethernet2Header.html#method.read"><code>Ethernet2Header.read</code></a> &amp; <a href="struct.Ethernet2Header.html#method.read_from_slice"><code>Ethernet2Header.read_from_slice</code></a></li>
+<li><a href="struct.SingleVlanHeader.html#method.read"><code>SingleVlanHeader.read</code></a> &amp; <a href="struct.SingleVlanHeader.html#method.read_from_slice"><code>SingleVlanHeader.read_from_slice</code></a></li>
+<li><a href="struct.DoubleVlanHeader.html#method.read"><code>DoubleVlanHeader.read</code></a> &amp; <a href="struct.DoubleVlanHeader.html#method.read_from_slice"><code>DoubleVlanHeader.read_from_slice</code></a></li>
+<li><a href="enum.IpHeader.html#method.read"><code>IpHeader.read</code></a> &amp; <a href="enum.IpHeader.html#method.read_from_slice"><code>IpHeader.read_from_slice</code></a></li>
+<li><a href="struct.Ipv4Header.html#method.read"><code>Ipv4Header.read</code></a> &amp; <a href="struct.Ipv4Header.html#method.read_from_slice"><code>Ipv4Header.read_from_slice</code></a></li>
+<li><a href="struct.Ipv6Header.html#method.read"><code>Ipv6Header.read</code></a> &amp; <a href="struct.Ipv6Header.html#method.read_from_slice"><code>Ipv6Header.read_from_slice</code></a></li>
+<li><a href="struct.UdpHeader.html#method.read"><code>UdpHeader.read</code></a> &amp; <a href="struct.UdpHeader.html#method.read_from_slice"><code>UdpHeader.read_from_slice</code></a></li>
+<li><a href="struct.TcpHeader.html#method.read"><code>TcpHeader.read</code></a> &amp; <a href="struct.TcpHeader.html#method.read_from_slice"><code>TcpHeader.read_from_slice</code></a></li>
+</ul>
+<h1 id="how-to-generate-fake-packet-data" class="section-header"><a href="#how-to-generate-fake-packet-data">How to generate fake packet data?</a></h1><h2 id="packet-builder" class="section-header"><a href="#packet-builder">Packet Builder</a></h2>
+<p>The PacketBuilder struct provides a high level interface for quickly creating network packets. The PacketBuilder will automatically set fields which can be deduced from the content and compositions of the packet itself (e.g. checksums, lengths, ethertype, ip protocol number).</p>
+<p><a href="https://github.com/JulianSchmid/etherparse/blob/0.8.0/examples/write_udp.rs">Example:</a></p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="kw">use</span> <span class="ident">etherparse</span>::<span class="ident">PacketBuilder</span>;
+
+<span class="kw">let</span> <span class="ident">builder</span> <span class="op">=</span> <span class="ident">PacketBuilder</span>::
+    <span class="ident">ethernet2</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],     <span class="comment">//source mac</span>
+               [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>]) <span class="comment">//destination mac</span>
+    .<span class="ident">ipv4</span>([<span class="number">192</span>,<span class="number">168</span>,<span class="number">1</span>,<span class="number">1</span>], <span class="comment">//source ip</span>
+          [<span class="number">192</span>,<span class="number">168</span>,<span class="number">1</span>,<span class="number">2</span>], <span class="comment">//desitination ip</span>
+          <span class="number">20</span>)            <span class="comment">//time to life</span>
+    .<span class="ident">udp</span>(<span class="number">21</span>,    <span class="comment">//source port </span>
+         <span class="number">1234</span>); <span class="comment">//desitnation port</span>
+ 
+<span class="comment">//payload of the udp packet</span>
+<span class="kw">let</span> <span class="ident">payload</span> <span class="op">=</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+
+<span class="comment">//get some memory to store the result</span>
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">result</span> <span class="op">=</span> <span class="ident">Vec</span>::<span class="op">&lt;</span><span class="ident">u8</span><span class="op">&gt;</span>::<span class="ident">with_capacity</span>(<span class="ident">builder</span>.<span class="ident">size</span>(<span class="ident">payload</span>.<span class="ident">len</span>()));
+ 
+<span class="comment">//serialize</span>
+<span class="comment">//this will automatically set all length fields, checksums and identifiers (ethertype &amp; protocol)</span>
+<span class="comment">//before writing the packet out to &quot;result&quot;</span>
+<span class="ident">builder</span>.<span class="ident">write</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">result</span>, <span class="kw-2">&amp;</span><span class="ident">payload</span>).<span class="ident">unwrap</span>();</pre></div>
+<p>There is also an <a href="https://github.com/JulianSchmid/etherparse/blob/0.8.0/examples/write_tcp.rs">example for TCP packets</a> available.</p>
+<p>Check out the <a href="struct.PacketBuilder.html">PacketBuilder documentation</a> for more informations.</p>
+<h2 id="manually-serialising-each-header" class="section-header"><a href="#manually-serialising-each-header">Manually serialising each header</a></h2>
+<p>Alternativly it is possible to manually build a packet (<a href="https://github.com/JulianSchmid/etherparse/blob/0.8.0/examples/write_ipv4_udp.rs">example</a>). Generally each struct representing a header has a &quot;write&quot; method that allows it to be serialized. These write methods sometimes automatically calculate checksums and fill them in. In case this is unwanted behavior (e.g. if you want to generate a packet with an invalid checksum), it is also possible to call a &quot;write_raw&quot; method that will simply serialize the data without doing checksum calculations.</p>
+<p>Read the documentations of the different methods for a more details:</p>
+<ul>
+<li><a href="struct.Ethernet2Header.html#method.write"><code>Ethernet2Header.write</code></a></li>
+<li><a href="struct.SingleVlanHeader.html#method.write"><code>SingleVlanHeader.write</code></a></li>
+<li><a href="struct.DoubleVlanHeader.html#method.write"><code>DoubleVlanHeader.write</code></a></li>
+<li><a href="struct.Ipv4Header.html#method.write"><code>Ipv4Header.write</code></a></li>
+<li><a href="struct.Ipv4Header.html#method.write_raw"><code>Ipv4Header.write_raw</code></a></li>
+<li><a href="struct.Ipv6Header.html#method.write"><code>Ipv6Header.write</code></a></li>
+<li><a href="struct.UdpHeader.html#method.write"><code>UdpHeader.write</code></a></li>
+<li><a href="struct.TcpHeader.html#method.write"><code>TcpHeader.write</code></a></li>
+</ul>
+<h1 id="roadmap" class="section-header"><a href="#roadmap">Roadmap</a></h1>
+<ul>
+<li>Documentation
+<ul>
+<li>Packet Builder</li>
+</ul>
+</li>
+<li>MutPacketSlice -&gt; modifaction of fields in slices directly?</li>
+<li>Reserializing SlicedPacket &amp; MutSlicedPacket with corrected checksums &amp; id's</li>
+<li>Slicing &amp; reading packet from different layers then ethernet onward (e.g. ip, vlan...)</li>
+<li>IEEE 802.3</li>
+</ul>
+<h1 id="references" class="section-header"><a href="#references">References</a></h1>
+<ul>
+<li>Darpa Internet Program Protocol Specification <a href="https://tools.ietf.org/html/rfc791">RFC 791</a></li>
+<li>Internet Protocol, Version 6 (IPv6) Specification <a href="https://tools.ietf.org/html/rfc8200">RFC 8200</a></li>
+<li><a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">IANA Protocol Numbers</a></li>
+<li><a href="https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml">Internet Protocol Version 6 (IPv6) Parameters</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=IEEE_802.1Q&amp;oldid=820983900">Wikipedia IEEE_802.1Q</a></li>
+<li>User Datagram Protocol (UDP) <a href="https://tools.ietf.org/html/rfc768">RFC 768</a></li>
+<li>Transmission Control Protocol <a href="https://tools.ietf.org/html/rfc793">RFC 793</a></li>
+<li>TCP Extensions for High Performance <a href="https://tools.ietf.org/html/rfc7323">RFC 7323</a></li>
+<li>The Addition of Explicit Congestion Notification (ECN) to IP <a href="https://tools.ietf.org/html/rfc3168">RFC 3168</a></li>
+<li>Robust Explicit Congestion Notification (ECN) Signaling with Nonces <a href="https://tools.ietf.org/html/rfc3540">RFC 3540</a></li>
+</ul>
+</div><h2 id="modules" class="section-header"><a href="#modules">Modules</a></h2>
+<table><tr class="module-item"><td><a class="mod" href="packet_filter/index.html" title="etherparse::packet_filter mod">packet_filter</a></td><td class="docblock-short"></td></tr></table><h2 id="structs" class="section-header"><a href="#structs">Structs</a></h2>
+<table><tr class="module-item"><td><a class="struct" href="struct.DoubleVlanHeader.html" title="etherparse::DoubleVlanHeader struct">DoubleVlanHeader</a></td><td class="docblock-short"><p>IEEE 802.1Q double VLAN Tagging Header</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.DoubleVlanHeaderSlice.html" title="etherparse::DoubleVlanHeaderSlice struct">DoubleVlanHeaderSlice</a></td><td class="docblock-short"><p>A slice containing an double vlan header of a network package.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.Ethernet2Header.html" title="etherparse::Ethernet2Header struct">Ethernet2Header</a></td><td class="docblock-short"><p>Ethernet II header.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.Ethernet2HeaderSlice.html" title="etherparse::Ethernet2HeaderSlice struct">Ethernet2HeaderSlice</a></td><td class="docblock-short"><p>A slice containing an ethernet 2 header of a network package.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.Ipv4Header.html" title="etherparse::Ipv4Header struct">Ipv4Header</a></td><td class="docblock-short"><p>IPv4 header without options.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.Ipv4HeaderSlice.html" title="etherparse::Ipv4HeaderSlice struct">Ipv4HeaderSlice</a></td><td class="docblock-short"><p>A slice containing an ipv4 header of a network package.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.Ipv6ExtensionHeader.html" title="etherparse::Ipv6ExtensionHeader struct">Ipv6ExtensionHeader</a></td><td class="docblock-short"><p>Dummy struct for ipv6 header extensions.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.Ipv6ExtensionHeaderSlice.html" title="etherparse::Ipv6ExtensionHeaderSlice struct">Ipv6ExtensionHeaderSlice</a></td><td class="docblock-short"><p>A slice containing an ipv6 extension header of a network package.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.Ipv6Header.html" title="etherparse::Ipv6Header struct">Ipv6Header</a></td><td class="docblock-short"><p>IPv6 header according to rfc8200.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.Ipv6HeaderSlice.html" title="etherparse::Ipv6HeaderSlice struct">Ipv6HeaderSlice</a></td><td class="docblock-short"><p>A slice containing an ipv6 header of a network package.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.PacketBuilder.html" title="etherparse::PacketBuilder struct">PacketBuilder</a></td><td class="docblock-short"><p>Helper for building packets.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.PacketBuilderStep.html" title="etherparse::PacketBuilderStep struct">PacketBuilderStep</a></td><td class="docblock-short"><p>An unfinished packet that is build with the packet builder</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.PacketHeaders.html" title="etherparse::PacketHeaders struct">PacketHeaders</a></td><td class="docblock-short"><p>Decoded packet headers (data link layer and higher).
+You can use PacketHeaders::from_ethernet_slice or PacketHeader::from_ip_slice
+to decode and get this struct as a result.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.SingleVlanHeader.html" title="etherparse::SingleVlanHeader struct">SingleVlanHeader</a></td><td class="docblock-short"><p>IEEE 802.1Q VLAN Tagging Header</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.SingleVlanHeaderSlice.html" title="etherparse::SingleVlanHeaderSlice struct">SingleVlanHeaderSlice</a></td><td class="docblock-short"><p>A slice containing a single vlan header of a network package.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.SlicedPacket.html" title="etherparse::SlicedPacket struct">SlicedPacket</a></td><td class="docblock-short"><p>A sliced into its component headers. Everything that could not be parsed is stored in a slice in the field &quot;payload&quot;.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.TcpHeader.html" title="etherparse::TcpHeader struct">TcpHeader</a></td><td class="docblock-short"><p>TCP header according to rfc 793.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.TcpHeaderSlice.html" title="etherparse::TcpHeaderSlice struct">TcpHeaderSlice</a></td><td class="docblock-short"><p>A slice containing an tcp header of a network package.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.TcpOptionsIterator.html" title="etherparse::TcpOptionsIterator struct">TcpOptionsIterator</a></td><td class="docblock-short"><p>Allows iterating over the options after a TCP header.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.UdpHeader.html" title="etherparse::UdpHeader struct">UdpHeader</a></td><td class="docblock-short"><p>Udp header according to rfc768.</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.UdpHeaderSlice.html" title="etherparse::UdpHeaderSlice struct">UdpHeaderSlice</a></td><td class="docblock-short"><p>A slice containing an udp header of a network package. Struct allows the selective read of fields in the header.</p>
+</td></tr></table><h2 id="enums" class="section-header"><a href="#enums">Enums</a></h2>
+<table><tr class="module-item"><td><a class="enum" href="enum.ErrorField.html" title="etherparse::ErrorField enum">ErrorField</a></td><td class="docblock-short"><p>Fields that can produce errors when serialized.</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.EtherType.html" title="etherparse::EtherType enum">EtherType</a></td><td class="docblock-short"><p>Ether type enum present in ethernet II header.</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.InternetSlice.html" title="etherparse::InternetSlice enum">InternetSlice</a></td><td class="docblock-short"></td></tr><tr class="module-item"><td><a class="enum" href="enum.IpHeader.html" title="etherparse::IpHeader enum">IpHeader</a></td><td class="docblock-short"><p>Internet protocol headers version 4 &amp; 6</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.IpTrafficClass.html" title="etherparse::IpTrafficClass enum">IpTrafficClass</a></td><td class="docblock-short"><p>Identifiers for the traffic_class field in ipv6 headers and protocol field in ipv4 headers.</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.LinkSlice.html" title="etherparse::LinkSlice enum">LinkSlice</a></td><td class="docblock-short"><p>A slice containing the link layer header (currently only Ethernet II is supported).</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.ReadError.html" title="etherparse::ReadError enum">ReadError</a></td><td class="docblock-short"><p>Errors that can occur when reading.</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.TcpOptionElement.html" title="etherparse::TcpOptionElement enum">TcpOptionElement</a></td><td class="docblock-short"><p>Different kinds of options that can be present in the options part of a tcp header.</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.TcpOptionReadError.html" title="etherparse::TcpOptionReadError enum">TcpOptionReadError</a></td><td class="docblock-short"><p>Errors that can occour while reading the options of a TCP header.</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.TcpOptionWriteError.html" title="etherparse::TcpOptionWriteError enum">TcpOptionWriteError</a></td><td class="docblock-short"><p>Errors that can occour when setting the options of a tcp header.</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.TransportHeader.html" title="etherparse::TransportHeader enum">TransportHeader</a></td><td class="docblock-short"><p>The possible headers on the transport layer</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.TransportSlice.html" title="etherparse::TransportSlice enum">TransportSlice</a></td><td class="docblock-short"></td></tr><tr class="module-item"><td><a class="enum" href="enum.ValueError.html" title="etherparse::ValueError enum">ValueError</a></td><td class="docblock-short"><p>Errors in the given data</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.VlanHeader.html" title="etherparse::VlanHeader enum">VlanHeader</a></td><td class="docblock-short"><p>IEEE 802.1Q VLAN Tagging Header (can be single or double tagged).</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.VlanSlice.html" title="etherparse::VlanSlice enum">VlanSlice</a></td><td class="docblock-short"><p>A slice containing a single or double vlan header.</p>
+</td></tr><tr class="module-item"><td><a class="enum" href="enum.WriteError.html" title="etherparse::WriteError enum">WriteError</a></td><td class="docblock-short"><p>Errors that can occur when writing.</p>
+</td></tr></table><h2 id="constants" class="section-header"><a href="#constants">Constants</a></h2>
+<table><tr class="module-item"><td><a class="constant" href="constant.IPV6_MAX_NUM_HEADER_EXTENSIONS.html" title="etherparse::IPV6_MAX_NUM_HEADER_EXTENSIONS constant">IPV6_MAX_NUM_HEADER_EXTENSIONS</a></td><td class="docblock-short"><p>Maximum number of header extensions allowed (according to the ipv6 rfc8200, &amp; iana protocol numbers).</p>
+</td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_MAXIMUM_DATA_OFFSET.html" title="etherparse::TCP_MAXIMUM_DATA_OFFSET constant">TCP_MAXIMUM_DATA_OFFSET</a></td><td class="docblock-short"><p>The maximum allowed value for the data offset (it is a 4 bit value).</p>
+</td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_MINIMUM_DATA_OFFSET.html" title="etherparse::TCP_MINIMUM_DATA_OFFSET constant">TCP_MINIMUM_DATA_OFFSET</a></td><td class="docblock-short"><p>The minimum data offset size (size of the tcp header itself).</p>
+</td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_MINIMUM_HEADER_SIZE.html" title="etherparse::TCP_MINIMUM_HEADER_SIZE constant">TCP_MINIMUM_HEADER_SIZE</a></td><td class="docblock-short"><p>The minimum size of the tcp header in bytes</p>
+</td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_OPTION_ID_END.html" title="etherparse::TCP_OPTION_ID_END constant">TCP_OPTION_ID_END</a></td><td class="docblock-short"></td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_OPTION_ID_MAXIMUM_SEGMENT_SIZE.html" title="etherparse::TCP_OPTION_ID_MAXIMUM_SEGMENT_SIZE constant">TCP_OPTION_ID_MAXIMUM_SEGMENT_SIZE</a></td><td class="docblock-short"></td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_OPTION_ID_NOP.html" title="etherparse::TCP_OPTION_ID_NOP constant">TCP_OPTION_ID_NOP</a></td><td class="docblock-short"></td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_OPTION_ID_SELECTIVE_ACK.html" title="etherparse::TCP_OPTION_ID_SELECTIVE_ACK constant">TCP_OPTION_ID_SELECTIVE_ACK</a></td><td class="docblock-short"></td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_OPTION_ID_SELECTIVE_ACK_PERMITTED.html" title="etherparse::TCP_OPTION_ID_SELECTIVE_ACK_PERMITTED constant">TCP_OPTION_ID_SELECTIVE_ACK_PERMITTED</a></td><td class="docblock-short"></td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_OPTION_ID_TIMESTAMP.html" title="etherparse::TCP_OPTION_ID_TIMESTAMP constant">TCP_OPTION_ID_TIMESTAMP</a></td><td class="docblock-short"></td></tr><tr class="module-item"><td><a class="constant" href="constant.TCP_OPTION_ID_WINDOW_SCALE.html" title="etherparse::TCP_OPTION_ID_WINDOW_SCALE constant">TCP_OPTION_ID_WINDOW_SCALE</a></td><td class="docblock-short"></td></tr></table><h2 id="traits" class="section-header"><a href="#traits">Traits</a></h2>
+<table><tr class="module-item"><td><a class="trait" href="trait.SerializedSize.html" title="etherparse::SerializedSize trait">SerializedSize</a></td><td class="docblock-short"><p>Contains the size when serialized.</p>
+</td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><div id="rustdoc-vars" data-root-path="../" data-current-crate="etherparse"></div>
+    <script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

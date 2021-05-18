@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `permutators` mod in crate `snowcap`."><meta name="keywords" content="rust, rustlang, rust-lang, permutators"><title>snowcap::permutators - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings"></script><script src="../../storage.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"                  integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "$", right: "$", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+</script>
+
+<style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../snowcap/index.html'><div class='logo-container rust-logo'><img src='../../rust-logo.png' alt='logo'></div></a><p class="location">Module permutators</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#traits">Traits</a></li></ul></div><p class="location"><a href="../index.html">snowcap</a></p><div id="sidebar-vars" data-name="permutators" data-ty="mod" data-relpath="../"></div><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" class="help-button">?</button>
+                <a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class="fqn"><span class="in-band">Module <a href="../index.html">snowcap</a>::<wbr><a class="mod" href="">permutators</a></span><span class="out-of-band"><span id="render-detail"><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span><a class="srclink" href="../../src/snowcap/permutators/mod.rs.html#18-106" title="goto source code">[src]</a></span></h1><div class="docblock"><h1 id="permutators" class="section-header"><a href="#permutators">Permutators</a></h1>
+<p>This module contains all different iterators which iterate over all permutations. The iterators
+differ from each other by the order in which the permutations are yielded.</p>
+<h2 id="different-permutators" class="section-header"><a href="#different-permutators">Different Permutators</a></h2>
+<ul>
+<li>
+<p><strong><a href="../../snowcap/permutators/struct.HeapsPermutator.html" title="HeapsPermutator"><code>HeapsPermutator</code></a></strong>: Simple permutator, implemented using the Heaps algorithm. This
+permutator does not re-implement <code>fail_pos</code>, and thus does not make use of the feedback
+functionality for permutators. The HeapsPermutaor is implemented for any type, which
+implements the <code>Copy</code> trait.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/permutators/struct.LexicographicPermutator.html" title="LexicographicPermutator"><code>LexicographicPermutator</code></a></strong>: Simple permutator, which returns all permutations in a
+lexicographic ordering. It is implemented for any type, which implements the <code>Copy</code> trait, and
+requires a <a href="../../snowcap/modifier_ordering/trait.ModifierOrdering.html"><code>CompleteOrdering</code></a> for the chosen
+type. This permutator does not re-implement <code>fail_pos</code>, and thus does not make use of the
+feedback functionality for permutators.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/permutators/struct.SJTPermutator.html" title="SJTPermutator"><code>SJTPermutator</code></a></strong>: Permutator implementing the Steinhaus-Johnson-Trotter algorithm. It is
+implemented for any type, which implements the <code>Copy</code> trait. This permutator does not
+re-implement <code>fail_pos</code>, and thus, does not make use of the feedback functionality for
+permutators.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/permutators/struct.MultipleSwapPermutator.html" title="MultipleSwapPermutator"><code>MultipleSwapPermutator</code></a></strong>: This is a meta-permutator that consists of a different
+permutator. Every time <code>next</code> is called, it in terms calls <code>next</code> multiple times on the
+specified permutator, resulting in multiple swaps at once. The numebr of times to call <code>next</code>
+is chosen such that every permutation is created exactly once (by choosing the smallest prime
+number larger than the number of elements in the permutation series). It does not re-implement
+<code>fail_pos</code>, and thus, does not make use of the feedback functionality for permutators.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/permutators/struct.TreePermutator.html" title="TreePermutator"><code>TreePermutator</code></a></strong>: This permutator is based on the
+<a href="../../snowcap/strategies/struct.TreeStrategy.html"><code>TreeStrategy</code></a>. The permutator generates a sequence
+identical to the <code>LexicographicPermutator</code>, but it does not require a <code>CompleteOrdering</code>.
+Instead, it builds a datastructure which does not require the comparison of single elements.
+Additionally, this permutator re-implements <code>fail_pos</code>, and makes use of the fallback
+funcitonality to reduce the number of permutations for dependencies with an <em>immediate</em>
+<em>effect</em>.</p>
+</li>
+<li>
+<p><strong><a href="../../snowcap/permutators/struct.RandomTreePermutator.html" title="RandomTreePermutator"><code>RandomTreePermutator</code></a></strong>: This permutator is very similar to the <a href="../../snowcap/permutators/struct.TreePermutator.html" title="TreePermutator"><code>TreePermutator</code></a>.
+However, the main difference is that the ordering of the remaining elements is always
+shuffled, every time a new branch in the tree is entered. As for the <code>TreePermutator</code>, this
+permutator re-implements <code>fail_pos</code> to reduce the number of permutations for dependencies with
+an <em>immediate effect</em>.</p>
+</li>
+</ul>
+</div><h2 id="structs" class="section-header"><a href="#structs">Structs</a></h2>
+<table><tr class="module-item"><td><a class="struct" href="struct.HeapsPermutator.html" title="snowcap::permutators::HeapsPermutator struct">HeapsPermutator</a></td><td class="docblock-short"><p>Heaps Permutator</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.LexicographicPermutator.html" title="snowcap::permutators::LexicographicPermutator struct">LexicographicPermutator</a></td><td class="docblock-short"><p>Ordered Permutator</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.MultipleSwapPermutator.html" title="snowcap::permutators::MultipleSwapPermutator struct">MultipleSwapPermutator</a></td><td class="docblock-short"><p>Multiple-Swap Permutator</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.RandomTreePermutator.html" title="snowcap::permutators::RandomTreePermutator struct">RandomTreePermutator</a></td><td class="docblock-short"><p>Random Tree Permutator</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.SJTPermutator.html" title="snowcap::permutators::SJTPermutator struct">SJTPermutator</a></td><td class="docblock-short"><p>Steinhaus-Johnson-Trotter Permutator</p>
+</td></tr><tr class="module-item"><td><a class="struct" href="struct.TreePermutator.html" title="snowcap::permutators::TreePermutator struct">TreePermutator</a></td><td class="docblock-short"><p>Tree Permutator</p>
+</td></tr></table><h2 id="traits" class="section-header"><a href="#traits">Traits</a></h2>
+<table><tr class="module-item"><td><a class="trait" href="trait.Permutator.html" title="snowcap::permutators::Permutator trait">Permutator</a></td><td class="docblock-short"><p>Permutator trait</p>
+</td></tr><tr class="module-item"><td><a class="trait" href="trait.PermutatorItem.html" title="snowcap::permutators::PermutatorItem trait">PermutatorItem</a></td><td class="docblock-short"><p>This is an empty trait to tell the compiler which types can be returned by the Permutator
+Iterator.</p>
+</td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><div id="rustdoc-vars" data-root-path="../../" data-current-crate="snowcap"></div>
+    <script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

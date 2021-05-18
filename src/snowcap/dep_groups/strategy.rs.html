@@ -1,0 +1,1379 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `snowcap/src/dep_groups/strategy.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>strategy.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings"></script><script src="../../../storage.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"                  integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "$", right: "$", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+</script>
+
+<style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../../snowcap/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu"><img src="../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><script src="../../../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" class="help-button">?</button>
+                <a id="settings-menu" href="../../../settings.html"><img src="../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
+<span id="2">  2</span>
+<span id="3">  3</span>
+<span id="4">  4</span>
+<span id="5">  5</span>
+<span id="6">  6</span>
+<span id="7">  7</span>
+<span id="8">  8</span>
+<span id="9">  9</span>
+<span id="10"> 10</span>
+<span id="11"> 11</span>
+<span id="12"> 12</span>
+<span id="13"> 13</span>
+<span id="14"> 14</span>
+<span id="15"> 15</span>
+<span id="16"> 16</span>
+<span id="17"> 17</span>
+<span id="18"> 18</span>
+<span id="19"> 19</span>
+<span id="20"> 20</span>
+<span id="21"> 21</span>
+<span id="22"> 22</span>
+<span id="23"> 23</span>
+<span id="24"> 24</span>
+<span id="25"> 25</span>
+<span id="26"> 26</span>
+<span id="27"> 27</span>
+<span id="28"> 28</span>
+<span id="29"> 29</span>
+<span id="30"> 30</span>
+<span id="31"> 31</span>
+<span id="32"> 32</span>
+<span id="33"> 33</span>
+<span id="34"> 34</span>
+<span id="35"> 35</span>
+<span id="36"> 36</span>
+<span id="37"> 37</span>
+<span id="38"> 38</span>
+<span id="39"> 39</span>
+<span id="40"> 40</span>
+<span id="41"> 41</span>
+<span id="42"> 42</span>
+<span id="43"> 43</span>
+<span id="44"> 44</span>
+<span id="45"> 45</span>
+<span id="46"> 46</span>
+<span id="47"> 47</span>
+<span id="48"> 48</span>
+<span id="49"> 49</span>
+<span id="50"> 50</span>
+<span id="51"> 51</span>
+<span id="52"> 52</span>
+<span id="53"> 53</span>
+<span id="54"> 54</span>
+<span id="55"> 55</span>
+<span id="56"> 56</span>
+<span id="57"> 57</span>
+<span id="58"> 58</span>
+<span id="59"> 59</span>
+<span id="60"> 60</span>
+<span id="61"> 61</span>
+<span id="62"> 62</span>
+<span id="63"> 63</span>
+<span id="64"> 64</span>
+<span id="65"> 65</span>
+<span id="66"> 66</span>
+<span id="67"> 67</span>
+<span id="68"> 68</span>
+<span id="69"> 69</span>
+<span id="70"> 70</span>
+<span id="71"> 71</span>
+<span id="72"> 72</span>
+<span id="73"> 73</span>
+<span id="74"> 74</span>
+<span id="75"> 75</span>
+<span id="76"> 76</span>
+<span id="77"> 77</span>
+<span id="78"> 78</span>
+<span id="79"> 79</span>
+<span id="80"> 80</span>
+<span id="81"> 81</span>
+<span id="82"> 82</span>
+<span id="83"> 83</span>
+<span id="84"> 84</span>
+<span id="85"> 85</span>
+<span id="86"> 86</span>
+<span id="87"> 87</span>
+<span id="88"> 88</span>
+<span id="89"> 89</span>
+<span id="90"> 90</span>
+<span id="91"> 91</span>
+<span id="92"> 92</span>
+<span id="93"> 93</span>
+<span id="94"> 94</span>
+<span id="95"> 95</span>
+<span id="96"> 96</span>
+<span id="97"> 97</span>
+<span id="98"> 98</span>
+<span id="99"> 99</span>
+<span id="100">100</span>
+<span id="101">101</span>
+<span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
+<span id="107">107</span>
+<span id="108">108</span>
+<span id="109">109</span>
+<span id="110">110</span>
+<span id="111">111</span>
+<span id="112">112</span>
+<span id="113">113</span>
+<span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
+<span id="139">139</span>
+<span id="140">140</span>
+<span id="141">141</span>
+<span id="142">142</span>
+<span id="143">143</span>
+<span id="144">144</span>
+<span id="145">145</span>
+<span id="146">146</span>
+<span id="147">147</span>
+<span id="148">148</span>
+<span id="149">149</span>
+<span id="150">150</span>
+<span id="151">151</span>
+<span id="152">152</span>
+<span id="153">153</span>
+<span id="154">154</span>
+<span id="155">155</span>
+<span id="156">156</span>
+<span id="157">157</span>
+<span id="158">158</span>
+<span id="159">159</span>
+<span id="160">160</span>
+<span id="161">161</span>
+<span id="162">162</span>
+<span id="163">163</span>
+<span id="164">164</span>
+<span id="165">165</span>
+<span id="166">166</span>
+<span id="167">167</span>
+<span id="168">168</span>
+<span id="169">169</span>
+<span id="170">170</span>
+<span id="171">171</span>
+<span id="172">172</span>
+<span id="173">173</span>
+<span id="174">174</span>
+<span id="175">175</span>
+<span id="176">176</span>
+<span id="177">177</span>
+<span id="178">178</span>
+<span id="179">179</span>
+<span id="180">180</span>
+<span id="181">181</span>
+<span id="182">182</span>
+<span id="183">183</span>
+<span id="184">184</span>
+<span id="185">185</span>
+<span id="186">186</span>
+<span id="187">187</span>
+<span id="188">188</span>
+<span id="189">189</span>
+<span id="190">190</span>
+<span id="191">191</span>
+<span id="192">192</span>
+<span id="193">193</span>
+<span id="194">194</span>
+<span id="195">195</span>
+<span id="196">196</span>
+<span id="197">197</span>
+<span id="198">198</span>
+<span id="199">199</span>
+<span id="200">200</span>
+<span id="201">201</span>
+<span id="202">202</span>
+<span id="203">203</span>
+<span id="204">204</span>
+<span id="205">205</span>
+<span id="206">206</span>
+<span id="207">207</span>
+<span id="208">208</span>
+<span id="209">209</span>
+<span id="210">210</span>
+<span id="211">211</span>
+<span id="212">212</span>
+<span id="213">213</span>
+<span id="214">214</span>
+<span id="215">215</span>
+<span id="216">216</span>
+<span id="217">217</span>
+<span id="218">218</span>
+<span id="219">219</span>
+<span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
+<span id="223">223</span>
+<span id="224">224</span>
+<span id="225">225</span>
+<span id="226">226</span>
+<span id="227">227</span>
+<span id="228">228</span>
+<span id="229">229</span>
+<span id="230">230</span>
+<span id="231">231</span>
+<span id="232">232</span>
+<span id="233">233</span>
+<span id="234">234</span>
+<span id="235">235</span>
+<span id="236">236</span>
+<span id="237">237</span>
+<span id="238">238</span>
+<span id="239">239</span>
+<span id="240">240</span>
+<span id="241">241</span>
+<span id="242">242</span>
+<span id="243">243</span>
+<span id="244">244</span>
+<span id="245">245</span>
+<span id="246">246</span>
+<span id="247">247</span>
+<span id="248">248</span>
+<span id="249">249</span>
+<span id="250">250</span>
+<span id="251">251</span>
+<span id="252">252</span>
+<span id="253">253</span>
+<span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
+<span id="259">259</span>
+<span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
+<span id="264">264</span>
+<span id="265">265</span>
+<span id="266">266</span>
+<span id="267">267</span>
+<span id="268">268</span>
+<span id="269">269</span>
+<span id="270">270</span>
+<span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
+<span id="296">296</span>
+<span id="297">297</span>
+<span id="298">298</span>
+<span id="299">299</span>
+<span id="300">300</span>
+<span id="301">301</span>
+<span id="302">302</span>
+<span id="303">303</span>
+<span id="304">304</span>
+<span id="305">305</span>
+<span id="306">306</span>
+<span id="307">307</span>
+<span id="308">308</span>
+<span id="309">309</span>
+<span id="310">310</span>
+<span id="311">311</span>
+<span id="312">312</span>
+<span id="313">313</span>
+<span id="314">314</span>
+<span id="315">315</span>
+<span id="316">316</span>
+<span id="317">317</span>
+<span id="318">318</span>
+<span id="319">319</span>
+<span id="320">320</span>
+<span id="321">321</span>
+<span id="322">322</span>
+<span id="323">323</span>
+<span id="324">324</span>
+<span id="325">325</span>
+<span id="326">326</span>
+<span id="327">327</span>
+<span id="328">328</span>
+<span id="329">329</span>
+<span id="330">330</span>
+<span id="331">331</span>
+<span id="332">332</span>
+<span id="333">333</span>
+<span id="334">334</span>
+<span id="335">335</span>
+<span id="336">336</span>
+<span id="337">337</span>
+<span id="338">338</span>
+<span id="339">339</span>
+<span id="340">340</span>
+<span id="341">341</span>
+<span id="342">342</span>
+<span id="343">343</span>
+<span id="344">344</span>
+<span id="345">345</span>
+<span id="346">346</span>
+<span id="347">347</span>
+<span id="348">348</span>
+<span id="349">349</span>
+<span id="350">350</span>
+<span id="351">351</span>
+<span id="352">352</span>
+<span id="353">353</span>
+<span id="354">354</span>
+<span id="355">355</span>
+<span id="356">356</span>
+<span id="357">357</span>
+<span id="358">358</span>
+<span id="359">359</span>
+<span id="360">360</span>
+<span id="361">361</span>
+<span id="362">362</span>
+<span id="363">363</span>
+<span id="364">364</span>
+<span id="365">365</span>
+<span id="366">366</span>
+<span id="367">367</span>
+<span id="368">368</span>
+<span id="369">369</span>
+<span id="370">370</span>
+<span id="371">371</span>
+<span id="372">372</span>
+<span id="373">373</span>
+<span id="374">374</span>
+<span id="375">375</span>
+<span id="376">376</span>
+<span id="377">377</span>
+<span id="378">378</span>
+<span id="379">379</span>
+<span id="380">380</span>
+<span id="381">381</span>
+<span id="382">382</span>
+<span id="383">383</span>
+<span id="384">384</span>
+<span id="385">385</span>
+<span id="386">386</span>
+<span id="387">387</span>
+<span id="388">388</span>
+<span id="389">389</span>
+<span id="390">390</span>
+<span id="391">391</span>
+<span id="392">392</span>
+<span id="393">393</span>
+<span id="394">394</span>
+<span id="395">395</span>
+<span id="396">396</span>
+<span id="397">397</span>
+<span id="398">398</span>
+<span id="399">399</span>
+<span id="400">400</span>
+<span id="401">401</span>
+<span id="402">402</span>
+<span id="403">403</span>
+<span id="404">404</span>
+<span id="405">405</span>
+<span id="406">406</span>
+<span id="407">407</span>
+<span id="408">408</span>
+<span id="409">409</span>
+<span id="410">410</span>
+<span id="411">411</span>
+<span id="412">412</span>
+<span id="413">413</span>
+<span id="414">414</span>
+<span id="415">415</span>
+<span id="416">416</span>
+<span id="417">417</span>
+<span id="418">418</span>
+<span id="419">419</span>
+<span id="420">420</span>
+<span id="421">421</span>
+<span id="422">422</span>
+<span id="423">423</span>
+<span id="424">424</span>
+<span id="425">425</span>
+<span id="426">426</span>
+<span id="427">427</span>
+<span id="428">428</span>
+<span id="429">429</span>
+<span id="430">430</span>
+<span id="431">431</span>
+<span id="432">432</span>
+<span id="433">433</span>
+<span id="434">434</span>
+<span id="435">435</span>
+<span id="436">436</span>
+<span id="437">437</span>
+<span id="438">438</span>
+<span id="439">439</span>
+<span id="440">440</span>
+<span id="441">441</span>
+<span id="442">442</span>
+<span id="443">443</span>
+<span id="444">444</span>
+<span id="445">445</span>
+<span id="446">446</span>
+<span id="447">447</span>
+<span id="448">448</span>
+<span id="449">449</span>
+<span id="450">450</span>
+<span id="451">451</span>
+<span id="452">452</span>
+<span id="453">453</span>
+<span id="454">454</span>
+<span id="455">455</span>
+<span id="456">456</span>
+<span id="457">457</span>
+<span id="458">458</span>
+<span id="459">459</span>
+<span id="460">460</span>
+<span id="461">461</span>
+<span id="462">462</span>
+<span id="463">463</span>
+<span id="464">464</span>
+<span id="465">465</span>
+<span id="466">466</span>
+<span id="467">467</span>
+<span id="468">468</span>
+<span id="469">469</span>
+<span id="470">470</span>
+<span id="471">471</span>
+<span id="472">472</span>
+<span id="473">473</span>
+<span id="474">474</span>
+<span id="475">475</span>
+<span id="476">476</span>
+<span id="477">477</span>
+<span id="478">478</span>
+<span id="479">479</span>
+<span id="480">480</span>
+<span id="481">481</span>
+<span id="482">482</span>
+<span id="483">483</span>
+<span id="484">484</span>
+<span id="485">485</span>
+<span id="486">486</span>
+<span id="487">487</span>
+<span id="488">488</span>
+<span id="489">489</span>
+<span id="490">490</span>
+<span id="491">491</span>
+<span id="492">492</span>
+<span id="493">493</span>
+<span id="494">494</span>
+<span id="495">495</span>
+<span id="496">496</span>
+<span id="497">497</span>
+<span id="498">498</span>
+<span id="499">499</span>
+<span id="500">500</span>
+<span id="501">501</span>
+<span id="502">502</span>
+<span id="503">503</span>
+<span id="504">504</span>
+<span id="505">505</span>
+<span id="506">506</span>
+<span id="507">507</span>
+<span id="508">508</span>
+<span id="509">509</span>
+<span id="510">510</span>
+<span id="511">511</span>
+<span id="512">512</span>
+<span id="513">513</span>
+<span id="514">514</span>
+<span id="515">515</span>
+<span id="516">516</span>
+<span id="517">517</span>
+<span id="518">518</span>
+<span id="519">519</span>
+<span id="520">520</span>
+<span id="521">521</span>
+<span id="522">522</span>
+<span id="523">523</span>
+<span id="524">524</span>
+<span id="525">525</span>
+<span id="526">526</span>
+<span id="527">527</span>
+<span id="528">528</span>
+<span id="529">529</span>
+<span id="530">530</span>
+<span id="531">531</span>
+<span id="532">532</span>
+<span id="533">533</span>
+<span id="534">534</span>
+<span id="535">535</span>
+<span id="536">536</span>
+<span id="537">537</span>
+<span id="538">538</span>
+<span id="539">539</span>
+<span id="540">540</span>
+<span id="541">541</span>
+<span id="542">542</span>
+<span id="543">543</span>
+<span id="544">544</span>
+<span id="545">545</span>
+<span id="546">546</span>
+<span id="547">547</span>
+<span id="548">548</span>
+<span id="549">549</span>
+<span id="550">550</span>
+<span id="551">551</span>
+<span id="552">552</span>
+<span id="553">553</span>
+<span id="554">554</span>
+<span id="555">555</span>
+<span id="556">556</span>
+<span id="557">557</span>
+<span id="558">558</span>
+<span id="559">559</span>
+<span id="560">560</span>
+<span id="561">561</span>
+<span id="562">562</span>
+<span id="563">563</span>
+<span id="564">564</span>
+<span id="565">565</span>
+<span id="566">566</span>
+<span id="567">567</span>
+<span id="568">568</span>
+<span id="569">569</span>
+<span id="570">570</span>
+<span id="571">571</span>
+<span id="572">572</span>
+<span id="573">573</span>
+<span id="574">574</span>
+<span id="575">575</span>
+<span id="576">576</span>
+<span id="577">577</span>
+<span id="578">578</span>
+<span id="579">579</span>
+<span id="580">580</span>
+<span id="581">581</span>
+<span id="582">582</span>
+<span id="583">583</span>
+<span id="584">584</span>
+<span id="585">585</span>
+<span id="586">586</span>
+<span id="587">587</span>
+<span id="588">588</span>
+<span id="589">589</span>
+<span id="590">590</span>
+<span id="591">591</span>
+<span id="592">592</span>
+<span id="593">593</span>
+<span id="594">594</span>
+<span id="595">595</span>
+<span id="596">596</span>
+<span id="597">597</span>
+<span id="598">598</span>
+<span id="599">599</span>
+<span id="600">600</span>
+<span id="601">601</span>
+<span id="602">602</span>
+<span id="603">603</span>
+<span id="604">604</span>
+<span id="605">605</span>
+<span id="606">606</span>
+<span id="607">607</span>
+<span id="608">608</span>
+<span id="609">609</span>
+<span id="610">610</span>
+<span id="611">611</span>
+<span id="612">612</span>
+<span id="613">613</span>
+<span id="614">614</span>
+<span id="615">615</span>
+<span id="616">616</span>
+<span id="617">617</span>
+<span id="618">618</span>
+<span id="619">619</span>
+<span id="620">620</span>
+<span id="621">621</span>
+<span id="622">622</span>
+<span id="623">623</span>
+<span id="624">624</span>
+<span id="625">625</span>
+<span id="626">626</span>
+<span id="627">627</span>
+<span id="628">628</span>
+<span id="629">629</span>
+<span id="630">630</span>
+<span id="631">631</span>
+<span id="632">632</span>
+<span id="633">633</span>
+<span id="634">634</span>
+<span id="635">635</span>
+<span id="636">636</span>
+<span id="637">637</span>
+<span id="638">638</span>
+<span id="639">639</span>
+<span id="640">640</span>
+<span id="641">641</span>
+<span id="642">642</span>
+<span id="643">643</span>
+<span id="644">644</span>
+<span id="645">645</span>
+<span id="646">646</span>
+<span id="647">647</span>
+<span id="648">648</span>
+<span id="649">649</span>
+<span id="650">650</span>
+<span id="651">651</span>
+<span id="652">652</span>
+<span id="653">653</span>
+<span id="654">654</span>
+<span id="655">655</span>
+<span id="656">656</span>
+<span id="657">657</span>
+<span id="658">658</span>
+<span id="659">659</span>
+<span id="660">660</span>
+<span id="661">661</span>
+<span id="662">662</span>
+<span id="663">663</span>
+<span id="664">664</span>
+<span id="665">665</span>
+<span id="666">666</span>
+<span id="667">667</span>
+<span id="668">668</span>
+<span id="669">669</span>
+<span id="670">670</span>
+<span id="671">671</span>
+<span id="672">672</span>
+<span id="673">673</span>
+<span id="674">674</span>
+<span id="675">675</span>
+<span id="676">676</span>
+<span id="677">677</span>
+<span id="678">678</span>
+</pre><div class="example-wrap"><pre class="rust ">
+<span class="comment">// Snowcap: Synthesizing Network-Wide Configuration Updates</span>
+<span class="comment">// Copyright (C) 2021  Tibor Schneider</span>
+<span class="comment">//</span>
+<span class="comment">// This program is free software; you can redistribute it and/or modify</span>
+<span class="comment">// it under the terms of the GNU General Public License as published by</span>
+<span class="comment">// the Free Software Foundation; either version 2 of the License, or</span>
+<span class="comment">// (at your option) any later version.</span>
+<span class="comment">//</span>
+<span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="comment">// GNU General Public License for more details.</span>
+<span class="comment">//</span>
+<span class="comment">// You should have received a copy of the GNU General Public License along</span>
+<span class="comment">// with this program; if not, write to the Free Software Foundation, Inc.,</span>
+<span class="comment">// 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span>
+
+<span class="doccomment">//! # DepGroupsStrategy</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! This module contains the implementation of the `DepGroupStrategy`.</span>
+
+<span class="kw">use</span> <span class="kw">super</span>::<span class="ident">utils</span>;
+<span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">hard_policies</span>::{<span class="ident">HardPolicy</span>, <span class="ident">PolicyError</span>};
+<span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">modifier_ordering</span>::<span class="ident">SimpleOrdering</span>;
+<span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">netsim</span>::<span class="ident">config</span>::<span class="ident">ConfigModifier</span>;
+<span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">netsim</span>::<span class="ident">Network</span>;
+<span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">permutators</span>::{<span class="ident">Permutator</span>, <span class="ident">PermutatorItem</span>, <span class="ident">RandomTreePermutator</span>};
+<span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">strategies</span>::{<span class="ident">GroupStrategy</span>, <span class="ident">PushBackTreeStrategy</span>, <span class="ident">Strategy</span>};
+<span class="kw">use</span> <span class="kw">crate</span>::{<span class="ident">Error</span>, <span class="ident">Stopper</span>};
+
+<span class="kw">use</span> <span class="ident">log</span>::<span class="kw-2">*</span>;
+<span class="kw">use</span> <span class="ident">rand</span>::<span class="ident">prelude</span>::<span class="kw-2">*</span>;
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">marker</span>::<span class="ident">PhantomData</span>;
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">time</span>::{<span class="ident">Duration</span>, <span class="ident">SystemTime</span>};
+
+<span class="doccomment">/// # The Dependency Groups Builder Strategy</span>
+<span class="doccomment">/// This strategy tries to build groups which are dependent of oneanother, and tries to solve these</span>
+<span class="doccomment">/// independently of all other modifications. The strategy should work really good when there are</span>
+<span class="doccomment">/// many different, smaller groups of dependent modifications, which are not dependent between each</span>
+<span class="doccomment">/// other.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ## Properties</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// This strategy benefits from problems with an *immediate effect*, since it can massively reduce</span>
+<span class="doccomment">/// the search space if a problem is detected with a relatively small problem. In addition, this</span>
+<span class="doccomment">/// strategy is able do deal with many smaller dependencies (with *no immediate effect* and a</span>
+<span class="doccomment">/// *sparse solution*), because it scales with `O(g^4)` for the number of dependency groups. But</span>
+<span class="doccomment">/// if the groups become larger, it scales with `O(n!)`.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ## Type Arguments</span>
+<span class="doccomment">/// - `S` is a [`GroupStrategy`](crate::strategies::GroupStrategy), used to solve a smaller problem</span>
+<span class="doccomment">///   with the group information learned before.</span>
+<span class="doccomment">/// - `P` is a [`Permutator&lt;usize&gt;`](crate::permutators::Permutator), used to generate all</span>
+<span class="doccomment">///   permutations of the groups. As soon as a new group is formed, the permutator is reset.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ## Overview of the strategy</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// * Initially, we start by having all modifiers in their own group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// * Repeat the following procedure, until we have found a valid solution:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///   1. *Choose ordering*: Choose a random ordering of the groups, but respect the inter-group</span>
+<span class="doccomment">///      ordering that was determined in step 3.2.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///   2. *Check ordering*: If the ordering works, then the algorithm ends successfully. If the</span>
+<span class="doccomment">///      ordering has a problem at group `gi`, then continue at step 3.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///   3. *Identify minimal problem*: This is a procedure with multiple phases</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///      1. *Reduction phase*: Go through all groups `gj` in `g1, g2, ..., g(i-1)`, and temporatily</span>
+<span class="doccomment">///         remove it from the sequence. Then, retry to execute the sequence. If the resulting</span>
+<span class="doccomment">///         errors are in any way different, we keep the group `gj` in the ordering. Else, we assume</span>
+<span class="doccomment">///         that this group `gj` is independent of the problem, and we remove it from the ordering.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///      2. *Solving phase*: Try to find a solution to the problem, using a different exhaustive</span>
+<span class="doccomment">///         strategy. Here, we try to retain all orerings of the sub-groups to speed up the process</span>
+<span class="doccomment">///         If we have found a valid sequence in which the problem can be found, then we declare the</span>
+<span class="doccomment">///         remaining modifiers as a group, and store it in the solvable sequence. Continue at step</span>
+<span class="doccomment">///         1. If not, then go to the expansion phase at step 3.3.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///      3. *Expansion phase*: If step 3.2 did not result in a solved group, then we expand the</span>
+<span class="doccomment">///         group uner consideration: Continuing form step 3.2, we apply single groups from after</span>
+<span class="doccomment">///         the last one which failed at step 2, and we monitor the changes of errors. If the errors</span>
+<span class="doccomment">///         have changed, then we add this group to the current group under consideration and go</span>
+<span class="doccomment">///         back to step 3.2 to solve the problem. If there exists no modifier group which will</span>
+<span class="doccomment">///         change the errors, we clare this try as failed, we learn nothing from it and continue at</span>
+<span class="doccomment">///         step 1, with a guard that after 10 successive iterations, not finding anything, we abort</span>
+<span class="doccomment">///         the strategy.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ## Some Details</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - In step 3.1, we don&#39;t only need to remove a modifier to see wether it changes the output, but</span>
+<span class="doccomment">///   we also need to move it to the front. Ideally, we would move this modifier to every position,</span>
+<span class="doccomment">///   but we could argue that this is not necessary due to the order in which we look at the groups.</span>
+<span class="doccomment">///   TODO write down a proof or give intuition why this is sufficient.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - In step 3.1, when the we have found a smaller problem inside the current problem due to the</span>
+<span class="doccomment">///   error being thrown at a different group, we cannot just use recurrsion to further reduce</span>
+<span class="doccomment">///   the problem. This is because, when we use the ordering with the group at the position it was</span>
+<span class="doccomment">///   before, the smaller problem is solvable (because the problem occurred at a different</span>
+<span class="doccomment">///   position). But if we would just remove it and do the recurrsion, it would never solve the</span>
+<span class="doccomment">///   problem later in step 3.2 or 3.3, because there, we add remaining groups, which come after the</span>
+<span class="doccomment">///   problem group. Thus, we need to remove it for the recurrsion and then add it back after it is</span>
+<span class="doccomment">///   finished. However, we need to add it back *only* when the last element of the ordering before</span>
+<span class="doccomment">///   and after the recurrsion are still the same.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - In step 3.1, when removing several groups to get the minimal problem, we really want a minimal</span>
+<span class="doccomment">///   problem in terms of groups. If, after removing a modifier, the group changes where the error</span>
+<span class="doccomment">///   appears, we remove all groups after that problematic group. Then, we rerun step 3.1 from the</span>
+<span class="doccomment">///   beginning, because we are now actually searching for a different problem, and groups, which</span>
+<span class="doccomment">///   are identified before, might no longer be part of the problem.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - In step 3.3, it might happen that adding the new modifier at the beginning of the problem</span>
+<span class="doccomment">///   doesn&#39;t change the output, even though it actually is part of the problem. To reduce the</span>
+<span class="doccomment">///   probability of such a case happening, we also try to put the modifier at the end of the</span>
+<span class="doccomment">///   sequence, right before the problematic modifier. (*TODO*: We should find an example where</span>
+<span class="doccomment">///   putting the modifier at the start or at the end does not change the result, but adding it in</span>
+<span class="doccomment">///   the middle somewhere does.)</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - During step 3.3, we do not allow the problem to be shifted to the newly added group, if that</span>
+<span class="doccomment">///   one cannot be applied at the beginning! However, it might happend that the group solves the</span>
+<span class="doccomment">///   problem if applied at the end, right before the problematic group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - When we compare for the errors to change, we cannot simply require that we have solved some</span>
+<span class="doccomment">///   errors, and that the old errors must be a superset of the new errors. As an example, while</span>
+<span class="doccomment">///   reducing the problem, noticing that the new errors introduce new policy errors, we would make</span>
+<span class="doccomment">///   the problem actually bigger by declaring this modifier independent and removing it from the</span>
+<span class="doccomment">///   groups. Since we already check if the position of the error has changed, any introduction of</span>
+<span class="doccomment">///   new errors means that this modifier belongs to the group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - As we have shown in the proof of lemma 3 (below), it is necessary that we go back to the</span>
+<span class="doccomment">///   reduction phase, when we the group containing the problematic modifier has changed during</span>
+<span class="doccomment">///   expansion phase. **TODO** Implement this.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ## Future Considerations</span>
+<span class="doccomment">/// - In step 3.3, we might want to check if adding the modifier somewhere in between does change</span>
+<span class="doccomment">///   the outcome.</span>
+<span class="doccomment">/// - As long as we don&#39;t check every single position, this strategy is not exhaustive!</span>
+<span class="doccomment">/// - In step 3.3, when we notice that a modifier cannot be applied at the beginning, we should</span>
+<span class="doccomment">///   actually check if it changes something when adding it later. The reason is that he might solve</span>
+<span class="doccomment">///   the problem when applied later in the group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ## Finding Dependencies is hard</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *If you find too large dependencies, solving them might take too long*: Take, as an example, the</span>
+<span class="doccomment">/// [`DifficultGadgetComplete`](crate::example_networks::DifficultGadgetComplete). If we detect a</span>
+<span class="doccomment">/// dependency group like this, and try to solve it, it might take $O(n!)$, even though not all</span>
+<span class="doccomment">/// modifiers are actually dependent, and they can be rearranged however you like. Thus, it is</span>
+<span class="doccomment">/// important that the learned groups are as small as possible.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Information from one dependency group cannot be used to solve another dependency group!* Assume</span>
+<span class="doccomment">/// that we have a group, for which there exists only one single valid ordering. As an example, take</span>
+<span class="doccomment">/// $m_1$, $m_2$, $m_3$, where this ordering is valid. Further, assume that for the chosen ordering,</span>
+<span class="doccomment">/// inserting $m_4$ at any position results in an invalid ordering. The only valid ordering with</span>
+<span class="doccomment">/// $m_4$ is $m_3$, $m_4$, $m_2$, $m_1$. This means, that we need to solve the problem again with</span>
+<span class="doccomment">/// the larger solution, and we cannot use the information, that we have already obtained by solving</span>
+<span class="doccomment">/// the smaller problem. The [`BipartiteGadget`](crate::example_networks::BipartiteGadget) is a good</span>
+<span class="doccomment">/// example where this happens. A dependency group is learned, but it is not complete, and the</span>
+<span class="doccomment">/// solution is invalid when the other modifiers are added. This group is then expanded, and solved</span>
+<span class="doccomment">/// multiple times, always increasing the size.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Combining two dependency groups might not reult in another dependency group!* Assume that we</span>
+<span class="doccomment">/// have two dependencies: $m_1$ must go before $m_2$, and $m_3$ must go before $m_4$. Further,</span>
+<span class="doccomment">/// assume we notice that performing $m_1$ before $m_3$ breaks the dependency between $m_3$ and</span>
+<span class="doccomment">/// $m_4$, and that now $m_4$ can be inserted into any arbitrary position, if $m_1$ is before $m_3.</span>
+<span class="doccomment">/// This shows, that having learned two dependency groups, the combination of them might not be a</span>
+<span class="doccomment">/// strict dependency group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ### How this strategy deals with these problems</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// The strategy is very conservative, when adding new modifiers to a group. We always extend the</span>
+<span class="doccomment">/// group, in which the problematic modifier resides. Because if a modifier causes the problem, it</span>
+<span class="doccomment">/// must also be a part of the new dependency group. Any other modifier, that survives the</span>
+<span class="doccomment">/// reduction phase satisfies one of the following conditions:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 1. Removing it from the ordering solves the problem $\rightarrow$ It changes the outcome of the</span>
+<span class="doccomment">///    group.</span>
+<span class="doccomment">/// 2. Removing it from the ordering changes the problematic modifier. In this case, we reduce the</span>
+<span class="doccomment">///    problem by only considering this smaller problem. Then, we recursively restart the reduction</span>
+<span class="doccomment">///    phase, to continue removing all modifiers that no longer are necessary for the group.</span>
+<span class="doccomment">/// 3. Removing it from the ordering changes the problems that occur. The chance for this modifier</span>
+<span class="doccomment">///    being a part of the group is large. There might be cases, in which a modifier never causes</span>
+<span class="doccomment">///    the problem, but only changes how it manifests itself as problems in the network. However,</span>
+<span class="doccomment">///    it is very hard to see this withouth trying all possible orderings. Thus, adding it to the</span>
+<span class="doccomment">///    group is a reasonable thing to do.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Thus, we only learn groups, which are somehow dependent. However, assume that we have already</span>
+<span class="doccomment">/// learned the two incomplete dependency groups $A$ and $B$. Now, we notice that $A$ must happen</span>
+<span class="doccomment">/// before $B$. Combining $A$ and $B$ might result in a modifier no longer being a dependency in the</span>
+<span class="doccomment">/// sense that there exists no ordering, in which rearranging that modifier will change the outcome</span>
+<span class="doccomment">/// of the ordering (even if this was previously the case in its smaller dependency group $A$ or</span>
+<span class="doccomment">/// $B$). But still, one might say that it is remains dependent of $A \cup B$, because either $A$ or</span>
+<span class="doccomment">/// $B$ was dependent on it.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ### Worst Cases</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Consider the [`BipartiteGadget`](crate::example_networks::BipartiteGadget). There exists a case,</span>
+<span class="doccomment">/// where we have found an incomplete dependency group, that contains the following</span>
+<span class="doccomment">/// modifiers:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - All sessions from `tI` to `xI`</span>
+<span class="doccomment">/// - All sessions from `rI` to `bI`, except one at `I = 1` will be removed</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// In this case, every ordering where the session from `t0` to `x0` is established first, will be</span>
+<span class="doccomment">/// valid (which is what we actually want to find out), but also every ordering, where the session</span>
+<span class="doccomment">/// `t1` to `x1` is added first (which is wrong when considering all modifiers). Assume, that the</span>
+<span class="doccomment">/// ordering learned is one where the session `t1` to `x1` is added first, and the session from `t0`</span>
+<span class="doccomment">/// to `x0` is added later. Then, in a subsequent iteration, the algorithm notices that the removal</span>
+<span class="doccomment">/// of session `r1` to `b1` also is a part of the problem. Now, both orderings are invalid, where</span>
+<span class="doccomment">/// the new modifier is added in the beginning or at the end, and thus, we need to recompute the</span>
+<span class="doccomment">/// entire problem, and brute-force it.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// This problem can be made even worse, when considering that there is no valid solution, and we</span>
+<span class="doccomment">/// need to expand the problem multiple times, without finding any solution. In this case, finding</span>
+<span class="doccomment">/// a solution takes:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// $$\sum_{i=0}^n O(i!) = O(n!)$$</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// # Proof that no learned dependency group is too large</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Theorem 1*: The `DepGroupsStrategy` does only learn weak dependency groups.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// For the proof, we interchange single modifiers and entire modifier groups, for which we already</span>
+<span class="doccomment">/// know a valid ordering, and which we always keep together in this valid ordering. We first need</span>
+<span class="doccomment">/// to define some terms before we can proof the theorem:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Configuration**: A configuration $C$ is a tuple $(\mathcal{G}, \mathcal{C}, \mathcal{S})$,</span>
+<span class="doccomment">///   where $\mathcal{G}$ denotes the network topology, $\mathcal{C}$ denotes a network wide</span>
+<span class="doccomment">///   configuration and $\mathcal{S}$ denotes a network state.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Configuration Modification**: A configuration modification $m$ is a single modification of the</span>
+<span class="doccomment">///   network-wide configuration $\mathcal{C}$ Based on a configuration $C$, applying a modification</span>
+<span class="doccomment">///   $m$ is expressed as $C \cdot m = C&#39;$, which results in a different configuration $C&#39;$. Notice,</span>
+<span class="doccomment">///   that $C&#39; = (\mathcal{G}, \mathcal{C}&#39;, \mathcal{S}&#39;)$. Even though this operation seems to be</span>
+<span class="doccomment">///   cumulative in most cases, this is not always the case (see the</span>
+<span class="doccomment">///   [Unstable Gadget](crate::example_networks::DifficultGadgetMinimal)).</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Policies**: The Policies $\mathcal{P}$ is a set of hard-policies that need to be satisfied for</span>
+<span class="doccomment">///   some state $\mathcal{S}$ of configuration $C$. This fact is denoted by $C \vdash \mathcal{P}$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Valid Ordering**: The ordering $o$ of a set of modifiers $D = \{m_1, m_2, \ldots, m_n \}$ on</span>
+<span class="doccomment">///   configuration $C$ under policy $\mathcal{P}$ is valid, if and only if $\forall\ x \leq n: C</span>
+<span class="doccomment">///   \cdot m_{o(1)} \cdot m_{o(2)} \cdot \ldots \cdot m_{o(x)} \vdash \mathcal{P}$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Similar Ordering**: A modifier ordering $o&#39;$ of modifiers $M = \{m_1, \ldots, m_n\}$ is</span>
+<span class="doccomment">///   similar to $o$ with respect to a subgroup of modifiers $M&#39; \subseteq M$, $|M&#39;| &gt; 0$, if this</span>
+<span class="doccomment">///   subgroup $M&#39;$ is moved inside of $o$. During this transformation, the relative ordering of $x$</span>
+<span class="doccomment">///   and $y$ must be preserved for all pairs $x, y \in M&#39;$ and for all pairs $x, y \in M \setminus</span>
+<span class="doccomment">///   M&#39;$. The relative ordering of $x$ and $y$ must not be preserved if and only if $x \in M&#39;$ and</span>
+<span class="doccomment">///   $x \in M \setminus M&#39;$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Problematic Modifier** Given a set of modifiers $M$, an invalid ordering $o$, a configuration</span>
+<span class="doccomment">///   $C$ and a policy $\mathcal{P}$, let $x \leq n$ be the smallest number, for which $C \cdot</span>
+<span class="doccomment">///   m_{o(1)} \cdot \ldots \cdot m_{o(x)}$ does not satisfy $\mathcal{P}$. Then, $m_x$ is called</span>
+<span class="doccomment">///   the problematic modifier of $M$ with $o$ on $C$ under $\mathcal{P}$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Critical Group**: A modifier group $M&#39; \subset M$ is critical for the set of modifiers $M =</span>
+<span class="doccomment">///   (m_1, \ldots, m_n)$ on $C$ under $\mathcal{P}$, if at least one of the following conditions</span>
+<span class="doccomment">///   apply:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///   1. There exaists a valid ordering $o$, and a similar ordering $o&#39;$ with respect to $M&#39;$ which</span>
+<span class="doccomment">///      is not valid. In other words, there exists a valid ordering where moving the group $M&#39;$</span>
+<span class="doccomment">///      around will result in an invalid ordering somewhere.</span>
+<span class="doccomment">///   2. There exists an invalid ordering $o$, and a similar ordering $o&#39;$ with respect to $M&#39;$,</span>
+<span class="doccomment">///      where the resulting error of $o$ and $o&#39;$  is different, or the problematic modifier has</span>
+<span class="doccomment">///      changed.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Dependency Group**: A set of modifiers $D = \{ m_1, m_2, \ldots, m_n \}$ is called a</span>
+<span class="doccomment">///   dependency group on configuration $C$ under policy $\mathcal{P}$ if the following holds:</span>
+<span class="doccomment">///   1. There exists a *valid ordering* $o$ for $D$ on $C$ under $\mathcal{P}$.</span>
+<span class="doccomment">///   2. Every subgroup $M&#39; \subset D$, with $|M&#39;| &gt; 0$ is *critical* for $D$ on $C$ under</span>
+<span class="doccomment">///      $\mathcal{P}$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - **Weak Dependency Group**: A set of modifiers $D&#39; \subseteq D$ is a weak dependency group if it</span>
+<span class="doccomment">///   is a subset of a dependency group $D$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Observation 1*: Any ordering $\tilde{o}$ is valid, if it is the beginning of a valid ordering</span>
+<span class="doccomment">/// $o$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Observation 2*: If any ordering $o$ is invalid, any other ordering $\tilde{o}$ is also invalid</span>
+<span class="doccomment">/// if it starts with the same sequence of modifiers, up to and including the problematic modifier.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Observation 3*: Let $A \subset M$ and $B \subset M$ be two subsets of $M$, which are disjoint</span>
+<span class="doccomment">/// ($A \cap B = \emptyset$). Let $o$ be an ordering, and $o&#39;$ be a similar ordering of $o$ with</span>
+<span class="doccomment">/// respect to $A$. Then, we construct an ordering $o_B$, similar to $o$, by moving $B$ to the</span>
+<span class="doccomment">/// beginning or to the end, and we construct $o&#39;_B$, similar to $o&#39;$, by moving $B$ to the</span>
+<span class="doccomment">/// beginning or the end. Then, $o_B$ and $o&#39;_B$ are still similar with respect to $A$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Lemma 1*: Let $A$ be a critical group to the set of modifiers $M$, and let $B$ be a</span>
+<span class="doccomment">/// non-critical group to $M$. Then, $A$ is also critical to $M \setminus B$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Proof of Lemma 1*: There are two cases, why $A$ is critical to $M$. We need to proof the fact</span>
+<span class="doccomment">/// for the following three cases:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 1. There exists a valid ordering $o$ of $M$, and an invalid, and similar ordering $o&#39;$ to $o$</span>
+<span class="doccomment">///    with respect to $A$. In this case, rearranging $B$ in $o$ does not change the fact that $o$</span>
+<span class="doccomment">///    is valid, and rearranging $B$ in $o&#39;$ does not make the ordering valid. Also, in both $o$ and</span>
+<span class="doccomment">///    $o&#39;$, the ordering of $B$ is valid (which can be quickly shown by moving $B$ to the beginning</span>
+<span class="doccomment">///    of $o$, and using the Observation 1). Thus, we generate $o_B$ by moving $B$ to the end of</span>
+<span class="doccomment">///    $o$, and we generate $o&#39;_B$ by moving $B$ to the end of $o&#39;$. Notice, that no modifier in $B$</span>
+<span class="doccomment">///    can be the problematic modifier of $o&#39;_B$, since (a) the relative ordering of $B$ is valid,</span>
+<span class="doccomment">///    and (b) rearranging $B$ cannot change the problematic modifier. Thus, we have a valid</span>
+<span class="doccomment">///    ordering $o_B$, and an invalid, similar ordering $o&#39;_B$ with respect to $A$, which shows that</span>
+<span class="doccomment">///    $A$ is still critical to $M \setminus B$.</span>
+<span class="doccomment">/// 2. There exists an invalid ordering $o$ for $M$, and an invalid, and similar ordering $o&#39;$ to</span>
+<span class="doccomment">///    $o$ with respect to $A$, which has a different error. Similarly to the case 1, we can</span>
+<span class="doccomment">///    generate similar orderings to $o$ and $o&#39;$ by moving $B$ to the end. This does not change</span>
+<span class="doccomment">///    the error of $o$ and $o&#39;$. Thus, they still have a different error, and they still are</span>
+<span class="doccomment">///    similar (see Observation 3), which shows that $A$ is still critical to $M \setminus B$.</span>
+<span class="doccomment">/// 3. There exists an invalid ordering $o$ for $M$, and an invalid, and similar ordering $o&#39;$ to</span>
+<span class="doccomment">///    $o$ with respect to $A$, which has a different problematic modifier. Notice, that the new</span>
+<span class="doccomment">///    problematic modifier cannot be in $B$ (by applying the same proof as in case 1). Again, by</span>
+<span class="doccomment">///    applying the same method as in case 1, we can move the modifier $B$ to the end without</span>
+<span class="doccomment">///    changing the problematic modifier. Thus, the resulting ordering still has two different</span>
+<span class="doccomment">///    problematic modifiers, and hence, $A$ is still critical to $M \setminus B$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// &lt;p style=text-align:right;&quot;&gt;$\square$&lt;/p&gt;</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Lemma 2*: Let $A$ and $B$ be two dependency grups. If $A$ can be applied before $B$, but</span>
+<span class="doccomment">/// $B$ cannot be applied before $A$, then $A \cup B$ forms a dependency group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Proof of Lemma 2*: **TODO** This is not the case based on the current definition of a</span>
+<span class="doccomment">/// dependency group. But on a higher level, it should definately be the case. Thus, we might</span>
+<span class="doccomment">/// need to change the definition, such that this is included. For the following, we will just</span>
+<span class="doccomment">/// assume that this is true.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Lemma 3*: After the reduction phase of the algorithm, the resulting group is a weak dependency</span>
+<span class="doccomment">/// group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Proof of Lemma 3*: In the following, we will call $M_i$ the group under consideration at</span>
+<span class="doccomment">/// iteration $i$. We will show that at each iteration of the reduction phase, if a group $A$</span>
+<span class="doccomment">/// survives, it is critical to $M_i$. This suffices, because we know from Lemma 1, that if we</span>
+<span class="doccomment">/// remove a non-critical group form $M_i$, the group $A$ is still critical to $M_{i+1}$. And if</span>
+<span class="doccomment">/// we remove a critical group to $M_i$, then the resulting group $M_{i+1}$ is a weak dependency</span>
+<span class="doccomment">/// group. By recursively applying this fact, we can see that what remains after all $k$ iterations</span>
+<span class="doccomment">/// is a weak dependency group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Now, we will show that at each iteration of the reduction phase, if group $A$ survives, it is</span>
+<span class="doccomment">/// critical to $M_i$. There are three cases in which $A$ remains:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 1. Removing $A$ solves the problem. Let $o$ be the ordering before removing $A$, which we know</span>
+<span class="doccomment">///    is invalid. Let $o_A$ be the ordering where $A$ is moved to the back of $M_i$. Since removing</span>
+<span class="doccomment">///    $A$ solves the problem, we know that either $o_A$ is valid, or in $o_A$, the problematic</span>
+<span class="doccomment">///    modifier is in $A$. If $o_A$ is valid, then we know that $A$ is critical to $M_i$. If the</span>
+<span class="doccomment">///    problematic modifier is in $A$, then we also know that $A$ is critical to $M_i$, because</span>
+<span class="doccomment">///    previously, the problematic modifier was not in $A$ (else, we would not try to remove $A$</span>
+<span class="doccomment">///    from $M_i$ during reduction phase).</span>
+<span class="doccomment">/// 2. Removing $A$ changes the problem. Again, let $o$ be the ordering before removing $A$, which</span>
+<span class="doccomment">///    we know is invalid. Let $o_A$ be the ordering where $A$ is moved to the back of $M_i$. With</span>
+<span class="doccomment">///    Observation 2, we can see that $o_A$ produces the same problem at the same problematic</span>
+<span class="doccomment">///    modifier as $o$, with $A$ removed. Thus, $A$ is critical to $M_i$.</span>
+<span class="doccomment">/// 3. Removing $A$ changes the problematic modifier. By applying the same argument as in case 2,</span>
+<span class="doccomment">///    $A$ is critical to $M_i$. However, notice that we recursively restart the reduction phase,</span>
+<span class="doccomment">///    and recheck all previously determined groups if they are still critical.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// &lt;p style=text-align:right;&quot;&gt;$\square$&lt;/p&gt;</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Lemma 4*: During expansion phase, starting form a weak dependency group $M_1$, we only add</span>
+<span class="doccomment">/// critical groups.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Proof of Lemma 4*: Again, there are several different cases in which a modifier group $A$ is</span>
+<span class="doccomment">/// added to the current group $M_i$ at iteration $i$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 1. Inserting the group $A$ either at tbe beginning or at the end of the ordering, right before</span>
+<span class="doccomment">///    the current problematic group, does solve the problem. Let $o$ be the ordering before</span>
+<span class="doccomment">///    inserting $A$ into the ordering, and $o&#39;$ the ordering where $A$ is inserted. Notice, that we</span>
+<span class="doccomment">///    can extend $o$ by applying $A$ at the end. This does not change the problem, since the</span>
+<span class="doccomment">///    problematic modifier happens before $A$ is applied. Thus, $o&#39;$ and $o$ are similar with</span>
+<span class="doccomment">///    respect to $A$, and thus, $A$ is critical to $M_i$.</span>
+<span class="doccomment">/// 2. Inserting the group $A$ either at the beginning or at the end of the ordering, right before</span>
+<span class="doccomment">///    the current problematic group, does change the error. Following the same argumentation of</span>
+<span class="doccomment">///    case 1, we can see that $A$ is critical to $M_i$.</span>
+<span class="doccomment">/// 3. Inserting the group $A$ either at the beginning or at the end of the ordering, right before</span>
+<span class="doccomment">///    the current problematic group, does change the problematic modifier. Same as for case 1 and</span>
+<span class="doccomment">///    2, we know that $A$ is critical to $M_i$. However, since we now reduce $M_i$ to only include</span>
+<span class="doccomment">///    all groups up to the group containing the problematic modifier, we need to rerun the</span>
+<span class="doccomment">///    reduction phase, since the resulting group might no longer be a weak dependency group.</span>
+<span class="doccomment">///    **TODO** implement this in the code.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Based on Lemma 2, we know that the expanded group $A \cup M_i = M_{i+1}$ is also a weak</span>
+<span class="doccomment">/// dependency group. This proves this lemma.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// &lt;p style=text-align:right;&quot;&gt;$\square$&lt;/p&gt;</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// *Proof of Theorem 1*: By using Lemma 3 and 4, we can see that every group, which is added to the</span>
+<span class="doccomment">/// set of groups has both a valid ordering, and is a (weak) dependency group.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// &lt;p style=text-align:right;&quot;&gt;$\square$&lt;/p&gt;</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ## Reason why this strategy is not exhaustive</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Let $M = \lbrace m_1, m_2, m_3, m_4 \rbrace$. Assume that there are the following two</span>
+<span class="doccomment">/// dependencies:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 1. $(m_1, m_2)$: This is a dependency, which has an immediate effect if $m_2$ is applied before</span>
+<span class="doccomment">///    $m_1$.</span>
+<span class="doccomment">/// 2. $(m_1, m_3, m_2, m_4)$: This dependency has no immediate effect. If $m_4$ is applied, and all</span>
+<span class="doccomment">///    other modifiers are not applied before in the correct order, then the policy is no longer</span>
+<span class="doccomment">///    satisfied, with always the exact same reason.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// In the following, we argue that there are cases in which the `DepGroupsStrategy` cannot solve the</span>
+<span class="doccomment">/// problem. for this, we need to consider two points:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///  1. Before we have learned anything, we have the following cases:</span>
+<span class="doccomment">///     1. Both $m_1$ and $m_2$ are before $m_4$. In this case, no matter the ordering or $m_1$ and</span>
+<span class="doccomment">///        $m_2$, we will learn that $m_2$ is dependent on $m_1$ (during reduction phase if $m_1$</span>
+<span class="doccomment">///        is before $m_2$, or during expansion phase if $m_2$ is before $m_1$).</span>
+<span class="doccomment">///     2. $m_2$ is before $m_4$. In this case, the same happens as in case 1.</span>
+<span class="doccomment">///     3. $m_1$ is before $m_4$. In this case, the same happens as in case 4.</span>
+<span class="doccomment">///     4. $m_4$ is before both $m_1$ and $m_2$. In this case, it fails at $m_4$, and the reduciton</span>
+<span class="doccomment">///        phase will result in $m_4$ being the only modifier left. Then, the expansion phase will</span>
+<span class="doccomment">///        have no effect.</span>
+<span class="doccomment">/// 2. When we have learned dependency $(m_1, m_2)$, we cannot learn anything anymore. Every</span>
+<span class="doccomment">///    reduction phase will result in $m_4$ begin the only modifier left. Then, the expansion</span>
+<span class="doccomment">///    phase will not find anything, because the problem is always the same if not in the single</span>
+<span class="doccomment">///    correct ordering.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// The next question is, what is the probability of `DepGroupsStrategy` finding a valid solution.</span>
+<span class="doccomment">/// For this, we need to count the number of possible orderings, in which the algorithm will find</span>
+<span class="doccomment">/// dependency $(m_1, m_2)$, which means the algorithm will fail, and the number of orderings in</span>
+<span class="doccomment">/// which the algorithm finds the valid solution. Out of the possible 24 different orderings, only 1</span>
+<span class="doccomment">/// will result in the algorithm succeeding. However, there are 11 orderings in which the algorithm</span>
+<span class="doccomment">/// will learn the dependency $(m_1, m_2)$. All other 12 cases we can ignore, because these</span>
+<span class="doccomment">/// orderings will just cause the algorithm to choose a different ordering and try again. This leads</span>
+<span class="doccomment">/// to a 9% probability of success.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// The question is now, can we find an example where this case happens?</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ## Test Case Reduction / Delta Debugging</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// In test Case Reduction, we try to reduce a problem in a computer program to the minimal set,</span>
+<span class="doccomment">/// which reproduces the same error, in order for the programmer to see the problem more easily and</span>
+<span class="doccomment">/// fix the bug, without being overwhelmed by information.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// We actually do a similar thing in this strategy, by trying to find the minimal set of</span>
+<span class="doccomment">/// modifications that cause a certain problem, and then, we try to fix it. The following are the</span>
+<span class="doccomment">/// similarities, i.e., how we can reformulate our problem to make it more similar to Test Case</span>
+<span class="doccomment">/// Reduction:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - Our oracle is the network simulator. Obviously, this oracle is not perfect, because devices in</span>
+<span class="doccomment">///   the real world might behave differently. However, when we just consider the reduction phase,</span>
+<span class="doccomment">///   and how we reduce the problem to a dependency group, we may argue that the oracle is perfect,</span>
+<span class="doccomment">///   since it is both the oracle and the &quot;real world&quot; (only for this case).</span>
+<span class="doccomment">/// - As in Case Reduction, we wish to keep only those modifiers where we know are part of the</span>
+<span class="doccomment">///   dependency group. This is similar to Case Reduction, where an example is minimized, in order</span>
+<span class="doccomment">///   to be better understood.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// However, there are some key differences:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// - In our case, the ordering of the modifiers can be chosen, and does certainly matter to the</span>
+<span class="doccomment">///   output of the oracle. Thus, several ideas cannot be directly applied, because the problem is</span>
+<span class="doccomment">///   not agnostic to the ordering. On way in which this fact materializes itself is that we cannot</span>
+<span class="doccomment">///   do canonicalization (bringing the ordering into canonical form), because changing the order</span>
+<span class="doccomment">///   will most likely change the result.</span>
+<span class="doccomment">/// - Our oracle is better than for case reduction. The oracle tells us which modifier caused the</span>
+<span class="doccomment">///   problem and what part of the network caused the error. We may use this insight to improve</span>
+<span class="doccomment">///   our algorithms.</span>
+<span class="doccomment">/// - In Test Case Reduction, one usually needs an ordering of the reduced test cases. Usually,</span>
+<span class="doccomment">///   you would take something like [Shortlex order](https://en.wikipedia.org/wiki/Shortlex_order),</span>
+<span class="doccomment">///   which prefers short test cases over long ones. In our case, however, one might argue that we</span>
+<span class="doccomment">///   need to know about all these reduced orerings. If they are disjoint, then we need both of</span>
+<span class="doccomment">///   them, and if they are not disjoint, then we probably need to merge them.</span>
+<span class="doccomment">/// - [Delta Debugging](https://en.wikipedia.org/wiki/Delta_debugging) cannot be applied directly</span>
+<span class="doccomment">///   due to the fact that the ordering matters. Rearranging can completely change the outcome.</span>
+<span class="doccomment">///   Only checking the second part also makes no sense, if we never reach this point, and if the</span>
+<span class="doccomment">///   modifications are applied on a different state of the network.</span>
+<span class="doccomment">/// - The input is not a series of bytes, but a set of modifiers. These modifiers are (for now)</span>
+<span class="doccomment">///   constant, and cannot be changed by the procedure. Also, our problem is different from the one</span>
+<span class="doccomment">///   checking parsers (as demonstrated [here](https://www.fuzzingbook.org/html/Reducer.html)). For</span>
+<span class="doccomment">///   parsers, the reduction passes never change the ordering of the input, but only remove certain</span>
+<span class="doccomment">///   parts of the input.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Compared to some [notes](https://www.drmaciver.com/2019/01/notes-on-test-case-reduction/) on</span>
+<span class="doccomment">/// test case reduction, we may be able to improve the algorithm by utilizing the following points:</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 1. **Cache oracle results** using bloom filters. This may be necessary to do if simulating the</span>
+<span class="doccomment">///    network becomes expensive. We might store different orderings of modifiers, which we know</span>
+<span class="doccomment">///    cause problems, and where these problems occur, thus reducing the total amount of simulation</span>
+<span class="doccomment">///    time. Since we cannot reduce an ordering into canonical form, and store it in this way into</span>
+<span class="doccomment">///    the bloom filter, caching might not yield a big benefit in our case, especially since we use</span>
+<span class="doccomment">///    permutators to never try the same ordering multiple times.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 2. Organize the code into **Reduction Passes**: One reduction pass is a function, which changes</span>
+<span class="doccomment">///    a small thing of the current modifier ordering, like removing one, or reordering it.</span>
+<span class="doccomment">///    Currently, this is somewhat distributed around the code. One reduction pass may invoke the</span>
+<span class="doccomment">///    oracle a multiple times. A fix-point is reached if no change is possible in this reduction</span>
+<span class="doccomment">///    pass. We need to ask the following questions:</span>
+<span class="doccomment">///    - What reductions to try when the pass fails to reduce the current ordering?</span>
+<span class="doccomment">///    - What reductions to try when the pass succeeds in reducing the current ordering?</span>
+<span class="doccomment">///    - In what order wo we try to perform reductions?</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 3. One might argue, that we can **use** the idea **directly**: Starting from an invalid ordering</span>
+<span class="doccomment">///    from the beginning, we might want to reduce it just to the minimal set of modifiers. During</span>
+<span class="doccomment">///    the reduction phase, we might want to try to find the smallest set of already learned groups,</span>
+<span class="doccomment">///    that cause the problem. As soon as we have found a minimal problem, then we can try to solve</span>
+<span class="doccomment">///    it by reordering, or by extending it with additional modifiers.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///    We can assume, that the algorithm will first just find those modifiers, which cannot be</span>
+<span class="doccomment">///    applied by their own. But this is ok, since we wish to keep the dependencies as small as</span>
+<span class="doccomment">///    possible. However, it might get more difficult to extend the problem again in order to find</span>
+<span class="doccomment">///    a valid ordering.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">///    Thus, this change would only result in a more aggressive reduction phase, which might also</span>
+<span class="doccomment">///    find completely different problems (but if finds problems).</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// 4. Perform the reduction in a **Random Order**: As suggested by the</span>
+<span class="doccomment">///    [notes](https://www.drmaciver.com/2019/01/notes-on-test-case-reduction/), performing the</span>
+<span class="doccomment">///    reduction in a random order is often a good idea. Also, one should try to change more than</span>
+<span class="doccomment">///    just one thing during the reduction phase, to reduce the total running time from $O(n)$ down</span>
+<span class="doccomment">///    to $O(\log n)$.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Obviously, we can replace our reduction phase with proper methods from test case reduction.</span>
+<span class="doccomment">/// However, early experiments have shown that the reduction only takes negligible time, compared to</span>
+<span class="doccomment">/// finding a valid solution for a group.</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">DepGroupsStrategy</span><span class="op">&lt;</span>
+    <span class="ident">S</span> <span class="op">=</span> <span class="ident">PushBackTreeStrategy</span><span class="op">&lt;</span><span class="ident">SimpleOrdering</span><span class="op">&gt;</span>,
+    <span class="ident">P</span> <span class="op">=</span> <span class="ident">RandomTreePermutator</span><span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span>,
+<span class="op">&gt;</span> <span class="kw">where</span>
+    <span class="ident">S</span>: <span class="ident">Strategy</span> <span class="op">+</span> <span class="ident">GroupStrategy</span>,
+    <span class="ident">P</span>: <span class="ident">Permutator</span><span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span> <span class="op">+</span> <span class="ident">Iterator</span>,
+    <span class="ident">P</span>::<span class="ident">Item</span>: <span class="ident">PermutatorItem</span><span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span>,
+{
+    <span class="ident">net</span>: <span class="ident">Network</span>,
+    <span class="ident">groups</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">ConfigModifier</span><span class="op">&gt;</span><span class="op">&gt;</span>,
+    <span class="ident">permutator</span>: <span class="ident">P</span>,
+    <span class="ident">hard_policy</span>: <span class="ident">HardPolicy</span>,
+    <span class="ident">rng</span>: <span class="ident">ThreadRng</span>,
+    <span class="ident">stop_time</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">SystemTime</span><span class="op">&gt;</span>,
+    <span class="ident">max_group_solve_time</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Duration</span><span class="op">&gt;</span>,
+    <span class="ident">strategy_phantom</span>: <span class="ident">PhantomData</span><span class="op">&lt;</span><span class="ident">S</span><span class="op">&gt;</span>,
+    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;count-states&quot;</span>)]</span>
+    <span class="ident">num_states</span>: <span class="ident">usize</span>,
+}
+
+<span class="kw">impl</span><span class="op">&lt;</span><span class="ident">S</span>, <span class="ident">P</span><span class="op">&gt;</span> <span class="ident">Strategy</span> <span class="kw">for</span> <span class="ident">DepGroupsStrategy</span><span class="op">&lt;</span><span class="ident">S</span>, <span class="ident">P</span><span class="op">&gt;</span>
+<span class="kw">where</span>
+    <span class="ident">S</span>: <span class="ident">Strategy</span> <span class="op">+</span> <span class="ident">GroupStrategy</span>,
+    <span class="ident">P</span>: <span class="ident">Permutator</span><span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span> <span class="op">+</span> <span class="ident">Iterator</span>,
+    <span class="ident">P</span>::<span class="ident">Item</span>: <span class="ident">PermutatorItem</span><span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span>,
+{
+    <span class="kw">fn</span> <span class="ident">new</span>(
+        <span class="kw-2">mut</span> <span class="ident">net</span>: <span class="ident">Network</span>,
+        <span class="ident">modifiers</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">ConfigModifier</span><span class="op">&gt;</span>,
+        <span class="kw-2">mut</span> <span class="ident">hard_policy</span>: <span class="ident">HardPolicy</span>,
+        <span class="ident">time_budget</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Duration</span><span class="op">&gt;</span>,
+    ) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">Box</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span>, <span class="ident">Error</span><span class="op">&gt;</span> {
+        <span class="kw">let</span> <span class="ident">num_modifiers</span> <span class="op">=</span> <span class="ident">modifiers</span>.<span class="ident">len</span>();
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">groups</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">ConfigModifier</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Vec</span>::<span class="ident">with_capacity</span>(<span class="ident">modifiers</span>.<span class="ident">len</span>());
+        <span class="kw">for</span> <span class="ident">modifier</span> <span class="kw">in</span> <span class="ident">modifiers</span> {
+            <span class="ident">groups</span>.<span class="ident">push</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="ident">modifier</span>]);
+        }
+        <span class="kw">let</span> <span class="ident">permutator</span> <span class="op">=</span> <span class="ident">P</span>::<span class="ident">new</span>((<span class="number">0</span>..<span class="ident">groups</span>.<span class="ident">len</span>()).<span class="ident">collect</span>());
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">hard_policy</span>.<span class="ident">set_num_mods_if_none</span>(<span class="ident">num_modifiers</span>);
+        <span class="ident">hard_policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>)<span class="question-mark">?</span>;
+        <span class="kw">if</span> <span class="op">!</span><span class="ident">hard_policy</span>.<span class="ident">check</span>() {
+            <span class="kw">return</span> <span class="prelude-val">Err</span>(<span class="ident">Error</span>::<span class="ident">InvalidInitialState</span>);
+        }
+        <span class="kw">let</span> <span class="ident">max_group_solve_time</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Duration</span><span class="op">&gt;</span> <span class="op">=</span>
+            <span class="ident">time_budget</span>.<span class="ident">as_ref</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">dur</span><span class="op">|</span> <span class="kw-2">*</span><span class="ident">dur</span> <span class="op">/</span> <span class="kw">super</span>::<span class="ident">TIME_FRACTION</span>);
+        <span class="kw">let</span> <span class="ident">stop_time</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">SystemTime</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">time_budget</span>.<span class="ident">map</span>(<span class="op">|</span><span class="ident">dur</span><span class="op">|</span> <span class="ident">SystemTime</span>::<span class="ident">now</span>() <span class="op">+</span> <span class="ident">dur</span>);
+        <span class="prelude-val">Ok</span>(<span class="ident">Box</span>::<span class="ident">new</span>(<span class="self">Self</span> {
+            <span class="ident">net</span>,
+            <span class="ident">groups</span>,
+            <span class="ident">permutator</span>,
+            <span class="ident">hard_policy</span>,
+            <span class="ident">rng</span>: <span class="ident">rand</span>::<span class="ident">thread_rng</span>(),
+            <span class="ident">stop_time</span>,
+            <span class="ident">max_group_solve_time</span>,
+            <span class="ident">strategy_phantom</span>: <span class="ident">PhantomData</span>,
+            <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;count-states&quot;</span>)]</span>
+            <span class="ident">num_states</span>: <span class="number">0</span>,
+        }))
+    }
+
+    <span class="kw">fn</span> <span class="ident">work</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>, <span class="kw-2">mut</span> <span class="ident">abort</span>: <span class="ident">Stopper</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">ConfigModifier</span><span class="op">&gt;</span>, <span class="ident">Error</span><span class="op">&gt;</span> {
+        <span class="lifetime">&#39;main_loop</span>: <span class="kw">loop</span> {
+            <span class="comment">// check for iter overflow</span>
+            <span class="kw">if</span> <span class="self">self</span>.<span class="ident">stop_time</span>.<span class="ident">as_ref</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">time</span><span class="op">|</span> <span class="ident">time</span>.<span class="ident">elapsed</span>().<span class="ident">is_ok</span>()).<span class="ident">unwrap_or</span>(<span class="bool-val">false</span>) {
+                <span class="comment">// time budget is used up!</span>
+                <span class="macro">error</span><span class="macro">!</span>(<span class="string">&quot;Time budget is used up! No solution was found yet!&quot;</span>);
+                <span class="kw">return</span> <span class="prelude-val">Err</span>(<span class="ident">Error</span>::<span class="ident">Timeout</span>);
+            }
+
+            <span class="comment">// check for abort criteria</span>
+            <span class="kw">if</span> <span class="ident">abort</span>.<span class="ident">try_is_stop</span>().<span class="ident">unwrap_or</span>(<span class="bool-val">false</span>) {
+                <span class="macro">info</span><span class="macro">!</span>(<span class="string">&quot;Operation was aborted!&quot;</span>);
+                <span class="kw">return</span> <span class="prelude-val">Err</span>(<span class="ident">Error</span>::<span class="ident">Abort</span>);
+            }
+
+            <span class="comment">// .--------.</span>
+            <span class="comment">// | Step 1 | Choose random ordering</span>
+            <span class="comment">// &#39;--------&#39;</span>
+            <span class="kw">let</span> <span class="ident">ordering</span> <span class="op">=</span> <span class="kw">match</span> <span class="self">self</span>.<span class="ident">permutator</span>.<span class="ident">next</span>() {
+                <span class="prelude-val">Some</span>(<span class="ident">o</span>) <span class="op">=</span><span class="op">&gt;</span> <span class="ident">o</span>,
+                <span class="prelude-val">None</span> <span class="op">=</span><span class="op">&gt;</span> {
+                    <span class="macro">error</span><span class="macro">!</span>(<span class="string">&quot;Strategy was not able to solve the problem!&quot;</span>);
+                    <span class="kw">return</span> <span class="prelude-val">Err</span>(<span class="ident">Error</span>::<span class="ident">NoSafeOrdering</span>);
+                }
+            }
+            .<span class="ident">as_patches</span>();
+
+            <span class="macro">debug</span><span class="macro">!</span>(
+                <span class="string">&quot;ordering of groups:\n{}&quot;</span>,
+                <span class="ident">utils</span>::<span class="ident">fmt_group_ord</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">groups</span>, <span class="kw-2">&amp;</span><span class="ident">ordering</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">net</span>),
+            );
+
+            <span class="comment">// .--------.</span>
+            <span class="comment">// | Step 2 | Check Ordering</span>
+            <span class="comment">// &#39;--------&#39;</span>
+            <span class="kw">let</span> (<span class="ident">problem_group_pos</span>, <span class="ident">errors</span>) <span class="op">=</span> <span class="kw">match</span> <span class="ident">utils</span>::<span class="ident">check_group_ordering</span>(
+                <span class="self">self</span>.<span class="ident">net</span>.<span class="ident">clone</span>(),
+                <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">groups</span>,
+                <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">hard_policy</span>,
+                <span class="kw-2">&amp;</span><span class="ident">ordering</span>,
+                <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;count-states&quot;</span>)]</span>
+                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>.<span class="ident">num_states</span>,
+            ) {
+                <span class="prelude-val">Ok</span>(<span class="kw">_</span>) <span class="op">=</span><span class="op">&gt;</span> {
+                    <span class="comment">// print the resulting groups</span>
+                    <span class="macro">info</span><span class="macro">!</span>(
+                        <span class="string">&quot;Resulting groups in the respective order:\n{}&quot;</span>,
+                        <span class="ident">utils</span>::<span class="ident">fmt_group_ord</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">groups</span>, <span class="kw-2">&amp;</span><span class="ident">ordering</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">net</span>)
+                    );
+                    <span class="kw">return</span> <span class="prelude-val">Ok</span>(<span class="ident">utils</span>::<span class="ident">finalize_ordering</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">groups</span>, <span class="kw-2">&amp;</span><span class="ident">ordering</span>));
+                }
+                <span class="prelude-val">Err</span>((<span class="kw">_</span>, <span class="ident">i</span>, <span class="prelude-val">Some</span>(<span class="ident">hp</span>))) <span class="op">=</span><span class="op">&gt;</span> (<span class="ident">i</span>, <span class="ident">hp</span>.<span class="ident">get_watch_errors</span>()),
+                <span class="prelude-val">Err</span>((<span class="kw">_</span>, <span class="ident">i</span>, <span class="prelude-val">None</span>)) <span class="op">=</span><span class="op">&gt;</span> (<span class="ident">i</span>, (<span class="ident">Vec</span>::<span class="ident">new</span>(), <span class="macro">vec</span><span class="macro">!</span>[<span class="prelude-val">Some</span>(<span class="ident">PolicyError</span>::<span class="ident">NoConvergence</span>)])),
+            };
+
+            <span class="comment">// .--------.</span>
+            <span class="comment">// | Step 3 | Find dependencies</span>
+            <span class="comment">// &#39;--------&#39;</span>
+            <span class="kw">match</span> <span class="ident">utils</span>::<span class="ident">find_dependency</span>::<span class="op">&lt;</span><span class="ident">S</span><span class="op">&gt;</span>(
+                <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">net</span>,
+                <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">groups</span>,
+                <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">hard_policy</span>,
+                <span class="kw-2">&amp;</span><span class="ident">ordering</span>,
+                <span class="ident">errors</span>,
+                <span class="self">self</span>.<span class="ident">stop_time</span>,
+                <span class="self">self</span>.<span class="ident">max_group_solve_time</span>,
+                <span class="ident">abort</span>.<span class="ident">clone</span>(),
+                <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;count-states&quot;</span>)]</span>
+                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>.<span class="ident">num_states</span>,
+            ) {
+                <span class="prelude-val">Some</span>((<span class="ident">new_group</span>, <span class="ident">old_groups</span>)) <span class="op">=</span><span class="op">&gt;</span> {
+                    <span class="macro">info</span><span class="macro">!</span>(<span class="string">&quot;Found a new dependency group!&quot;</span>);
+                    <span class="comment">// add the new ordering to the known groups</span>
+                    <span class="ident">utils</span>::<span class="ident">add_minimal_ordering_as_new_gorup</span>(
+                        <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>.<span class="ident">groups</span>,
+                        <span class="ident">old_groups</span>,
+                        <span class="prelude-val">Some</span>(<span class="ident">new_group</span>),
+                    );
+
+                    <span class="comment">// prepare a new permutator for the next iteration</span>
+                    <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">group_idx</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span> <span class="op">=</span> (<span class="number">0</span>..<span class="self">self</span>.<span class="ident">groups</span>.<span class="ident">len</span>()).<span class="ident">collect</span>();
+                    <span class="ident">group_idx</span>.<span class="ident">shuffle</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>.<span class="ident">rng</span>);
+                    <span class="self">self</span>.<span class="ident">permutator</span> <span class="op">=</span> <span class="ident">P</span>::<span class="ident">new</span>(<span class="ident">group_idx</span>);
+
+                    <span class="kw">continue</span> <span class="lifetime">&#39;main_loop</span>;
+                }
+                <span class="prelude-val">None</span> <span class="op">=</span><span class="op">&gt;</span> {
+                    <span class="comment">// Unable to extend the running group! Declare this try as failed and try</span>
+                    <span class="comment">// again. tell the permutator that we have failed at the position</span>
+                    <span class="macro">info</span><span class="macro">!</span>(<span class="string">&quot;Could not find a new dependency group!&quot;</span>);
+                    <span class="self">self</span>.<span class="ident">permutator</span>.<span class="ident">fail_pos</span>(<span class="ident">problem_group_pos</span>);
+                    <span class="comment">// continue with the permutation</span>
+                    <span class="kw">continue</span> <span class="lifetime">&#39;main_loop</span>;
+                }
+            }
+        }
+    }
+
+    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;count-states&quot;</span>)]</span>
+    <span class="kw">fn</span> <span class="ident">num_states</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">usize</span> {
+        <span class="self">self</span>.<span class="ident">num_states</span>
+    }
+}
+</pre></div>
+</section><section id="search" class="content hidden"></section><section class="footer"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="snowcap"></div>
+    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script><script defer src="../../../search-index.js"></script></body></html>

@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["BgpEvent","BGP Events"],["BgpSessionType","Type of a BGP session"]],"struct":[["BgpRibEntry","BGP RIB Table entry"],["BgpRoute","Bgp Route The following attributes are omitted"]]});

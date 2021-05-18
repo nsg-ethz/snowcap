@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["BoxMean",""],["BoxPoints",""],["QuartileMethod",""]],"struct":[["BoxPlot",""]]});

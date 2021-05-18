@@ -1,0 +1,1475 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `snowcap/src/hard_policies/mod.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>mod.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings"></script><script src="../../../storage.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"                  integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "$", right: "$", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+</script>
+
+<style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../../snowcap/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu"><img src="../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><script src="../../../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" class="help-button">?</button>
+                <a id="settings-menu" href="../../../settings.html"><img src="../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
+<span id="2">  2</span>
+<span id="3">  3</span>
+<span id="4">  4</span>
+<span id="5">  5</span>
+<span id="6">  6</span>
+<span id="7">  7</span>
+<span id="8">  8</span>
+<span id="9">  9</span>
+<span id="10"> 10</span>
+<span id="11"> 11</span>
+<span id="12"> 12</span>
+<span id="13"> 13</span>
+<span id="14"> 14</span>
+<span id="15"> 15</span>
+<span id="16"> 16</span>
+<span id="17"> 17</span>
+<span id="18"> 18</span>
+<span id="19"> 19</span>
+<span id="20"> 20</span>
+<span id="21"> 21</span>
+<span id="22"> 22</span>
+<span id="23"> 23</span>
+<span id="24"> 24</span>
+<span id="25"> 25</span>
+<span id="26"> 26</span>
+<span id="27"> 27</span>
+<span id="28"> 28</span>
+<span id="29"> 29</span>
+<span id="30"> 30</span>
+<span id="31"> 31</span>
+<span id="32"> 32</span>
+<span id="33"> 33</span>
+<span id="34"> 34</span>
+<span id="35"> 35</span>
+<span id="36"> 36</span>
+<span id="37"> 37</span>
+<span id="38"> 38</span>
+<span id="39"> 39</span>
+<span id="40"> 40</span>
+<span id="41"> 41</span>
+<span id="42"> 42</span>
+<span id="43"> 43</span>
+<span id="44"> 44</span>
+<span id="45"> 45</span>
+<span id="46"> 46</span>
+<span id="47"> 47</span>
+<span id="48"> 48</span>
+<span id="49"> 49</span>
+<span id="50"> 50</span>
+<span id="51"> 51</span>
+<span id="52"> 52</span>
+<span id="53"> 53</span>
+<span id="54"> 54</span>
+<span id="55"> 55</span>
+<span id="56"> 56</span>
+<span id="57"> 57</span>
+<span id="58"> 58</span>
+<span id="59"> 59</span>
+<span id="60"> 60</span>
+<span id="61"> 61</span>
+<span id="62"> 62</span>
+<span id="63"> 63</span>
+<span id="64"> 64</span>
+<span id="65"> 65</span>
+<span id="66"> 66</span>
+<span id="67"> 67</span>
+<span id="68"> 68</span>
+<span id="69"> 69</span>
+<span id="70"> 70</span>
+<span id="71"> 71</span>
+<span id="72"> 72</span>
+<span id="73"> 73</span>
+<span id="74"> 74</span>
+<span id="75"> 75</span>
+<span id="76"> 76</span>
+<span id="77"> 77</span>
+<span id="78"> 78</span>
+<span id="79"> 79</span>
+<span id="80"> 80</span>
+<span id="81"> 81</span>
+<span id="82"> 82</span>
+<span id="83"> 83</span>
+<span id="84"> 84</span>
+<span id="85"> 85</span>
+<span id="86"> 86</span>
+<span id="87"> 87</span>
+<span id="88"> 88</span>
+<span id="89"> 89</span>
+<span id="90"> 90</span>
+<span id="91"> 91</span>
+<span id="92"> 92</span>
+<span id="93"> 93</span>
+<span id="94"> 94</span>
+<span id="95"> 95</span>
+<span id="96"> 96</span>
+<span id="97"> 97</span>
+<span id="98"> 98</span>
+<span id="99"> 99</span>
+<span id="100">100</span>
+<span id="101">101</span>
+<span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
+<span id="107">107</span>
+<span id="108">108</span>
+<span id="109">109</span>
+<span id="110">110</span>
+<span id="111">111</span>
+<span id="112">112</span>
+<span id="113">113</span>
+<span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
+<span id="139">139</span>
+<span id="140">140</span>
+<span id="141">141</span>
+<span id="142">142</span>
+<span id="143">143</span>
+<span id="144">144</span>
+<span id="145">145</span>
+<span id="146">146</span>
+<span id="147">147</span>
+<span id="148">148</span>
+<span id="149">149</span>
+<span id="150">150</span>
+<span id="151">151</span>
+<span id="152">152</span>
+<span id="153">153</span>
+<span id="154">154</span>
+<span id="155">155</span>
+<span id="156">156</span>
+<span id="157">157</span>
+<span id="158">158</span>
+<span id="159">159</span>
+<span id="160">160</span>
+<span id="161">161</span>
+<span id="162">162</span>
+<span id="163">163</span>
+<span id="164">164</span>
+<span id="165">165</span>
+<span id="166">166</span>
+<span id="167">167</span>
+<span id="168">168</span>
+<span id="169">169</span>
+<span id="170">170</span>
+<span id="171">171</span>
+<span id="172">172</span>
+<span id="173">173</span>
+<span id="174">174</span>
+<span id="175">175</span>
+<span id="176">176</span>
+<span id="177">177</span>
+<span id="178">178</span>
+<span id="179">179</span>
+<span id="180">180</span>
+<span id="181">181</span>
+<span id="182">182</span>
+<span id="183">183</span>
+<span id="184">184</span>
+<span id="185">185</span>
+<span id="186">186</span>
+<span id="187">187</span>
+<span id="188">188</span>
+<span id="189">189</span>
+<span id="190">190</span>
+<span id="191">191</span>
+<span id="192">192</span>
+<span id="193">193</span>
+<span id="194">194</span>
+<span id="195">195</span>
+<span id="196">196</span>
+<span id="197">197</span>
+<span id="198">198</span>
+<span id="199">199</span>
+<span id="200">200</span>
+<span id="201">201</span>
+<span id="202">202</span>
+<span id="203">203</span>
+<span id="204">204</span>
+<span id="205">205</span>
+<span id="206">206</span>
+<span id="207">207</span>
+<span id="208">208</span>
+<span id="209">209</span>
+<span id="210">210</span>
+<span id="211">211</span>
+<span id="212">212</span>
+<span id="213">213</span>
+<span id="214">214</span>
+<span id="215">215</span>
+<span id="216">216</span>
+<span id="217">217</span>
+<span id="218">218</span>
+<span id="219">219</span>
+<span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
+<span id="223">223</span>
+<span id="224">224</span>
+<span id="225">225</span>
+<span id="226">226</span>
+<span id="227">227</span>
+<span id="228">228</span>
+<span id="229">229</span>
+<span id="230">230</span>
+<span id="231">231</span>
+<span id="232">232</span>
+<span id="233">233</span>
+<span id="234">234</span>
+<span id="235">235</span>
+<span id="236">236</span>
+<span id="237">237</span>
+<span id="238">238</span>
+<span id="239">239</span>
+<span id="240">240</span>
+<span id="241">241</span>
+<span id="242">242</span>
+<span id="243">243</span>
+<span id="244">244</span>
+<span id="245">245</span>
+<span id="246">246</span>
+<span id="247">247</span>
+<span id="248">248</span>
+<span id="249">249</span>
+<span id="250">250</span>
+<span id="251">251</span>
+<span id="252">252</span>
+<span id="253">253</span>
+<span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
+<span id="259">259</span>
+<span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
+<span id="264">264</span>
+<span id="265">265</span>
+<span id="266">266</span>
+<span id="267">267</span>
+<span id="268">268</span>
+<span id="269">269</span>
+<span id="270">270</span>
+<span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
+<span id="296">296</span>
+<span id="297">297</span>
+<span id="298">298</span>
+<span id="299">299</span>
+<span id="300">300</span>
+<span id="301">301</span>
+<span id="302">302</span>
+<span id="303">303</span>
+<span id="304">304</span>
+<span id="305">305</span>
+<span id="306">306</span>
+<span id="307">307</span>
+<span id="308">308</span>
+<span id="309">309</span>
+<span id="310">310</span>
+<span id="311">311</span>
+<span id="312">312</span>
+<span id="313">313</span>
+<span id="314">314</span>
+<span id="315">315</span>
+<span id="316">316</span>
+<span id="317">317</span>
+<span id="318">318</span>
+<span id="319">319</span>
+<span id="320">320</span>
+<span id="321">321</span>
+<span id="322">322</span>
+<span id="323">323</span>
+<span id="324">324</span>
+<span id="325">325</span>
+<span id="326">326</span>
+<span id="327">327</span>
+<span id="328">328</span>
+<span id="329">329</span>
+<span id="330">330</span>
+<span id="331">331</span>
+<span id="332">332</span>
+<span id="333">333</span>
+<span id="334">334</span>
+<span id="335">335</span>
+<span id="336">336</span>
+<span id="337">337</span>
+<span id="338">338</span>
+<span id="339">339</span>
+<span id="340">340</span>
+<span id="341">341</span>
+<span id="342">342</span>
+<span id="343">343</span>
+<span id="344">344</span>
+<span id="345">345</span>
+<span id="346">346</span>
+<span id="347">347</span>
+<span id="348">348</span>
+<span id="349">349</span>
+<span id="350">350</span>
+<span id="351">351</span>
+<span id="352">352</span>
+<span id="353">353</span>
+<span id="354">354</span>
+<span id="355">355</span>
+<span id="356">356</span>
+<span id="357">357</span>
+<span id="358">358</span>
+<span id="359">359</span>
+<span id="360">360</span>
+<span id="361">361</span>
+<span id="362">362</span>
+<span id="363">363</span>
+<span id="364">364</span>
+<span id="365">365</span>
+<span id="366">366</span>
+<span id="367">367</span>
+<span id="368">368</span>
+<span id="369">369</span>
+<span id="370">370</span>
+<span id="371">371</span>
+<span id="372">372</span>
+<span id="373">373</span>
+<span id="374">374</span>
+<span id="375">375</span>
+<span id="376">376</span>
+<span id="377">377</span>
+<span id="378">378</span>
+<span id="379">379</span>
+<span id="380">380</span>
+<span id="381">381</span>
+<span id="382">382</span>
+<span id="383">383</span>
+<span id="384">384</span>
+<span id="385">385</span>
+<span id="386">386</span>
+<span id="387">387</span>
+<span id="388">388</span>
+<span id="389">389</span>
+<span id="390">390</span>
+<span id="391">391</span>
+<span id="392">392</span>
+<span id="393">393</span>
+<span id="394">394</span>
+<span id="395">395</span>
+<span id="396">396</span>
+<span id="397">397</span>
+<span id="398">398</span>
+<span id="399">399</span>
+<span id="400">400</span>
+<span id="401">401</span>
+<span id="402">402</span>
+<span id="403">403</span>
+<span id="404">404</span>
+<span id="405">405</span>
+<span id="406">406</span>
+<span id="407">407</span>
+<span id="408">408</span>
+<span id="409">409</span>
+<span id="410">410</span>
+<span id="411">411</span>
+<span id="412">412</span>
+<span id="413">413</span>
+<span id="414">414</span>
+<span id="415">415</span>
+<span id="416">416</span>
+<span id="417">417</span>
+<span id="418">418</span>
+<span id="419">419</span>
+<span id="420">420</span>
+<span id="421">421</span>
+<span id="422">422</span>
+<span id="423">423</span>
+<span id="424">424</span>
+<span id="425">425</span>
+<span id="426">426</span>
+<span id="427">427</span>
+<span id="428">428</span>
+<span id="429">429</span>
+<span id="430">430</span>
+<span id="431">431</span>
+<span id="432">432</span>
+<span id="433">433</span>
+<span id="434">434</span>
+<span id="435">435</span>
+<span id="436">436</span>
+<span id="437">437</span>
+<span id="438">438</span>
+<span id="439">439</span>
+<span id="440">440</span>
+<span id="441">441</span>
+<span id="442">442</span>
+<span id="443">443</span>
+<span id="444">444</span>
+<span id="445">445</span>
+<span id="446">446</span>
+<span id="447">447</span>
+<span id="448">448</span>
+<span id="449">449</span>
+<span id="450">450</span>
+<span id="451">451</span>
+<span id="452">452</span>
+<span id="453">453</span>
+<span id="454">454</span>
+<span id="455">455</span>
+<span id="456">456</span>
+<span id="457">457</span>
+<span id="458">458</span>
+<span id="459">459</span>
+<span id="460">460</span>
+<span id="461">461</span>
+<span id="462">462</span>
+<span id="463">463</span>
+<span id="464">464</span>
+<span id="465">465</span>
+<span id="466">466</span>
+<span id="467">467</span>
+<span id="468">468</span>
+<span id="469">469</span>
+<span id="470">470</span>
+<span id="471">471</span>
+<span id="472">472</span>
+<span id="473">473</span>
+<span id="474">474</span>
+<span id="475">475</span>
+<span id="476">476</span>
+<span id="477">477</span>
+<span id="478">478</span>
+<span id="479">479</span>
+<span id="480">480</span>
+<span id="481">481</span>
+<span id="482">482</span>
+<span id="483">483</span>
+<span id="484">484</span>
+<span id="485">485</span>
+<span id="486">486</span>
+<span id="487">487</span>
+<span id="488">488</span>
+<span id="489">489</span>
+<span id="490">490</span>
+<span id="491">491</span>
+<span id="492">492</span>
+<span id="493">493</span>
+<span id="494">494</span>
+<span id="495">495</span>
+<span id="496">496</span>
+<span id="497">497</span>
+<span id="498">498</span>
+<span id="499">499</span>
+<span id="500">500</span>
+<span id="501">501</span>
+<span id="502">502</span>
+<span id="503">503</span>
+<span id="504">504</span>
+<span id="505">505</span>
+<span id="506">506</span>
+<span id="507">507</span>
+<span id="508">508</span>
+<span id="509">509</span>
+<span id="510">510</span>
+<span id="511">511</span>
+<span id="512">512</span>
+<span id="513">513</span>
+<span id="514">514</span>
+<span id="515">515</span>
+<span id="516">516</span>
+<span id="517">517</span>
+<span id="518">518</span>
+<span id="519">519</span>
+<span id="520">520</span>
+<span id="521">521</span>
+<span id="522">522</span>
+<span id="523">523</span>
+<span id="524">524</span>
+<span id="525">525</span>
+<span id="526">526</span>
+<span id="527">527</span>
+<span id="528">528</span>
+<span id="529">529</span>
+<span id="530">530</span>
+<span id="531">531</span>
+<span id="532">532</span>
+<span id="533">533</span>
+<span id="534">534</span>
+<span id="535">535</span>
+<span id="536">536</span>
+<span id="537">537</span>
+<span id="538">538</span>
+<span id="539">539</span>
+<span id="540">540</span>
+<span id="541">541</span>
+<span id="542">542</span>
+<span id="543">543</span>
+<span id="544">544</span>
+<span id="545">545</span>
+<span id="546">546</span>
+<span id="547">547</span>
+<span id="548">548</span>
+<span id="549">549</span>
+<span id="550">550</span>
+<span id="551">551</span>
+<span id="552">552</span>
+<span id="553">553</span>
+<span id="554">554</span>
+<span id="555">555</span>
+<span id="556">556</span>
+<span id="557">557</span>
+<span id="558">558</span>
+<span id="559">559</span>
+<span id="560">560</span>
+<span id="561">561</span>
+<span id="562">562</span>
+<span id="563">563</span>
+<span id="564">564</span>
+<span id="565">565</span>
+<span id="566">566</span>
+<span id="567">567</span>
+<span id="568">568</span>
+<span id="569">569</span>
+<span id="570">570</span>
+<span id="571">571</span>
+<span id="572">572</span>
+<span id="573">573</span>
+<span id="574">574</span>
+<span id="575">575</span>
+<span id="576">576</span>
+<span id="577">577</span>
+<span id="578">578</span>
+<span id="579">579</span>
+<span id="580">580</span>
+<span id="581">581</span>
+<span id="582">582</span>
+<span id="583">583</span>
+<span id="584">584</span>
+<span id="585">585</span>
+<span id="586">586</span>
+<span id="587">587</span>
+<span id="588">588</span>
+<span id="589">589</span>
+<span id="590">590</span>
+<span id="591">591</span>
+<span id="592">592</span>
+<span id="593">593</span>
+<span id="594">594</span>
+<span id="595">595</span>
+<span id="596">596</span>
+<span id="597">597</span>
+<span id="598">598</span>
+<span id="599">599</span>
+<span id="600">600</span>
+<span id="601">601</span>
+<span id="602">602</span>
+<span id="603">603</span>
+<span id="604">604</span>
+<span id="605">605</span>
+<span id="606">606</span>
+<span id="607">607</span>
+<span id="608">608</span>
+<span id="609">609</span>
+<span id="610">610</span>
+<span id="611">611</span>
+<span id="612">612</span>
+<span id="613">613</span>
+<span id="614">614</span>
+<span id="615">615</span>
+<span id="616">616</span>
+<span id="617">617</span>
+<span id="618">618</span>
+<span id="619">619</span>
+<span id="620">620</span>
+<span id="621">621</span>
+<span id="622">622</span>
+<span id="623">623</span>
+<span id="624">624</span>
+<span id="625">625</span>
+<span id="626">626</span>
+<span id="627">627</span>
+<span id="628">628</span>
+<span id="629">629</span>
+<span id="630">630</span>
+<span id="631">631</span>
+<span id="632">632</span>
+<span id="633">633</span>
+<span id="634">634</span>
+<span id="635">635</span>
+<span id="636">636</span>
+<span id="637">637</span>
+<span id="638">638</span>
+<span id="639">639</span>
+<span id="640">640</span>
+<span id="641">641</span>
+<span id="642">642</span>
+<span id="643">643</span>
+<span id="644">644</span>
+<span id="645">645</span>
+<span id="646">646</span>
+<span id="647">647</span>
+<span id="648">648</span>
+<span id="649">649</span>
+<span id="650">650</span>
+<span id="651">651</span>
+<span id="652">652</span>
+<span id="653">653</span>
+<span id="654">654</span>
+<span id="655">655</span>
+<span id="656">656</span>
+<span id="657">657</span>
+<span id="658">658</span>
+<span id="659">659</span>
+<span id="660">660</span>
+<span id="661">661</span>
+<span id="662">662</span>
+<span id="663">663</span>
+<span id="664">664</span>
+<span id="665">665</span>
+<span id="666">666</span>
+<span id="667">667</span>
+<span id="668">668</span>
+<span id="669">669</span>
+<span id="670">670</span>
+<span id="671">671</span>
+<span id="672">672</span>
+<span id="673">673</span>
+<span id="674">674</span>
+<span id="675">675</span>
+<span id="676">676</span>
+<span id="677">677</span>
+<span id="678">678</span>
+<span id="679">679</span>
+<span id="680">680</span>
+<span id="681">681</span>
+<span id="682">682</span>
+<span id="683">683</span>
+<span id="684">684</span>
+<span id="685">685</span>
+<span id="686">686</span>
+<span id="687">687</span>
+<span id="688">688</span>
+<span id="689">689</span>
+<span id="690">690</span>
+<span id="691">691</span>
+<span id="692">692</span>
+<span id="693">693</span>
+<span id="694">694</span>
+<span id="695">695</span>
+<span id="696">696</span>
+<span id="697">697</span>
+<span id="698">698</span>
+<span id="699">699</span>
+<span id="700">700</span>
+<span id="701">701</span>
+<span id="702">702</span>
+<span id="703">703</span>
+<span id="704">704</span>
+<span id="705">705</span>
+<span id="706">706</span>
+<span id="707">707</span>
+<span id="708">708</span>
+<span id="709">709</span>
+<span id="710">710</span>
+<span id="711">711</span>
+<span id="712">712</span>
+<span id="713">713</span>
+<span id="714">714</span>
+<span id="715">715</span>
+<span id="716">716</span>
+<span id="717">717</span>
+<span id="718">718</span>
+<span id="719">719</span>
+<span id="720">720</span>
+<span id="721">721</span>
+<span id="722">722</span>
+<span id="723">723</span>
+<span id="724">724</span>
+<span id="725">725</span>
+<span id="726">726</span>
+</pre><div class="example-wrap"><pre class="rust ">
+<span class="comment">// Snowcap: Synthesizing Network-Wide Configuration Updates</span>
+<span class="comment">// Copyright (C) 2021  Tibor Schneider</span>
+<span class="comment">//</span>
+<span class="comment">// This program is free software; you can redistribute it and/or modify</span>
+<span class="comment">// it under the terms of the GNU General Public License as published by</span>
+<span class="comment">// the Free Software Foundation; either version 2 of the License, or</span>
+<span class="comment">// (at your option) any later version.</span>
+<span class="comment">//</span>
+<span class="comment">// This program is distributed in the hope that it will be useful,</span>
+<span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="comment">// GNU General Public License for more details.</span>
+<span class="comment">//</span>
+<span class="comment">// You should have received a copy of the GNU General Public License along</span>
+<span class="comment">// with this program; if not, write to the Free Software Foundation, Inc.,</span>
+<span class="comment">// 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span>
+
+<span class="doccomment">//! # Hard Policies</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! This module contains all necessary structures and tools to generate hard policies as Linear</span>
+<span class="doccomment">//! Temporal Logic.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! # Policy Language</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! This module defines a languate with which to express complex policies. On the top-level, it is</span>
+<span class="doccomment">//! based on [Linear Temporal Logic (LTL)](https://en.wikipedia.org/wiki/Linear_temporal_logic). In</span>
+<span class="doccomment">//! LTL, there exists propositional variables, in the following called conditions, boolean operators</span>
+<span class="doccomment">//! and temporal modal operators.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## Temporal Modal Operators</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! For the LTL, we use a sequence of states, i.e., the sequence of converged states during</span>
+<span class="doccomment">//! reconfiguration. At each of these states, every propositional variable can either be satsicied</span>
+<span class="doccomment">//! or not. The following operators exist</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! - $\phi$ (Now): $\phi$ has to hold in the current state</span>
+<span class="doccomment">//! - $\mathbf{X}\ \phi$ (Next): $\phi$ has to hold in the next state</span>
+<span class="doccomment">//! - $\mathbf{F}\ \phi$ (Finally): $\phi$ has to hold eventually, somewhere on the subsequent path</span>
+<span class="doccomment">//! - $\mathbf{G}\ \phi$ (Globally): $\phi$ has to hold on the entire subsequent path, including the</span>
+<span class="doccomment">//!   current state</span>
+<span class="doccomment">//! - $\psi\ \mathbf{U}\ \phi$ (Until): $\psi$ has to hold at least until $\phi$ becomes true, which</span>
+<span class="doccomment">//!   must hold at the current or any future position. Note, that $\psi$ and $phi$ don&#39;t necessarily</span>
+<span class="doccomment">//!   need to hold at the same time.</span>
+<span class="doccomment">//! - $\psi\ \mathbf{R}\ \phi$ (Release): $\phi$ has to be true until and including the point where</span>
+<span class="doccomment">//!   $\psi$ first becomes true. If $\psi$ never becomes true, then $\phi$ must hold forever.</span>
+<span class="doccomment">//! - $\psi\ \mathbf{W}\ \phi$ (Weak Until): $\psi$ has to hold at least until $\phi$ becomes true. If</span>
+<span class="doccomment">//!   $\phi$ never becomes true, then $\psi$ must hold forever. Note, that $\psi$ and $phi$ don&#39;t</span>
+<span class="doccomment">//!   necessarily need to hold at the same time.</span>
+<span class="doccomment">//! - $\psi\ \mathbf{M}\ \phi$ (Strong Release): $\phi$ has to be true until and including the point where</span>
+<span class="doccomment">//!   $\psi$ first becomes true. $\psi$ must hold eventually.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## Logical Operators</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! The following logical operators are supported</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! - $\neg \psi$ (Not)</span>
+<span class="doccomment">//! - $\phi \land \psi$ (And)</span>
+<span class="doccomment">//! - $\phi \lor \psi$ (Or)</span>
+<span class="doccomment">//! - $\phi \oplus \psi$ (xor)</span>
+<span class="doccomment">//! - $\phi \Rightarrow \psi$ (Implies)</span>
+<span class="doccomment">//! - $\phi \iff \psi$ (If and only if)</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## Propositional Variables (Conditions)</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Propositional variables are types of conditions which can be evaluated on the current state (or</span>
+<span class="doccomment">//! when considering the current and last state) of the network (i.e., forwarding state). The</span>
+<span class="doccomment">//! following conditions are possible:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! - $\mathbf{V}_{(r, p, c)}$ (Valid path / Reachability): Router $r$ is able to reach prefix $p$</span>
+<span class="doccomment">//!   without encountering any black hole, or forwarding loop. Aitionally, the path condition $c$</span>
+<span class="doccomment">//!   must hold, if it is provided.</span>
+<span class="doccomment">//! - $\mathbf{I}_{(r, p)}$ (Isolation): Router $r$ is not able to reach prefix $p$, there exists</span>
+<span class="doccomment">//!   a black hole on the path.</span>
+<span class="doccomment">//! - $\mathbf{V}_{(r, p, c)}^+$ (Reliability): Router $r$ is able to reach prefix $p$ in the case</span>
+<span class="doccomment">//!   where a single link fails. This condition is checked by simulating a link failure at every</span>
+<span class="doccomment">//!   link in the network. The path condition $c$ (if given) must hold on every chosen path for all</span>
+<span class="doccomment">//!   possible link failures.</span>
+<span class="doccomment">//! - $\mathbf{T}_{(r, p, c)}$ (Transient behavior): During convergence to reach the current state,</span>
+<span class="doccomment">//!   every possible path, that router $r$ might choose to reach $p$ does satisfy the path condition</span>
+<span class="doccomment">//!   $c$. Note, that this condition cannot check, that during convergence, no forwarding loop or</span>
+<span class="doccomment">//!   black hole may appear. Only the path can be checked.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## Path Condition</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! The path condition is a condition on the path. This is an expression, which can contain boolean</span>
+<span class="doccomment">//! operators $\land$ (and), $\lor$ (or) and $\neg$ (not). In addition, the expression may contain</span>
+<span class="doccomment">//! router $r \in \mathcal{V}$, which needs to be reached in the path, an edge $e \in \mathcal{V}</span>
+<span class="doccomment">//! \times \mathcal{V}$, or a positional condition. This positional constraint can be expressed as</span>
+<span class="doccomment">//! a sequence of the alphabet $\lbrace \ast, ?\rbrace \cup \mathcal{V}$. Here, $?$ means any single</span>
+<span class="doccomment">//! router, and $\ast$ means a sequence of any length (can be of length zero) of any router. This</span>
+<span class="doccomment">//! can be used to express more complex conditions on the path. As an example, the positional</span>
+<span class="doccomment">//! condition $[\ast, a, ?, b, c, \ast]$ means that the path must first reach $a$, then visit any</span>
+<span class="doccomment">//! other node, then $b$ must be traversed, immediately followed by $c$. This always matches on the</span>
+<span class="doccomment">//! entire path, and not just on a small part of it.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! # Transient Behavior</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! For transient behavior, we cannot guarantee the absence of black holes or forwarding loops. In</span>
+<span class="doccomment">//! fact, if we would be able, then we would be able to guarantee to the network operator, that the</span>
+<span class="doccomment">//! network is in a more reliable state during reconfiguration, than it is during normal operation.</span>
+<span class="doccomment">//! This obviously makes no sence. Nevertheless, we are able to guarantee that if there exists a</span>
+<span class="doccomment">//! path, then this path will satisfy the specified conditions.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## Computation Complexity</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! In the following, we use the notation $n = |\mathcal{V}|$ to be the number of routers in the</span>
+<span class="doccomment">//! network. For this algorithm, the following things need to be computed:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! 1. First, we need to compute the route reachability graph $G_R(r)$ for all routes</span>
+<span class="doccomment">//!    $r \in \mathcal{R}$. This graph $G_R$ can be computed using a DFS traversal on the BGP graph</span>
+<span class="doccomment">//!    $G_{BGP} = (\mathcal{V}, E_{BGP})$ which takes $O(|\mathcal{V}| + |E_{BGP}|) = O(n^2)$. Hence,</span>
+<span class="doccomment">//!    computing all route reachability graphs takes a total of $O(|\mathcal{R}| \cdot n^2)$ time.</span>
+<span class="doccomment">//! 2. Then, we create the forwarding supergraph $G_{pcs} = (\mathcal{V}, E_{pcs})$ in</span>
+<span class="doccomment">//!    $O(n \cdot |\mathcal{R}|)$ time.</span>
+<span class="doccomment">//! 3. Finally, we need to perform a DFS traversal on $G_{pcs}$ for every node $v \in \mathcal{V}$.</span>
+<span class="doccomment">//!    This takes a total of $O(|\mathcal{V}| + |E_{pcs}|)$ for every node $v \in \mathcal{V}$,</span>
+<span class="doccomment">//!    which leads to a complexity $O(|\mathcal{V}| \cdot (|\mathcal{V}| + |E_{pcs}|)) = O(n^3)$.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Collecting all these complexities yields the following total time complexity:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! $$O(n^2 (n + |\mathcal{R}|))$$</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! However, if the path conditions cannot be checked using a single DFS traversal (i.e., if they</span>
+<span class="doccomment">//! include positional conditions), then we need to enumerate over all possible paths in the</span>
+<span class="doccomment">//! network (which is, on a DAG $\mathcal{O}(n^2)$), which leads to a total time complexity of:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! $$O(2^n + n^2 \mathcal{R})$$</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## Algorithm Description</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! The following algorithm is described on a per-prefix basis. We assume that no router is able</span>
+<span class="doccomment">//! to change the prefix, and that prefixes canot overlap. Based on this assumption, we can safely</span>
+<span class="doccomment">//! check the conditions for every prefix individually. Note, that the constraint on non-overlaping</span>
+<span class="doccomment">//! prefixes can be satisfied by creating multiple prefixes for the different ranges.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Definitions</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! In the following, any variable annotated with $\square^-$ means that this is at the state</span>
+<span class="doccomment">//! before the small delta reconfiguration, and $\square^+$ means after the reconfiguration.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! - $\mathcal{S}^\pm$: State of the network before or after the delta reconfiguration.</span>
+<span class="doccomment">//! - $v \in \mathcal{V}$: All routers in the network, $\mathcal{V}_{ext} \subset \mathcal{V}$:</span>
+<span class="doccomment">//!   external routers</span>
+<span class="doccomment">//! - $r \in \mathcal{R}^\pm$: All routes in the network before and after the delta reconfiguration.</span>
+<span class="doccomment">//!   Routes can be compared: $r_1 &gt;_v r_2$ means that $r_1$ is preferred over $r_2$ at node $v$</span>
+<span class="doccomment">//!   (the node is important here, because IGP cost is one of the criteria to choose a route).</span>
+<span class="doccomment">//!   Additionally, we call $\mathcal{R} = \mathcal{R}^- \cup \mathcal{R}^+$ as the set of all</span>
+<span class="doccomment">//!   routes before and after the reconfiguration combined.</span>
+<span class="doccomment">//! - $rri(r)$: Route reachability of route $r$ is the set of nodes $rri(r) \subseteq \mathcal{V}$,</span>
+<span class="doccomment">//!   which may be reached by this route. It is constructed by considering both states before and</span>
+<span class="doccomment">//!   after the reconfiguration. The $rri(r)$ respects the rules of route dissemination and route</span>
+<span class="doccomment">//!   maps.</span>
+<span class="doccomment">//! - $nh(v, r)$: Next hop at node $v$, when router $v$ chooses route $r$.</span>
+<span class="doccomment">//! - $pcr(v)$: possibly considered routes: Maps each router in the network to a set of possible</span>
+<span class="doccomment">//!   routes, which might get activated and deactivated as transient behavior during convergence of</span>
+<span class="doccomment">//!   delta reconfiguration.</span>
+<span class="doccomment">//! - $G_{pcr} = (\mathcal{V}, E_{pcr})$: Forwarding supergraph that contains the forwarding state</span>
+<span class="doccomment">//!   of every possible intermediate state (and the forwarding state of impossible intermediate</span>
+<span class="doccomment">//!   states).</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Algorithm</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! The algorithm can be split into several different parts. On a high level, we first extract the</span>
+<span class="doccomment">//! route reachability information for each route (a set of routers which can theoretically learn</span>
+<span class="doccomment">//! this route). Based on this, we generate a forwarding supergraph containing all possible</span>
+<span class="doccomment">//! forwarding graphs. Finally, we perform a graph traversal on this grpah, to verify the path</span>
+<span class="doccomment">//! constraints.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! As the first step, we need to prepare the BGP graph $G^\pm_{bgp} = (\mathcal{V}, E^\pm_{bgp},</span>
+<span class="doccomment">//! L_{bgp})$. In this graph, every edge may be either labeled as up $U$, over $O$, or down $D$:</span>
+<span class="doccomment">//! $e \in \lbrace U, O, D \rbrace$. Note, that we need two different graphs, one before and one</span>
+<span class="doccomment">//! after the reconfiguration. both graphs may be different.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! As a next step, we compute the the route reachability information $rri(r)$ of every route</span>
+<span class="doccomment">//! $r \in \mathcal{R}$. This information is the set of nodes that may be reached by route r based</span>
+<span class="doccomment">//! on the BGP configuration. Notice, that we compute the reachability of $r \in \mathcal{R}$ on</span>
+<span class="doccomment">//! both $G_{bgp}^-$ and $G_{bgp}^+$, and call the union of the reached nodes as</span>
+<span class="doccomment">//! $rri(r) = reach(G_{bgp}^-) \cup reach(G_{bgp}^+)$. While traversing the bgp graph, if a route</span>
+<span class="doccomment">//! map is encountered from node $u$ to $v$ (either an outgoing route map on node $u$ or an incoming</span>
+<span class="doccomment">//! route map on node $v$, or both), we don&#39;t continue traversing node $v$, but we generate a new</span>
+<span class="doccomment">//! route $r&#39;$ and start traversing at node $v$. *(Implementation Detail: we generate $G_{bgp}$ and</span>
+<span class="doccomment">//! compute $rri(r)$ both before and after the reconfiguration.)*</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Finally, we build the forwarding supergraph $G_{pcr}$, by looking at all possibly considered</span>
+<span class="doccomment">//! routes $pcr(v) = \lbrace r \in \mathcal{R} \mid v \in rri^-(r) \cup rri^+(r) \rbrace$ and</span>
+<span class="doccomment">//! looking at their next hop, both before and after the reconfiguration. The final graph</span>
+<span class="doccomment">//! $G_{pcr} = (\mathcal{V}, E_{pcr})$ contains an edge from node $u$ to $v$, if and only if there</span>
+<span class="doccomment">//! exists a route $r \in pcr(u)$, which might reach node $u$, and which would cause router $u$ to</span>
+<span class="doccomment">//! send packets to node $v$. More formally,</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! $$ E_{pcr} = \big\lbrace (u, v) \mid v \in \lbrace nh^-(u, r) \cup nh^+(u, r) \mid r \in</span>
+<span class="doccomment">//! pcr(u) \rbrace \big\rbrace$$</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! After having constructed the forwarding supergraph, we can check the path conditions of all</span>
+<span class="doccomment">//! nodes in the network. If the condition contains a positional path expression, we have to</span>
+<span class="doccomment">//! enumerate all possible paths, and check the condition on all these paths. This leads to a time</span>
+<span class="doccomment">//! complexity of $\mathcal{O}(2^n)$ (due to finding all possible paths on a directed acyclic</span>
+<span class="doccomment">//! graph). However, if there exists no such condition, we can check all conditions for a single</span>
+<span class="doccomment">//! node in one single graph traversal (in a depth-first-search procedure). This then yields a time</span>
+<span class="doccomment">//! complexity of only $\mathcal{O}(n^3)$.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! For the rest of the algorithm explenation, we look at a single node $v$, and assume that the</span>
+<span class="doccomment">//! path conditions do not contain and positional expressions. We continue by transforming the</span>
+<span class="doccomment">//! conditions into Conjunctive Normal Form (CNF). Such expressions are are written as product of</span>
+<span class="doccomment">//! sums, or as an AND of ORs. Let the condition for node $v$ be:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! $$(a \lor b \lor \neg c) \land (d \lor e) \land \ldots = \phi_1 \land \phi_2 \land \ldots$$</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! For each group of expressions, combined with an logical or (in the following called $\phi_i$),</span>
+<span class="doccomment">//! we generate a gorup $g_i$, which we use to remember during DFS traversal if at least one of</span>
+<span class="doccomment">//! these expressions in $g_i$ are satisfied, which means that $phi_i$ is satisfied. Finally, we can</span>
+<span class="doccomment">//! determine, if the entire expression is satisfied, namely then, when all these groups are true.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! We perform the DFS traversal. If we encounter a black hole somewhere, we ignore this branch, and</span>
+<span class="doccomment">//! go back without changing anything. *TODO: We might be able to do something more intelligent here</span>
+<span class="doccomment">//! but we need to discuss this.*. If we encounter a loop, we similarly do nothing, and just ignore</span>
+<span class="doccomment">//! this branch. However, if we reach the target, we update the groups in which this target is in.</span>
+<span class="doccomment">//! Every time, we backtrack because every possible next hop has been explored, we combine the</span>
+<span class="doccomment">//! information of the groups as follows:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! - If every branch satisfies the group, then the current node also satisfies the group.</span>
+<span class="doccomment">//! - If at least one branch does not satisfy a group, then this group is also not satisfied for the</span>
+<span class="doccomment">//!   current node.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! This information then propagates back to the root $v$. If all groups are still satisfied, we can</span>
+<span class="doccomment">//! declare the condition as being satisfied. If not, then it is violated.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### IGP Link Weight Change</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! If the IGP link weight changes, we apply the insight from the paper on [Disruption Free Topology</span>
+<span class="doccomment">//! Reconfiguration in OSPF Networks](https://ieeexplore.ieee.org/document/4215601), in which the</span>
+<span class="doccomment">//! authors prove that there always exists a sequence of link weights which guarantee no forwarding</span>
+<span class="doccomment">//! loops in any transient state.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! So, our algorithm generates many different reconfiguraiton expressions to incrementally change</span>
+<span class="doccomment">//! the link weight until we reach the desired value, treating all of these as individual changes.</span>
+<span class="doccomment">//! While preparing the forwarding supergraph, we consider the next hop based on the IGP metric</span>
+<span class="doccomment">//! before and after the reconfiguration.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Why we cannot check for black holes</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Using this approach, it is impossible to check if black holes might appear, just by looking at</span>
+<span class="doccomment">//! the state before and after the delta reconfiguration. The reason is that even though the chosen</span>
+<span class="doccomment">//! route has not changed from before to after, it might still disappear temporarily. This is</span>
+<span class="doccomment">//! highlighted by the following two examples:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! *Example 1*: Consier the following network and configuration:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ![counter_example](https://n.ethz.ch/~sctibor/images/TransientStateCounterExample.svg)</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! In this example, we apply one single modification, that the community of a route is changed from</span>
+<span class="doccomment">//! 0 to 666 at router `r5`. Router `r3` only allows routes with community 666, while router `r4`</span>
+<span class="doccomment">//! denies these routes. Finally, `r2` resets the community to 0, which hides everything that might</span>
+<span class="doccomment">//! happen to the router `r1`. Depending on the order of messages, `r1` might not notice any change,</span>
+<span class="doccomment">//! or `r1` might experience a transient black hole.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! This example can be extended to violate arbitrary conditions, such as the necessity of</span>
+<span class="doccomment">//! traversing a specific link. Hence, our algorithm is not able to check for transient black holes,</span>
+<span class="doccomment">//! and the algorithm must always consider all routes, that might be reached by a node.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! *Example 2*: Consier the following network and configuration:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ![counter_example](https://n.ethz.ch/~sctibor/images/TransientStateCounterExample2.svg)</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! In this example, we add a new route map to router `b2`. Now, let&#39;s consider router `rx`. First,</span>
+<span class="doccomment">//! notice that the router `rx` can only receive the route propagated by `b1` with</span>
+<span class="doccomment">//! `local_pref = 120`. This route is prefered by router `r1`, and hence, router `rx` will receive</span>
+<span class="doccomment">//! this route. As soon as we introduce the modification, there are two orderings which we must</span>
+<span class="doccomment">//! consider:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! 1. `r4` receives the new route with the community 666 before `r3`, and send its new route with</span>
+<span class="doccomment">//!    `local_pref=150` towards `r2`. Then, `r2` will forward the route towards `r1`, which will</span>
+<span class="doccomment">//!    then retract the route from `e1` for `rx`. Now, we have a black hole at `rx`.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! 2. `r3` receives the new route with the community 666 before `r4`, and sen its new route with</span>
+<span class="doccomment">//!    `local_pref=200` towards `r2`. Since this route is advertised via peer session, `r2` will not</span>
+<span class="doccomment">//!    notice `r1` about the change, and hence, `rx` will still know the same prefix.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! In the final state, no matter the ordering of messages, the router `r2` will prefer the route</span>
+<span class="doccomment">//! form `r3`, and ignore the one from `r4`. Hence, router `r2` does not advertise a route towards</span>
+<span class="doccomment">//! `r1`, and `rx` can reach the prefix via `e1`.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Why we cannot improve the overapproximation</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Using this approach, it is impossible to improve the overapproximation of the forwarding</span>
+<span class="doccomment">//! supergraph, just by looking at the state before and after the delta reconfiguration. The only</span>
+<span class="doccomment">//! way, how the overapproximation can theoretically be improved, is by considering less routes at</span>
+<span class="doccomment">//! any node $v$. However, the two examples above can be extended, such that a much wrose route is</span>
+<span class="doccomment">//! selected temporarily, even if the same better route is selected before and after the delta</span>
+<span class="doccomment">//! reconfiguration. This clearly shows that we cannot go fancy by only considering e.g., routes</span>
+<span class="doccomment">//! that are better than the old known route (if this one is still known after reconfiguration).</span>
+
+<span class="kw">mod</span> <span class="ident">condition</span>;
+<span class="kw">mod</span> <span class="ident">ltl</span>;
+<span class="kw">mod</span> <span class="ident">transient_behavior</span>;
+
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">condition</span>::{<span class="ident">Condition</span>, <span class="ident">PathCondition</span>, <span class="ident">Waypoint</span>};
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">ltl</span>::{<span class="ident">HardPolicy</span>, <span class="ident">LTLBoolean</span>, <span class="ident">LTLModal</span>, <span class="ident">LTLOperator</span>, <span class="ident">WatchErrors</span>};
+<span class="kw">use</span> <span class="ident">transient_behavior</span>::<span class="ident">TransientStateAnalyzer</span>;
+
+<span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">netsim</span>::{<span class="ident">Network</span>, <span class="ident">Prefix</span>, <span class="ident">RouterId</span>};
+<span class="comment">//use crate::transient_behavior::TransientError;</span>
+
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">collections</span>::<span class="ident">VecDeque</span>;
+<span class="kw">use</span> <span class="ident">thiserror</span>::<span class="ident">Error</span>;
+
+<span class="doccomment">/// # Hard Policy Error</span>
+<span class="doccomment">/// This indicates which policy resulted in the policy failing.</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>, <span class="ident">Error</span>, <span class="ident">PartialEq</span>, <span class="ident">Eq</span>, <span class="ident">Hash</span>, <span class="ident">Clone</span>)]</span>
+<span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">PolicyError</span> {
+    <span class="doccomment">/// Forwarding Black Hole occured</span>
+    <span class="attribute">#[<span class="ident">error</span>(<span class="string">&quot;Black Hole at router {router:?} for {prefix:?}&quot;</span>)]</span>
+    <span class="ident">BlackHole</span> {
+        <span class="doccomment">/// The router where the black hole exists.</span>
+        <span class="ident">router</span>: <span class="ident">RouterId</span>,
+        <span class="doccomment">/// The prefix for which the black hole exists.</span>
+        <span class="ident">prefix</span>: <span class="ident">Prefix</span>,
+    },
+
+    <span class="doccomment">/// Forwarding Loop occured</span>
+    <span class="attribute">#[<span class="ident">error</span>(<span class="string">&quot;Forwarding Loop {path:?} for {prefix:?}&quot;</span>)]</span>
+    <span class="ident">ForwardingLoop</span> {
+        <span class="doccomment">/// The loop, only containing the relevant routers.</span>
+        <span class="ident">path</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">RouterId</span><span class="op">&gt;</span>,
+        <span class="doccomment">/// The prefix for which the forwarding loop exists.</span>
+        <span class="ident">prefix</span>: <span class="ident">Prefix</span>,
+    },
+
+    <span class="doccomment">/// PathRequirement was not satisfied</span>
+    <span class="attribute">#[<span class="ident">error</span>(<span class="string">&quot;Invalid Path for {prefix:?}: path: {path:?} condition: {condition}&quot;</span>)]</span>
+    <span class="ident">PathCondition</span> {
+        <span class="doccomment">/// The actual path taken in the network</span>
+        <span class="ident">path</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">RouterId</span><span class="op">&gt;</span>,
+        <span class="doccomment">/// The expected path</span>
+        <span class="ident">condition</span>: <span class="ident">PathCondition</span>,
+        <span class="doccomment">/// the prefix for which the wrong path exists.</span>
+        <span class="ident">prefix</span>: <span class="ident">Prefix</span>,
+    },
+
+    <span class="doccomment">/// A route is present, where it should be dropped somewhere</span>
+    <span class="attribute">#[<span class="ident">error</span>(<span class="string">&quot;Router {router:?} should not be able to reach {prefix:?} but the following path is valid: {path:?}&quot;</span>)]</span>
+    <span class="ident">UnallowedPathExists</span> {
+        <span class="doccomment">/// The router who should not be able to reach the prefix</span>
+        <span class="ident">router</span>: <span class="ident">RouterId</span>,
+        <span class="doccomment">/// The prefix which should not be reached</span>
+        <span class="ident">prefix</span>: <span class="ident">Prefix</span>,
+        <span class="doccomment">/// the path with which the router can reach the prefix</span>
+        <span class="ident">path</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">RouterId</span><span class="op">&gt;</span>,
+    },
+
+    <span class="doccomment">/// Reliability Constraint is not satisfied</span>
+    <span class="attribute">#[<span class="ident">error</span>(<span class="string">&quot;Router {router:?} has no backup path for {prefix:?} when link ({link_a:?} -&gt; {link_b:?}) fails.&quot;</span>)]</span>
+    <span class="ident">NotReliable</span> {
+        <span class="doccomment">/// Router for thich the reliability is violated</span>
+        <span class="ident">router</span>: <span class="ident">RouterId</span>,
+        <span class="doccomment">/// Prefix for which the reliability is violated</span>
+        <span class="ident">prefix</span>: <span class="ident">Prefix</span>,
+        <span class="doccomment">/// Critical link, where a link failure causes the unreliability (router a)</span>
+        <span class="ident">link_a</span>: <span class="ident">RouterId</span>,
+        <span class="doccomment">/// Critical link, where a link failure causes the unreliability (router b)</span>
+        <span class="ident">link_b</span>: <span class="ident">RouterId</span>,
+    },
+
+    <span class="doccomment">/// Condition during reliability check is not satisfied</span>
+    <span class="attribute">#[<span class="ident">error</span>(<span class="string">&quot;Backup path for {prefix:?} when link ({link_a:?} -&gt; {link_b:?}) fails is not satisfied: path: {path:?}, codition: {condition}&quot;</span>)]</span>
+    <span class="ident">ReliabilityCondition</span> {
+        <span class="doccomment">/// Router for which the reliability condition is violated</span>
+        <span class="ident">path</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">RouterId</span><span class="op">&gt;</span>,
+        <span class="doccomment">/// Condition which is violated during reliability check, when the given link fails.</span>
+        <span class="ident">condition</span>: <span class="ident">PathCondition</span>,
+        <span class="doccomment">/// Prefix for which the reliability condition is violated</span>
+        <span class="ident">prefix</span>: <span class="ident">Prefix</span>,
+        <span class="doccomment">/// Critical link, where a link failure causes the reliability constraint to fail (router a)</span>
+        <span class="ident">link_a</span>: <span class="ident">RouterId</span>,
+        <span class="doccomment">/// Critical link, where a link failure causes the reliability constraint to fail (router b)</span>
+        <span class="ident">link_b</span>: <span class="ident">RouterId</span>,
+    },
+
+    <span class="doccomment">/// No Convergence</span>
+    <span class="attribute">#[<span class="ident">error</span>(<span class="string">&quot;Network did not converge&quot;</span>)]</span>
+    <span class="ident">NoConvergence</span>,
+
+    <span class="doccomment">/// Transient Behavior Violation</span>
+    <span class="attribute">#[<span class="ident">error</span>(<span class="string">&quot;Transient behavior on router {router:?} for {prefix:?} may be violated: {condition}&quot;</span>)]</span>
+    <span class="ident">TransientBehavior</span> {
+        <span class="doccomment">/// Router for which transient behavior might be violated</span>
+        <span class="ident">router</span>: <span class="ident">RouterId</span>,
+        <span class="doccomment">/// Prefix for which the router might violate transient behavior</span>
+        <span class="ident">prefix</span>: <span class="ident">Prefix</span>,
+        <span class="doccomment">/// Path condition which may be violated in transient behavior</span>
+        <span class="ident">condition</span>: <span class="ident">PathCondition</span>,
+    },
+}
+
+<span class="kw">impl</span> <span class="ident">PolicyError</span> {
+    <span class="doccomment">/// Get a string representing the policy error, where all router names are inserted.</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">repr_with_name</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">net</span>: <span class="kw-2">&amp;</span><span class="ident">Network</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">String</span> {
+        <span class="kw">match</span> <span class="self">self</span> {
+            <span class="ident">PolicyError</span>::<span class="ident">BlackHole</span> { <span class="ident">router</span>, <span class="ident">prefix</span> } <span class="op">=</span><span class="op">&gt;</span> <span class="macro">format</span><span class="macro">!</span>(
+                <span class="string">&quot;Black hole for prefix {} at router {}&quot;</span>,
+                <span class="ident">prefix</span>.<span class="number">0</span>,
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">router</span>).<span class="ident">unwrap</span>(),
+            ),
+            <span class="ident">PolicyError</span>::<span class="ident">ForwardingLoop</span> { <span class="ident">path</span>, <span class="ident">prefix</span> } <span class="op">=</span><span class="op">&gt;</span> <span class="macro">format</span><span class="macro">!</span>(
+                <span class="string">&quot;Forwarding loop for prefix {}: {} -&gt; {}&quot;</span>,
+                <span class="ident">prefix</span>.<span class="number">0</span>,
+                <span class="ident">path</span>.<span class="ident">iter</span>()
+                    .<span class="ident">map</span>(<span class="op">|</span><span class="ident">r</span><span class="op">|</span> <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">r</span>).<span class="ident">unwrap</span>())
+                    .<span class="ident">collect</span>::<span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">str</span><span class="op">&gt;</span><span class="op">&gt;</span>()
+                    .<span class="ident">join</span>(<span class="string">&quot; -&gt; &quot;</span>),
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">path</span>.<span class="ident">first</span>().<span class="ident">unwrap</span>()).<span class="ident">unwrap</span>(),
+            ),
+            <span class="ident">PolicyError</span>::<span class="ident">PathCondition</span> { <span class="ident">path</span>, <span class="ident">condition</span>, <span class="ident">prefix</span> } <span class="op">=</span><span class="op">&gt;</span> <span class="macro">format</span><span class="macro">!</span>(
+                <span class="string">&quot;Path condition invalidated for prefix {}: path: {}, condition: {}&quot;</span>,
+                <span class="ident">prefix</span>.<span class="number">0</span>,
+                <span class="ident">path</span>.<span class="ident">iter</span>()
+                    .<span class="ident">map</span>(<span class="op">|</span><span class="ident">r</span><span class="op">|</span> <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">r</span>).<span class="ident">unwrap</span>())
+                    .<span class="ident">collect</span>::<span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">str</span><span class="op">&gt;</span><span class="op">&gt;</span>()
+                    .<span class="ident">join</span>(<span class="string">&quot; -&gt; &quot;</span>),
+                <span class="ident">condition</span>.<span class="ident">repr_with_name</span>(<span class="ident">net</span>)
+            ),
+            <span class="ident">PolicyError</span>::<span class="ident">UnallowedPathExists</span> { <span class="ident">router</span>, <span class="ident">prefix</span>, <span class="ident">path</span> } <span class="op">=</span><span class="op">&gt;</span> <span class="macro">format</span><span class="macro">!</span>(
+                <span class="string">&quot;Router {} can reach unallowed prefix {} via path [{}]&quot;</span>,
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">router</span>).<span class="ident">unwrap</span>(),
+                <span class="ident">prefix</span>.<span class="number">0</span>,
+                <span class="ident">path</span>.<span class="ident">iter</span>()
+                    .<span class="ident">map</span>(<span class="op">|</span><span class="ident">r</span><span class="op">|</span> <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">r</span>).<span class="ident">unwrap</span>())
+                    .<span class="ident">collect</span>::<span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span><span class="op">&gt;</span>()
+                    .<span class="ident">join</span>(<span class="string">&quot;, &quot;</span>)
+            ),
+            <span class="ident">PolicyError</span>::<span class="ident">NotReliable</span> { <span class="ident">router</span>, <span class="ident">prefix</span>, <span class="ident">link_a</span>, <span class="ident">link_b</span>} <span class="op">=</span><span class="op">&gt;</span> <span class="macro">format</span><span class="macro">!</span>(
+                <span class="string">&quot;Router {} cannot reach prefix {} when link [{} -&gt; {}] fails&quot;</span>,
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">router</span>).<span class="ident">unwrap</span>(),
+                <span class="ident">prefix</span>.<span class="number">0</span>,
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">link_a</span>).<span class="ident">unwrap</span>(),
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">link_b</span>).<span class="ident">unwrap</span>(),
+            ),
+            <span class="ident">PolicyError</span>::<span class="ident">ReliabilityCondition</span> { <span class="ident">path</span>, <span class="ident">condition</span>, <span class="ident">prefix</span>, <span class="ident">link_a</span>, <span class="ident">link_b</span>} <span class="op">=</span><span class="op">&gt;</span> <span class="macro">format</span><span class="macro">!</span>(
+                <span class="string">&quot;Reliability condition {} violated for prefix {} with path {} when link [{} -&gt; {}] fails&quot;</span>,
+                <span class="ident">condition</span>.<span class="ident">repr_with_name</span>(<span class="ident">net</span>),
+                <span class="ident">prefix</span>.<span class="number">0</span>,
+                <span class="ident">path</span>.<span class="ident">iter</span>()
+                    .<span class="ident">map</span>(<span class="op">|</span><span class="ident">r</span><span class="op">|</span> <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">r</span>).<span class="ident">unwrap</span>())
+                    .<span class="ident">collect</span>::<span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">str</span><span class="op">&gt;</span><span class="op">&gt;</span>()
+                    .<span class="ident">join</span>(<span class="string">&quot; -&gt; &quot;</span>),
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">link_a</span>).<span class="ident">unwrap</span>(),
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">link_b</span>).<span class="ident">unwrap</span>(),
+            ),
+            <span class="ident">PolicyError</span>::<span class="ident">NoConvergence</span> <span class="op">=</span><span class="op">&gt;</span> <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;No Convergence&quot;</span>),
+            <span class="ident">PolicyError</span>::<span class="ident">TransientBehavior</span> {<span class="ident">router</span>, <span class="ident">prefix</span>, <span class="ident">condition</span>} <span class="op">=</span><span class="op">&gt;</span> <span class="macro">format</span><span class="macro">!</span>(
+                <span class="string">&quot;Transient behavior of router {} for prefix {} may be violated! condition: {}&quot;</span>,
+                <span class="ident">net</span>.<span class="ident">get_router_name</span>(<span class="kw-2">*</span><span class="ident">router</span>).<span class="ident">unwrap</span>(),
+                <span class="ident">prefix</span>.<span class="number">0</span>,
+                <span class="ident">condition</span>.<span class="ident">repr_with_name</span>(<span class="ident">net</span>),
+            )
+        }
+    }
+}
+
+<span class="doccomment">/// Extracts only the loop from the path.</span>
+<span class="doccomment">/// The last node in the path must already exist previously in the path. If no loop exists in the</span>
+<span class="doccomment">/// path, then an unrecoverable error occurs.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// TODO: this is inefficient. We should not collect into a VecDeque, rotate and collect back, but</span>
+<span class="doccomment">/// we should push only the elements that are needed in the correct order, without allocating a</span>
+<span class="doccomment">/// VecDeque.</span>
+<span class="kw">fn</span> <span class="ident">prepare_loop_path</span>(<span class="ident">path</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">RouterId</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">RouterId</span><span class="op">&gt;</span> {
+    <span class="kw">let</span> <span class="ident">len</span> <span class="op">=</span> <span class="ident">path</span>.<span class="ident">len</span>();
+    <span class="kw">let</span> <span class="ident">loop_router</span> <span class="op">=</span> <span class="ident">path</span>[<span class="ident">len</span> <span class="op">-</span> <span class="number">1</span>];
+    <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">first_loop_router</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span> <span class="op">=</span> <span class="prelude-val">None</span>;
+    <span class="kw">for</span> (<span class="ident">i</span>, <span class="ident">r</span>) <span class="kw">in</span> <span class="ident">path</span>.<span class="ident">iter</span>().<span class="ident">enumerate</span>().<span class="ident">take</span>(<span class="ident">len</span> <span class="op">-</span> <span class="number">1</span>) {
+        <span class="kw">if</span> <span class="kw-2">*</span><span class="ident">r</span> <span class="op">=</span><span class="op">=</span> <span class="ident">loop_router</span> {
+            <span class="ident">first_loop_router</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">i</span>);
+            <span class="kw">break</span>;
+        }
+    }
+    <span class="kw">let</span> <span class="ident">first_loop_router</span> <span class="op">=</span>
+        <span class="ident">first_loop_router</span>.<span class="ident">unwrap_or_else</span>(<span class="op">|</span><span class="op">|</span> <span class="macro">panic</span><span class="macro">!</span>(<span class="string">&quot;Loop-Free path given: {:?}&quot;</span>, <span class="ident">path</span>));
+    <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">loop_unordered</span>: <span class="ident">VecDeque</span><span class="op">&lt;</span><span class="ident">RouterId</span><span class="op">&gt;</span> <span class="op">=</span>
+        <span class="ident">path</span>.<span class="ident">into_iter</span>().<span class="ident">skip</span>(<span class="ident">first_loop_router</span> <span class="op">+</span> <span class="number">1</span>).<span class="ident">collect</span>();
+
+    <span class="comment">// order the loop, such that the smallest router ID starts the loop</span>
+    <span class="kw">let</span> <span class="ident">lowest_pos</span> <span class="op">=</span> <span class="ident">loop_unordered</span>
+        .<span class="ident">iter</span>()
+        .<span class="ident">enumerate</span>()
+        .<span class="ident">min_by</span>(<span class="op">|</span><span class="ident">a</span>, <span class="ident">b</span><span class="op">|</span> <span class="ident">a</span>.<span class="number">1</span>.<span class="ident">cmp</span>(<span class="ident">b</span>.<span class="number">1</span>))
+        .<span class="ident">map</span>(<span class="op">|</span>(<span class="ident">i</span>, <span class="kw">_</span>)<span class="op">|</span> <span class="ident">i</span>)
+        .<span class="ident">expect</span>(<span class="string">&quot;Loop is empty&quot;</span>);
+
+    <span class="ident">loop_unordered</span>.<span class="ident">rotate_left</span>(<span class="ident">lowest_pos</span>);
+    <span class="ident">loop_unordered</span>.<span class="ident">into_iter</span>().<span class="ident">collect</span>()
+}
+
+<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
+<span class="kw">mod</span> <span class="ident">test</span> {
+    <span class="kw">use</span> <span class="kw">super</span>::<span class="kw-2">*</span>;
+    <span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">example_networks</span>::<span class="kw-2">*</span>;
+    <span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">netsim</span>::{
+        <span class="ident">config</span>::{<span class="ident">ConfigExpr</span>::<span class="kw-2">*</span>, <span class="ident">ConfigModifier</span>::<span class="kw-2">*</span>},
+        <span class="ident">BgpSessionType</span>::<span class="kw-2">*</span>,
+        <span class="ident">Prefix</span>,
+    };
+
+    <span class="attribute">#[<span class="ident">test</span>]</span>
+    <span class="kw">fn</span> <span class="ident">static_policy_reachability</span>() {
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">net</span> <span class="op">=</span> <span class="ident">SimpleNet</span>::<span class="ident">net</span>(<span class="number">2</span>);
+        <span class="kw">let</span> <span class="ident">r1</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r1&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r2</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r2&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r3</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r3&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r4</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r4&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">policy</span> <span class="op">=</span>
+            <span class="ident">HardPolicy</span>::<span class="ident">reachability</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="ident">r1</span>, <span class="ident">r2</span>, <span class="ident">r3</span>, <span class="ident">r4</span>].<span class="ident">iter</span>(), <span class="macro">vec</span><span class="macro">!</span>[<span class="ident">Prefix</span>(<span class="number">0</span>)].<span class="ident">iter</span>());
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">false</span>));
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Remove</span>(<span class="ident">BgpSession</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r2</span>, <span class="ident">session_type</span>: <span class="ident">IBgpPeer</span> }))
+            .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">false</span>));
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Remove</span>(<span class="ident">BgpSession</span> { <span class="ident">source</span>: <span class="ident">r2</span>, <span class="ident">target</span>: <span class="ident">r4</span>, <span class="ident">session_type</span>: <span class="ident">IBgpPeer</span> }))
+            .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="op">!</span><span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">true</span>));
+    }
+
+    <span class="attribute">#[<span class="ident">test</span>]</span>
+    <span class="kw">fn</span> <span class="ident">static_policy_link_required</span>() {
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">net</span> <span class="op">=</span> <span class="ident">SimpleNet</span>::<span class="ident">net</span>(<span class="number">2</span>);
+        <span class="kw">let</span> <span class="ident">r1</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r1&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r2</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r2&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r3</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r3&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r4</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r4&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">e1</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;e1&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">e4</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;e4&quot;</span>).<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="ident">p</span> <span class="op">=</span> <span class="ident">Prefix</span>(<span class="number">0</span>);
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">policy</span> <span class="op">=</span> <span class="ident">HardPolicy</span>::<span class="ident">globally</span>(<span class="macro">vec</span><span class="macro">!</span>[
+            <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r1</span>, <span class="ident">p</span>, <span class="prelude-val">Some</span>(<span class="ident">PathCondition</span>::<span class="ident">Edge</span>(<span class="ident">r1</span>, <span class="ident">e1</span>))),
+            <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r2</span>, <span class="ident">p</span>, <span class="prelude-val">Some</span>(<span class="ident">PathCondition</span>::<span class="ident">Edge</span>(<span class="ident">r2</span>, <span class="ident">r1</span>))),
+            <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r3</span>, <span class="ident">p</span>, <span class="prelude-val">Some</span>(<span class="ident">PathCondition</span>::<span class="ident">Edge</span>(<span class="ident">r2</span>, <span class="ident">r1</span>))),
+            <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r4</span>, <span class="ident">p</span>, <span class="prelude-val">Some</span>(<span class="ident">PathCondition</span>::<span class="ident">Edge</span>(<span class="ident">r2</span>, <span class="ident">r1</span>))),
+        ]);
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Remove</span>(<span class="ident">BgpSession</span> { <span class="ident">source</span>: <span class="ident">r4</span>, <span class="ident">target</span>: <span class="ident">e4</span>, <span class="ident">session_type</span>: <span class="ident">EBgp</span> }))
+            .<span class="ident">unwrap</span>();
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r2</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r2</span>, <span class="ident">weight</span>: <span class="number">0.1</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r2</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r2</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">0.1</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r3</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r3</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">2.0</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r3</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r3</span>, <span class="ident">weight</span>: <span class="number">2.0</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">false</span>));
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r2</span>, <span class="ident">weight</span>: <span class="number">0.1</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r2</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">false</span>));
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r2</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">0.1</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r2</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="op">!</span><span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">true</span>));
+    }
+
+    <span class="attribute">#[<span class="ident">test</span>]</span>
+    <span class="kw">fn</span> <span class="ident">static_policy_reliability</span>() {
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">net</span> <span class="op">=</span> <span class="ident">SimpleNet</span>::<span class="ident">net</span>(<span class="number">2</span>);
+        <span class="kw">let</span> <span class="ident">r1</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r1&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r2</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r2&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r3</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r3&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r4</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r4&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">e4</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;e4&quot;</span>).<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="ident">p</span> <span class="op">=</span> <span class="ident">Prefix</span>(<span class="number">0</span>);
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">policy</span> <span class="op">=</span> <span class="ident">HardPolicy</span>::<span class="ident">globally</span>(<span class="macro">vec</span><span class="macro">!</span>[
+            <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r1</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+            <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r2</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+            <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r3</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+            <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r4</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+            <span class="ident">Condition</span>::<span class="ident">Reliable</span>(<span class="ident">r1</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+            <span class="ident">Condition</span>::<span class="ident">Reliable</span>(<span class="ident">r2</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+            <span class="ident">Condition</span>::<span class="ident">Reliable</span>(<span class="ident">r3</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+            <span class="ident">Condition</span>::<span class="ident">Reliable</span>(<span class="ident">r4</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+        ]);
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">false</span>));
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Remove</span>(<span class="ident">BgpSession</span> { <span class="ident">source</span>: <span class="ident">r2</span>, <span class="ident">target</span>: <span class="ident">r4</span>, <span class="ident">session_type</span>: <span class="ident">IBgpPeer</span> }))
+            .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="op">!</span><span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">true</span>));
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Remove</span>(<span class="ident">BgpSession</span> { <span class="ident">source</span>: <span class="ident">r4</span>, <span class="ident">target</span>: <span class="ident">e4</span>, <span class="ident">session_type</span>: <span class="ident">EBgp</span> }))
+            .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="op">!</span><span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">true</span>));
+    }
+
+    <span class="attribute">#[<span class="ident">test</span>]</span>
+    <span class="kw">fn</span> <span class="ident">dynamic_policy_reachability_new_firewall</span>() {
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">net</span> <span class="op">=</span> <span class="ident">SimpleNet</span>::<span class="ident">net</span>(<span class="number">2</span>);
+        <span class="kw">let</span> <span class="ident">r1</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r1&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r2</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r2&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r3</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r3&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">r4</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;r4&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">e1</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;e1&quot;</span>).<span class="ident">unwrap</span>();
+        <span class="kw">let</span> <span class="ident">e4</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_router_id</span>(<span class="string">&quot;e4&quot;</span>).<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="ident">p</span> <span class="op">=</span> <span class="ident">Prefix</span>(<span class="number">0</span>);
+
+        <span class="comment">// the policy requires that all routers can always reach the prefix. After the</span>
+        <span class="comment">// reconfiguration, we would like for all traffic to go via route r2 --&gt; r1 --&gt; e1.</span>
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">policy</span> <span class="op">=</span> <span class="ident">HardPolicy</span>::<span class="ident">new</span>(
+            <span class="macro">vec</span><span class="macro">!</span>[
+                <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r1</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+                <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r2</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+                <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r3</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+                <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r4</span>, <span class="ident">p</span>, <span class="prelude-val">None</span>),
+                <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r1</span>, <span class="ident">p</span>, <span class="prelude-val">Some</span>(<span class="ident">PathCondition</span>::<span class="ident">Edge</span>(<span class="ident">r1</span>, <span class="ident">e1</span>))),
+                <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r2</span>, <span class="ident">p</span>, <span class="prelude-val">Some</span>(<span class="ident">PathCondition</span>::<span class="ident">Edge</span>(<span class="ident">r2</span>, <span class="ident">r1</span>))),
+                <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r3</span>, <span class="ident">p</span>, <span class="prelude-val">Some</span>(<span class="ident">PathCondition</span>::<span class="ident">Edge</span>(<span class="ident">r2</span>, <span class="ident">r1</span>))),
+                <span class="ident">Condition</span>::<span class="ident">Reachable</span>(<span class="ident">r4</span>, <span class="ident">p</span>, <span class="prelude-val">Some</span>(<span class="ident">PathCondition</span>::<span class="ident">Edge</span>(<span class="ident">r2</span>, <span class="ident">r1</span>))),
+            ],
+            <span class="ident">LTLModal</span>::<span class="ident">Now</span>(<span class="ident">Box</span>::<span class="ident">new</span>(<span class="ident">LTLBoolean</span>::<span class="ident">And</span>(<span class="macro">vec</span><span class="macro">!</span>[
+                <span class="ident">Box</span>::<span class="ident">new</span>(<span class="ident">LTLModal</span>::<span class="ident">Globally</span>(<span class="ident">Box</span>::<span class="ident">new</span>(<span class="ident">LTLBoolean</span>::<span class="ident">And</span>(<span class="macro">vec</span><span class="macro">!</span>[
+                    <span class="ident">Box</span>::<span class="ident">new</span>(<span class="number">0</span>),
+                    <span class="ident">Box</span>::<span class="ident">new</span>(<span class="number">1</span>),
+                    <span class="ident">Box</span>::<span class="ident">new</span>(<span class="number">2</span>),
+                    <span class="ident">Box</span>::<span class="ident">new</span>(<span class="number">3</span>),
+                ])))),
+                <span class="ident">Box</span>::<span class="ident">new</span>(<span class="ident">LTLModal</span>::<span class="ident">Finally</span>(<span class="ident">Box</span>::<span class="ident">new</span>(<span class="ident">LTLModal</span>::<span class="ident">Globally</span>(<span class="ident">Box</span>::<span class="ident">new</span>(
+                    <span class="ident">LTLBoolean</span>::<span class="ident">And</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="ident">Box</span>::<span class="ident">new</span>(<span class="number">4</span>), <span class="ident">Box</span>::<span class="ident">new</span>(<span class="number">5</span>), <span class="ident">Box</span>::<span class="ident">new</span>(<span class="number">6</span>), <span class="ident">Box</span>::<span class="ident">new</span>(<span class="number">7</span>)]),
+                ))))),
+            ]))),
+        );
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Remove</span>(<span class="ident">BgpSession</span> { <span class="ident">source</span>: <span class="ident">r4</span>, <span class="ident">target</span>: <span class="ident">e4</span>, <span class="ident">session_type</span>: <span class="ident">EBgp</span> }))
+            .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">eprintln</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">policy</span>.<span class="ident">repr_with_name</span>(<span class="kw-2">&amp;</span><span class="ident">net</span>));
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">false</span>));
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="op">!</span><span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">true</span>));
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r3</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r3</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">2.0</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r3</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r3</span>, <span class="ident">weight</span>: <span class="number">2.0</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">false</span>));
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="op">!</span><span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">true</span>));
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r2</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r1</span>, <span class="ident">target</span>: <span class="ident">r2</span>, <span class="ident">weight</span>: <span class="number">0.1</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="ident">net</span>.<span class="ident">apply_modifier</span>(<span class="kw-2">&amp;</span><span class="ident">Update</span> {
+            <span class="ident">from</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r2</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">1.0</span> },
+            <span class="ident">to</span>: <span class="ident">IgpLinkWeight</span> { <span class="ident">source</span>: <span class="ident">r2</span>, <span class="ident">target</span>: <span class="ident">r1</span>, <span class="ident">weight</span>: <span class="number">0.1</span> },
+        })
+        .<span class="ident">unwrap</span>();
+
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fw_state</span> <span class="op">=</span> <span class="ident">net</span>.<span class="ident">get_forwarding_state</span>();
+        <span class="ident">policy</span>.<span class="ident">step</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">net</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fw_state</span>).<span class="ident">unwrap</span>();
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">false</span>));
+        <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">policy</span>.<span class="ident">check_overwrite_finish</span>(<span class="bool-val">true</span>));
+    }
+}
+</pre></div>
+</section><section id="search" class="content hidden"></section><section class="footer"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="snowcap"></div>
+    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script><script defer src="../../../search-index.js"></script></body></html>

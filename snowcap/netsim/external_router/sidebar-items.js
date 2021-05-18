@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["ExternalRouter","Struct representing an external router NOTE: We use vectors, for both the neighbors and active routes. The reason is the following:"]]});
