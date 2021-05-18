@@ -144,3 +144,28 @@ sleep 5
 RUST_LOG=info ./target/release/snowcap_main run -r -s 3 -a --json eval_sigcomm2021/result_11/random.json topology-zoo eval_sigcomm2021/topology_zoo/HiberniaIreland.gml FM2RR -s 10
 RUST_LOG=info ./target/release/snowcap_main run --json eval_sigcomm2021/result_11/snowcap.json topology-zoo eval_sigcomm2021/topology_zoo/HiberniaIreland.gml FM2RR -s 10
 python3.8 ./eval_sigcomm2021/scripts/table_11.py
+
+echo "
+Snowcap Evaluation complete!
+----------------------------
+
+All experiments are done! You can visit the generated plots and the obtained
+data at (or click the `results` shortcut on the desktop):
+
+  ~/snowcap/eval_sigcomm2021/result_XX
+  ~/snowcap/eval_sigcomm2021/plot_XX.pdf
+
+You may also compare the data with the precomputed data (with SPEEDUP=1). For
+this, you should generate the plots by opening a new terminal and typing:
+
+  cd ~/snowcap
+  PRECOMPUTED_DATA=yes ./eval_sigcomm2021/scripts/generate_plots.sh
+
+This script will use the precomputed results to generate the plots, that are
+also used in the paper:
+
+  ~/dnowcap/eval_sigcomm2021/precomputed_results/result_XX
+  ~/dnowcap/eval_sigcomm2021/precomputed_results/plot_XX.pdf
+
+Press enter to close this window..."
+read  exit_script

@@ -32,7 +32,6 @@ cat /sys/module/kvm_<CPU>/parameters/nested
 ```
 If this command returns `Y` or `1`, then nested virtualization is supported.
 If it says `N` or ^`0`, then you might use a different machine.
-(You can also continue, but performance for the last experiment, the case study on GNS3, will be greatly limited.)
 Then, enable nested virtualization by running: (make sure that no other virtual machines are running)
 ```sh
 sudo modprobe -r kvm_<CPU>
