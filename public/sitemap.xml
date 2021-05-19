@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nsg-ethz.github.io/snowcap/public/post/about/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nsg-ethz.github.io/snowcap/public/post/abstract/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nsg-ethz.github.io/snowcap/public/post/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nsg-ethz.github.io/snowcap/public/post/setup/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nsg-ethz.github.io/snowcap/public/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nsg-ethz.github.io/snowcap/public/categories/</loc>
+  </url><url>
+    <loc>https://nsg-ethz.github.io/snowcap/public/tags/</loc>
+  </url>
+</urlset>

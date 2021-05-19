@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sections on Snowcap 🏔️</title>
+    <link>https://nsg-ethz.github.io/snowcap/public/post/</link>
+    <description>Recent content in Sections on Snowcap 🏔️</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nsg-ethz.github.io/snowcap/public/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://nsg-ethz.github.io/snowcap/public/post/about/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nsg-ethz.github.io/snowcap/public/post/about/</guid>
+      <description>Snowcap is a prototype implementation of the SIGCOMM&#39;21 paper Snowcap: Synthesizing Network-Wide Configuration Updates by Tibor Schneider, Rüdiger Birkner, and Laurent Vanbever from the Networked Systems Group at ETH Zürich.</description>
+    </item>
+    
+    <item>
+      <title>Abstract</title>
+      <link>https://nsg-ethz.github.io/snowcap/public/post/abstract/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nsg-ethz.github.io/snowcap/public/post/abstract/</guid>
+      <description>Large-scale reconfiguration campaigns tend to be nerve-racking for network operators as they can lead to significant network downtimes, decreased performance, and policy violations. Unfortunately, existing reconfiguration frameworks often fall short in practice as they either only support a small set of reconfiguration scenarios or simply do not scale.
+We address these problems with Snowcap, the first network reconfiguration framework which can synthesize configuration updates that comply with arbitrary hard and soft specifications, and involve arbitrary routing protocols.</description>
+    </item>
+    
+    <item>
+      <title>Setup and Usage</title>
+      <link>https://nsg-ethz.github.io/snowcap/public/post/setup/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nsg-ethz.github.io/snowcap/public/post/setup/</guid>
+      <description>Snowcap is written in Rust, and can be used as an executable, or as a library. To install the rust toolchain, follow the instructions on installing rustup. Then, clone and build the project:
+git clone git@github.com:nsg-ethz/snowcap.git cd snowcap cargo build --release Then, you can run snowcap with:
+cargo run --release -- --help </description>
+    </item>
+    
+  </channel>
+</rss>
