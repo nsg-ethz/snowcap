@@ -48,7 +48,7 @@ echo '<meta http-equiv="refresh" content="0; url=https://nsg-ethz.github.io/snow
 cd target/doc
 
 # check if there is something to commit
-UPDATED_FILES=$(git ls-files --other --directory --exclude-standard)
+UPDATED_FILES=$(git ls-files -o -m -d)
 if [ -z $UPDATED_FILES ]; then
     echo "Nothing has changed! Nothing to push"
     cd ../..

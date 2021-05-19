@@ -240,6 +240,13 @@
   </a></li>
 {{ end }}
 
+{{ with .Site.Social.license }}
+  <li><a href="//github.com/{{$.Site.Social.github}}/blob/main/LICENSE" class="btn btn-default btn-lg" title="License">
+  <i class="fa fa-balance-scale"></i>
+  {{.}}
+  </a></li>
+{{ end }}
+
 {{ with .Site.Social.email }}
   <li><a href="mailto:{{.}}" title="Email" class="btn btn-default btn-lg">
   <i class="fa fa-envelope"></i>

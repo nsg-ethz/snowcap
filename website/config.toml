@@ -50,6 +50,7 @@ theme = "onedly"
     # Documentation reference
     documentation    = "https://nsg-ethz.github.io/snowcap/snowcap/index.html"
     submission       = "404"
+    license          = "GPL-2.0"
     # Coding Communities
     github           = "nsg-ethz/snowcap"
     gitlab           = ""
