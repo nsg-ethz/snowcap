@@ -28,13 +28,39 @@ rm -rf \
    target/doc/gns3
 RUSTDOCFLAGS="--html-in-header katex-header.html" cargo doc --no-deps --all-features || exit 1
 
-echo '<meta http-equiv="refresh" content="0; url=https://nsg-ethz.github.io/snowcap/snowcap/index.html">' > target/doc/index.html
+# generate the static webpage
+cd website
+hugo -D
+cd ..
 
-# read a git commit message
-read -p "Enter a git message for github pages: " COMMIT_MESSAGE || exit 1
+# copy over the static webpage
+if [ -d "taget/doc/public" ]; then
+    echo "removing the old static webpage"
+    rm -rf target/doc/public
+fi
+echo "copying the new static webpage"
+cp -r website/public target/doc/
+
+# setup the index page
+echo '<meta http-equiv="refresh" content="0; url=https://nsg-ethz.github.io/snowcap/public/index.html">' > target/doc/index.html
 
 # go to the docs folder
 cd target/doc
+
+# check if there is something to commit
+UPDATED_FILES=$(git ls-files --other --directory --exclude-standard)
+if [ -z $UPDATED_FILES ]; then
+    echo "Nothing has changed! Nothing to push"
+    cd ../..
+    exit 0
+else
+    echo "Files changed:"
+    echo "$UPDATED_FILES"
+fi
+echo ""
+
+# read a git commit message
+read -p "Enter a git message for github pages: " COMMIT_MESSAGE || exit 1
 
 # Create the commit
 git add .
