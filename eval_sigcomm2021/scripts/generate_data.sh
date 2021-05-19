@@ -75,8 +75,8 @@ ITER_EXP_9=$(echo "100 / ${SPEEDUP}" | bc)
 ITER_EXP_10=$(echo "1000 / ${SPEEDUP}" | bc)
 
 # limit the speedup factor that the minimal numbers are satisfied
-if [ "${ITER_EXP_5}" -lt "100" ]; then
-    ITER_EXP_5="100"
+if [ "${ITER_EXP_5}" -lt "500" ]; then
+    ITER_EXP_5="500"
 fi
 if [ "${ITER_EXP_9}" -lt "10" ]; then
     ITER_EXP_9="10"

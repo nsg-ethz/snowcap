@@ -36,14 +36,12 @@ Then, build and test the project and the documentation with:
 ```sh
 cargo build --release
 cargo test --release
-./create_docs.sh
+cargo doc --all-features
 ```
 
-The documentation can then be found at `target/doc/snowcap/index.html`
+## Running `snowcap_main`
 
-## Running `net_update_main`
-
-To run the `net_update_main` binary, simply execute
+To run the `snowcap_main` binary, simply execute
 
 ```
 cargo run -- --help
