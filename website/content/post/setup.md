@@ -3,7 +3,7 @@ title = "Setup and Usage"
 description = "Instructions on how to install and use Snowcap"
 date = "2021-05-19"
 author = "Tibor Schneider"
-sec = 3
+sec = 4
 +++
 
 _Snowcap_ is written in Rust, and can be used as an executable, or as a library.

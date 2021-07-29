@@ -49,7 +49,7 @@ theme = "onedly"
 [social]
     # Documentation reference
     documentation    = "https://nsg-ethz.github.io/snowcap/snowcap/index.html"
-    submission       = "404"
+    submission       = "https://tibors.ch/publication/snowcap/snowcap.pdf"
     license          = "GPL-2.0"
     # Coding Communities
     github           = "nsg-ethz/snowcap"
